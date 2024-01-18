@@ -21,7 +21,11 @@
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
-    "@electron-toolkit/utils": "^3.0.0"
+    "@electron-toolkit/utils": "^3.0.0",
+    "electron-store": "^8.1.0",
+    "openai": "^4.24.7",
+    "puppeteer": "^21.7.0",
+    "semver": "^7.5.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.5.2",
