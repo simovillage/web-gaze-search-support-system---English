@@ -1,16 +1,17 @@
-import Versions from './components/Versions'
-import icons from './assets/icons.svg'
+import icons from './assets/icons.svg';
+import Versions from './components/Versions';
 
 function App(): JSX.Element {
   return (
     <div className="container">
-      <Versions></Versions>
+      <Versions />
 
       <svg className="hero-logo" viewBox="0 0 900 300">
         <use xlinkHref={`${icons}#electron`} />
       </svg>
       <h2 className="hero-text">
-        You{"'"}ve successfully created an Electron project with React and TypeScript
+        You{"'"}ve successfully created an Electron project with React and
+        TypeScript
       </h2>
       <p className="hero-tagline">
         Please try pressing <code>F12</code> to open the devTool
@@ -18,7 +19,11 @@ function App(): JSX.Element {
 
       <div className="links">
         <div className="link-item">
-          <a target="_blank" href="https://electron-vite.org" rel="noopener noreferrer">
+          <a
+            target="_blank"
+            href="https://electron-vite.org"
+            rel="noopener noreferrer"
+          >
             Documentation
           </a>
         </div>
@@ -50,7 +55,11 @@ function App(): JSX.Element {
             <h2 className="title">Configuring</h2>
             <p className="detail">
               Config with <span>electron.vite.config.ts</span> and refer to the{' '}
-              <a target="_blank" href="https://electron-vite.org/config" rel="noopener noreferrer">
+              <a
+                target="_blank"
+                href="https://electron-vite.org/config"
+                rel="noopener noreferrer"
+              >
                 config guide
               </a>
               .
@@ -130,7 +139,11 @@ function App(): JSX.Element {
             <h2 className="title">Packaging</h2>
             <p className="detail">
               Use{' '}
-              <a target="_blank" href="https://www.electron.build" rel="noopener noreferrer">
+              <a
+                target="_blank"
+                href="https://www.electron.build"
+                rel="noopener noreferrer"
+              >
                 electron-builder
               </a>{' '}
               and pre-configured to pack your app.
@@ -139,7 +152,7 @@ function App(): JSX.Element {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
