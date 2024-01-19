@@ -1,9 +1,17 @@
 // 視線情報
-export type GazePoint = {
+export type GazePointNullable = {
   unixtime: number;
   x: number | null;
   y: number | null;
+  nullable: true;
 };
+export type GazePointNonNullable = {
+  unixtime: number;
+  x: number;
+  y: number;
+  nullable: false;
+};
+export type GazePoint = GazePointNullable | GazePointNonNullable;
 
 // Tobiiから視線情報が送られてきたときのイベント
 export type GazePointEvent = {
@@ -28,7 +36,7 @@ export type GazeEvent = GazePointEvent | GazeScrollEvent | GazeMouseMoveEvent;
 // 視線の状態
 export type GazeStates = {
   // 現在の停留点
-  currentStationaryPoint: GazePoint | null;
+  currentStationaryPoint: GazePointNonNullable | null;
   // 現在の視線の状態
-  lastPoint: GazePoint | null;
+  currentPoint: GazePointNonNullable | null;
 };

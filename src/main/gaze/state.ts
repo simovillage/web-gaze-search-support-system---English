@@ -1,6 +1,11 @@
 import EventEmitter from 'events';
+import { STATIONARY_DECISION_THRESHOLD_PIXEL } from '@src/main/constants';
 import { gazeEventEmitter } from '@src/main/gaze/event';
-import { GazeEvent, GazeStates } from '@src/main/gaze/type';
+import {
+  GazeEvent,
+  GazePointNonNullable,
+  GazeStates,
+} from '@src/main/gaze/type';
 
 // gazeStatesの更新を検知するためのEventEmitter
 const gazeStatesEmitter = new EventEmitter();
@@ -10,7 +15,7 @@ const gazeStates = new Proxy<{ states: GazeStates }>(
   {
     states: {
       currentStationaryPoint: null,
-      lastPoint: null,
+      currentPoint: null,
     },
   },
   {
@@ -28,14 +33,66 @@ const gazeStates = new Proxy<{ states: GazeStates }>(
   },
 );
 
+// 2点間のユークリッド距離を計算する
+const calculateEuclideanDistance = (
+  a: Pick<GazePointNonNullable, 'x' | 'y'>,
+  b: Pick<GazePointNonNullable, 'x' | 'y'>,
+) => {
+  return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
+};
+
 // gazeEventsが更新されたときの処理
 gazeEventEmitter.on('data', (data: GazeEvent) => {
   switch (data.name) {
     case 'point': {
-      const { value } = data;
+      // 現在の停留点
+      const currentStationaryPoint = gazeStates.states.currentStationaryPoint;
+      // 最新の視線情報
+      const currentPoint = data.value;
+
+      // 最新の視線情報がnullの場合は停留点をnullにする
+      if (currentPoint.nullable) {
+        const states = {
+          ...gazeStates.states,
+          currentStationaryPoint: null,
+          currentPoint: null,
+        };
+        gazeStates.states = states;
+        break;
+      }
+
+      // 直前の視線情報がnullの場合は停留点の更新
+      if (currentStationaryPoint === null) {
+        const states = {
+          ...gazeStates.states,
+          currentStationaryPoint: currentPoint,
+          currentPoint: currentPoint,
+        };
+        gazeStates.states = states;
+        break;
+      }
+
+      // 最新の視線情報と現在の停留点とのユークリッド距離を計算
+      const distance = calculateEuclideanDistance(
+        currentPoint,
+        currentStationaryPoint,
+      );
+
+      // 移動距離が閾値を超えていたら停留点の更新
+      if (distance > STATIONARY_DECISION_THRESHOLD_PIXEL) {
+        const states = {
+          ...gazeStates.states,
+          currentStationaryPoint: currentPoint,
+          currentPoint: currentPoint,
+        };
+        gazeStates.states = states;
+        break;
+      }
+
+      // 閾値を超えていなかったら停留点の更新はしない
       const states = {
         ...gazeStates.states,
-        lastPoint: value,
+        currentPoint: currentPoint,
       };
       gazeStates.states = states;
       break;
