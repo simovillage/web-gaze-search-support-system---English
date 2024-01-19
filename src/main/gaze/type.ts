@@ -36,7 +36,12 @@ export type GazeEvent = GazePointEvent | GazeScrollEvent | GazeMouseMoveEvent;
 // 視線の状態
 export type GazeStates = {
   // 現在の停留点
-  currentStationaryPoint: GazePointNonNullable | null;
+  currentStationaryPoint: GazePoint;
   // 現在の視線の状態
-  currentPoint: GazePointNonNullable | null;
+  currentPoint: GazePoint;
+};
+
+export type GazeUpdateStationaryPointData = {
+  currentStationaryPoint: GazePoint;
+  lastStationaryPoint: GazePoint;
 };

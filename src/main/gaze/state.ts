@@ -5,7 +5,10 @@ import {
   GazeEvent,
   GazePointNonNullable,
   GazeStates,
+  GazeUpdateStationaryPointData,
 } from '@src/main/gaze/type';
+import equal from 'fast-deep-equal';
+import { satisfies } from 'semver';
 
 // gazeStatesの更新を検知するためのEventEmitter
 const gazeStatesEmitter = new EventEmitter();
@@ -14,8 +17,18 @@ const gazeStatesEmitter = new EventEmitter();
 const gazeStates = new Proxy<{ states: GazeStates }>(
   {
     states: {
-      currentStationaryPoint: null,
-      currentPoint: null,
+      currentStationaryPoint: {
+        unixtime: 0,
+        x: null,
+        y: null,
+        nullable: true,
+      },
+      currentPoint: {
+        unixtime: 0,
+        x: null,
+        y: null,
+        nullable: true,
+      },
     },
   },
   {
@@ -23,10 +36,22 @@ const gazeStates = new Proxy<{ states: GazeStates }>(
       return Reflect.get(target, prop, receiver);
     },
     set: (target, prop, value, receiver) => {
+      const before = { ...target.states };
       const result = Reflect.set(target, prop, value, receiver);
-      if (result && prop !== 'states') {
+      const after = { ...target.states };
+
+      if (result && prop === 'states') {
         const states = value as GazeStates;
         gazeStatesEmitter.emit('data', { ...states });
+      }
+      if (
+        result &&
+        !equal(before.currentStationaryPoint, after.currentStationaryPoint)
+      ) {
+        gazeEventEmitter.emit('updateStationaryPoint', {
+          currentStationaryPoint: after.currentStationaryPoint,
+          lastStationaryPoint: before.currentStationaryPoint,
+        } satisfies GazeUpdateStationaryPointData);
       }
       return result;
     },
@@ -52,15 +77,23 @@ gazeEventEmitter.on('data', (data: GazeEvent) => {
       if (currentPoint.nullable) {
         const states = {
           ...gazeStates.states,
-          currentStationaryPoint: null,
-          currentPoint: null,
+          currentStationaryPoint: {
+            ...currentPoint,
+            x: null,
+            y: null,
+          },
+          currentPoint: {
+            ...currentPoint,
+            x: null,
+            y: null,
+          },
         };
         gazeStates.states = states;
         break;
       }
 
       // 直前の視線情報がnullの場合は停留点の更新
-      if (currentStationaryPoint === null) {
+      if (currentStationaryPoint.nullable) {
         const states = {
           ...gazeStates.states,
           currentStationaryPoint: currentPoint,
@@ -96,19 +129,39 @@ gazeEventEmitter.on('data', (data: GazeEvent) => {
       break;
     }
     case 'scroll': {
+      const { unixtime } = data.value;
       const states = {
-        ...gazeStates.states,
-        currentStationaryPoint: null,
-        lastPoint: null,
+        currentStationaryPoint: {
+          unixtime,
+          x: null,
+          y: null,
+          nullable: true,
+        } as const,
+        currentPoint: {
+          unixtime,
+          x: null,
+          y: null,
+          nullable: true,
+        } as const,
       };
       gazeStates.states = states;
       break;
     }
     case 'mouse-move': {
+      const { unixtime } = data.value;
       const states = {
-        ...gazeStates.states,
-        currentStationaryPoint: null,
-        lastPoint: null,
+        currentStationaryPoint: {
+          unixtime,
+          x: null,
+          y: null,
+          nullable: true,
+        } as const,
+        currentPoint: {
+          unixtime,
+          x: null,
+          y: null,
+          nullable: true,
+        } as const,
       };
       gazeStates.states = states;
       break;
