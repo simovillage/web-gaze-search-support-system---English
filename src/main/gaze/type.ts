@@ -41,6 +41,7 @@ export type GazeStates = {
   currentPoint: GazePoint;
 };
 
+// 停留点が更新されたときに送られるイベントのデータ
 export type GazeUpdateStationaryPointData = {
   currentStationaryPoint: GazePoint;
   lastStationaryPoint: GazePoint;
