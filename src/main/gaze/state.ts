@@ -8,7 +8,6 @@ import {
   GazeUpdateStationaryPointData,
 } from '@src/main/gaze/type';
 import equal from 'fast-deep-equal';
-import { satisfies } from 'semver';
 
 // gazeStatesの更新を検知するためのEventEmitter
 const gazeStatesEmitter = new EventEmitter();
