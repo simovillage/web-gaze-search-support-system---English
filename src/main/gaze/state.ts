@@ -37,9 +37,7 @@ const gazeStates = new Proxy<{ states: GazeStates }>(
 const calculateEuclideanDistance = (
   a: Pick<GazePointNonNullable, 'x' | 'y'>,
   b: Pick<GazePointNonNullable, 'x' | 'y'>,
-) => {
-  return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
-};
+) => Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
 
 // gazeEventsが更新されたときの処理
 gazeEventEmitter.on('data', (data: GazeEvent) => {
