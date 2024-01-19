@@ -14,7 +14,7 @@ export const execAsync = async <T = string>(
   command: string,
   args: string[],
 ): Promise<Result<{ stdout: T; stderr: string }, Error>> => {
-  const [normalisedCommand, ...normalisedArgs] = [command, ...args].map(
+  const [normalizedCommand, ...normalizedArgs] = [command, ...args].map(
     (str) => {
       let s = str;
       s = s.replace(/\//g, '\\');
@@ -31,9 +31,9 @@ export const execAsync = async <T = string>(
     },
   );
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     exec(
-      `${normalisedCommand} ${normalisedArgs.join(' ')}`,
+      `${normalizedCommand} ${normalizedArgs.join(' ')}`,
       (err, stdout, stderr) => {
         if (err) {
           resolve({
