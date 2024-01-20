@@ -19,6 +19,14 @@ export class SingletonPuppeteer {
       return;
     }
 
+    const pages = await SingletonPuppeteer._browser.pages();
+    for (const page of pages) {
+      page.removeAllListeners();
+      await page.close();
+    }
+
+    SingletonPuppeteer._browser.removeAllListeners();
+
     await SingletonPuppeteer._browser.close();
     SingletonPuppeteer._browser = null;
   }
