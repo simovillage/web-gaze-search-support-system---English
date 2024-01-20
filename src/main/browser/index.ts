@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { fetchPageElements } from '@src/main/browser/pageElement';
 import {
   articleRegexps,
   ignoreRegexps,
@@ -78,6 +79,13 @@ export const open = async () => {
     };
 
     store.set(`browser.pages.${hashedUrl}`, pageFull);
+
+    // 要素を取得して保存
+    store.set(`browser.pages.${hashedUrl}.elements.isLoading`, true);
+    fetchPageElements(url).then((elements) => {
+      store.set(`browser.pages.${hashedUrl}.elements.data`, elements);
+      store.set(`browser.pages.${hashedUrl}.elements.isLoading`, false);
+    });
   });
 };
 
