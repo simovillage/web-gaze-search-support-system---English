@@ -1,24 +1,18 @@
 import { GazePointNonNullable } from '@src/main/gaze/type';
 
-export type BrowserElementText = {
+export type BrowserElementRect = {
   x: number;
   y: number;
   width: number;
   height: number;
-  type: 'text';
+  type: 'text' | 'img';
+};
+
+export type BrowserElement = {
+  rects: BrowserElementRect[];
   text: string;
+  images: string[];
 };
-
-export type BrowserElementImage = {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-  type: 'image';
-  src: string;
-};
-
-export type BrowserElement = BrowserElementText | BrowserElementImage;
 
 export type BrowserPageType = 'article' | 'other';
 
