@@ -8,6 +8,7 @@ import {
 import { BrowserPage, BrowserStates } from '@src/main/browser/type';
 import { STATIONARY_DECISION_THRESHOLD_MILLISECOND } from '@src/main/constants';
 import { gazeStatesEmitter } from '@src/main/gaze';
+import { pushMouseMoveEvent, pushScrollEvent } from '@src/main/gaze/event';
 import { GazeUpdateStationaryPointData } from '@src/main/gaze/type';
 import { SingletonPuppeteer } from '@src/main/libs/puppeteer';
 import { store } from '@src/main/libs/store';
@@ -17,6 +18,33 @@ export const open = async () => {
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
   await page.goto('https://www.smartmagazine.jp/tokyo/');
+
+  // 特殊なイベントのための処理
+  await page.evaluateOnNewDocument(() => {
+    // スクロールの監視
+    window.addEventListener('scroll', () => {
+      console.log('scroll');
+    });
+    // マウスの移動の監視
+    window.addEventListener('mousemove', () => {
+      console.log('mousemove');
+    });
+  });
+
+  page.on('console', (msg) => {
+    if (msg.text() === 'scroll') {
+      pushScrollEvent({
+        unixtime: Date.now(),
+      });
+      return;
+    }
+    if (msg.text() === 'mousemove') {
+      pushMouseMoveEvent({
+        unixtime: Date.now(),
+      });
+      return;
+    }
+  });
 
   // ページが遷移したときの処理
   page.on('framenavigated', async (frame) => {
