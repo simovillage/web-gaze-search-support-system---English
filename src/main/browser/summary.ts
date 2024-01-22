@@ -49,8 +49,12 @@ const extractFocusedElements = async (
     }),
   );
 
+  console.log({
+    elementsWithFillRatio,
+  });
+
   const focusedElements = elementsWithFillRatio.filter(
-    (element) => element.fillRatio > FOCUS_DECISION_FILL_RATIO_THRESHOLD,
+    (element) => element.fillRatio > 0.05, //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
   );
 
   return focusedElements;
@@ -115,7 +119,16 @@ export const summarizeArticleBasedOnFocusedElements = async (
     )
   ).flatMap((caption) => (caption ? [caption] : []));
 
+  console.log({
+    focusedTexts,
+    captions,
+  });
+
   const summary = await summarize([...focusedTexts, ...captions].join('\n'));
+
+  console.log({
+    summary,
+  });
 
   if (!summary.ok) {
     throw summary.error;

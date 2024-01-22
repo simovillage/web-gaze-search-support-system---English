@@ -1,6 +1,7 @@
 import { join } from 'path';
 import { electronApp, is, optimizer } from '@electron-toolkit/utils';
 import { open } from '@src/main/browser';
+import { suggest } from '@src/main/keyword';
 import { resetStore } from '@src/main/libs/store';
 import { initialize } from '@src/main/python';
 import { BrowserWindow, app, shell } from 'electron';
@@ -52,11 +53,14 @@ app.whenReady().then(async () => {
     optimizer.watchWindowShortcuts(window);
   });
 
-  resetStore();
+  // resetStore();
 
   createWindow();
 
-  open();
+  // open();
+
+  const keywords = await suggest();
+  console.log(keywords);
 
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
