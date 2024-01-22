@@ -117,6 +117,7 @@ export const open = async () => {
     });
   });
 
+  // 記事ページから戻ってきたときの処理
   page.on('framenavigated', async (frame) => {
     const url = frame.url();
 
