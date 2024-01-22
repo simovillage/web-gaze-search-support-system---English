@@ -16,5 +16,14 @@
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
     "source.organizeImports.biome": "explicit"
-  }
+  },
+  "cSpell.words": [
+    "framenavigated",
+    "networkidle",
+    "openai",
+    "smartmagazine",
+    "Tobii",
+    "unixtime",
+    "venv"
+  ]
 }
