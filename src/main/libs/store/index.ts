@@ -18,7 +18,8 @@ store.set({ ...defaultValues, ...storeValues });
 
 const resetStore = () => {
   const system = store.get('system');
-  store.set({ ...defaultValues, system });
+  const pages = store.get('browser').pages;
+  store.set({ ...defaultValues, system, browser: { pageHistory: [], pages } });
 };
 
 export { store, resetStore };

@@ -28,6 +28,7 @@ const gazeStates = new Proxy<{ states: GazeStates }>(
         y: null,
         nullable: true,
       },
+      currentScrollY: 0,
     },
   },
   {
@@ -47,9 +48,10 @@ const gazeStates = new Proxy<{ states: GazeStates }>(
         result &&
         !equal(before.currentStationaryPoint, after.currentStationaryPoint)
       ) {
-        gazeEventEmitter.emit('updateStationaryPoint', {
+        gazeStatesEmitter.emit('updateStationaryPoint', {
           currentStationaryPoint: after.currentStationaryPoint,
           lastStationaryPoint: before.currentStationaryPoint,
+          scrollY: before.currentScrollY,
         } satisfies GazeUpdateStationaryPointData);
       }
       return result;
@@ -128,7 +130,7 @@ gazeEventEmitter.on('data', (data: GazeEvent) => {
       break;
     }
     case 'scroll': {
-      const { unixtime } = data.value;
+      const { unixtime, scrollY } = data.value;
       const states = {
         currentStationaryPoint: {
           unixtime,
@@ -142,6 +144,7 @@ gazeEventEmitter.on('data', (data: GazeEvent) => {
           y: null,
           nullable: true,
         } as const,
+        currentScrollY: scrollY,
       };
       gazeStates.states = states;
       break;
@@ -149,6 +152,7 @@ gazeEventEmitter.on('data', (data: GazeEvent) => {
     case 'mouse-move': {
       const { unixtime } = data.value;
       const states = {
+        ...gazeStates.states,
         currentStationaryPoint: {
           unixtime,
           x: null,

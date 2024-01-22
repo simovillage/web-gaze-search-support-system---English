@@ -3,6 +3,9 @@ import { execAsync } from '@main/libs/childProcess';
 import semver from 'semver';
 
 export const initialize = async () => {
+  console.log('Initializing Python...');
+
+  console.log('Checking Python version...');
   const pyVersionResult = await execAsync<string>('python', ['--version']);
   if (!pyVersionResult.ok) {
     throw new Error(`Python not found: ${pyVersionResult.error.message}`);
@@ -21,6 +24,7 @@ export const initialize = async () => {
     );
   }
 
+  console.log('Installing Python dependencies...');
   const venvResult = await execAsync<string>('python', ['-m', 'venv', '.venv']);
   if (!venvResult.ok) {
     throw new Error(`Python venv failed: ${venvResult.error.message}`);
@@ -55,4 +59,6 @@ export const initialize = async () => {
       `Python pip install failed: ${pipInstallResult.error.message}`,
     );
   }
+
+  console.log('Python initialized successfully');
 };

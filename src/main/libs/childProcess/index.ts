@@ -18,22 +18,24 @@ export const execAsync = async <T = string>(
     (str) => {
       let s = str;
       s = s.replace(/\//g, '\\');
-      s = s.replace(/"/, `\"`);
-      s = s.replace(/\|/, '^|');
-      s = s.replace(/</, '^<');
-      s = s.replace(/>/, '^>');
-      s = s.replace(/&/, '^&');
-      s = s.replace(/;/, '^;');
-      s = s.replace(/%/, '^%');
-      s = s.replace(/!/, '^!');
-      s = s.replace(/\^/, '^^');
-      return `"${s}"`;
+      s = s.replace(/"/g, `\\"`);
+      s = s.replace(/\|/g, '^|');
+      s = s.replace(/</g, '^<');
+      s = s.replace(/>/g, '^>');
+      s = s.replace(/&/g, '^&');
+      s = s.replace(/;/g, '^;');
+      s = s.replace(/%/g, '^%');
+      s = s.replace(/!/g, '^!');
+      s = s.replace(/\^/g, '^^');
+      return `${s}`;
     },
   );
 
+  const superNormalizedArgs = normalizedArgs.map((str) => `"${str}"`);
+
   return new Promise((resolve) => {
     exec(
-      `${normalizedCommand} ${normalizedArgs.join(' ')}`,
+      `${normalizedCommand} ${superNormalizedArgs.join(' ')}`,
       (err, stdout, stderr) => {
         if (err) {
           resolve({

@@ -1,6 +1,7 @@
 import EventEmitter from 'events';
 import {
   GazeEvent,
+  GazeMouseMoveEvent,
   GazePointEvent,
   GazeScrollEvent,
 } from '@src/main/gaze/type';
@@ -42,7 +43,7 @@ const pushScrollEvent = (value: GazeScrollEvent['value']): void => {
 };
 
 // MouseMoveEventをpushする
-const pushMouseMoveEvent = (value: GazeScrollEvent['value']): void => {
+const pushMouseMoveEvent = (value: GazeMouseMoveEvent['value']): void => {
   gazeEvents.push({
     name: 'mouse-move',
     value,

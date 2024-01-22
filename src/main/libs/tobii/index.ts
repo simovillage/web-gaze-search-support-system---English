@@ -13,6 +13,14 @@ childProcess.stdout.on('data', (chunk: Buffer) => {
   const raw = chunk.toString();
   const [unixtime, x_ratio, y_ratio] = raw.split('/').map((v) => parseFloat(v));
 
+  if (
+    unixtime === undefined ||
+    x_ratio === undefined ||
+    y_ratio === undefined
+  ) {
+    return;
+  }
+
   // Tobiiの座標系は左上が(0, 0)、右下が(1, 1)のため、画面の座標系に変換する
   const x_p = Number.isNaN(x_ratio) ? null : Math.round(x_ratio * SCREEN_WIDTH);
   const x = (() => {
@@ -44,5 +52,7 @@ childProcess.stdout.on('data', (chunk: Buffer) => {
     return y_p;
   })();
 
-  tobiiEmitter.emit('data', { unixtime, x, y });
+  const nullable = x === null || y === null;
+
+  tobiiEmitter.emit('data', { unixtime, x, y, nullable });
 });

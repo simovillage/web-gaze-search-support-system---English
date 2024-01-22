@@ -22,7 +22,10 @@ export type GazePointEvent = {
 // スクロールしたときのイベント
 export type GazeScrollEvent = {
   name: 'scroll';
-  value: Pick<GazePoint, 'unixtime'>;
+  value: Pick<GazePoint, 'unixtime'> & {
+    // スクロール量
+    scrollY: number;
+  };
 };
 
 // マウスを動かしたときのイベント
@@ -39,10 +42,13 @@ export type GazeStates = {
   currentStationaryPoint: GazePoint;
   // 現在の視線の状態
   currentPoint: GazePoint;
+  // 現在のスクロール量
+  currentScrollY: number;
 };
 
 // 停留点が更新されたときに送られるイベントのデータ
 export type GazeUpdateStationaryPointData = {
   currentStationaryPoint: GazePoint;
   lastStationaryPoint: GazePoint;
+  scrollY: number;
 };

@@ -1,5 +1,8 @@
 import { join } from 'path';
 import { electronApp, is, optimizer } from '@electron-toolkit/utils';
+import { open } from '@src/main/browser';
+import { resetStore } from '@src/main/libs/store';
+import { initialize } from '@src/main/python';
 import { BrowserWindow, app, shell } from 'electron';
 import icon from '../../resources/icon.png?asset';
 
@@ -49,7 +52,11 @@ app.whenReady().then(async () => {
     optimizer.watchWindowShortcuts(window);
   });
 
+  resetStore();
+
   createWindow();
+
+  open();
 
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the

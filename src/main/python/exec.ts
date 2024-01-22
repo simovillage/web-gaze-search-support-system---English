@@ -4,7 +4,7 @@ export const execPythonScript = async <T>(
   scriptPath: string,
   args: string[],
 ) => {
-  const result = await execAsync('.venv/Scripts/pyhton.exe', [
+  const result = await execAsync('.venv/Scripts/python.exe', [
     scriptPath,
     ...args,
   ]);

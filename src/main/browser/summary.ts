@@ -32,10 +32,12 @@ const extractFocusedElements = async (
   const elementsWithFillRatio = await Promise.all(
     elementsWithStationaryPoints.map(async (element) => {
       const fillRatios = await Promise.all(
-        element.rects.map(async (rect) => {
-          const fillRatio = await calcFillRatio(rect);
-          return fillRatio;
-        }),
+        element.rects
+          .filter(({ rect }) => rect.type === 'text')
+          .map(async (rect) => {
+            const fillRatio = await calcFillRatio(rect);
+            return fillRatio;
+          }),
       );
 
       const products = fillRatios.reduce((acc, cur) => acc * cur, 1);
@@ -67,7 +69,7 @@ export const summarizeArticleBasedOnFocusedElements = async (
 
   const waitForElementsResult = await new Promise<Result<void, Error>>(
     (resolve) => {
-      setTimeout(() => {
+      const id = setTimeout(() => {
         resolve({
           ok: false,
           error: new Error('timeout'),
@@ -79,6 +81,7 @@ export const summarizeArticleBasedOnFocusedElements = async (
           return;
         }
 
+        clearTimeout(id);
         clearInterval(interval);
         resolve({
           ok: true,

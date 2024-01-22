@@ -7,7 +7,10 @@ import {
 } from '@src/main/browser/regexp';
 import { summarizeArticleBasedOnFocusedElements } from '@src/main/browser/summary';
 import { BrowserPage, BrowserStates } from '@src/main/browser/type';
-import { STATIONARY_DECISION_THRESHOLD_MILLISECOND } from '@src/main/constants';
+import {
+  SCREEN_HEIGHT_OFFSET,
+  STATIONARY_DECISION_THRESHOLD_MILLISECOND,
+} from '@src/main/constants';
 import { gazeStatesEmitter } from '@src/main/gaze';
 import { pushMouseMoveEvent, pushScrollEvent } from '@src/main/gaze/event';
 import { GazeUpdateStationaryPointData } from '@src/main/gaze/type';
@@ -24,7 +27,8 @@ export const open = async () => {
   await page.evaluateOnNewDocument(() => {
     // スクロールの監視
     window.addEventListener('scroll', () => {
-      console.log('scroll');
+      const { scrollY } = window;
+      console.log(`scroll:${scrollY}`);
     });
     // マウスの移動の監視
     window.addEventListener('mousemove', () => {
@@ -33,9 +37,11 @@ export const open = async () => {
   });
 
   page.on('console', (msg) => {
-    if (msg.text() === 'scroll') {
+    if (msg.text().startsWith('scroll:')) {
+      const scrollY = Number(msg.text().replace('scroll:', ''));
       pushScrollEvent({
         unixtime: Date.now(),
+        scrollY,
       });
       return;
     }
@@ -145,10 +151,10 @@ export const open = async () => {
 
     // 遷移前のページが記事ページかどうかを判定
     const includeArticlesLast = articleRegexps.some((regexp) =>
-      regexp.test(url),
+      regexp.test(lastPage.url.raw),
     );
     const includeNotArticlesLast = notArticleRegexps.some((regexp) =>
-      regexp.test(url),
+      regexp.test(lastPage.url.raw),
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
@@ -157,9 +163,11 @@ export const open = async () => {
       return;
     }
 
-    const isFitIntention = confirm(
-      'ただいま閲覧したページはタスクや興味に適していましたか？',
-    );
+    const isFitIntention = await page.evaluate(() => {
+      return window.confirm(
+        'ただいま閲覧したページはタスクや興味に適していましたか？',
+      );
+    });
 
     // 検索意図に適していない場合は何もしない
     if (!isFitIntention) {
@@ -169,7 +177,7 @@ export const open = async () => {
     // URLをハッシュ化
     const hashedUrl = crypto
       .createHash('sha256')
-      .update(url, 'utf8')
+      .update(lastPage.url.raw, 'utf8')
       .digest('hex');
 
     // 要約を取得して保存
@@ -193,7 +201,7 @@ gazeStatesEmitter.on(
     }
 
     // 停留時間を計算し、閾値以下なら何もしない
-    const { currentStationaryPoint, lastStationaryPoint } = data;
+    const { currentStationaryPoint, lastStationaryPoint, scrollY } = data;
 
     if (lastStationaryPoint.nullable) {
       return;
@@ -217,7 +225,10 @@ gazeStatesEmitter.on(
 
     // 停留点を追加
     clonedTargetPage.stationaryPoints.push({
-      ...lastStationaryPoint,
+      unixtime: lastStationaryPoint.unixtime,
+      x: lastStationaryPoint.x,
+      y: lastStationaryPoint.y + scrollY - 80,
+      nullable: lastStationaryPoint.nullable,
       stationaryTime,
     });
 
