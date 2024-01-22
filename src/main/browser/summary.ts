@@ -1,8 +1,5 @@
 import { BrowserElement, BrowserStationaryPoint } from '@src/main/browser/type';
-import {
-  FOCUS_DECISION_FILL_RATIO_THRESHOLD,
-  RECT_INCLUDE_OFFSET,
-} from '@src/main/constants';
+import { RECT_INCLUDE_OFFSET } from '@src/main/constants';
 import { generateCaption, summarize } from '@src/main/libs/openai';
 import { store } from '@src/main/libs/store';
 import { calcFillRatio } from '@src/main/python';
