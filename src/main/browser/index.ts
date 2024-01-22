@@ -5,6 +5,7 @@ import {
   ignoreRegexps,
   notArticleRegexps,
 } from '@src/main/browser/regexp';
+import { summarizeArticleBasedOnFocusedElements } from '@src/main/browser/summary';
 import { BrowserPage, BrowserStates } from '@src/main/browser/type';
 import { STATIONARY_DECISION_THRESHOLD_MILLISECOND } from '@src/main/constants';
 import { gazeStatesEmitter } from '@src/main/gaze';
@@ -114,6 +115,65 @@ export const open = async () => {
       store.set(`browser.pages.${hashedUrl}.elements.data`, elements);
       store.set(`browser.pages.${hashedUrl}.elements.isLoading`, false);
     });
+  });
+
+  page.on('framenavigated', async (frame) => {
+    const url = frame.url();
+
+    // 除外ページなら何もしない
+    const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));
+    if (includeIgnores) {
+      return;
+    }
+
+    // 現在のページが記事ページかどうかを判定
+    const includeArticlesCurrent = articleRegexps.some((regexp) =>
+      regexp.test(url),
+    );
+    const includeNotArticlesCurrent = notArticleRegexps.some((regexp) =>
+      regexp.test(url),
+    );
+    const isArticleCurrent =
+      includeArticlesCurrent && !includeNotArticlesCurrent;
+
+    const pageHistory = store.get('browser').pageHistory;
+    const lastPage = pageHistory.at(-1);
+    if (!lastPage) {
+      return;
+    }
+
+    // 遷移前のページが記事ページかどうかを判定
+    const includeArticlesLast = articleRegexps.some((regexp) =>
+      regexp.test(url),
+    );
+    const includeNotArticlesLast = notArticleRegexps.some((regexp) =>
+      regexp.test(url),
+    );
+    const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
+
+    // 記事ページから戻ってきた場合のみ処理する
+    if (!(!isArticleCurrent && isArticleLast)) {
+      return;
+    }
+
+    const isFitIntention = confirm(
+      'ただいま閲覧したページはタスクや興味に適していましたか？',
+    );
+
+    // 検索意図に適していない場合は何もしない
+    if (!isFitIntention) {
+      return;
+    }
+
+    // URLをハッシュ化
+    const hashedUrl = crypto
+      .createHash('sha256')
+      .update(url, 'utf8')
+      .digest('hex');
+
+    // 要約を取得して保存
+    const summary = await summarizeArticleBasedOnFocusedElements(hashedUrl);
+    store.set(`browser.pages.${hashedUrl}.summary.data`, summary);
   });
 };
 

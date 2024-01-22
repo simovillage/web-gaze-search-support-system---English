@@ -1,5 +1,5 @@
 import EventEmitter from 'events';
-import { STATIONARY_DECISION_THRESHOLD_PIXEL } from '@src/main/constants';
+import { STATIONARY_DECISION_PIXEL_RANGE_RADIUS } from '@src/main/constants';
 import { gazeEventEmitter } from '@src/main/gaze/event';
 import {
   GazeEvent,
@@ -109,7 +109,7 @@ gazeEventEmitter.on('data', (data: GazeEvent) => {
       );
 
       // 移動距離が閾値を超えていたら停留点の更新
-      if (distance > STATIONARY_DECISION_THRESHOLD_PIXEL) {
+      if (distance > STATIONARY_DECISION_PIXEL_RANGE_RADIUS) {
         const states = {
           ...gazeStates.states,
           currentStationaryPoint: currentPoint,
