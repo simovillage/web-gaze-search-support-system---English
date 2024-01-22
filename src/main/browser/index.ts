@@ -8,8 +8,8 @@ import {
 import { summarizeArticleBasedOnFocusedElements } from '@src/main/browser/summary';
 import { BrowserPage, BrowserStates } from '@src/main/browser/type';
 import {
-  SCREEN_HEIGHT_OFFSET,
   STATIONARY_DECISION_THRESHOLD_MILLISECOND,
+  STATIONARY_POINT_Y_OFFSET,
 } from '@src/main/constants';
 import { gazeStatesEmitter } from '@src/main/gaze';
 import { pushMouseMoveEvent, pushScrollEvent } from '@src/main/gaze/event';
@@ -53,7 +53,7 @@ export const open = async () => {
     }
   });
 
-  // ページが遷移したときの処理
+  // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
     const title = await frame.title();
     const url = frame.url();
@@ -184,6 +184,22 @@ export const open = async () => {
     const summary = await summarizeArticleBasedOnFocusedElements(hashedUrl);
     store.set(`browser.pages.${hashedUrl}.summary.data`, summary);
   });
+
+  // ページ遷移時にスクロールをリセットする
+  page.on('framenavigated', async (frame) => {
+    const url = frame.url();
+
+    // 除外ページなら何もしない
+    const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));
+    if (includeIgnores) {
+      return;
+    }
+
+    pushScrollEvent({
+      unixtime: Date.now(),
+      scrollY: 0,
+    });
+  });
 };
 
 // 停留点が更新されたときの処理
@@ -227,7 +243,7 @@ gazeStatesEmitter.on(
     clonedTargetPage.stationaryPoints.push({
       unixtime: lastStationaryPoint.unixtime,
       x: lastStationaryPoint.x,
-      y: lastStationaryPoint.y + scrollY - 80,
+      y: lastStationaryPoint.y + scrollY - STATIONARY_POINT_Y_OFFSET,
       nullable: lastStationaryPoint.nullable,
       stationaryTime,
     });

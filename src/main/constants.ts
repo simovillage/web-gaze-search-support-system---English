@@ -15,6 +15,9 @@ export const TOBII_SAMPLE_RATE = 60;
 export const HEAD_TEXT_HEIGHT_OFFSET = 20;
 export const BLOCK_BOTTOM_OFFSET = 30;
 
+// 停留点のyがやや下になるのを調整するためのオフセット
+export const STATIONARY_POINT_Y_OFFSET = 80;
+
 // Rect内に含める停留点のオフセット
 export const RECT_INCLUDE_OFFSET = 50;
 
@@ -25,4 +28,3 @@ export const STATIONARY_DECISION_THRESHOLD_MILLISECOND = 300;
 
 // 注視判定に必要な停留点の面積の割合の閾値
 export const FOCUS_DECISION_FILL_RATIO_THRESHOLD = 0.5;
-export const FOCUS_DECISION_FILL_RATIO_THRESHOLD_LOWER_LIMIT = 0.2;
