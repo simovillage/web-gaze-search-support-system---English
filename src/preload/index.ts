@@ -1,8 +1,14 @@
 import { electronAPI } from '@electron-toolkit/preload';
-import { contextBridge } from 'electron';
+import { contextBridge, ipcRenderer } from 'electron';
 
 // Custom APIs for renderer
-const api = {};
+export const api = {
+  launchBrowser: async () => await ipcRenderer.invoke('launch-browser'),
+  closeBrowser: async () => await ipcRenderer.invoke('close-browser'),
+  suggestKeywords: async () => await ipcRenderer.invoke('suggest-keywords'),
+  openKeywordsModal: async () =>
+    await ipcRenderer.invoke('open-keywords-modal'),
+};
 
 // Use `contextBridge` APIs to expose Electron APIs to
 // renderer only if context isolation is enabled, otherwise

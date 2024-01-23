@@ -1,10 +1,13 @@
 import { join } from 'path';
 import { electronApp, is, optimizer } from '@electron-toolkit/utils';
 import { open } from '@src/main/browser';
+import { handleCloseBrowser } from '@src/main/handlers/closeBrowser';
+import { handleLaunchBrowser } from '@src/main/handlers/launchBrowser';
+import { handleSuggestKeywords } from '@src/main/handlers/suggestKeywords';
 import { suggest } from '@src/main/keyword';
 import { resetStore } from '@src/main/libs/store';
 import { initialize } from '@src/main/python';
-import { BrowserWindow, app, shell } from 'electron';
+import { BrowserWindow, app, ipcMain, shell } from 'electron';
 import icon from '../../resources/icon.png?asset';
 
 function createWindow(): void {
@@ -37,6 +40,12 @@ function createWindow(): void {
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
   }
+
+  ipcMain.handle('launch-browser', async () => await handleLaunchBrowser());
+
+  ipcMain.handle('close-browser', async () => await handleCloseBrowser());
+
+  ipcMain.handle('suggest-keywords', async () => await handleSuggestKeywords());
 }
 
 // This method will be called when Electron has finished
@@ -53,14 +62,9 @@ app.whenReady().then(async () => {
     optimizer.watchWindowShortcuts(window);
   });
 
-  // resetStore();
+  resetStore();
 
   createWindow();
-
-  // open();
-
-  const keywords = await suggest();
-  console.log(keywords);
 
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
