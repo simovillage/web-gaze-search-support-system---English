@@ -47,6 +47,16 @@ ignore_words_list = [
     r"キッズ",
     r"ウェルカム",
     r"補助便座",
+    r"^参拝者$",
+    r"^観光",
+    r"お勧め",
+    r"敷地",
+    r"言わず",
+    r"^にも$",
+    r"ブッフェ",
+    r"ショッピング",
+    r"オア"
+
 ]
 
 
@@ -215,9 +225,11 @@ def find_similar_tourism_spots(
         correlations = []
         for j in range(len(emotion_scores)):
             if i != j:
+                # TODO: ここでエラーが発生する可能性あり
                 # ピアソンの積率相関係数を計算
                 corr, _ = pearsonr(emotion_scores.iloc[i], emotion_scores.iloc[j])
                 correlations.append(corr)
+                # correlations.append(1)
 
         # 相関係数の平均を計算して辞書に格納
         average_correlation_scores[similar_spot_df.loc[i, "観光地"]] = np.mean(

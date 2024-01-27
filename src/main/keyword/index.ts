@@ -97,6 +97,9 @@ export const suggest = async () => {
     similarRelatedKeywords.push(...similar_related);
     spotRelatedKeywords.push(...spot_related);
 
+    // TODO: ここでエラーが発生する可能性あり
+    // break;
+
     if (
       textRelatedKeywords.length >= keywordLengthThreshold &&
       similarRelatedKeywords.length >= keywordLengthThreshold &&
