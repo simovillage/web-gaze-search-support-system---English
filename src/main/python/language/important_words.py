@@ -147,7 +147,9 @@ def extract_words(text: str):
 
     words = list(
         filter(
-            lambda row: (row[1] == "名詞") or (row[1] == "動詞") or (row[1] == "形容詞"),
+            lambda row: (row[1] == "名詞")
+            or (row[1] == "動詞")
+            or (row[1] == "形容詞"),
             separating_words,
         )
     )
