@@ -107,8 +107,11 @@ export const suggest = async () => {
   }
 
   return {
-    textRelated: textRelatedKeywords.slice(0, keywordLengthThreshold),
-    similarRelated: similarRelatedKeywords.slice(0, keywordLengthThreshold),
-    spotRelated: spotRelatedKeywords.slice(0, keywordLengthThreshold),
+    textRelatedKeywords: textRelatedKeywords.slice(0, keywordLengthThreshold),
+    similarRelatedKeywords: similarRelatedKeywords.slice(
+      0,
+      keywordLengthThreshold,
+    ),
+    spotRelatedKeywords: spotRelatedKeywords.slice(0, keywordLengthThreshold),
   };
 };

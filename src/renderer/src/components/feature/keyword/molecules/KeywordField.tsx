@@ -1,3 +1,5 @@
+import { useUpdateKeywords } from '@src/renderer/src/stores/keyword/operations';
+
 type KeywordFieldPresenterProps = {
   onClickOpen: () => Promise<void>;
 };
@@ -5,9 +7,12 @@ type KeywordFieldPresenterProps = {
 export const KeywordFieldPresenter = ({
   onClickOpen,
 }: KeywordFieldPresenterProps) => {
+  const updateRelatedKeywords = useUpdateKeywords();
   const handleClickSuggest = async () => {
-    await window.api.suggestKeywords();
+    const relatedKeywords = await window.api.suggestKeywords();
+    updateRelatedKeywords(relatedKeywords);
   };
+
   return (
     <div className="flex items-center justify-start space-x-4">
       <button

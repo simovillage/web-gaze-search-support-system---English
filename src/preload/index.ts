@@ -5,7 +5,11 @@ import { contextBridge, ipcRenderer } from 'electron';
 export const api = {
   launchBrowser: async () => await ipcRenderer.invoke('launch-browser'),
   closeBrowser: async () => await ipcRenderer.invoke('close-browser'),
-  suggestKeywords: async () => await ipcRenderer.invoke('suggest-keywords'),
+  suggestKeywords: async (): Promise<{
+    textRelatedKeywords: string[];
+    similarRelatedKeywords: string[];
+    spotRelatedKeywords: string[];
+  }> => await ipcRenderer.invoke('suggest-keywords'),
   openKeywordsModal: async () =>
     await ipcRenderer.invoke('open-keywords-modal'),
 };
