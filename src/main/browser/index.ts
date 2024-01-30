@@ -181,12 +181,12 @@ export const open = async () => {
       .digest('hex');
 
     // 要約を取得して保存
-    console.log("generating summary...")
-    store.set(`browser.pages.${hashedUrl}.summary.isLoading`, true)
+    console.log('generating summary...');
+    store.set(`browser.pages.${hashedUrl}.summary.isLoading`, true);
     const summary = await summarizeArticleBasedOnFocusedElements(hashedUrl);
     store.set(`browser.pages.${hashedUrl}.summary.data`, summary);
-    store.set(`browser.pages.${hashedUrl}.summary.isLoading`, false)
-    console.log("summary generated")
+    store.set(`browser.pages.${hashedUrl}.summary.isLoading`, false);
+    console.log('summary generated');
   });
 
   // ページ遷移時にスクロールをリセットする
