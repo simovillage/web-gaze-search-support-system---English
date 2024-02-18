@@ -3,7 +3,8 @@ import { electronApp, is, optimizer } from '@electron-toolkit/utils';
 import { handleCloseBrowser } from '@src/main/handlers/closeBrowser';
 import { handleLaunchBrowser } from '@src/main/handlers/launchBrowser';
 import { handleSuggestKeywords } from '@src/main/handlers/suggestKeywords';
-import { resetStore } from '@src/main/libs/store';
+import { resetStore, store } from '@src/main/libs/store';
+import { initialize } from '@src/main/python';
 import { BrowserWindow, app, ipcMain, shell } from 'electron';
 import icon from '../../resources/icon.png?asset';
 
@@ -58,6 +59,10 @@ app.whenReady().then(async () => {
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window);
   });
+
+  if (!store.get('system').isInitializedPythonEnv) {
+    await initialize();
+  }
 
   resetStore();
 
