@@ -1,5 +1,8 @@
 {
-  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "extends": [
+    "@electron-toolkit/tsconfig/tsconfig.web.json",
+    "@tsconfig/strictest/tsconfig.json"
+  ],
   "include": [
     "src/renderer/src/env.d.ts",
     "src/renderer/src/**/*",
@@ -11,9 +14,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@renderer/*": [
-        "src/renderer/src/*"
-      ]
+      "@src/*": ["src/*"],
+      "@renderer/*": ["src/renderer/src/*"]
     }
   }
 }
