@@ -5,10 +5,12 @@ import { store } from '@src/main/libs/store';
 import { calcFillRatio } from '@src/main/python';
 import { Result } from '@src/types/result';
 
+// 注視した要素を抽出する
 const extractFocusedElements = async (
   elements: BrowserElement[],
   stationaryPoints: BrowserStationaryPoint[],
 ) => {
+  // 要素と停留点を結びつける
   const elementsWithStationaryPoints = elements.map((element) => ({
     ...element,
     rects: element.rects.map((rect) => {
@@ -26,6 +28,7 @@ const extractFocusedElements = async (
     }),
   }));
 
+  // 四角形の面積と停留点の面積の割合を計算する
   const elementsWithFillRatio = await Promise.all(
     elementsWithStationaryPoints.map(async (element) => {
       const fillRatios = await Promise.all(
@@ -57,6 +60,7 @@ const extractFocusedElements = async (
   return focusedElements;
 };
 
+// 注視した要素を基に要約する
 export const summarizeArticleBasedOnFocusedElements = async (
   hashedUrl: string,
 ) => {

@@ -2,14 +2,16 @@ import time
 
 import tobii_research as tr
 
-fount_eyetrackers = tr.find_all_eyetrackers()
-my_eyetracker = fount_eyetrackers[0]
+# デバイスの取得
+found_eyetrackers = tr.find_all_eyetrackers()
+my_eyetracker = found_eyetrackers[0]
 
 if my_eyetracker is None:
     print("No eyetracker found", flush=True)
     exit(1)
 
 
+# サブスクライブで実行するコールバック関数
 def gaze_data_callback(gaze_data):
     gaze_left_eye = gaze_data["left_gaze_point_on_display_area"]
     gaze_right_eye = gaze_data["right_gaze_point_on_display_area"]
@@ -29,9 +31,11 @@ def gaze_data_callback(gaze_data):
     )
 
 
+# サブスクライブの開始
 my_eyetracker.subscribe_to(
     tr.EYETRACKER_GAZE_DATA, gaze_data_callback, as_dictionary=True
 )
 
+# プロセスが終了しないようにする
 while True:
     time.sleep(1)

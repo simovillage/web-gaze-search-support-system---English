@@ -5,6 +5,7 @@ import { SCREEN_HEIGHT, SCREEN_WIDTH } from '@src/main/constants';
 // Tobiiからのデータを受け取るためのEventEmitter
 export const tobiiEmitter = new EventEmitter();
 
+// Tobiiを動かすPythonスクリプトを実行する
 const childProcess = spawn('.venv/Scripts/python.exe', [
   'src/main/libs/tobii/subscribe.py',
 ]);
@@ -23,6 +24,8 @@ childProcess.stdout.on('data', (chunk: Buffer) => {
 
   // Tobiiの座標系は左上が(0, 0)、右下が(1, 1)のため、画面の座標系に変換する
   const x_p = Number.isNaN(x_ratio) ? null : Math.round(x_ratio * SCREEN_WIDTH);
+
+  // 座標の補正
   const x = (() => {
     if (x_p === null) {
       return null;
@@ -52,6 +55,7 @@ childProcess.stdout.on('data', (chunk: Buffer) => {
     return y_p;
   })();
 
+  // 座標にnullが含まれるかどうか
   const nullable = x === null || y === null;
 
   tobiiEmitter.emit('data', { unixtime, x, y, nullable });

@@ -1,12 +1,9 @@
 import { join } from 'path';
 import { electronApp, is, optimizer } from '@electron-toolkit/utils';
-import { open } from '@src/main/browser';
 import { handleCloseBrowser } from '@src/main/handlers/closeBrowser';
 import { handleLaunchBrowser } from '@src/main/handlers/launchBrowser';
 import { handleSuggestKeywords } from '@src/main/handlers/suggestKeywords';
-import { suggest } from '@src/main/keyword';
 import { resetStore } from '@src/main/libs/store';
-import { initialize } from '@src/main/python';
 import { BrowserWindow, app, ipcMain, shell } from 'electron';
 import icon from '../../resources/icon.png?asset';
 

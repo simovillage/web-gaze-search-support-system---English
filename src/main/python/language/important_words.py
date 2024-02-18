@@ -11,6 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 mecab = MeCab.Tagger('-r "C:\Program Files (x86)\MeCab\etc\mecabrc-u"')
 
+# 固有名詞から除外する単語のリスト
 ignore_words_list = [
     r"^.*[0-9]+[年月日時分秒m].*$",
     r"^デートコース$",
@@ -148,6 +149,7 @@ ignore_words_list = [
 ]
 
 
+# MeCabを使ってテキストから単語を抽出する関数
 def extract_words(text: str):
     parsed_result = mecab.parse(text)
     splitted_rows = re.split(r"\n", parsed_result)
@@ -251,6 +253,7 @@ def find_similar_by_vector(words):
     return result_words
 
 
+# 類似観光スポットを抽出する関数
 def find_similar_tourism_spots(
     article_title: str, top_5_words: list[str], similar_words: list[str]
 ):

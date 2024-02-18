@@ -1,5 +1,6 @@
 import { GazePointNonNullable } from '@src/main/gaze/type';
 
+// Webページの要素の座標
 export type BrowserElementRect = {
   x: number;
   y: number;
@@ -8,18 +9,22 @@ export type BrowserElementRect = {
   type: 'text' | 'img';
 };
 
+// Webページの要素
 export type BrowserElement = {
   rects: BrowserElementRect[];
   text: string;
   images: string[];
 };
 
+// Webページの種類
 export type BrowserPageType = 'article' | 'other';
 
+// Webページにおける停留点
 export type BrowserStationaryPoint = GazePointNonNullable & {
   stationaryTime: number;
 };
 
+// Webページ
 export type BrowserPage = {
   title: string;
   url: {
@@ -38,6 +43,7 @@ export type BrowserPage = {
   stationaryPoints: BrowserStationaryPoint[];
 };
 
+// Webブラウザの状態
 export type BrowserStates = {
   pageHistory: Pick<BrowserPage, 'title' | 'url' | 'type'>[];
   pages: {

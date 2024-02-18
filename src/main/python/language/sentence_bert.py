@@ -6,6 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from transformers import BertJapaneseTokenizer, BertModel
 
 
+# Sentence-BERT の日本語モデルを使うためのクラス
 class SentenceBertJapanese:
     def __init__(self, model_name_or_path, device=None):
         self.tokenizer = BertJapaneseTokenizer.from_pretrained(model_name_or_path)
@@ -53,11 +54,16 @@ MODEL_NAME = "sonoisa/sentence-bert-base-ja-mean-tokens-v2"  # <- v2です。
 model = SentenceBertJapanese(MODEL_NAME)
 
 
+# 文書間類似度を計算する関数
 def calc_sentence_bert_similarity(target: str, sentences: list[str]):
+    # ターゲットと比較する文章をセットにする
     sentences_list = [target] + sentences
+    # 文章をエンコードしてベクトル化する
     embeddings = model.encode(sentences_list, batch_size=8)
 
+    # コサイン類似度を計算する
     similarity_matrix = cosine_similarity(embeddings)
+    # コサイン距離に変換する
     distance_matrix = 1 - similarity_matrix
 
     # sentences と類似度スコアをセットにする
