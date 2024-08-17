@@ -158,8 +158,8 @@ export const open = async () => {
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
-    // 記事ページから戻ってきた場合のみ処理する
-    if (!(!isArticleCurrent && isArticleLast)) {
+    // 前ページが対象の記事ページでなかった場合は以降の処理をしない
+    if (!isArticleLast) {
       return;
     }
 

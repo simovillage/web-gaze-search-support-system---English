@@ -24,11 +24,13 @@ export const initialize = async () => {
     );
   }
 
+  /**
   console.log('Installing Python dependencies...');
   const venvResult = await execAsync<string>('python', ['-m', 'venv', '.venv']);
   if (!venvResult.ok) {
     throw new Error(`Python venv failed: ${venvResult.error.message}`);
   }
+    */
 
   if (process.platform !== 'win32') {
     throw new Error('This system does not support non-Windows platforms');
