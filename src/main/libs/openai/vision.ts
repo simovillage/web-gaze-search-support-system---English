@@ -9,10 +9,20 @@ export const generateCaption = async (imgSrc: string) => {
         {
           role: 'user',
           content: [
+            //英語で画像を説明してねという指示
+            {
+              type: 'text',
+              text: 'Create a caption for the image. However, please use English.',
+            },
+
+            /**
+            //日本語で画像を説明してねという指示
             {
               type: 'text',
               text: 'Create a caption for the image. However, please use Japanese.',
             },
+            */
+
             {
               type: 'image_url',
               image_url: {
