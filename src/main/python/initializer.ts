@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { REQUIRED_PYTHON_VERSION } from '@main/constants';
 import { execAsync } from '@main/libs/childProcess';
 import semver from 'semver';
@@ -24,11 +26,30 @@ export const initialize = async () => {
     );
   }
 
+  // スクリプトが 'web-gaze-search-support-system' ディレクトリ内にある場合
+  const venvPath = path.join('.venv');
+
+  // async を使用するためには関数のコンテキストが必要です
+  async function setupVirtualEnvironment() {
+    if (!fs.existsSync(venvPath)) {
+      // 仮想環境を作成
+      await execAsync('python', ['-m', 'venv', venvPath]);
+    } else {
+      // 仮想環境が存在する場合の処理
+      console.log('Virtual environment already exists.');
+    }
+  }
+
+  // 関数を実行
+  setupVirtualEnvironment();
+
+  /** 
   console.log('Installing Python dependencies...');
   const venvResult = await execAsync<string>('python', ['-m', 'venv', '.venv']);
   if (!venvResult.ok) {
     throw new Error(`Python venv failed: ${venvResult.error.message}`);
   }
+    */
 
   if (process.platform !== 'win32') {
     throw new Error('This system does not support non-Windows platforms');
