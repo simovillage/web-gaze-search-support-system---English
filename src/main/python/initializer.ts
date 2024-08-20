@@ -26,9 +26,10 @@ export const initialize = async () => {
     );
   }
 
+  /**
   // スクリプトが 'web-gaze-search-support-system' ディレクトリ内にある場合
   const venvPath = path.join('.venv');
-  /**
+  
   // async を使用するためには関数のコンテキストが必要です
   async function setupVirtualEnvironment() {
     if (!fs.existsSync(venvPath)) {
