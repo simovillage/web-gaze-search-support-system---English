@@ -55,6 +55,7 @@ export const initialize = async () => {
     throw new Error('This system does not support non-Windows platforms');
   }
 
+  /**
   const pipUpgradeResult = await execAsync('.venv/Scripts/python.exe', [
     '-m',
     'pip',
@@ -80,6 +81,7 @@ export const initialize = async () => {
       `Python pip install failed: ${pipInstallResult.error.message}`,
     );
   }
+    */
 
   console.log('Python initialized successfully');
 };
