@@ -26,11 +26,9 @@ export const initialize = async () => {
     );
   }
 
-  /**
-
   // スクリプトが 'web-gaze-search-support-system' ディレクトリ内にある場合
   const venvPath = path.join('.venv');
-
+  /**
   // async を使用するためには関数のコンテキストが必要です
   async function setupVirtualEnvironment() {
     if (!fs.existsSync(venvPath)) {
@@ -57,7 +55,6 @@ export const initialize = async () => {
     throw new Error('This system does not support non-Windows platforms');
   }
 
-  /**
   const pipUpgradeResult = await execAsync('.venv/Scripts/python.exe', [
     '-m',
     'pip',
@@ -83,7 +80,6 @@ export const initialize = async () => {
       `Python pip install failed: ${pipInstallResult.error.message}`,
     );
   }
-    */
 
   console.log('Python initialized successfully');
 };
