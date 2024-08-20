@@ -133,15 +133,20 @@ export const open = async () => {
       return;
     }
 
+    /**
     // 現在のページが記事ページかどうかを判定
+    //処理を変更したため現状不要
     const includeArticlesCurrent = articleRegexps.some((regexp) =>
       regexp.test(url),
     );
     const includeNotArticlesCurrent = notArticleRegexps.some((regexp) =>
       regexp.test(url),
     );
+    
+    
     const isArticleCurrent =
       includeArticlesCurrent && !includeNotArticlesCurrent;
+    */
 
     const pageHistory = store.get('browser').pageHistory;
     const lastPage = pageHistory.at(-1);
