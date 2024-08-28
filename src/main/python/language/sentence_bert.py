@@ -37,7 +37,7 @@ class SentenceBertEnglish:
         return torch.stack(all_embeddings)
 
 
-MODEL_NAME = "sentence-transformers/all-MiniLM-L5-v2"
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 model = SentenceBertEnglish(MODEL_NAME)
 
 
