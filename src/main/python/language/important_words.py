@@ -13,47 +13,66 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk import pos_tag
 
-nltk_resources = ['punkt', 'averaged_perceptron_tagger', 'stopwords']
 
-for resource in nltk_resources:
+nltk_resources = {
+    'punkt_tab': 'tokenizers/punkt_tab',
+    'averaged_perceptron_tagger_eng': 'taggers/averaged_perceptron_tagger_eng',
+    'stopwords': 'corpora/stopwords'
+}
+
+for resource, path in nltk_resources.items():
     try:
-        nltk.data.find(resource)
+        nltk.data.find(f'{path}')
+        # print(f"{resource} is already downloaded")
     except LookupError:
         nltk.download(resource)
+        # print(f"{resource} download complete") 
+
+stop_words = set(stopwords.words('english'))
 
 # NLTKを使ってテキストから単語を抽出する関数
 def extract_words(text: str):
-        # トークナイゼーション
+    # トークナイゼーション
     words = word_tokenize(text)
     
     # 品詞タグ付け
     tagged_words = pos_tag(words)
     
     # 重要な品詞の抽出（名詞、動詞、形容詞）
-    important_words = [word for word, tag in tagged_words if tag.startswith(('NN', 'VB', 'JJ'))]
+    # word.lower → 単語を小文字化する
+    important_words = [word for word, tag in tagged_words 
+                        if tag.startswith(('NN', 'VB', 'JJ') and word.lower() not in stop_words)]
     
     # 固有名詞の抽出
-    proper_nouns = [word for word, tag in tagged_words if tag.startswith('NNP')]
+    proper_nouns = [word for word, tag in tagged_words
+                         if tag.startswith('NNP')]
     
     return {
         "words": important_words,
-        "proper_nouns": proper_nouns
+        "proper_nouns": proper_nouns,
     }
 
 
-def calc_tfidf_for_proper_nouns(texts, proper_nouns):
-
+def calc_tfidf_for_proper_nouns(texts):
+    extracted_data = [extract_words(text) for text in texts]
+    all_proper_nouns = [word for data in extracted_data
+                        for word in data['proper_nouns']]
 
     # カスタムトークナイザーを定義します。
     def custom_tokenizer(text):
         words = text.split()
-        proper_nouns_in_text = [word for word in words if word in proper_nouns]
+        # (単語,タグ)のタプルの単語のみを抽出
+        proper_nouns_in_text = [word for word in words if word in all_proper_nouns]
         return proper_nouns_in_text
 
     # TF-IDFベクトルライザーを初期化します。
+    # lawercase　→　全て小文字化する。固有名詞の特性を失わせてしまうため必ずFalse
     tfidf_vectorizer = TfidfVectorizer(
         use_idf=True, lowercase=False, tokenizer=custom_tokenizer, token_pattern=None
     )
+
+    # proper_nounsの抽出されたリストを結合した文字列として渡す
+    texts = [" ".join(data['words']) for data in extracted_data]
 
     # 文章内の全単語（ここでは固有名詞のみ）のTfidf値を取得します。
     tfidf_matrix = tfidf_vectorizer.fit_transform(texts)
@@ -213,50 +232,3 @@ print(
         },
     )
 )
-
-"""
-    #日本語での処理
-# MeCabを使ってテキストから単語を抽出する関数
-import MeCab
-mecab = MeCab.Tagger('-r "C:\Program Files (x86)\MeCab\etc\mecabrc-u"')
-
-
-def extract_words(text: str):
-    parsed_result = mecab.parse(text)
-    splitted_rows = re.split(r"\n", parsed_result)
-    separating_words = list(map(lambda row: re.split(r"\t|,", row), splitted_rows))
-    separating_words = list(filter(lambda row: len(row) >= 10, separating_words))
-
-    words = list(
-        filter(
-            lambda row: (row[1] == "名詞")
-            or (row[1] == "動詞")
-            or (row[1] == "形容詞"),
-            separating_words,
-        )
-    )
-    words = list(map(lambda row: row[0], words))
-
-    proper_nouns = list(filter(lambda row: row[2] == "固有名詞", separating_words))
-    proper_nouns = list(map(lambda row: row[0], proper_nouns))
-    proper_nouns = [
-        pn
-        for pn in proper_nouns
-        if not any(re.search(pattern, pn) for pattern in ignore_words_list)
-    ]
-
-    return {
-        "words": words,
-        "proper_nouns": proper_nouns,
-    }
-
-
-def calc_tfidf_for_proper_nouns(texts, proper_nouns):
-
-
-    固有名詞に限定して、テキストのリストからTF-IDF値を計算する関数。
-
-    :param texts: テキストのリスト。
-    :param proper_nouns: 固有名詞のリスト。
-    :return: TF-IDF行列、単語リスト。
-"""
