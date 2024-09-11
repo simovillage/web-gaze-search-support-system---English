@@ -22,10 +22,11 @@ export const fetchPageElements = async (url: string) => {
   await page.goto(url, { waitUntil: 'networkidle2' });
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  // Img要素のlazy loadingを無効化する
+  // Img要素のlazy loadingを無効化する→自動で付与されるlazyloadedクラスも削除可能に
   await page.evaluate(() => {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+    const images = document.querySelectorAll('img.lazyloaded"]');
     for (const img of images) {
+      img.classList.remove('lazyloaded');
       img.removeAttribute('loading');
     }
   });
@@ -40,6 +41,7 @@ export const fetchPageElements = async (url: string) => {
         SCREEN_HEIGHT_OFFSET: number,
       ) => {
         // spot記事の場合、floatの影響で位置がずれるので修正する
+        // smartmagazineを使用する場合のみ有効
         const spotPhotListElm =
           document.querySelector<HTMLElement>('.spotPhotoList');
         if (spotPhotListElm) {
@@ -48,7 +50,7 @@ export const fetchPageElements = async (url: string) => {
 
         // 段落ごとのまとまりをBlockと呼ぶ
         const contentsBlocks = Array.from<HTMLParagraphElement>(
-          document.querySelectorAll('.article-text-area > p'),
+          document.querySelectorAll('mod-wysiwyg__text > p'),
         );
 
         return contentsBlocks.map((block) => {

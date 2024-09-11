@@ -21,7 +21,7 @@ export const open = async () => {
   // puppeteerの起動
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
-  await page.goto('https://www.smartmagazine.jp/tokyo/');
+  await page.goto('https://www.japan.travel/en/destinations/kanto/tokyo/');
 
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
