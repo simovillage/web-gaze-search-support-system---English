@@ -46,7 +46,7 @@ export const fetchPageElements = async (url: string) => {
       (
         BLOCK_BOTTOM_OFFSET: number,
         HEAD_TEXT_HEIGHT_OFFSET: number,
-        SCREEN_HEIGHT_OFFSET: number
+        SCREEN_HEIGHT_OFFSET: number,
       ) => {
         // 段落ごとのまとまりをBlockと呼ぶ
         const contentsBlocks = Array.from<HTMLParagraphElement>(
@@ -73,9 +73,9 @@ export const fetchPageElements = async (url: string) => {
           const children = Array.from(block.children);
           // Block内の要素のタグ名(先頭と末尾にはダミーのタグを入れる)
           const tags = [
-            "HEAD",
+            'HEAD',
             ...children.map((child) => child.tagName),
-            "TAIL",
+            'TAIL',
           ];
           // Block内の要素(先頭と末尾にはダミーの要素を入れる)
           const elements = [null, ...children, null];
@@ -90,19 +90,19 @@ export const fetchPageElements = async (url: string) => {
             // 要素のタグ名
             const tag = tags[i];
             if (!tag) {
-              throw new Error("Unexpected Error");
+              throw new Error('Unexpected Error');
             }
 
             // 末尾に到達したら終了
-            if (tag === "TAIL") {
+            if (tag === 'TAIL') {
               break;
             }
 
             // 画像の場合は画像のelementから位置とサイズを取得する
-            if (tag === "IMG") {
+            if (tag === 'IMG') {
               const element = elements[i];
               if (!element) {
-                throw new Error("Unexpected Error");
+                throw new Error('Unexpected Error');
               }
               const imgBoundingRect = element.getBoundingClientRect();
               const y = imgBoundingRect.top + SCREEN_HEIGHT_OFFSET;
@@ -112,7 +112,7 @@ export const fetchPageElements = async (url: string) => {
                 y,
                 width,
                 height,
-                type: "img",
+                type: 'img',
               });
 
               // 次の要素へ
@@ -126,16 +126,16 @@ export const fetchPageElements = async (url: string) => {
             while (true) {
               const targetTag = tags[i + j + 1];
               // BRタグが連続する場合は複数のテキストが存在する
-              if (targetTag === "BR") {
+              if (targetTag === 'BR') {
                 j++;
                 continue;
               }
               // BRタグの次が画像の場合はテキストが存在しない
-              if (targetTag === "IMG") {
+              if (targetTag === 'IMG') {
                 break;
               }
               // 末尾に到達した場合はひとつのテキストが存在する
-              if (targetTag === "TAIL") {
+              if (targetTag === 'TAIL') {
                 j++;
                 break;
               }
@@ -149,15 +149,15 @@ export const fetchPageElements = async (url: string) => {
 
             // テキストのtopとbottomを計算する
             const startY =
-              tag === "HEAD"
+              tag === 'HEAD'
                 ? blockTop
                 : elements[i]?.getBoundingClientRect().top ?? -1;
             const endY =
-              tags[i + j] === "TAIL"
+              tags[i + j] === 'TAIL'
                 ? blockBottom
                 : elements[i + j]?.getBoundingClientRect().top ?? -1;
             if (startY === -1 || endY === -1) {
-              throw new Error("Unexpected Error");
+              throw new Error('Unexpected Error');
             }
 
             // テキストの高さを計算する
@@ -169,15 +169,15 @@ export const fetchPageElements = async (url: string) => {
               y: startY + SCREEN_HEIGHT_OFFSET,
               width,
               height: height + offset,
-              type: "text",
+              type: 'text',
             });
 
             i += j;
           }
 
-          const text = (block.textContent ?? "").replace(/\s+/g, "");
-          const images = Array.from(block.querySelectorAll("img")).map(
-            (img) => img.src
+          const text = (block.textContent ?? '').replace(/\s+/g, '');
+          const images = Array.from(block.querySelectorAll('img')).map(
+            (img) => img.src,
           );
 
           return {
@@ -189,13 +189,13 @@ export const fetchPageElements = async (url: string) => {
       },
       BLOCK_BOTTOM_OFFSET,
       HEAD_TEXT_HEIGHT_OFFSET,
-      SCREEN_HEIGHT_OFFSET
+      SCREEN_HEIGHT_OFFSET,
     )
   ).filter((element) => {
     const ignoreTextRegexps = [/公開日/, /更新日/];
 
     const includeIgnoreText = ignoreTextRegexps.some((regexp) =>
-      regexp.test(element.text)
+      regexp.test(element.text),
     );
 
     return !includeIgnoreText;
