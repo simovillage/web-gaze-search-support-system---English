@@ -19,14 +19,15 @@ export const fetchPageElements = async (url: string) => {
     },
   });
   const page = await browser.newPage();
-  await page.goto(url, { waitUntil: 'networkidle2' });
+  await page.goto(url, { waitUntil: 'load' });
+  await page.waitForNavigation();
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  // Img要素のlazy loadingを無効化する→自動で付与されるlazyloadedクラスも削除可能に
   await page.evaluate(() => {
-    const images = document.querySelectorAll('img.lazyloaded"]');
+    // Img要素のlazy loadingを無効化する→自動で付与されるlazyloadedクラスも削除可能に
+    const images = document.querySelectorAll('img.lazyloaded');
     for (const img of images) {
-      img.classList.remove('lazyloaded');
+      img.removeAttribute('lazyloaded');
       img.removeAttribute('loading');
     }
   });
