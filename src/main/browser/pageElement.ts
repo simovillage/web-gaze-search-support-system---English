@@ -14,7 +14,7 @@ import puppeteer from 'puppeteer';
 // ページ内の要素の位置とサイズを取得する
 export const fetchPageElements = async (url: string) => {
   const browser = await puppeteer.launch({
-    headless: 'new',
+    headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     defaultViewport: {
       width: SCREEN_WIDTH,
@@ -22,7 +22,7 @@ export const fetchPageElements = async (url: string) => {
     },
   });
   const page = await browser.newPage();
-  await page.goto(url, { waitUntil: 'load' });
+  await page.goto(url, { waitUntil: 'networkidle2' });
   await page.waitForNavigation();
   await new Promise((resolve) => setTimeout(resolve, 4000));
 
@@ -45,12 +45,12 @@ export const fetchPageElements = async (url: string) => {
     (
       BLOCK_BOTTOM_OFFSET: number,
       HEAD_TEXT_HEIGHT_OFFSET: number,
-      SCREEN_HEIGHT_OFFSET: number,
+      SCREEN_HEIGHT_OFFSET: number
     ) => {
       // 段落ごとのまとまりをBlockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
         //説明部のテキスト抜き出し
-        document.querySelectorAll('.spot-overview-section > p'),
+        document.querySelectorAll('.spot-overview-section > p')
       );
       // 各要素のテキストを出力
       contentsBlocks.forEach((block, index) => {
@@ -118,6 +118,8 @@ export const fetchPageElements = async (url: string) => {
             i++;
             continue;
           }
+          //デバッグ用
+          console.log('Elements found:', contentsBlocks);
 
           // テキストの場合はbrタグから位置とサイズを計算する
           let j = 0;
@@ -176,7 +178,7 @@ export const fetchPageElements = async (url: string) => {
 
         const text = (block.textContent ?? '').replace(/\s+/g, '');
         const images = Array.from(block.querySelectorAll('img')).map(
-          (img) => img.src,
+          (img) => img.src
         );
 
         return {
@@ -188,7 +190,7 @@ export const fetchPageElements = async (url: string) => {
     },
     BLOCK_BOTTOM_OFFSET,
     HEAD_TEXT_HEIGHT_OFFSET,
-    SCREEN_HEIGHT_OFFSET,
+    SCREEN_HEIGHT_OFFSET
   );
 
   return elements;

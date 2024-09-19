@@ -22,13 +22,14 @@ export const open = async () => {
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
   await page.goto(
-    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&sort=relevance',
+    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Sensoji&sort=relevance',
+    { timeout: 0 }
   );
 
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
     // スクロールの監視
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll:', () => {
       const { scrollY } = window;
       console.log(`scroll:${scrollY}`);
     });
@@ -39,7 +40,7 @@ export const open = async () => {
   });
 
   page.on('console', (msg) => {
-    if (msg.text().startsWith('scroll:')) {
+    if (msg.text().startsWith('scroll')) {
       const scrollY = Number(msg.text().replace('scroll:', ''));
 
       pushScrollEvent({
@@ -70,12 +71,12 @@ export const open = async () => {
     // 記事ページかどうかを判定
     const includeArticles = articleRegexps.some((regexp) => regexp.test(url));
     //デバッグ用
-    console.log('includeArticles:', includeArticles);
+    //console.log('includeArticles:', includeArticles);
     const includeNotArticles = notArticleRegexps.some((regexp) =>
-      regexp.test(url),
+      regexp.test(url)
     );
     //デバッグ用
-    console.log('includeNotArticles:', includeNotArticles);
+    //console.log('includeNotArticles:', includeNotArticles);
 
     // URLをハッシュ化
     const hashedUrl = crypto
@@ -96,7 +97,7 @@ export const open = async () => {
     store.set('browser.pageHistory', [...pageHistory, page]);
 
     //デバッグ用
-    console.log('type:', page.type);
+    console.log('type:', page.type, 'URL:', url);
 
     // 記事ページでなければ処理を終了
     if (page.type !== 'article') {
@@ -123,7 +124,12 @@ export const open = async () => {
       stationaryPoints: [],
     };
 
-    store.set(`browser.pages.${hashedUrl}`, pageFull);
+    //デバッグ用
+    try {
+      store.set(`browser.pages.${hashedUrl}`, pageFull);
+    } catch (error) {
+      console.error('Failed to set summary data:', error);
+    }
 
     console.log('Calling fetchPageElements with URL:', url);
     // 要素を取得して保存
@@ -167,15 +173,15 @@ export const open = async () => {
 
     // 遷移前のページが記事ページかどうかを判定
     const includeArticlesLast = articleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw),
+      regexp.test(lastPage.url.raw)
     );
     const includeNotArticlesLast = notArticleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw),
+      regexp.test(lastPage.url.raw)
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
     //デバッグ用
-    console.log('This Page:', isArticleLast, 'URL', url);
+    //console.log('This Page:', isArticleLast, 'URL', url);
 
     // 前ページが対象の記事ページでなかった場合は以降の処理をしない
     if (!isArticleLast) {
@@ -184,7 +190,7 @@ export const open = async () => {
 
     const isFitIntention = await page.evaluate(() => {
       return window.confirm(
-        'ただいま閲覧したページはタスクや興味に適していましたか？',
+        'ただいま閲覧したページはタスクや興味に適していましたか？'
       );
     });
 
@@ -272,5 +278,5 @@ gazeStatesEmitter.on(
     });
 
     store.set(`browser.pages.${currentPage.url.hash}`, clonedTargetPage);
-  },
+  }
 );
