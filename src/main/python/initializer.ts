@@ -14,16 +14,16 @@ export const initialize = async () => {
   const pyVersion = semver.valid(semver.coerce(pyVersionResult.value.stdout));
   if (!pyVersion) {
     throw new Error(
-      `Python version not found: ${pyVersionResult.value.stdout}`,
+      `Python version not found: ${pyVersionResult.value.stdout}`
     );
   }
 
   if (!semver.gte(pyVersion, REQUIRED_PYTHON_VERSION)) {
     throw new Error(
-      `Python version ${pyVersion} is not supported, please install python ${REQUIRED_PYTHON_VERSION} or above`,
+      `Python version ${pyVersion} is not supported, please install python ${REQUIRED_PYTHON_VERSION} or above`
     );
   }
-
+  /**
   console.log('Installing Python dependencies...');
   const venvResult = await execAsync<string>('python', ['-m', 'venv', '.venv']);
   if (!venvResult.ok) {
@@ -59,6 +59,7 @@ export const initialize = async () => {
       `Python pip install failed: ${pipInstallResult.error.message}`,
     );
   }
+    */
 
   console.log('Python initialized successfully');
 };

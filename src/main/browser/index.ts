@@ -67,7 +67,7 @@ export const open = async () => {
     // 記事ページかどうかを判定
     const includeArticles = articleRegexps.some((regexp) => regexp.test(url));
     const includeNotArticles = notArticleRegexps.some((regexp) =>
-      regexp.test(url),
+      regexp.test(url)
     );
 
     // URLをハッシュ化
@@ -117,6 +117,7 @@ export const open = async () => {
 
     // 要素を取得して保存
     store.set(`browser.pages.${hashedUrl}.elements.isLoading`, true);
+    //fetchPageElementsが終了後にelementsをconfig.jsonに保存
     fetchPageElements(url).then((elements) => {
       store.set(`browser.pages.${hashedUrl}.elements.data`, elements);
       store.set(`browser.pages.${hashedUrl}.elements.isLoading`, false);
@@ -135,10 +136,10 @@ export const open = async () => {
 
     // 現在のページが記事ページかどうかを判定
     const includeArticlesCurrent = articleRegexps.some((regexp) =>
-      regexp.test(url),
+      regexp.test(url)
     );
     const includeNotArticlesCurrent = notArticleRegexps.some((regexp) =>
-      regexp.test(url),
+      regexp.test(url)
     );
     const isArticleCurrent =
       includeArticlesCurrent && !includeNotArticlesCurrent;
@@ -151,10 +152,10 @@ export const open = async () => {
 
     // 遷移前のページが記事ページかどうかを判定
     const includeArticlesLast = articleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw),
+      regexp.test(lastPage.url.raw)
     );
     const includeNotArticlesLast = notArticleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw),
+      regexp.test(lastPage.url.raw)
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
@@ -165,7 +166,7 @@ export const open = async () => {
 
     const isFitIntention = await page.evaluate(() => {
       return window.confirm(
-        'ただいま閲覧したページはタスクや興味に適していましたか？',
+        'ただいま閲覧したページはタスクや興味に適していましたか？'
       );
     });
 
@@ -253,5 +254,5 @@ gazeStatesEmitter.on(
     });
 
     store.set(`browser.pages.${currentPage.url.hash}`, clonedTargetPage);
-  },
+  }
 );
