@@ -2,203 +2,77 @@ import json
 import re
 import sys
 
-import MeCab
 import numpy as np
 import pandas as pd
 from gensim.models import KeyedVectors
 from scipy.stats import pearsonr
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-mecab = MeCab.Tagger('-r "C:\Program Files (x86)\MeCab\etc\mecabrc-u"')
-
-# 固有名詞から除外する単語のリスト
-ignore_words_list = [
-    r"^.*[0-9]+[年月日時分秒m].*$",
-    r"^デートコース$",
-    r"^プロ野球$",
-    r"^メインスタジアム$",
-    r"^国際大会$",
-    r"^.+的$",
-    r"^重要文化財$",
-    r"^神宮球場$",
-    r"ウェブサイト",
-    r"ホームページ",
-    r"公式",
-    r"^天望$",
-    r"^展望台$",
-    r"^ランチメニュー$",
-    r"^スカイツリー$",
-    r"^ソラマチ$",
-    r"^商業施設$",
-    r"^光の海$",
-    r"^優しい光$",
-    r"^イベント会場$",
-    r"^自家製パン$",
-    r"^テイクアウト$",
-    r"^青山$",
-    r"^2階$",
-    r"^一丁目$",
-    r"^登録有形文化財$",
-    r"^B級グルメ$",
-    r"^レトロ$",
-    r"^日本$",
-    r"事前予約",
-    r"観光地",
-    r"web",
-    r"キッズ",
-    r"ウェルカム",
-    r"補助便座",
-    #
-    r"^デートコース$",
-    r"^5分$",
-    r"^黄金色$",
-    r"^魅力的$",
-    r"^1年$",
-    r"^デートコース$",
-    r"^重要文化財$",
-    r"^幻想的$",
-    r"^ロイヤルガーデンカフェ$",
-    r"^ランチメニュー$",
-    r"^自家製パン$",
-    r"^テイクアウト$",
-    r"^青山$",
-    r"^BY$",
-    r"^シェフの家$",
-    r"^1964年$",
-    r"^メインスタジアム$",
-    r"^国際大会$",
-    r"^プロ野球$",
-    r"^2020年東京オリンピック$",
-    r"^日本$",
-    r"^先端技術$",
-    r"^入場無料$",
-    r"^3Dプリンタ$",
-    r"^神宮$",
-    r"^1時間$",
-    r"^ターザン$",
-    r"^入場料$",
-    r"^2歳$",
-    r"^100円$",
-    r"^300円$",
-    r"^休憩所$",
-    r"^レジャーシート$",
-    #
-    r"^言わずと知れた$",
-    r"^観光スポット$",
-    r"^敷地内$",
-    r"^建築物$",
-    r"^にも$",
-    r"^重要文化財$",
-    r"^観世$",
-    r"^3人$",
-    r"^三社$",
-    #
-    r"^45分$",
-    r"^メッカ$",
-    r"^観光客$",
-    r"^5分$",
-    r"^シャトルバス$",
-    r"^高さ$",
-    r"^634m$",
-    r"^4D$",
-    r"^展望台$",
-    r"^天望$",
-    r"^350m$",
-    r"^天望$",
-    r"^450m$",
-    r"^天望$",
-    r"^web$",
-    r"^事前予約$",
-    r"^天望$",
-    r"^天望$",
-    r"^限定グッズ$",
-    r"^ココ$",
-    r"^HP$",
-    r"^世界自然遺産$",
-    r"^80種$",
-    r"^6m$",
-    r"^1m$",
-    r"^最大級$",
-    r"^街中$",
-    r"^浴衣姿$",
-    r"^1月$",
-    r"^5月$",
-    r"^9月$",
-    r"^入場無料$",
-    r"^入場券$",
-    r"^ちゃんこ鍋$",
-    r"^東の$",
-    r"^宰$",
-    r"^参拝者$",
-    r"^呉服商$",
-    r"^2013年$",
-    r"^地元住民$",
-    r"^観光客$",
-    r"^60種$",
-    r"^お土産$",
-    r"^ゲット$",
-    r"^参拝者$",
-    r"^観光",
-    r"お勧め",
-    r"敷地",
-    r"言わず",
-    r"^にも$",
-    r"ブッフェ",
-    r"ショッピング",
-    r"オア",
-]
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk import pos_tag
 
 
-# MeCabを使ってテキストから単語を抽出する関数
+nltk_resources = {
+    'punkt_tab': 'tokenizers/punkt_tab',
+    'averaged_perceptron_tagger_eng': 'taggers/averaged_perceptron_tagger_eng',
+    'stopwords': 'corpora/stopwords'
+}
+
+for resource, path in nltk_resources.items():
+    try:
+        nltk.data.find(f'{path}')
+        # print(f"{resource} is already downloaded")
+    except LookupError:
+        nltk.download(resource)
+        # print(f"{resource} download complete") 
+
+stop_words = set(stopwords.words('english'))
+
+# NLTKを使ってテキストから単語を抽出する関数
 def extract_words(text: str):
-    parsed_result = mecab.parse(text)
-    splitted_rows = re.split(r"\n", parsed_result)
-    separating_words = list(map(lambda row: re.split(r"\t|,", row), splitted_rows))
-    separating_words = list(filter(lambda row: len(row) >= 10, separating_words))
-
-    words = list(
-        filter(
-            lambda row: (row[1] == "名詞")
-            or (row[1] == "動詞")
-            or (row[1] == "形容詞"),
-            separating_words,
-        )
-    )
-    words = list(map(lambda row: row[0], words))
-
-    proper_nouns = list(filter(lambda row: row[2] == "固有名詞", separating_words))
-    proper_nouns = list(map(lambda row: row[0], proper_nouns))
-    proper_nouns = [
-        pn
-        for pn in proper_nouns
-        if not any(re.search(pattern, pn) for pattern in ignore_words_list)
-    ]
-
+    # トークナイゼーション
+    words = word_tokenize(text)
+    
+    # 品詞タグ付け
+    tagged_words = pos_tag(words)
+    
+    # 重要な品詞の抽出（名詞、動詞、形容詞）
+    # word.lower → 単語を小文字化する
+    important_words = [word for word, tag in tagged_words 
+                        if tag.startswith(('NN', 'VB', 'JJ') and word.lower() not in stop_words)]
+    
+    # 固有名詞の抽出
+    proper_nouns = [word for word, tag in tagged_words
+                         if tag.startswith('NNP')]
+    
     return {
-        "words": words,
+        "words": important_words,
         "proper_nouns": proper_nouns,
     }
 
 
-def calc_tfidf_for_proper_nouns(texts, proper_nouns):
-    """
-    固有名詞に限定して、テキストのリストからTF-IDF値を計算する関数。
-
-    :param texts: テキストのリスト。
-    :param proper_nouns: 固有名詞のリスト。
-    :return: TF-IDF行列、単語リスト。
-    """
+def calc_tfidf_for_proper_nouns(texts):
+    extracted_data = [extract_words(text) for text in texts]
+    all_proper_nouns = [word for data in extracted_data
+                        for word in data['proper_nouns']]
 
     # カスタムトークナイザーを定義します。
     def custom_tokenizer(text):
         words = text.split()
-        proper_nouns_in_text = [word for word in words if word in proper_nouns]
+        # (単語,タグ)のタプルの単語のみを抽出
+        proper_nouns_in_text = [word for word in words if word in all_proper_nouns]
         return proper_nouns_in_text
 
     # TF-IDFベクトルライザーを初期化します。
+    # lawercase　→　全て小文字化する。固有名詞の特性を失わせてしまうため必ずFalse
     tfidf_vectorizer = TfidfVectorizer(
         use_idf=True, lowercase=False, tokenizer=custom_tokenizer, token_pattern=None
     )
+
+    # proper_nounsの抽出されたリストを結合した文字列として渡す
+    texts = [" ".join(data['words']) for data in extracted_data]
 
     # 文章内の全単語（ここでは固有名詞のみ）のTfidf値を取得します。
     tfidf_matrix = tfidf_vectorizer.fit_transform(texts)

@@ -7,6 +7,7 @@
 - Windows 10 or 11 (64bit)
 - Node.js v18.18.2 or later
 - Python v3.10.10
+- openai の API キー
 
 ## Setup
 
@@ -37,6 +38,26 @@ pnpm install
 ### 6. Mecab のインストール
 
 <https://qd-suriken.com/2020/04/22/widows%E3%81%A7mecabneologd/>などを参照し、Mecab と mecab-ipadic-neologd をインストールし、Path を設定してください。
+
+### 7. .env ファイルの作成
+
+ルートディレクトリの下に
+「.env」
+というファイルを作成し、
+以下をそのままコピペしてください
+
+---ここから---（ここは無視）
+
+MAIN_VITE_OPENAI_API_KEY=(your-api-key-here)
+
+---ここまで---（ここも無視）
+
+(your-openai-api-key-here) の場所に持っている API キーを入力してください。
+
+### 8.word2vec 学習済みモデルの導入
+
+なんとかして旧システムを開発した先輩が作成した word2vec 学習済モデルを探し、モデルを入れる場所に入れてください。
+場所：.（ルートディレクトリ）/src/main/models/
 
 ### 7. システムの実行
 
@@ -69,3 +90,7 @@ pnpm dev
 #### Suggest
 
 最後に閲覧した Web ページに対しての検索キーワードの推薦処理を開始します。
+
+### おまけ
+
+柳川先輩と森先輩の論文を読んでおくとかなり理解がスムーズになります。

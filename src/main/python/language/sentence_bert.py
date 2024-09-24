@@ -2,32 +2,24 @@ import json
 import sys
 
 import torch
+from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from transformers import BertJapaneseTokenizer, BertModel
+
+# sentence-BERT英語モデルを使うためのクラス
 
 
-# Sentence-BERT の日本語モデルを使うためのクラス
-class SentenceBertJapanese:
+class SentenceBertEnglish:
     def __init__(self, model_name_or_path, device=None):
-        self.tokenizer = BertJapaneseTokenizer.from_pretrained(model_name_or_path)
-        self.model = BertModel.from_pretrained(model_name_or_path)
-        self.model.eval()
+        # sentence Transformerを使用してモデルをロードする
+        self.model = SentenceTransformer(model_name_or_path)
 
+        # デバイスの設定
         if device is None:
             device = "cuda" if torch.cuda.is_available() else "cpu"
         self.device = torch.device(device)
-        self.model.to(device)
 
-    def _mean_pooling(self, model_output, attention_mask):
-        token_embeddings = model_output[
-            0
-        ]  # First element of model_output contains all token embeddings
-        input_mask_expanded = (
-            attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
-        )
-        return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(
-            input_mask_expanded.sum(1), min=1e-9
-        )
+        # モデルの移動は不要（今のところ）
+        # self.model.to(device)
 
     @torch.no_grad()
     def encode(self, sentences, batch_size=8):
@@ -36,13 +28,8 @@ class SentenceBertJapanese:
         for batch_idx in iterator:
             batch = sentences[batch_idx : batch_idx + batch_size]
 
-            encoded_input = self.tokenizer.batch_encode_plus(
-                batch, padding="longest", truncation=True, return_tensors="pt"
-            ).to(self.device)
-            model_output = self.model(**encoded_input)
-            sentence_embeddings = self._mean_pooling(
-                model_output, encoded_input["attention_mask"]
-            ).to("cpu")
+            # モデルに入力をエンコードして埋め込みを取得する
+            sentence_embeddings = self.model.encode(batch, show_progress_bar=False)
 
             all_embeddings.extend(sentence_embeddings)
 
@@ -50,11 +37,12 @@ class SentenceBertJapanese:
         return torch.stack(all_embeddings)
 
 
-MODEL_NAME = "sonoisa/sentence-bert-base-ja-mean-tokens-v2"  # <- v2です。
-model = SentenceBertJapanese(MODEL_NAME)
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+model = SentenceBertEnglish(MODEL_NAME)
 
 
 # 文書間類似度を計算する関数
+
 def calc_sentence_bert_similarity(target: str, sentences: list[str]):
     # ターゲットと比較する文章をセットにする
     sentences_list = [target] + sentences

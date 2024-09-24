@@ -4,7 +4,21 @@ import { Result } from '@src/types/result';
 export const summarize = async (text: string) => {
   const summaryResult: Result<string, Error> = await openAi.chat.completions
     .create({
-      model: 'gpt-3.5-turbo-16k-0613',
+      model: 'gpt-4-turbo-2024-04-09',
+      //英語で要約してねという指示
+      messages: [
+        {
+          role: 'user',
+          content: [
+            {
+              type: 'text',
+              text: `Summarize the following text into 3 sentences in English. Try to extract proper nouns.\n\n${text}`,
+            },
+          ],
+        },
+      ],
+      /** 
+       * //日本語で要約してねという指示
       messages: [
         {
           role: 'user',
@@ -16,6 +30,7 @@ export const summarize = async (text: string) => {
           ],
         },
       ],
+      */
     })
     .then((completion) => {
       const summary = completion.choices[0]?.message.content;

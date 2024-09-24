@@ -21,12 +21,15 @@ export const open = async () => {
   // puppeteerの起動
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
-  await page.goto('https://www.smartmagazine.jp/tokyo/');
+  await page.goto(
+    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Sensoji&sort=relevance',
+    { timeout: 0 }
+  );
 
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
     // スクロールの監視
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll:', () => {
       const { scrollY } = window;
       console.log(`scroll:${scrollY}`);
     });
@@ -37,8 +40,9 @@ export const open = async () => {
   });
 
   page.on('console', (msg) => {
-    if (msg.text().startsWith('scroll:')) {
+    if (msg.text().startsWith('scroll')) {
       const scrollY = Number(msg.text().replace('scroll:', ''));
+
       pushScrollEvent({
         unixtime: Date.now(),
         scrollY,
@@ -66,9 +70,13 @@ export const open = async () => {
 
     // 記事ページかどうかを判定
     const includeArticles = articleRegexps.some((regexp) => regexp.test(url));
+    //デバッグ用
+    //console.log('includeArticles:', includeArticles);
     const includeNotArticles = notArticleRegexps.some((regexp) =>
       regexp.test(url)
     );
+    //デバッグ用
+    //console.log('includeNotArticles:', includeNotArticles);
 
     // URLをハッシュ化
     const hashedUrl = crypto
@@ -87,6 +95,9 @@ export const open = async () => {
     };
     const pageHistory = store.get('browser').pageHistory;
     store.set('browser.pageHistory', [...pageHistory, page]);
+
+    //デバッグ用
+    console.log('type:', page.type, 'URL:', url);
 
     // 記事ページでなければ処理を終了
     if (page.type !== 'article') {
@@ -113,12 +124,19 @@ export const open = async () => {
       stationaryPoints: [],
     };
 
-    store.set(`browser.pages.${hashedUrl}`, pageFull);
+    //デバッグ用
+    try {
+      store.set(`browser.pages.${hashedUrl}`, pageFull);
+    } catch (error) {
+      console.error('Failed to set summary data:', error);
+    }
 
+    console.log('Calling fetchPageElements with URL:', url);
     // 要素を取得して保存
     store.set(`browser.pages.${hashedUrl}.elements.isLoading`, true);
     //fetchPageElementsが終了後にelementsをconfig.jsonに保存
     fetchPageElements(url).then((elements) => {
+      console.log('Fetched elements:', elements);
       store.set(`browser.pages.${hashedUrl}.elements.data`, elements);
       store.set(`browser.pages.${hashedUrl}.elements.isLoading`, false);
     });
@@ -134,15 +152,19 @@ export const open = async () => {
       return;
     }
 
+    /**
     // 現在のページが記事ページかどうかを判定
+    //処理を変更したため現状不要
     const includeArticlesCurrent = articleRegexps.some((regexp) =>
       regexp.test(url)
     );
     const includeNotArticlesCurrent = notArticleRegexps.some((regexp) =>
       regexp.test(url)
     );
+
     const isArticleCurrent =
       includeArticlesCurrent && !includeNotArticlesCurrent;
+      */
 
     const pageHistory = store.get('browser').pageHistory;
     const lastPage = pageHistory.at(-1);
@@ -159,8 +181,11 @@ export const open = async () => {
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
-    // 記事ページから戻ってきた場合のみ処理する
-    if (!(!isArticleCurrent && isArticleLast)) {
+    //デバッグ用
+    //console.log('This Page:', isArticleLast, 'URL', url);
+
+    // 前ページが対象の記事ページでなかった場合は以降の処理をしない
+    if (!isArticleLast) {
       return;
     }
 

@@ -22,4 +22,6 @@ const resetStore = () => {
   store.set({ ...defaultValues, system, browser: { pageHistory: [], pages } });
 };
 
+
+
 export { store, resetStore };

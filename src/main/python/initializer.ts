@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { REQUIRED_PYTHON_VERSION } from '@main/constants';
 import { execAsync } from '@main/libs/childProcess';
 import semver from 'semver';
@@ -29,11 +31,13 @@ export const initialize = async () => {
   if (!venvResult.ok) {
     throw new Error(`Python venv failed: ${venvResult.error.message}`);
   }
+    */
 
   if (process.platform !== 'win32') {
     throw new Error('This system does not support non-Windows platforms');
   }
 
+  /**
   const pipUpgradeResult = await execAsync('.venv/Scripts/python.exe', [
     '-m',
     'pip',
