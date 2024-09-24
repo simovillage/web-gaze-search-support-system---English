@@ -1,5 +1,3 @@
-import * as fs from 'fs';
-import * as path from 'path';
 import { REQUIRED_PYTHON_VERSION } from '@main/constants';
 import { execAsync } from '@main/libs/childProcess';
 import semver from 'semver';

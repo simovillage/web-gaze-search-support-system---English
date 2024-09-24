@@ -26,9 +26,7 @@ export const fetchPageElements = async (url: string) => {
   await page.waitForNavigation();
   await new Promise((resolve) => setTimeout(resolve, 4000));
 
-  /**
-  // Img要素のlazy loadingを無効化する
-  //多分エラーが出ます
+  // Img要素の取得
   await page.evaluate(() => {
     // Img要素のlazy loadingを無効化する→自動で付与されるlazyloadedクラスも削除可能に
     const images = document.querySelectorAll('img.lazyloaded');
@@ -37,7 +35,6 @@ export const fetchPageElements = async (url: string) => {
       img.removeAttribute('loading');
     }
   });
-  */
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -50,7 +47,9 @@ export const fetchPageElements = async (url: string) => {
       // 段落ごとのまとまりをBlockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
         //説明部のテキスト抜き出し
-        document.querySelectorAll('.spot-overview-section > p')
+        document.querySelectorAll(
+          '.spot-description__preview * , .spot-highlight__information > p'
+        )
       );
       // 各要素のテキストを出力
       contentsBlocks.forEach((block, index) => {
