@@ -12,7 +12,7 @@
     "formatter": {
       "quoteStyle": "single",
       "jsxQuoteStyle": "double",
-      "trailingComma": "all",
+      "trailingComma": "es5",
       "semicolons": "always",
       "arrowParentheses": "always"
     }
