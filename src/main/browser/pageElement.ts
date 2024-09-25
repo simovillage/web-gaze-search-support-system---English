@@ -29,10 +29,11 @@ export const fetchPageElements = async (url: string) => {
   // Img要素の取得
   await page.evaluate(() => {
     // Img要素のlazy loadingを無効化する→自動で付与されるlazyloadedクラスも削除可能に
-    const images = document.querySelectorAll('img.lazyloaded');
+    const images = document.querySelectorAll(
+      '.spot-page-image img, .spot-highlight img',
+    );
     for (const img of images) {
-      img.removeAttribute('lazyloaded');
-      img.removeAttribute('loading');
+      img;
     }
   });
 
@@ -42,14 +43,12 @@ export const fetchPageElements = async (url: string) => {
     (
       BLOCK_BOTTOM_OFFSET: number,
       HEAD_TEXT_HEIGHT_OFFSET: number,
-      SCREEN_HEIGHT_OFFSET: number
+      SCREEN_HEIGHT_OFFSET: number,
     ) => {
       // 段落ごとのまとまりをBlockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
         //説明部のテキスト抜き出し
-        document.querySelectorAll(
-          '.spot-description__preview * , .spot-highlight__information > p'
-        )
+        document.querySelectorAll('.spot-description p, .spot-highlight p'),
       );
       // 各要素のテキストを出力
       contentsBlocks.forEach((block, index) => {
@@ -177,7 +176,7 @@ export const fetchPageElements = async (url: string) => {
 
         const text = (block.textContent ?? '').replace(/\s+/g, '');
         const images = Array.from(block.querySelectorAll('img')).map(
-          (img) => img.src
+          (img) => img.src,
         );
 
         return {
@@ -189,7 +188,7 @@ export const fetchPageElements = async (url: string) => {
     },
     BLOCK_BOTTOM_OFFSET,
     HEAD_TEXT_HEIGHT_OFFSET,
-    SCREEN_HEIGHT_OFFSET
+    SCREEN_HEIGHT_OFFSET,
   );
 
   return elements;
