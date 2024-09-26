@@ -14,7 +14,7 @@ import puppeteer from 'puppeteer';
 // ページ内の要素の位置とサイズを取得する
 export const fetchPageElements = async (url: string) => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     defaultViewport: {
       width: SCREEN_WIDTH,
@@ -26,15 +26,27 @@ export const fetchPageElements = async (url: string) => {
   await page.waitForNavigation();
   await new Promise((resolve) => setTimeout(resolve, 4000));
 
-  // Img要素の取得
   await page.evaluate(() => {
-    // Img要素のlazy loadingを無効化する→自動で付与されるlazyloadedクラスも削除可能に
-    const images = document.querySelectorAll(
-      '.spot-page-image img, .spot-highlight img, .article__content img'
-    );
+    //自動で付与されるlazyloadedクラスを無効化
+    const images = document.querySelectorAll('.article__content .lazy');
+    console.log(`Images with lazy class found: ${images.length}`);
     for (const img of images) {
-      img;
+      img.classList.remove('lazy');
     }
+    //ボタンを選択し、非表示にする
+    const button = document.querySelector(
+      '.spot-description__toggle'
+    ) as HTMLButtonElement;
+    if (button) {
+      console.log('Button found, hiding it.');
+      button.style.display = 'none'; // ボタンを非表示
+    } else {
+      console.log('Button not found.');
+    }
+    //隠された要素を表示させる
+    const element = document.getElementById('spot-more') as HTMLElement;
+    console.log('Hidden elements found');
+    element.style.display = 'inline';
   });
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -47,9 +59,9 @@ export const fetchPageElements = async (url: string) => {
     ) => {
       // 段落ごとのまとまりをBlockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
-        //説明部のテキスト抜き出し
+        //画像とテキストデータを取ってくる
         document.querySelectorAll(
-          '.spot-description p, .spot-highlight p, .article__content p'
+          '.spot-description p, .spot-highlight p, .article__content p, .spot-page-image img, .spot-highlight img, .article__content img'
         )
       );
       // 各要素のテキストを出力
@@ -118,8 +130,8 @@ export const fetchPageElements = async (url: string) => {
             i++;
             continue;
           }
-          //デバッグ用
-          console.log('Elements found:', contentsBlocks);
+          //デバッグ用 - 多分意味ない
+          //console.log('Elements found:', contentsBlocks);
 
           // テキストの場合はbrタグから位置とサイズを計算する
           let j = 0;

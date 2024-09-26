@@ -26,6 +26,21 @@ export const open = async () => {
     { timeout: 0 }
   );
 
+  //ボタンを選択し、非表示にする
+  const button = document.querySelector(
+    '.spot-description__toggle'
+  ) as HTMLButtonElement;
+  if (button) {
+    console.log('Button found, hiding it.');
+    button.style.display = 'none'; // ボタンを非表示
+  } else {
+    console.log('Button not found.');
+  }
+  //隠された要素を表示させる
+  const element = document.getElementById('spot-more') as HTMLElement;
+  console.log('Hidden elements found');
+  element.style.display = 'inline';
+
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
     // スクロールの監視
@@ -97,7 +112,7 @@ export const open = async () => {
     store.set('browser.pageHistory', [...pageHistory, page]);
 
     //デバッグ用
-    console.log('type:', page.type, 'URL:', url);
+    //console.log('type:', page.type, 'URL:', url);
 
     // 記事ページでなければ処理を終了
     if (page.type !== 'article') {
