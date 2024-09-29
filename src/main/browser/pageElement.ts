@@ -33,16 +33,6 @@ export const fetchPageElements = async (url: string) => {
     for (const img of images) {
       img.classList.remove('lazy');
     }
-    //ボタンを選択し、非表示にする
-    const button = document.querySelector(
-      '.spot-description__toggle'
-    ) as HTMLButtonElement;
-    if (button) {
-      console.log('Button found, hiding it.');
-      button.style.display = 'none'; // ボタンを非表示
-    } else {
-      console.log('Button not found.');
-    }
     //隠された要素を表示させる
     const element = document.getElementById('spot-more') as HTMLElement;
     console.log('Hidden elements found');

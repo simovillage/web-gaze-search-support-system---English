@@ -26,21 +26,6 @@ export const open = async () => {
     { timeout: 0 }
   );
 
-  //ボタンを選択し、非表示にする
-  const button = document.querySelector(
-    '.spot-description__toggle'
-  ) as HTMLButtonElement;
-  if (button) {
-    console.log('Button found, hiding it.');
-    button.style.display = 'none'; // ボタンを非表示
-  } else {
-    console.log('Button not found.');
-  }
-  //隠された要素を表示させる
-  const element = document.getElementById('spot-more') as HTMLElement;
-  console.log('Hidden elements found');
-  element.style.display = 'inline';
-
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
     // スクロールの監視
@@ -74,6 +59,19 @@ export const open = async () => {
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
+    try {
+      await frame.waitForSelector('.spot-description__toggle', {
+        timeout: 10000,
+      });
+      const element = await frame.$('.spot-description__toggle');
+      if (element) {
+        await element.click();
+      } else {
+        console.log('Element not found');
+      }
+    } catch (error) {
+      console.error('Error during the element interaction:', error);
+    }
     const title = await frame.title();
     const url = frame.url();
 
@@ -111,9 +109,6 @@ export const open = async () => {
     const pageHistory = store.get('browser').pageHistory;
     store.set('browser.pageHistory', [...pageHistory, page]);
 
-    //デバッグ用
-    //console.log('type:', page.type, 'URL:', url);
-
     // 記事ページでなければ処理を終了
     if (page.type !== 'article') {
       return;
@@ -146,7 +141,7 @@ export const open = async () => {
       console.error('Failed to set summary data:', error);
     }
 
-    console.log('Calling fetchPageElements with URL:', url);
+    // console.log('Calling fetchPageElements with URL:', url);
     // 要素を取得して保存
     store.set(`browser.pages.${hashedUrl}.elements.isLoading`, true);
     //fetchPageElementsが終了後にelementsをconfig.jsonに保存
