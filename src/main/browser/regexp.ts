@@ -7,10 +7,6 @@ export const articleRegexps = [
   /^https:\/\/en\.japantravel\.com\/tokyo\/.*\/[0-9]+\/?$/,
   /^https:\/\/en\.japantravel\.com\/places\/tokyo\/.*\/[0-9]+\/?$/,
 ] as const;
-export const needshowelementregexps = [
-  //隠された要素があるため表示が必要
-  /^https:\/\/en\.japantravel\.com\/places\/tokyo\/.*\/[0-9]+\/?$/,
-] as const;
 // 記事判定に含めないURLの正規表現
 export const notArticleRegexps = [
   //日本語用記事除外ページ

@@ -21,10 +21,7 @@ export const open = async () => {
   // puppeteerの起動
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
-  await page.goto(
-    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Sensoji&sort=relevance',
-    { timeout: 0 }
-  );
+  await page.goto('https://www.smartmagazine.jp/tokyo/');
 
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
@@ -73,7 +70,7 @@ export const open = async () => {
     //デバッグ用
     //console.log('includeArticles:', includeArticles);
     const includeNotArticles = notArticleRegexps.some((regexp) =>
-      regexp.test(url)
+      regexp.test(url),
     );
     //デバッグ用
     //console.log('includeNotArticles:', includeNotArticles);
@@ -171,10 +168,10 @@ export const open = async () => {
 
     // 遷移前のページが記事ページかどうかを判定
     const includeArticlesLast = articleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw)
+      regexp.test(lastPage.url.raw),
     );
     const includeNotArticlesLast = notArticleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw)
+      regexp.test(lastPage.url.raw),
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
@@ -188,7 +185,7 @@ export const open = async () => {
 
     const isFitIntention = await page.evaluate(() => {
       return window.confirm(
-        'ただいま閲覧したページはタスクや興味に適していましたか？'
+        'ただいま閲覧したページはタスクや興味に適していましたか？',
       );
     });
 
@@ -276,5 +273,5 @@ gazeStatesEmitter.on(
     });
 
     store.set(`browser.pages.${currentPage.url.hash}`, clonedTargetPage);
-  }
+  },
 );
