@@ -3,6 +3,7 @@ import { fetchPageElements } from '@src/main/browser/pageElement';
 import {
   articleRegexps,
   ignoreRegexps,
+  needshowelementregexps,
   notArticleRegexps,
 } from '@src/main/browser/regexp';
 import { summarizeArticleBasedOnFocusedElements } from '@src/main/browser/summary';
@@ -59,21 +60,26 @@ export const open = async () => {
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
-    try {
-      await frame.waitForSelector('.spot-description__toggle', {
-        timeout: 10000,
-      });
-      const element = await frame.$('.spot-description__toggle');
-      if (element) {
-        await element.click();
-      } else {
-        console.log('Element not found');
-      }
-    } catch (error) {
-      console.error('Error during the element interaction:', error);
-    }
     const title = await frame.title();
     const url = frame.url();
+
+    //隠された要素があるページであればそれを表示する
+    const ShowElementRegexps = needshowelementregexps.some((regexp) =>
+      regexp.test(url)
+    );
+    if (ShowElementRegexps) {
+      try {
+        await frame.waitForSelector('.spot-description__toggle', {
+          timeout: 10000,
+        });
+        const element = await frame.$('.spot-description__toggle');
+        if (element) {
+          await element.click();
+        }
+      } catch (error) {
+        console.error('Error during the element interaction:', error);
+      }
+    }
 
     // 除外ページなら何もしない
     const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));

@@ -33,10 +33,6 @@ export const fetchPageElements = async (url: string) => {
     for (const img of images) {
       img.classList.remove('lazy');
     }
-    //隠された要素を表示させる
-    const element = document.getElementById('spot-more') as HTMLElement;
-    console.log('Hidden elements found');
-    element.style.display = 'inline';
   });
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -50,9 +46,7 @@ export const fetchPageElements = async (url: string) => {
       // 段落ごとのまとまりをBlockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
         //画像とテキストデータを取ってくる
-        document.querySelectorAll(
-          '.spot-description p, .spot-highlight p, .article__content p, .spot-page-image img, .spot-highlight img, .article__content img'
-        )
+        document.querySelectorAll('.spot-description p')
       );
       // 各要素のテキストを出力
       contentsBlocks.forEach((block, index) => {
