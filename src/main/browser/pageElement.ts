@@ -14,7 +14,7 @@ import puppeteer from 'puppeteer';
 // ページ内の要素の位置とサイズを取得する
 export const fetchPageElements = async (url: string) => {
   const browser = await puppeteer.launch({
-    headless: 'new',
+    headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
     defaultViewport: {
       width: SCREEN_WIDTH,
@@ -26,6 +26,7 @@ export const fetchPageElements = async (url: string) => {
   await page.waitForNavigation();
   await new Promise((resolve) => setTimeout(resolve, 4000));
 
+  /**
   await page.evaluate(() => {
     //自動で付与されるlazyloadedクラスを無効化
     const images = document.querySelectorAll('.article__content .lazy');
@@ -34,6 +35,7 @@ export const fetchPageElements = async (url: string) => {
       img.classList.remove('lazy');
     }
   });
+  */
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -45,8 +47,8 @@ export const fetchPageElements = async (url: string) => {
     ) => {
       // 段落ごとのまとまりをBlockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
-        //画像とテキストデータを取ってくる
-        document.querySelectorAll('.spot-description p')
+        //テキストデータを取ってくる
+        document.querySelectorAll('.spot-description div > p')
       );
       // 各要素のテキストを出力
       contentsBlocks.forEach((block, index) => {
