@@ -12,6 +12,7 @@ export const notArticleRegexps = [
   //日本語用記事除外ページ
   /https:\/\/www\.smartmagazine\.jp\/tokyo\/article.*\/page\/[0-9]+\/$/,
   //英語用記事除外ページ
+  /https:\/\/en\.japantravel.com\/search.*\/?$/,
 ] as const;
 // 除外するURLの正規表現
 export const ignoreRegexps = [

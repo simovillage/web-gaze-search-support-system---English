@@ -67,10 +67,8 @@ export const open = async () => {
 
     // 記事ページかどうかを判定
     const includeArticles = articleRegexps.some((regexp) => regexp.test(url));
-    //デバッグ用
-    //console.log('includeArticles:', includeArticles);
     const includeNotArticles = notArticleRegexps.some((regexp) =>
-      regexp.test(url),
+      regexp.test(url)
     );
     //デバッグ用
     //console.log('includeNotArticles:', includeNotArticles);
@@ -118,17 +116,11 @@ export const open = async () => {
       stationaryPoints: [],
     };
 
-    //デバッグ用
-    try {
-      store.set(`browser.pages.${hashedUrl}`, pageFull);
-    } catch (error) {
-      console.error('Failed to set summary data:', error);
-    }
+    store.set(`browser.pages.${hashedUrl}`, pageFull);
 
     // console.log('Calling fetchPageElements with URL:', url);
     // 要素を取得して保存
     store.set(`browser.pages.${hashedUrl}.elements.isLoading`, true);
-    //fetchPageElementsが終了後にelementsをconfig.jsonに保存
     fetchPageElements(url).then((elements) => {
       console.log('Fetched elements:', elements);
       store.set(`browser.pages.${hashedUrl}.elements.data`, elements);
@@ -146,9 +138,7 @@ export const open = async () => {
       return;
     }
 
-    /**
     // 現在のページが記事ページかどうかを判定
-    //処理を変更したため現状不要
     const includeArticlesCurrent = articleRegexps.some((regexp) =>
       regexp.test(url)
     );
@@ -158,7 +148,6 @@ export const open = async () => {
 
     const isArticleCurrent =
       includeArticlesCurrent && !includeNotArticlesCurrent;
-      */
 
     const pageHistory = store.get('browser').pageHistory;
     const lastPage = pageHistory.at(-1);
@@ -168,10 +157,10 @@ export const open = async () => {
 
     // 遷移前のページが記事ページかどうかを判定
     const includeArticlesLast = articleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw),
+      regexp.test(lastPage.url.raw)
     );
     const includeNotArticlesLast = notArticleRegexps.some((regexp) =>
-      regexp.test(lastPage.url.raw),
+      regexp.test(lastPage.url.raw)
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
@@ -179,13 +168,13 @@ export const open = async () => {
     //console.log('This Page:', isArticleLast, 'URL', url);
 
     // 前ページが対象の記事ページでなかった場合は以降の処理をしない
-    if (!isArticleLast) {
+    if (!(!isArticleCurrent && isArticleLast)) {
       return;
     }
 
     const isFitIntention = await page.evaluate(() => {
       return window.confirm(
-        'ただいま閲覧したページはタスクや興味に適していましたか？',
+        'ただいま閲覧したページはタスクや興味に適していましたか？'
       );
     });
 
@@ -273,5 +262,5 @@ gazeStatesEmitter.on(
     });
 
     store.set(`browser.pages.${currentPage.url.hash}`, clonedTargetPage);
-  },
+  }
 );
