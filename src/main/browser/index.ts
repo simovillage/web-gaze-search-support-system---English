@@ -21,7 +21,9 @@ export const open = async () => {
   // puppeteerの起動
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
-  await page.goto('https://www.smartmagazine.jp/tokyo/');
+  await page.goto(
+    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=sensoji&sort=relevance'
+  );
 
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
@@ -58,6 +60,15 @@ export const open = async () => {
   page.on('framenavigated', async (frame) => {
     const title = await frame.title();
     const url = frame.url();
+
+    const showElements = document.querySelector(
+      '.spot-description__toggle'
+    ) as HTMLElement;
+    if (showElements) {
+      showElements.style.display = 'inline';
+      showElements.style.display = 'none'; // ボタンを非表示
+     }
+
 
     // 除外ページなら何もしない
     const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));

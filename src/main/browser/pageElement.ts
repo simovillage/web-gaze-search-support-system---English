@@ -40,17 +40,9 @@ export const fetchPageElements = async (url: string) => {
       HEAD_TEXT_HEIGHT_OFFSET: number,
       SCREEN_HEIGHT_OFFSET: number
     ) => {
-      const showElements = document.querySelector(
-        '.spot-description__toggle'
-      ) as HTMLElement;
-      if (showElements) {
-        showElements.style.display = 'inline';
-        showElements.style.display = 'none'; // ボタンを非表示
-      }
-
       // 段落ごとのまとまりをBlockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
-        document.querySelectorAll('.article-text-area > p')
+        document.querySelectorAll('.spot-description p')
       );
 
       return contentsBlocks.map((block) => {
