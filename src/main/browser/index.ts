@@ -4,6 +4,7 @@ import {
   articleRegexps,
   ignoreRegexps,
   notArticleRegexps,
+  showRegexps,
 } from '@src/main/browser/regexp';
 import { summarizeArticleBasedOnFocusedElements } from '@src/main/browser/summary';
 import { BrowserPage, BrowserStates } from '@src/main/browser/type';
@@ -61,14 +62,47 @@ export const open = async () => {
     const title = await frame.title();
     const url = frame.url();
 
-    const showElements = document.querySelector(
-      '.spot-description__toggle'
-    ) as HTMLElement;
-    if (showElements) {
-      showElements.style.display = 'inline';
-      showElements.style.display = 'none'; // ボタンを非表示
-     }
+    // iframeであれば処理をスキップ
+    if (frame.parentFrame() !== null) {
+      //console.log('iframe が検出されました。処理をスキップします');
+      return;
+    }
 
+    //デバッグ用
+    //console.log('メインフレームです。処理を続行します');
+    const needShowPage = showRegexps.some((regexp) => regexp.test(url));
+    if (needShowPage) {
+      try {
+        // ターゲット要素が存在するか確認
+        const elementExists = await frame.$('.spot-description__full-text');
+        if (elementExists) {
+          /**
+           * デバッグ用
+          console.log(
+            'ターゲットの要素が存在します。スタイルを変更して表示します'
+          );
+          */
+
+          // スタイルを変更して要素を表示
+          await frame.evaluate(() => {
+            const targetDiv = document.querySelector(
+              '.spot-description__full-text'
+            ) as HTMLElement;
+            if (targetDiv) {
+              targetDiv.style.display = 'inline'; // 要素を表示
+              targetDiv.style.visibility = 'visible'; // 要素を見える状態に
+              targetDiv.style.height = 'auto'; // 高さを自動調整
+            } else {
+              //console.log('ターゲットのdivが見つかりませんでした');
+            }
+          });
+        } else {
+          //console.log('ターゲットの要素が見つかりませんでした');
+        }
+      } catch (error) {
+        //console.error('エラーが発生しました:', error);
+      }
+    }
 
     // 除外ページなら何もしない
     const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));
@@ -81,8 +115,6 @@ export const open = async () => {
     const includeNotArticles = notArticleRegexps.some((regexp) =>
       regexp.test(url)
     );
-    //デバッグ用
-    //console.log('includeNotArticles:', includeNotArticles);
 
     // URLをハッシュ化
     const hashedUrl = crypto
@@ -100,7 +132,9 @@ export const open = async () => {
       type: includeArticles && !includeNotArticles ? 'article' : 'other',
     };
     const pageHistory = store.get('browser').pageHistory;
-    store.set('browser.pageHistory', [...pageHistory, page]);
+    try {
+      store.set('browser.pageHistory', [...pageHistory, page]);
+    } catch (error) {}
 
     // 記事ページでなければ処理を終了
     if (page.type !== 'article') {
@@ -129,11 +163,13 @@ export const open = async () => {
 
     store.set(`browser.pages.${hashedUrl}`, pageFull);
 
-    // console.log('Calling fetchPageElements with URL:', url);
     // 要素を取得して保存
+    //視線を何も取ってないとここでエラーが発生
     store.set(`browser.pages.${hashedUrl}.elements.isLoading`, true);
+    //保存処理
     fetchPageElements(url).then((elements) => {
-      console.log('Fetched elements:', elements);
+      //デバッグ用
+      console.log('fetchPageElements Calling ...');
       store.set(`browser.pages.${hashedUrl}.elements.data`, elements);
       store.set(`browser.pages.${hashedUrl}.elements.isLoading`, false);
     });
