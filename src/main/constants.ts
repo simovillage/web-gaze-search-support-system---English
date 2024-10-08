@@ -13,7 +13,7 @@ export const TOBII_SAMPLE_RATE = 60;
 
 // PageElementのコンテンツの位置とサイズを計算する際に使用するオフセット
 export const HEAD_TEXT_HEIGHT_OFFSET = 20;
-export const BLOCK_BOTTOM_OFFSET = 20;
+export const BLOCK_BOTTOM_OFFSET = 16;
 export const BLOCK_BOTTOM_HILIGHT_OFFSET = 10;
 
 // 停留点のyがやや下になるのを調整するためのオフセット

@@ -33,8 +33,8 @@ export const fetchPageElements = async (url: string) => {
       img.removeAttribute('loading');
     }
   });
-  await new Promise((resolve) => setTimeout(resolve, 2000));
   */
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   //デバッグ用
   console.log('以下よりコンテンツの分析を開始します');

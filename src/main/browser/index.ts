@@ -89,7 +89,7 @@ export const open = async () => {
               '.spot-description__full-text'
             ) as HTMLElement;
             if (targetDiv) {
-              targetDiv.style.display = 'inline'; // 要素を表示
+              targetDiv.style.display = 'block'; // 要素を表示
               targetDiv.style.visibility = 'visible'; // 要素を見える状態に
               targetDiv.style.height = 'auto'; // 高さを自動調整
             } else {
@@ -100,9 +100,11 @@ export const open = async () => {
           //console.log('ターゲットの要素が見つかりませんでした');
         }
       } catch (error) {
-        //console.error('エラーが発生しました:', error);
+        console.error('エラーが発生しました:', error);
       }
     }
+    //2秒待つ
+    //await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // 除外ページなら何もしない
     const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));
@@ -168,8 +170,6 @@ export const open = async () => {
     store.set(`browser.pages.${hashedUrl}.elements.isLoading`, true);
     //保存処理
     fetchPageElements(url).then((elements) => {
-      //デバッグ用
-      console.log('fetchPageElements Calling ...');
       store.set(`browser.pages.${hashedUrl}.elements.data`, elements);
       store.set(`browser.pages.${hashedUrl}.elements.isLoading`, false);
     });
