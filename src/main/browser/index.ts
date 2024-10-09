@@ -64,25 +64,15 @@ export const open = async () => {
 
     // iframeであれば処理をスキップ
     if (frame.parentFrame() !== null) {
-      //console.log('iframe が検出されました。処理をスキップします');
       return;
     }
 
-    //デバッグ用
-    //console.log('メインフレームです。処理を続行します');
     const needShowPage = showRegexps.some((regexp) => regexp.test(url));
     if (needShowPage) {
       try {
         // ターゲット要素が存在するか確認
         const elementExists = await frame.$('.spot-description__full-text');
         if (elementExists) {
-          /**
-           * デバッグ用
-          console.log(
-            'ターゲットの要素が存在します。スタイルを変更して表示します'
-          );
-          */
-
           // スタイルを変更して要素を表示
           await frame.evaluate(() => {
             const targetDiv = document.querySelector(
@@ -92,19 +82,13 @@ export const open = async () => {
               targetDiv.style.display = 'block'; // 要素を表示
               targetDiv.style.visibility = 'visible'; // 要素を見える状態に
               targetDiv.style.height = 'auto'; // 高さを自動調整
-            } else {
-              //console.log('ターゲットのdivが見つかりませんでした');
-            }
+            } 
           });
-        } else {
-          //console.log('ターゲットの要素が見つかりませんでした');
-        }
+        } 
       } catch (error) {
         console.error('エラーが発生しました:', error);
       }
     }
-    //2秒待つ
-    //await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // 除外ページなら何もしない
     const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));
@@ -210,9 +194,6 @@ export const open = async () => {
       regexp.test(lastPage.url.raw)
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
-
-    //デバッグ用
-    //console.log('This Page:', isArticleLast, 'URL', url);
 
     // 前ページが対象の記事ページでなかった場合は以降の処理をしない
     if (!(!isArticleCurrent && isArticleLast)) {
