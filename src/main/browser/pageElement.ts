@@ -39,12 +39,10 @@ export const fetchPageElements = async (url: string) => {
   //隠された要素を表示してから要素を取得する
   // ターゲット要素が存在するか確認
   try {
-    console.log('ターゲットが存在するかを確認します');
     const elementExists = await page.$('.spot-description__full-text');
     if (elementExists) {
       // スタイルを変更して要素を表示
       await page.evaluate(() => {
-        console.log('要素を表示します');
         const targetDiv = document.querySelector(
           '.spot-description__full-text'
         ) as HTMLElement;
