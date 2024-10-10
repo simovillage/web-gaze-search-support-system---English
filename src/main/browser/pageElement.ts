@@ -1,7 +1,7 @@
 import { BrowserElement, BrowserElementRect } from '@src/main/browser/type';
 import {
   BLOCK_BOTTOM_OFFSET,
-  //HEAD_TEXT_HEIGHT_OFFSET,
+  HEAD_TEXT_HEIGHT_OFFSET,
   SCREEN_HEIGHT,
   SCREEN_HEIGHT_OFFSET,
   SCREEN_WIDTH,
@@ -10,6 +10,9 @@ import puppeteer from 'puppeteer';
 
 // ページ内の要素の位置とサイズを取得する
 export const fetchPageElements = async (url: string) => {
+  //デバッグ用
+  console.log('呼ばれました！！！要素の取得を開始します。');
+
   const browser = await puppeteer.launch({
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -31,8 +34,32 @@ export const fetchPageElements = async (url: string) => {
     }
   });
   */
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  //await new Promise((resolve) => setTimeout(resolve, 2000));
 
+  //隠された要素を表示してから要素を取得する
+  // ターゲット要素が存在するか確認
+  try {
+    console.log('ターゲットが存在するかを確認します');
+    const elementExists = await page.$('.spot-description__full-text');
+    if (elementExists) {
+      // スタイルを変更して要素を表示
+      await page.evaluate(() => {
+        console.log('要素を表示します');
+        const targetDiv = document.querySelector(
+          '.spot-description__full-text'
+        ) as HTMLElement;
+        if (targetDiv) {
+          targetDiv.style.display = 'block'; // 要素を表示
+          targetDiv.style.visibility = 'visible'; // 要素を見える状態に
+          targetDiv.style.height = 'auto'; // 高さを自動調整
+        }
+      });
+    }
+  } catch (error) {
+    console.error('エラーが発生しました:', error);
+  }
+  //デバッグ用
+  console.log('以下よりコンテンツの分析を開始します');
   const elements: BrowserElement[] = await page.evaluate(
     (
       BLOCK_BOTTOM_OFFSET: number,
@@ -86,6 +113,7 @@ export const fetchPageElements = async (url: string) => {
   );
 
   //デバッグ用
+  console.log('分析が終了しました。');
   console.log('elements here:', elements);
   return elements;
 };
