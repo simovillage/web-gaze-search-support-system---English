@@ -8,7 +8,7 @@ import { Result } from '@src/types/result';
 // 注視した要素を抽出する
 const extractFocusedElements = async (
   elements: BrowserElement[],
-  stationaryPoints: BrowserStationaryPoint[],
+  stationaryPoints: BrowserStationaryPoint[]
 ) => {
   // 要素と停留点を結びつける
   const elementsWithStationaryPoints = elements.map((element) => ({
@@ -19,7 +19,7 @@ const extractFocusedElements = async (
           stationaryPoint.x >= rect.x - RECT_INCLUDE_OFFSET &&
           stationaryPoint.x <= rect.x + rect.width + RECT_INCLUDE_OFFSET &&
           stationaryPoint.y >= rect.y - RECT_INCLUDE_OFFSET &&
-          stationaryPoint.y <= rect.y + rect.height + RECT_INCLUDE_OFFSET,
+          stationaryPoint.y <= rect.y + rect.height + RECT_INCLUDE_OFFSET
       );
       return {
         rect,
@@ -37,7 +37,7 @@ const extractFocusedElements = async (
           .map(async (rect) => {
             const fillRatio = await calcFillRatio(rect);
             return fillRatio;
-          }),
+          })
       );
 
       const products = fillRatios.reduce((acc, cur) => acc * cur, 1);
@@ -46,7 +46,7 @@ const extractFocusedElements = async (
         ...element,
         fillRatio: products,
       };
-    }),
+    })
   );
 
   console.log({
@@ -54,7 +54,7 @@ const extractFocusedElements = async (
   });
 
   const focusedElements = elementsWithFillRatio.filter(
-    (element) => element.fillRatio > 0.05, //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
+    (element) => element.fillRatio > 0.05 //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
   );
 
   return focusedElements;
@@ -62,7 +62,7 @@ const extractFocusedElements = async (
 
 // 注視した要素を基に要約する
 export const summarizeArticleBasedOnFocusedElements = async (
-  hashedUrl: string,
+  hashedUrl: string
 ) => {
   const targetPage = store.get('browser').pages[hashedUrl];
   if (!targetPage) {
@@ -93,7 +93,7 @@ export const summarizeArticleBasedOnFocusedElements = async (
           value: undefined,
         });
       }, 100);
-    },
+    }
   );
 
   if (!waitForElementsResult.ok) {
@@ -102,7 +102,7 @@ export const summarizeArticleBasedOnFocusedElements = async (
 
   const focusedElements = await extractFocusedElements(
     elements.data,
-    stationaryPoints,
+    stationaryPoints
   );
 
   const focusedTexts = focusedElements.map((element) => element.text);
@@ -116,7 +116,7 @@ export const summarizeArticleBasedOnFocusedElements = async (
           return;
         }
         return captionResult.value;
-      }),
+      })
     )
   ).flatMap((caption) => (caption ? [caption] : []));
 

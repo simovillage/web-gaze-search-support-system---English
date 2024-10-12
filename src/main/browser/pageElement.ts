@@ -1,5 +1,6 @@
 import { BrowserElement, BrowserElementRect } from '@src/main/browser/type';
 import {
+  BLOCK_BOTTOM_HILIGHT_OFFSET,
   BLOCK_BOTTOM_OFFSET,
   HEAD_TEXT_HEIGHT_OFFSET,
   SCREEN_HEIGHT,
@@ -62,12 +63,20 @@ export const fetchPageElements = async (url: string) => {
   const elements: BrowserElement[] = await page.evaluate(
     (
       BLOCK_BOTTOM_OFFSET: number,
-      //HEAD_TEXT_HEIGHT_OFFSET: number,
+      BLOCK_BOTTOM_HILIGHT_OFFSET: number,
       SCREEN_HEIGHT_OFFSET: number
     ) => {
-      // 段落ごとのまとまりをBlockと呼ぶ
+      // 2つのdivタグから段落を取得し、Blockと呼ぶ
       const contentsBlocks = Array.from<HTMLParagraphElement>(
-        document.querySelectorAll('.spot-description p')
+        document.querySelectorAll('.spot-description p, .spot-highlight p')
+      );
+
+      // それぞれのdivにタグ付けそする
+      const spotDescriptionParagraphs = contentsBlocks.filter(
+        (p) => p.closest('.spot-description') !== null
+      );
+      const spotHighlightParagraphs = contentsBlocks.filter(
+        (p) => p.closest('.spot-highlight') !== null
       );
 
       return contentsBlocks.map((block) => {
@@ -78,8 +87,17 @@ export const fetchPageElements = async (url: string) => {
         const width = blockBoundingRect.width;
         // Blockの上端
         const blockTop = blockBoundingRect.top;
-        // Blockの下端(余分が出るので調整する)
-        const blockBottom = blockBoundingRect.bottom - BLOCK_BOTTOM_OFFSET;
+
+        let blockBottom = blockBoundingRect.bottom;
+
+        if (spotDescriptionParagraphs.includes(block)) {
+          // Blockの下端(余分が出るので調整する)
+          blockBottom = blockBoundingRect.bottom - BLOCK_BOTTOM_OFFSET;
+        } else if (spotHighlightParagraphs.includes(block)) {
+          // Blockの下端(余分が出るので調整する)
+          blockBottom = blockBoundingRect.bottom - BLOCK_BOTTOM_HILIGHT_OFFSET;
+        }
+
         //高さを計算
         const height = blockBottom - blockTop;
 
@@ -101,13 +119,13 @@ export const fetchPageElements = async (url: string) => {
 
         return {
           rects: boundingRects,
-          text: text.replace(/\s+/g, ''),
+          text: text,
           images,
         };
       });
     },
     BLOCK_BOTTOM_OFFSET,
-    //HEAD_TEXT_HEIGHT_OFFSET,
+    BLOCK_BOTTOM_HILIGHT_OFFSET,
     SCREEN_HEIGHT_OFFSET
   );
 
