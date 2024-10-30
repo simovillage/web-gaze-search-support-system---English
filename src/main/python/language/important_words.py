@@ -1,52 +1,52 @@
 import json
-import re
 import sys
 
+import nltk
 import numpy as np
 import pandas as pd
 from gensim.models import KeyedVectors
+from nltk import pos_tag
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 from scipy.stats import pearsonr
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk import pos_tag
-
-
 nltk_resources = {
-    'punkt_tab': 'tokenizers/punkt_tab',
-    'averaged_perceptron_tagger_eng': 'taggers/averaged_perceptron_tagger_eng',
-    'stopwords': 'corpora/stopwords'
+    "punkt_tab": "tokenizers/punkt_tab",
+    "averaged_perceptron_tagger_eng": "taggers/averaged_perceptron_tagger_eng",
+    "stopwords": "corpora/stopwords",
 }
 
 for resource, path in nltk_resources.items():
     try:
-        nltk.data.find(f'{path}')
+        nltk.data.find(f"{path}")
         # print(f"{resource} is already downloaded")
     except LookupError:
         nltk.download(resource)
-        # print(f"{resource} download complete") 
+        # print(f"{resource} download complete")
 
-stop_words = set(stopwords.words('english'))
+stop_words = set(stopwords.words("english"))
+
 
 # NLTKを使ってテキストから単語を抽出する関数
 def extract_words(text: str):
     # トークナイゼーション
     words = word_tokenize(text)
-    
+
     # 品詞タグ付け
     tagged_words = pos_tag(words)
-    
+
     # 重要な品詞の抽出（名詞、動詞、形容詞）
     # word.lower → 単語を小文字化する
-    important_words = [word for word, tag in tagged_words 
-                        if tag.startswith(('NN', 'VB', 'JJ') and word.lower() not in stop_words)]
-    
+    important_words = [
+        word
+        for word, tag in tagged_words
+        if tag.startswith(("NN", "VB", "JJ") and word.lower() not in stop_words)
+    ]
+
     # 固有名詞の抽出
-    proper_nouns = [word for word, tag in tagged_words
-                         if tag.startswith('NNP')]
-    
+    proper_nouns = [word for word, tag in tagged_words if tag.startswith("NNP")]
+
     return {
         "words": important_words,
         "proper_nouns": proper_nouns,
@@ -55,8 +55,9 @@ def extract_words(text: str):
 
 def calc_tfidf_for_proper_nouns(texts):
     extracted_data = [extract_words(text) for text in texts]
-    all_proper_nouns = [word for data in extracted_data
-                        for word in data['proper_nouns']]
+    all_proper_nouns = [
+        word for data in extracted_data for word in data["proper_nouns"]
+    ]
 
     # カスタムトークナイザーを定義します。
     def custom_tokenizer(text):
@@ -72,7 +73,7 @@ def calc_tfidf_for_proper_nouns(texts):
     )
 
     # proper_nounsの抽出されたリストを結合した文字列として渡す
-    texts = [" ".join(data['words']) for data in extracted_data]
+    texts = [" ".join(data["words"]) for data in extracted_data]
 
     # 文章内の全単語（ここでは固有名詞のみ）のTfidf値を取得します。
     tfidf_matrix = tfidf_vectorizer.fit_transform(texts)
@@ -136,10 +137,12 @@ def find_similar_tourism_spots(
         proper_nouns = top_5_words
     proper_noun = proper_nouns[0]
 
-    tourism_spots_df = pd.read_csv("src/main/csv/spots.csv")
-    tokyo_tourism_spot_df = tourism_spots_df[tourism_spots_df["都道府県"] == "東京"]
+    tourism_spots_df = pd.read_csv(
+        "src/main/csv/Analysis_Reviews_3_Central_wards_of_Tokyo_en_ja.csv"
+    )
+    tokyo_tourism_spot_df = tourism_spots_df[tourism_spots_df["Ward"]]
 
-    tokyo_tourism_spot_names = tokyo_tourism_spot_df["観光地"].tolist()
+    tokyo_tourism_spot_names = tokyo_tourism_spot_df["Place_Name"].tolist()
     filtered_tokyo_tourism_spot_names = [
         word for word in tokyo_tourism_spot_names if word in model.key_to_index
     ]
@@ -162,21 +165,21 @@ def find_similar_tourism_spots(
         filtered_tokyo_tourism_spot_names.remove(similar_spot_name)
 
     similar_spot_df = tokyo_tourism_spot_df[
-        tokyo_tourism_spot_df["観光地"].isin(similar_spot_names)
+        tokyo_tourism_spot_df["Place_Name"].isin(similar_spot_names)
     ].reset_index(drop=True)
 
     # 感情スコアのカラムを選択
     emotion_cols = [
-        "yorokobi",
-        "ikari",
-        "takaburi",
-        "aware",
-        "suki",
-        "kowa",
-        "yasu",
-        "iya",
-        "odoroki",
-        "haji",
+        "anger",
+        "anticipation",
+        "disgust",
+        "fear",
+        "joy",
+        "negative",
+        "positive",
+        "sadness",
+        "surprise",
+        "trust",
     ]
 
     # 各観光スポットの感情スコアを抽出
@@ -197,7 +200,7 @@ def find_similar_tourism_spots(
                 # correlations.append(1)
 
         # 相関係数の平均を計算して辞書に格納
-        average_correlation_scores[similar_spot_df.loc[i, "観光地"]] = np.mean(
+        average_correlation_scores[similar_spot_df.loc[i, "Place_Name"]] = np.mean(
             correlations
         )
 
