@@ -26,17 +26,6 @@ export const fetchPageElements = async (url: string) => {
   await page.goto(url, { waitUntil: 'networkidle2' });
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  /**
-  // Img要素のlazy loadingを無効化する
-  await page.evaluate(() => {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    for (const img of images) {
-      img.removeAttribute('loading');
-    }
-  });
-  */
-  //await new Promise((resolve) => setTimeout(resolve, 2000));
-
   //隠された要素を表示してから要素を取得する
   // ターゲット要素が存在するか確認
   try {
@@ -66,12 +55,24 @@ export const fetchPageElements = async (url: string) => {
       BLOCK_BOTTOM_HILIGHT_OFFSET: number,
       SCREEN_HEIGHT_OFFSET: number
     ) => {
-      // 2つのdivタグから段落を取得し、Blockと呼ぶ
-      const contentsBlocks = Array.from<HTMLParagraphElement>(
-        document.querySelectorAll('.spot-description p, .spot-highlight p')
+      // それぞれのdivタグから段落を取得し、Blockと呼ぶ
+      const contentsBlocks = Array.from<HTMLElement>(
+        document.querySelectorAll(
+          '.spot-description p, .spot-highlight p, .spot-page-image img, .spot-highlights-section img'
+        )
       );
 
-      // それぞれのdivにタグ付けそする
+      // pタグをフィルタリング
+      const paragraphBlocks = contentsBlocks.filter(
+        (block) => block.tagName && block.tagName.toUpperCase() === 'P'
+      );
+
+      // imgタグをフィルタリング
+      const imageBlocks = contentsBlocks.filter(
+        (block) => block.tagName === 'IMG'
+      );
+
+      // テキスト要素のdivにタグ付ける
       const spotDescriptionParagraphs = contentsBlocks.filter(
         (p) => p.closest('.spot-description') !== null
       );
@@ -80,7 +81,10 @@ export const fetchPageElements = async (url: string) => {
       );
 
       return contentsBlocks.map((block) => {
-        // テキストと画像、それぞれの要素の位置とサイズを計算する
+        // 要素の位置とサイズを入れる配列
+        const boundingRects: BrowserElementRect[] = [];
+
+        // テキスト要素の位置とサイズを計算する
         const blockBoundingRect = block.getBoundingClientRect();
         // xとwidthは共通なのでここで定義する
         const x = blockBoundingRect.left;
@@ -90,32 +94,40 @@ export const fetchPageElements = async (url: string) => {
 
         let blockBottom = blockBoundingRect.bottom;
 
-        if (spotDescriptionParagraphs.includes(block)) {
-          // Blockの下端(余分が出るので調整する)
-          blockBottom = blockBoundingRect.bottom - BLOCK_BOTTOM_OFFSET;
-        } else if (spotHighlightParagraphs.includes(block)) {
-          // Blockの下端(余分が出るので調整する)
-          blockBottom = blockBoundingRect.bottom - BLOCK_BOTTOM_HILIGHT_OFFSET;
+        if (paragraphBlocks.includes(block)) {
+          if (spotDescriptionParagraphs.includes(block)) {
+            blockBottom = blockBoundingRect.bottom - BLOCK_BOTTOM_OFFSET;
+          } else if (spotHighlightParagraphs.includes(block)) {
+            blockBottom =
+              blockBoundingRect.bottom - BLOCK_BOTTOM_HILIGHT_OFFSET;
+          }
+
+          const height = blockBottom - blockTop;
+          boundingRects.push({
+            x,
+            y: blockTop + SCREEN_HEIGHT_OFFSET,
+            width,
+            height,
+            type: 'text',
+          });
+        } else if (imageBlocks.includes(block)) {
+          const imgBoundingRect = block.getBoundingClientRect();
+          const y = imgBoundingRect.top + SCREEN_HEIGHT_OFFSET;
+          const height = blockBoundingRect.height;
+
+          boundingRects.push({
+            x,
+            y,
+            width,
+            height,
+            type: 'img',
+          });
         }
 
-        //高さを計算
-        const height = blockBottom - blockTop;
-
-        // 要素の位置とサイズを入れる配列
-        const boundingRects: BrowserElementRect[] = [];
-
-        boundingRects.push({
-          x,
-          y: blockTop + SCREEN_HEIGHT_OFFSET,
-          width,
-          height: height,
-          type: 'text',
-        });
-
-        const text = block.textContent || '';
-        const images = Array.from(block.querySelectorAll('img')).map(
-          (img) => img.src
-        );
+        //テキスト要素を代入
+        const text = paragraphBlocks ? block.textContent || '' : '';
+        //画像要素を代入
+        const images = imageBlocks ? [block.getAttribute('src') || ''] : [];
 
         return {
           rects: boundingRects,
