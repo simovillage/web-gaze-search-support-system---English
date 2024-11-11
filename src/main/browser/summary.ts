@@ -54,7 +54,9 @@ const extractFocusedElements = async (
   });
 
   const focusedElements = elementsWithFillRatio.filter(
-    (element) => element.fillRatio > 0.05 //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
+    //　日本語用閾値　> fillRatioが0.05以上であれば注視しているとし、文章を抜き出して要約する
+    // (element) => element.fillRatio > 0.05 //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
+    (element) => element.fillRatio > 0.01 //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
   );
 
   return focusedElements;

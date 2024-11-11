@@ -23,7 +23,7 @@ export const open = async () => {
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
   await page.goto(
-    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=sensoji&sort=relevance'
+    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Yasukuni+Shrine&sort=relevance'
   );
 
   // 特殊なイベントのための処理
@@ -59,13 +59,18 @@ export const open = async () => {
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
-    const title = await frame.title();
-    const url = frame.url();
-
     // iframeであれば処理をスキップ
     if (frame.parentFrame() !== null) {
       return;
     }
+
+    await frame.evaluate(() => {
+      //　拡大率変更
+      document.body.style.zoom = '125%';
+    });
+
+    const title = await frame.title();
+    const url = frame.url();
 
     const needShowPage = showRegexps.some((regexp) => regexp.test(url));
     if (needShowPage) {
@@ -82,9 +87,9 @@ export const open = async () => {
               targetDiv.style.display = 'block'; // 要素を表示
               targetDiv.style.visibility = 'visible'; // 要素を見える状態に
               targetDiv.style.height = 'auto'; // 高さを自動調整
-            } 
+            }
           });
-        } 
+        }
       } catch (error) {
         console.error('エラーが発生しました:', error);
       }
@@ -161,6 +166,10 @@ export const open = async () => {
 
   // 記事ページから戻ってきたときの処理
   page.on('framenavigated', async (frame) => {
+    // iframeであれば処理をスキップ
+    if (frame.parentFrame() !== null) {
+      return;
+    }
     const url = frame.url();
 
     // 除外ページなら何もしない
@@ -195,7 +204,7 @@ export const open = async () => {
     );
     const isArticleLast = includeArticlesLast && !includeNotArticlesLast;
 
-    // 前ページが対象の記事ページでなかった場合は以降の処理をしない
+    // 記事ページから戻ってきた場合のみ処理する
     if (!(!isArticleCurrent && isArticleLast)) {
       return;
     }
