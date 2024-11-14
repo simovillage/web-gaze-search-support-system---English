@@ -47,6 +47,10 @@ export const fetchPageElements = async (url: string) => {
   } catch (error) {
     console.error('エラーが発生しました:', error);
   }
+  await page.evaluate(() => {
+    //　拡大率変更
+    document.body.style.zoom = '125%';
+  });
   //デバッグ用
   console.log('以下よりコンテンツの分析を開始します');
   const elements: BrowserElement[] = await page.evaluate(
@@ -57,8 +61,14 @@ export const fetchPageElements = async (url: string) => {
     ) => {
       // それぞれのdivタグから段落を取得し、Blockと呼ぶ
       const contentsBlocks = Array.from<HTMLElement>(
+        /**
+        //画像も取得できる方
         document.querySelectorAll(
-          '.spot-description p, .spot-highlight p, .spot-page-image img, .spot-highlights-section img'
+          '.spot-description p, .spot-highlight p, .spot-page-image img, .spot-highlights-section img,'
+        )
+          */
+        document.querySelectorAll(
+          '.spot-description p, .spot-highlight p, .article__content p'
         )
       );
 
