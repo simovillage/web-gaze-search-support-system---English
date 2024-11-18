@@ -41,7 +41,7 @@ def extract_words(text: str):
     important_words = [
         word
         for word, tag in tagged_words
-        if tag.startswith(("NN", "VB", "JJ") and word.lower() not in stop_words)
+        if tag.startswith(("NN", "VB", "JJ")) and word.lower() not in stop_words
     ]
 
     # 固有名詞の抽出
@@ -88,7 +88,7 @@ def calc_tfidf_for_proper_nouns(texts):
 
 
 # 学習済みのWord2Vecモデルの読み込み
-model = KeyedVectors.load("src/main/models/w2v/keyword220807.kv", mmap="r")
+model = KeyedVectors.load("src/main/models/w2v/wikipedia2vec_model.kv", mmap="r")
 
 
 def find_top_similar_words(words):
@@ -114,7 +114,7 @@ def find_top_similar_words(words):
 
     return top_5_words
 
-
+"""
 def find_similar_by_vector(words):
     # トップ5単語のベクトルを加算
     aggregate_vector = np.sum([model[word] for word in words], axis=0)
@@ -126,6 +126,29 @@ def find_similar_by_vector(words):
     result_words = [word for word, similarity in similar_words if word not in words][:5]
 
     return result_words
+"""
+def find_similar_by_vector(words):
+    words = [word.lower() for word in words]  # 小文字化
+    print(f"Input words (lowercased): {words}")
+
+    # ENTITY/ を付与して語彙に合わせる
+    formatted_words = [f"ENTITY/{word}" for word in words]
+    filtered_words = [word for word in formatted_words if word in model.key_to_index]
+    print(f"Filtered words: {filtered_words}")
+
+    if not filtered_words:
+        print("No words found in the model vocabulary. Returning default value.")
+        return ["default_word"]  # デフォルト処理
+
+    aggregate_vector = np.sum([model[word] for word in filtered_words], axis=0)
+    print(f"Aggregate vector shape: {aggregate_vector.shape}")
+
+    similar_words = model.similar_by_vector(aggregate_vector, topn=10)
+    print(f"Similar words: {similar_words}")
+
+    result_words = [word for word, similarity in similar_words if word not in filtered_words][:5]
+    return result_words
+
 
 
 # 類似観光スポットを抽出する関数
@@ -138,11 +161,12 @@ def find_similar_tourism_spots(
     proper_noun = proper_nouns[0]
 
     tourism_spots_df = pd.read_csv(
-        "src/main/csv/Analysis_Reviews_3_Central_wards_of_Tokyo_en_ja.csv"
+        # "src/main/csv/Tokyo_spots_en_ja.csv"
+        "D:\senpaisystem\src\main\csv\Tokyo_spots_en_ja.csv"
     )
-    tokyo_tourism_spot_df = tourism_spots_df[tourism_spots_df["Ward"]]
+    # tokyo_tourism_spot_df = tourism_spots_df[tourism_spots_df["Ward"]]
 
-    tokyo_tourism_spot_names = tokyo_tourism_spot_df["Place_Name"].tolist()
+    tokyo_tourism_spot_names = tourism_spots_df["Place_Name"].tolist()
     filtered_tokyo_tourism_spot_names = [
         word for word in tokyo_tourism_spot_names if word in model.key_to_index
     ]
@@ -164,8 +188,8 @@ def find_similar_tourism_spots(
         similar_spot_names.append(similar_spot_name)
         filtered_tokyo_tourism_spot_names.remove(similar_spot_name)
 
-    similar_spot_df = tokyo_tourism_spot_df[
-        tokyo_tourism_spot_df["Place_Name"].isin(similar_spot_names)
+    similar_spot_df = tourism_spots_df[
+        tourism_spots_df["Place_Name"].isin(similar_spot_names)
     ].reset_index(drop=True)
 
     # 感情スコアのカラムを選択
@@ -221,7 +245,7 @@ texts = list(map(lambda text: extract_words(text), texts))
 proper_nouns = list(set(sum(list(map(lambda text: text["proper_nouns"], texts)), [])))
 texts = list(map(lambda text: " ".join(text["words"]), texts))
 
-tfidfs, terms = calc_tfidf_for_proper_nouns(texts, proper_nouns)
+tfidfs, terms = calc_tfidf_for_proper_nouns(texts)
 
 top_5_words = find_top_similar_words(terms)
 similar_words = find_similar_by_vector(top_5_words)
