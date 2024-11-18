@@ -64,10 +64,12 @@ export const open = async () => {
       return;
     }
 
+    /**
     await frame.evaluate(() => {
       //　拡大率変更
       document.body.style.zoom = '125%';
     });
+    */
 
     const title = await frame.title();
     const url = frame.url();
@@ -166,10 +168,6 @@ export const open = async () => {
 
   // 記事ページから戻ってきたときの処理
   page.on('framenavigated', async (frame) => {
-    // iframeであれば処理をスキップ
-    if (frame.parentFrame() !== null) {
-      return;
-    }
     const url = frame.url();
 
     // 除外ページなら何もしない
@@ -209,15 +207,26 @@ export const open = async () => {
       return;
     }
 
-    const isFitIntention = await page.evaluate(() => {
-      return window.confirm(
-        'ただいま閲覧したページはタスクや興味に適していましたか？'
-      );
-    });
-
-    // 検索意図に適していない場合は何もしない
-    if (!isFitIntention) {
+    // iframeであれば処理をスキップ
+    if (frame.parentFrame() !== null) {
       return;
+    }
+
+    try {
+      await page.waitForNavigation({ waitUntil: 'networkidle2' });
+
+      const isFitIntention = await page.evaluate(() => {
+        return window.confirm(
+          'ただいま閲覧したページはタスクや興味に適していましたか？'
+        );
+      });
+
+      // 検索意図に適していない場合は何もしない
+      if (!isFitIntention) {
+        return;
+      }
+    } catch (error) {
+      console.error('Navigation error during evaluation:', error);
     }
 
     // URLをハッシュ化

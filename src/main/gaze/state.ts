@@ -15,6 +15,7 @@ const gazeStatesEmitter = new EventEmitter();
 // 停留点の管理をするオブジェクト. Proxyを使って更新を検知する
 const gazeStates = new Proxy<{ states: GazeStates }>(
   {
+    ////改変前日本語注視判定ステータス////
     states: {
       currentStationaryPoint: {
         unixtime: 0,
