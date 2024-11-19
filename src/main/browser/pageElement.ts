@@ -2,7 +2,7 @@ import { BrowserElement, BrowserElementRect } from '@src/main/browser/type';
 import {
   BLOCK_BOTTOM_HILIGHT_OFFSET,
   BLOCK_BOTTOM_OFFSET,
-  HEAD_TEXT_HEIGHT_OFFSET,
+  //HEAD_TEXT_HEIGHT_OFFSET,
   SCREEN_HEIGHT,
   SCREEN_HEIGHT_OFFSET,
   SCREEN_WIDTH,

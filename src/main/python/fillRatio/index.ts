@@ -14,7 +14,7 @@ export const calcFillRatio = async (element: {
 
   // 停留点の座標の配列
   const points = stationaryPoints.map(
-    (stationaryPoint) => [stationaryPoint.x, stationaryPoint.y] as const,
+    (stationaryPoint) => [stationaryPoint.x, stationaryPoint.y] as const
   );
 
   // 四角形の座標の配列
@@ -36,10 +36,11 @@ export const calcFillRatio = async (element: {
         rectangle_bounds: rectangleBounds,
         radius,
       }),
-    ],
+    ]
   );
 
   // 割合
-  const fillRatio = parseFloat(result);
+  //const fillRatio = parseFloat(result);
+  const fillRatio = 1 + parseFloat(result); //デバッグ用
   return fillRatio;
 };

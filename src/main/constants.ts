@@ -24,11 +24,11 @@ export const RECT_INCLUDE_OFFSET = 50;
 
 // 停留判定のピクセル範囲の半径
 // export const STATIONARY_DECISION_PIXEL_RANGE_RADIUS = 60; // //日本語用半径
-export const STATIONARY_DECISION_PIXEL_RANGE_RADIUS = 30;
+export const STATIONARY_DECISION_PIXEL_RANGE_RADIUS = 300;
 
 // 停留判定に必要な最低ミリ秒数
 export const STATIONARY_DECISION_THRESHOLD_MILLISECOND = 300;
 
 // 注視判定に必要な停留点の面積の割合の閾値
 // export const FOCUS_DECISION_FILL_RATIO_THRESHOLD = 0.5; // //日本語用注視割合
-export const FOCUS_DECISION_FILL_RATIO_THRESHOLD = 0.3;
+export const FOCUS_DECISION_FILL_RATIO_THRESHOLD = 0.5;

@@ -19,8 +19,27 @@ class SentenceBertEnglish:
         self.device = torch.device(device)
 
         # モデルの移動は不要（今のところ）
-        # self.model.to(device)
+        self.model.to(device)
 
+    @torch.no_grad()
+    def encode(self, sentences, batch_size=8):
+        all_embeddings = []
+        iterator = range(0, len(sentences), batch_size)
+        for batch_idx in iterator:
+            batch = sentences[batch_idx : batch_idx + batch_size]
+
+            # モデルに入力をエンコードして埋め込みを取得する
+            sentence_embeddings = self.model.encode(batch, show_progress_bar=False)
+
+            # NumPy配列をTensorに変換
+            sentence_embeddings = torch.tensor(sentence_embeddings)
+
+            all_embeddings.extend(sentence_embeddings)
+
+        # Tensorのリストをスタックして返す
+        return torch.stack(all_embeddings)
+
+"""
     @torch.no_grad()
     def encode(self, sentences, batch_size=8):
         all_embeddings = []
@@ -35,6 +54,7 @@ class SentenceBertEnglish:
 
         # return torch.stack(all_embeddings).numpy()
         return torch.stack(all_embeddings)
+"""
 
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
