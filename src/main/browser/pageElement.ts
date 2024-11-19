@@ -51,6 +51,7 @@ export const fetchPageElements = async (url: string) => {
     //　拡大率変更
     document.body.style.zoom = '125%';
   });
+
   //デバッグ用
   console.log('以下よりコンテンツの分析を開始します');
   const elements: BrowserElement[] = await page.evaluate(
