@@ -40,7 +40,7 @@ export const calcFillRatio = async (element: {
   );
 
   // 割合
-  //const fillRatio = parseFloat(result);
-  const fillRatio = 1 + parseFloat(result); //デバッグ用
+  const fillRatio = parseFloat(result);
+  //const fillRatio = 1 + parseFloat(result); //デバッグ用
   return fillRatio;
 };

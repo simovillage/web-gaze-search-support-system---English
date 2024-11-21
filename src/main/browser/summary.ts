@@ -21,6 +21,7 @@ const extractFocusedElements = async (
           stationaryPoint.y >= rect.y - RECT_INCLUDE_OFFSET &&
           stationaryPoint.y <= rect.y + rect.height + RECT_INCLUDE_OFFSET
       );
+      console.log(stationaryPointsInRect);
       return {
         rect,
         stationaryPoints: stationaryPointsInRect,
