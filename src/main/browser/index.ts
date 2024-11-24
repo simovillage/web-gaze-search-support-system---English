@@ -38,16 +38,22 @@ export const open = async () => {
     }
     console.log('新しい要素が読み込まれ、イベントが発生しました');
 
+    /**
     // スクロールの監視
     window.addEventListener('scroll', () => {
-      console.log('スクロールイベントが発生しました');
       const { scrollY } = window;
       console.log(`scroll:${scrollY}`);
+    });
+    */
+
+    document.querySelectorAll('*').forEach(el => {
+      el.addEventListener('scroll', () => {
+        console.log(`スクロールイベントが発生しました: ${el.tagName}`);
+      });
     });
 
     // マウスの移動の監視
     window.addEventListener('mousemove', () => {
-      console.log('mousemoveイベントが発生しました');
       console.log('mousemove');
     });
 
@@ -101,38 +107,32 @@ export const open = async () => {
       return;
     }
 
-    /**
-    await frame.evaluate(() => {
-      //　拡大率変更
-      document.body.style.zoom = '125%';
-    });
-    */
-
     const title = await frame.title();
     const url = frame.url();
 
-    const needShowPage = showRegexps.some((regexp) => regexp.test(url));
-    if (needShowPage) {
-      try {
-        // ターゲット要素が存在するか確認
-        const elementExists = await frame.$('.spot-description__full-text');
-        if (elementExists) {
-          // スタイルを変更して要素を表示
-          await frame.evaluate(() => {
-            const targetDiv = document.querySelector(
-              '.spot-description__full-text'
-            ) as HTMLElement;
-            if (targetDiv) {
-              targetDiv.style.display = 'block'; // 要素を表示
-              targetDiv.style.visibility = 'visible'; // 要素を見える状態に
-              targetDiv.style.height = 'auto'; // 高さを自動調整
-            }
-          });
-        }
-      } catch (error) {
-        console.error('エラーが発生しました:', error);
+      //隠された要素の表示
+  const needShowPage = showRegexps.some((regexp) => regexp.test(url));
+  if (needShowPage) {
+    try {
+      // ターゲット要素が存在するか確認
+      const elementExists = await frame.$('.spot-description__full-text');
+      if (elementExists) {
+        // スタイルを変更して要素を表示
+        await frame.evaluate(() => {
+          const targetDiv = document.querySelector(
+            '.spot-description__full-text'
+          ) as HTMLElement;
+          if (targetDiv) {
+            targetDiv.style.display = 'block'; // 要素を表示
+            targetDiv.style.visibility = 'visible'; // 要素を見える状態に
+            targetDiv.style.height = 'auto'; // 高さを自動調整
+          }
+        });
       }
+    } catch (error) {
+      console.error('エラーが発生しました:', error);
     }
+  }
 
     // 除外ページなら何もしない
     const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));
