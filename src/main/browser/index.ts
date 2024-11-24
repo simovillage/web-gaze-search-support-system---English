@@ -26,29 +26,55 @@ export const open = async () => {
     'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Yasukuni+Shrine&sort=relevance'
   );
 
+  //従来の処理
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
+    if (window.self !== window.top) {
+      console.log(
+        `メインフレームではないためスキップします：, ${window.location.href}`
+      );
+      // 親フレームが存在する場合は何もしない
+      return;
+    }
+    console.log('新しい要素が読み込まれ、イベントが発生しました');
+
     // スクロールの監視
-    window.addEventListener('scroll:', () => {
+    window.addEventListener('scroll', () => {
+      console.log('スクロールイベントが発生しました');
       const { scrollY } = window;
       console.log(`scroll:${scrollY}`);
     });
+
     // マウスの移動の監視
     window.addEventListener('mousemove', () => {
+      console.log('mousemoveイベントが発生しました');
       console.log('mousemove');
     });
+
+    console.log(`イベントリスナーが登録されました:${window.location.href}`);
   });
 
+  //コンソール内メッセージをキャプチャ
   page.on('console', (msg) => {
+    //　デバッグ用 - コンソールログの出力
+    if (!msg.text().includes('Google Maps')) {
+      console.log(`BROWSER LOG (${msg.type()}): ${msg.text()}`);
+    }
+
+    //従来の処理
     if (msg.text().startsWith('scroll')) {
       const scrollY = Number(msg.text().replace('scroll:', ''));
+      //デバッグ用
+      console.log(`Captured scrollY: ${scrollY}`); // Puppeteer 側でログを記録
 
       pushScrollEvent({
         unixtime: Date.now(),
         scrollY,
       });
+
       return;
     }
+
     if (msg.text() === 'mousemove') {
       pushMouseMoveEvent({
         unixtime: Date.now(),
@@ -56,6 +82,17 @@ export const open = async () => {
       return;
     }
   });
+
+  /**
+  //デバッグ用 - リソースエラーの確認
+  page.on('response', (response) => {
+    if (!response.ok()) {
+      console.error(
+        `Failed to load resource: ${response.url()} - Status: ${response.status()}`
+      );
+    }
+  });
+  */
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
