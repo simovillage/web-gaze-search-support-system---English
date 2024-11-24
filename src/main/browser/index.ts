@@ -30,27 +30,17 @@ export const open = async () => {
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
     if (window.self !== window.top) {
-      console.log(
-        `メインフレームではないためスキップします：, ${window.location.href}`
-      );
       // 親フレームが存在する場合は何もしない
       return;
     }
     console.log('新しい要素が読み込まれ、イベントが発生しました');
 
-    /**
     // スクロールの監視
     window.addEventListener('scroll', () => {
       const { scrollY } = window;
       console.log(`scroll:${scrollY}`);
     });
-    */
-
-    document.querySelectorAll('*').forEach(el => {
-      el.addEventListener('scroll', () => {
-        console.log(`スクロールイベントが発生しました: ${el.tagName}`);
-      });
-    });
+    
 
     // マウスの移動の監視
     window.addEventListener('mousemove', () => {
