@@ -26,42 +26,46 @@ export const open = async () => {
     'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Yasukuni+Shrine&sort=relevance'
   );
 
+  window.onerror = (message, source, lineno, colno, error) => {
+    console.error(`[ERROR] ${message} at ${source}:${lineno}:${colno}`, error);
+  };  
+
   //従来の処理
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
+    
     if (window.self !== window.top) {
+      console.log("iframeであるため、処理をスキップします")
       // 親フレームが存在する場合は何もしない
       return;
+    }else {
+      console.log('新しい要素が読み込まれ、イベントが発生しました');
+
+      // スクロールの監視
+      window.addEventListener('scroll', () => {
+        const { scrollY } = window;
+        console.log(`scroll:${scrollY}`);
+      });
+      
+  
+      // マウスの移動の監視
+      window.addEventListener('mousemove', () => {
+        console.log('mousemove');
+      });
+  
+      console.log(`イベントリスナーが登録されました:${window.location.href}`);
     }
-    console.log('新しい要素が読み込まれ、イベントが発生しました');
-
-    // スクロールの監視
-    window.addEventListener('scroll', () => {
-      const { scrollY } = window;
-      console.log(`scroll:${scrollY}`);
-    });
-    
-
-    // マウスの移動の監視
-    window.addEventListener('mousemove', () => {
-      console.log('mousemove');
-    });
-
-    console.log(`イベントリスナーが登録されました:${window.location.href}`);
   });
 
   //コンソール内メッセージをキャプチャ
   page.on('console', (msg) => {
-    //　デバッグ用 - コンソールログの出力
-    if (!msg.text().includes('Google Maps')) {
-      console.log(`BROWSER LOG (${msg.type()}): ${msg.text()}`);
-    }
+    console.log(`BROWSER LOG (${msg.type()}): ${msg.text()}`);
 
     //従来の処理
     if (msg.text().startsWith('scroll')) {
       const scrollY = Number(msg.text().replace('scroll:', ''));
       //デバッグ用
-      console.log(`Captured scrollY: ${scrollY}`); // Puppeteer 側でログを記録
+      //console.log(`Captured scrollY: ${scrollY}`); // Puppeteer 側でログを記録
 
       pushScrollEvent({
         unixtime: Date.now(),
@@ -89,18 +93,19 @@ export const open = async () => {
     }
   });
   */
+  
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
+    
     // iframeであれば処理をスキップ
     if (frame.parentFrame() !== null) {
       return;
     }
-
     const title = await frame.title();
     const url = frame.url();
 
-      //隠された要素の表示
+  //隠された要素の表示
   const needShowPage = showRegexps.some((regexp) => regexp.test(url));
   if (needShowPage) {
     try {
