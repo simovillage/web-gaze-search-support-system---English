@@ -26,36 +26,53 @@ export const open = async () => {
     'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Yasukuni+Shrine&sort=relevance'
   );
 
-  window.onerror = (message, source, lineno, colno, error) => {
-    console.error(`[ERROR] ${message} at ${source}:${lineno}:${colno}`, error);
-  };  
+/**
+  await page.evaluateOnNewDocument(() => {
+    const registerScrollListener = () => {
+      window.addEventListener('scroll', () => {
+        console.log("スクロールイベントを登録しました")
+        console.log(`[SCROLL] Y: ${window.scrollY}, X: ${window.scrollX}`);
+      });
+    };
+  
+    // 初期登録
+    registerScrollListener();
+  
+    // 定期的に再登録
+    setInterval(() => {
+      console.log('[EVENT RE-REGISTER] Ensuring scroll listener is active.');
+      registerScrollListener();
+    }, 5000); // 5秒ごとに再登録
+  
+  });
+  */
 
   //従来の処理
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
-    
     if (window.self !== window.top) {
-      console.log("iframeであるため、処理をスキップします")
-      // 親フレームが存在する場合は何もしない
       return;
-    }else {
+    }
       console.log('新しい要素が読み込まれ、イベントが発生しました');
 
+      
       // スクロールの監視
       window.addEventListener('scroll', () => {
         const { scrollY } = window;
         console.log(`scroll:${scrollY}`);
       });
       
-  
+      
       // マウスの移動の監視
       window.addEventListener('mousemove', () => {
         console.log('mousemove');
       });
   
       console.log(`イベントリスナーが登録されました:${window.location.href}`);
-    }
+    
   });
+  
+  
 
   //コンソール内メッセージをキャプチャ
   page.on('console', (msg) => {
@@ -97,37 +114,51 @@ export const open = async () => {
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
-    
     // iframeであれば処理をスキップ
     if (frame.parentFrame() !== null) {
       return;
     }
+
     const title = await frame.title();
     const url = frame.url();
 
-  //隠された要素の表示
-  const needShowPage = showRegexps.some((regexp) => regexp.test(url));
-  if (needShowPage) {
+    
+    //隠された要素の表示
+    const needShowPage = showRegexps.some((regexp) => regexp.test(url));
+    if (needShowPage) {
+      try {
+        // ターゲット要素が存在するか確認
+        const elementExists = await frame.$('.spot-description__full-text');
+        if (elementExists) {
+          // スタイルを変更して要素を表示
+          await frame.evaluate(() => {
+            const targetDiv = document.querySelector(
+              '.spot-description__full-text'
+            ) as HTMLElement;
+            if (targetDiv) {
+              targetDiv.style.display = 'block'; // 要素を表示
+              targetDiv.style.visibility = 'visible'; // 要素を見える状態に
+              targetDiv.style.height = 'auto'; // 高さを自動調整
+            }
+          });
+        }
+      } catch (error) {
+        console.error('エラーが発生しました:', error);
+      }
+    }
+      
+
     try {
       // ターゲット要素が存在するか確認
-      const elementExists = await frame.$('.spot-description__full-text');
-      if (elementExists) {
-        // スタイルを変更して要素を表示
+      const overViewExists = await frame.$('.spot-overview');
+      if (overViewExists) {
+        // スタイルを変更して要素を削除
         await frame.evaluate(() => {
-          const targetDiv = document.querySelector(
-            '.spot-description__full-text'
-          ) as HTMLElement;
-          if (targetDiv) {
-            targetDiv.style.display = 'block'; // 要素を表示
-            targetDiv.style.visibility = 'visible'; // 要素を見える状態に
-            targetDiv.style.height = 'auto'; // 高さを自動調整
-          }
         });
       }
     } catch (error) {
       console.error('エラーが発生しました:', error);
     }
-  }
 
     // 除外ページなら何もしない
     const includeIgnores = ignoreRegexps.some((regexp) => regexp.test(url));
