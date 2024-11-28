@@ -26,27 +26,8 @@ export const open = async () => {
     'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Yasukuni+Shrine&sort=relevance'
   );
 
-/**
-  await page.evaluateOnNewDocument(() => {
-    const registerScrollListener = () => {
-      window.addEventListener('scroll', () => {
-        console.log("スクロールイベントを登録しました")
-        console.log(`[SCROLL] Y: ${window.scrollY}, X: ${window.scrollX}`);
-      });
-    };
-  
-    // 初期登録
-    registerScrollListener();
-  
-    // 定期的に再登録
-    setInterval(() => {
-      console.log('[EVENT RE-REGISTER] Ensuring scroll listener is active.');
-      registerScrollListener();
-    }, 5000); // 5秒ごとに再登録
-  
-  });
-  */
 
+  /**
   //従来の処理
   // 特殊なイベントのための処理
   await page.evaluateOnNewDocument(() => {
@@ -60,7 +41,8 @@ export const open = async () => {
       window.addEventListener('scroll', () => {
         const { scrollY } = window;
         console.log(`scroll:${scrollY}`);
-      });
+        //alert(`スクロール位置: ${window.scrollY}`);
+      }, { capture: true });
       
       
       // マウスの移動の監視
@@ -71,12 +53,9 @@ export const open = async () => {
       console.log(`イベントリスナーが登録されました:${window.location.href}`);
     
   });
-  
-  
 
   //コンソール内メッセージをキャプチャ
   page.on('console', (msg) => {
-    console.log(`BROWSER LOG (${msg.type()}): ${msg.text()}`);
 
     //従来の処理
     if (msg.text().startsWith('scroll')) {
@@ -99,30 +78,75 @@ export const open = async () => {
       return;
     }
   });
-
-  /**
-  //デバッグ用 - リソースエラーの確認
-  page.on('response', (response) => {
-    if (!response.ok()) {
-      console.error(
-        `Failed to load resource: ${response.url()} - Status: ${response.status()}`
-      );
-    }
-  });
   */
-  
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
     // iframeであれば処理をスキップ
     if (frame.parentFrame() !== null) {
+      //console.log(`skipped frame:${frame.url()}`)
       return;
     }
+
+/**
+    const inPageScrollY = await frame.evaluate(() => {
+      const logDiv = document.createElement('div');
+      logDiv.style.position = 'fixed';
+      logDiv.style.bottom = '0';
+      logDiv.style.left = '0';
+      logDiv.style.width = '100%';
+      logDiv.style.backgroundColor = 'rgba(0,0,0,0.7)';
+      logDiv.style.color = 'white';
+      logDiv.style.fontSize = '12px';
+      logDiv.style.fontFamily = 'monospace';
+      logDiv.style.zIndex = '10000';
+      document.body.appendChild(logDiv);
+    
+      const appendLog = (message) => {
+        const p = document.createElement('p');
+        p.textContent = message;
+        logDiv.appendChild(p);
+      };
+    
+      const scrollY = window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+
+        // ログを1行のみに制限
+        logDiv.textContent = `スクロール位置: ${scrollPosition}`;
+        return scrollPosition
+      });
+    
+      appendLog('ログシステム初期化完了');
+      return scrollY
+    });
+    console.log(inPageScrollY)
+    */
+
+// ページ内でスクロール位置を記録
+await frame.evaluate(() => {
+  const scrollTracker = document.createElement('div');
+  scrollTracker.id = 'scroll-tracker';
+  scrollTracker.style.display = 'none'; // 非表示に設定
+  document.body.appendChild(scrollTracker);
+
+  window.addEventListener('scroll', () => {
+    scrollTracker.textContent = window.scrollY.toString(); // スクロール位置を更新
+  });
+});
+
+// 定期的にスクロール位置を取得
+setInterval(async () => {
+  const scrollY = await frame.evaluate(() => {
+    const tracker = document.getElementById('scroll-tracker');
+    return tracker ? parseFloat(tracker.textContent || '0') : 0;
+  });
+  console.log('現在のスクロール位置:', scrollY);
+}, 500); // 500msごとに取得
 
     const title = await frame.title();
     const url = frame.url();
 
-    
+  
     //隠された要素の表示
     const needShowPage = showRegexps.some((regexp) => regexp.test(url));
     if (needShowPage) {
@@ -145,19 +169,6 @@ export const open = async () => {
       } catch (error) {
         console.error('エラーが発生しました:', error);
       }
-    }
-      
-
-    try {
-      // ターゲット要素が存在するか確認
-      const overViewExists = await frame.$('.spot-overview');
-      if (overViewExists) {
-        // スタイルを変更して要素を削除
-        await frame.evaluate(() => {
-        });
-      }
-    } catch (error) {
-      console.error('エラーが発生しました:', error);
     }
 
     // 除外ページなら何もしない
