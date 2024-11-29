@@ -27,58 +27,25 @@ export const open = async () => {
   );
 
 
-  /**
-  //従来の処理
-  // 特殊なイベントのための処理
-  await page.evaluateOnNewDocument(() => {
-    if (window.self !== window.top) {
-      return;
-    }
-      console.log('新しい要素が読み込まれ、イベントが発生しました');
-
-      
-      // スクロールの監視
-      window.addEventListener('scroll', () => {
-        const { scrollY } = window;
-        console.log(`scroll:${scrollY}`);
-        //alert(`スクロール位置: ${window.scrollY}`);
-      }, { capture: true });
-      
-      
-      // マウスの移動の監視
-      window.addEventListener('mousemove', () => {
-        console.log('mousemove');
-      });
-  
-      console.log(`イベントリスナーが登録されました:${window.location.href}`);
-    
+// Node.js: Expose a function to receive scroll data
+await page.exposeFunction('onScrollChange', (scrollY) => {
+  //デバッグ用
+  //console.log('現在のスクロール位置:', scrollY);
+  // 必要に応じて、ここでデータを外部保存や処理に利用
+  pushScrollEvent({
+    unixtime: Date.now(),
+    scrollY,
   });
+});
 
-  //コンソール内メッセージをキャプチャ
-  page.on('console', (msg) => {
-
-    //従来の処理
-    if (msg.text().startsWith('scroll')) {
-      const scrollY = Number(msg.text().replace('scroll:', ''));
-      //デバッグ用
-      //console.log(`Captured scrollY: ${scrollY}`); // Puppeteer 側でログを記録
-
-      pushScrollEvent({
-        unixtime: Date.now(),
-        scrollY,
-      });
-
-      return;
-    }
-
-    if (msg.text() === 'mousemove') {
-      pushMouseMoveEvent({
-        unixtime: Date.now(),
-      });
-      return;
-    }
+await page.exposeFunction('onMouseMove', () => {
+  //デバッグ用
+  //console.log('mousemove'); // Node.jsのコンソールに出力
+  pushMouseMoveEvent({
+    unixtime: Date.now(),
   });
-  */
+});
+
 
   // 記事ページに遷移したときの処理
   page.on('framenavigated', async (frame) => {
@@ -88,7 +55,41 @@ export const open = async () => {
       return;
     }
 
-/**
+    // ブラウザ側スクリプト
+await frame.evaluate(() => {
+  const logDiv = document.createElement('div');
+  logDiv.id = 'scroll-tracker';
+  logDiv.style.display = 'none'; // 表示せず、データ格納用として利用
+  document.body.appendChild(logDiv);
+
+  // スクロールイベントリスナーを設定
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    logDiv.textContent = scrollPosition.toString();
+    // Node.js側に通知
+    window.onScrollChange(scrollPosition);
+  });
+
+    // スクロールイベントリスナーを設定
+    window.addEventListener('mousemove', () => {
+      console.log('mousemove'); // マウス移動時にコンソールに出力
+      if (window.onMouseMove) {
+        window.onMouseMove(); // 外部で定義された関数を呼び出し
+      }
+    });
+
+  // MutationObserverでDOM変更を検知
+  const observer = new MutationObserver(() => {
+    const scrollY = document.getElementById('scroll-tracker')?.textContent;
+    if (scrollY) {
+      window.onScrollChange(parseFloat(scrollY));
+    }
+  });
+  const target = document.getElementById('scroll-tracker');
+  if (target) observer.observe(target, { childList: true });
+});
+
+    /**
     const inPageScrollY = await frame.evaluate(() => {
       const logDiv = document.createElement('div');
       logDiv.style.position = 'fixed';
@@ -119,29 +120,7 @@ export const open = async () => {
       appendLog('ログシステム初期化完了');
       return scrollY
     });
-    console.log(inPageScrollY)
     */
-
-// ページ内でスクロール位置を記録
-await frame.evaluate(() => {
-  const scrollTracker = document.createElement('div');
-  scrollTracker.id = 'scroll-tracker';
-  scrollTracker.style.display = 'none'; // 非表示に設定
-  document.body.appendChild(scrollTracker);
-
-  window.addEventListener('scroll', () => {
-    scrollTracker.textContent = window.scrollY.toString(); // スクロール位置を更新
-  });
-});
-
-// 定期的にスクロール位置を取得
-setInterval(async () => {
-  const scrollY = await frame.evaluate(() => {
-    const tracker = document.getElementById('scroll-tracker');
-    return tracker ? parseFloat(tracker.textContent || '0') : 0;
-  });
-  console.log('現在のスクロール位置:', scrollY);
-}, 500); // 500msごとに取得
 
     const title = await frame.title();
     const url = frame.url();
