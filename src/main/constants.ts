@@ -19,7 +19,8 @@ export const BLOCK_BOTTOM_OFFSET = 16;
 export const BLOCK_BOTTOM_HILIGHT_OFFSET = 10;
 
 // 停留点のyがやや下になるのを調整するためのオフセット
-export const STATIONARY_POINT_Y_OFFSET = 80;
+// export const STATIONARY_POINT_Y_OFFSET = 80;
+export const STATIONARY_POINT_Y_OFFSET = 30;
 
 // Rect内に含める停留点のオフセット
 export const RECT_INCLUDE_OFFSET = 50;

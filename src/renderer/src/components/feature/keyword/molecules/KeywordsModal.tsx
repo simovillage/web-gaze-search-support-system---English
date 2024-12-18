@@ -39,19 +39,19 @@ export const KeywordModalPresenter = ({
         </form>
         <div className="flex items-center justify-between">
           <KeywordList
-            title="本文関連情報"
+            title="Keywords related to text"
             keywordType="textRelatedKeywords"
             keywordStates={relatedKeywordStates.textRelatedKeywords}
             onChange={onChange}
           />
           <KeywordList
-            title="共起関連情報"
+            title="Similar Words to the Keywords"
             keywordType="similarRelatedKeywords"
             keywordStates={relatedKeywordStates.similarRelatedKeywords}
             onChange={onChange}
           />
           <KeywordList
-            title="類似観光スポット"
+            title="Similar Spots"
             keywordType="spotRelatedKeywords"
             keywordStates={relatedKeywordStates.spotRelatedKeywords}
             onChange={onChange}

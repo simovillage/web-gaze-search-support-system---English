@@ -2,11 +2,11 @@ import { RelatedKeywordsMap } from '@src/renderer/src/stores/keyword/types';
 import { atom } from 'jotai';
 import { atomWithReset } from 'jotai/utils';
 
-export const textRelatedKeywordsAtom = atom(['', '', '', '', '']);
+export const textRelatedKeywordsAtom = atom([]);
 
-export const similarRelatedKeywordsAtom = atom(['', '', '', '', '']);
+export const similarRelatedKeywordsAtom = atom([]);
 
-export const spotRelatedKeywordsAtom = atom(['', '', '', '', '']);
+export const spotRelatedKeywordsAtom = atom([]);
 
 export const checkedRelatedKeywordsAtom = atomWithReset({
   textRelatedKeywords: [false, false, false, false, false] as boolean[],
