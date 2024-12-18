@@ -9,6 +9,8 @@ export const execPythonScript = async <T>(
     ...args,
   ]);
 
+  console.log("Result:", result);
+
   if (!result.ok) {
     throw result.error;
   }

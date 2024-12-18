@@ -63,6 +63,7 @@ const extractFocusedElements = async (
   return focusedElements;
 };
 
+
 // 注視した要素を基に要約する
 export const summarizeArticleBasedOnFocusedElements = async (
   hashedUrl: string
@@ -122,6 +123,7 @@ export const summarizeArticleBasedOnFocusedElements = async (
       })
     )
   ).flatMap((caption) => (caption ? [caption] : []));
+  
 
   console.log({
     focusedTexts,
