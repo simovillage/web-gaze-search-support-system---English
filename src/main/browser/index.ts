@@ -23,7 +23,7 @@ export const open = async () => {
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
   await page.goto(
-    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&q=Sensoji&sort=relevance'
+    'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&category=culture&q=Sensoji&sort=relevance'
   );
 
 

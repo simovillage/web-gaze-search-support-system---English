@@ -1,6 +1,7 @@
 import { openAi } from '@src/main/libs/openai';
 import { Result } from '@src/types/result';
 
+//英語版システムではこのプログラムを利用していません
 export const generateCaption = async (imgSrc: string) => {
   const captionResult: Result<string, Error> = await openAi.chat.completions
     .create({

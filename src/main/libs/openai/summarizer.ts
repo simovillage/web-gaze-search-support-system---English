@@ -11,7 +11,7 @@ export const summarize = async (text: string) => {
           content: [
             {
               type: 'text',
-              text: `Summarize the following text into 2 sentences in English. Try to extract proper nouns.\n\n${text}`,
+              text: `Summarize the following text into 3 sentences in English. Try to extract proper nouns.\n\n${text}`,
             },
           ],
         },
