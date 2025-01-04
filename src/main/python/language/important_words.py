@@ -168,7 +168,7 @@ def find_similar_by_vector(words):
 
     result_words = [
         word for word, similarity in similar_words
-        if word not in filtered_words or similarity > 0.75  # 類似度が高いものを残す条件を追加
+        if word not in filtered_words
     ][:5]
 
     # デバッグ用 - result wordsが0の場合、default_wordを返す
@@ -197,10 +197,10 @@ def find_similar_tourism_spots(
     # tokyo_tourism_spot_df = tourism_spots_df[tourism_spots_df["Ward"]]
 
     # 観光地名を小文字化
-    tokyo_tourism_spot_names = [name.lower() for name in tourism_spots_df["Place_Name"]]
+    tokyo_tourism_spot_names = tourism_spots_df["wikipedia2VecVocab"].astype(str)
 
     filtered_tokyo_tourism_spot_names = [
-        word for word in tokyo_tourism_spot_names if word.lower() in model.key_to_index
+        word for word in tokyo_tourism_spot_names if word in model.key_to_index
     ]
     filtered_tokyo_tourism_spot_names = [
         word for word in filtered_tokyo_tourism_spot_names if word != proper_noun
@@ -208,7 +208,7 @@ def find_similar_tourism_spots(
     filtered_tokyo_tourism_spot_names = [
         word
         for word in filtered_tokyo_tourism_spot_names
-        if word not in [word.lower() for word in top_5_words + similar_words]
+        if word not in [word for word in top_5_words + similar_words]
     ]
 
     similar_spot_names = []
@@ -229,13 +229,11 @@ def find_similar_tourism_spots(
         # print(f"Most similar spot found: {similar_spot_name}")
         similar_spot_names.append(similar_spot_name)
 
-        # 削除処理の前に候補リストを再チェック
-        if similar_spot_name in filtered_tokyo_tourism_spot_names:
-            filtered_tokyo_tourism_spot_names.remove(similar_spot_name)
+        filtered_tokyo_tourism_spot_names.remove(similar_spot_name)
 
     # 正常に取得した場合
     similar_spot_df = tourism_spots_df[
-        tourism_spots_df["Place_Name"].str.lower().isin(similar_spot_names)
+        tourism_spots_df["wikipedia2VecVocab"].isin(similar_spot_names)
     ].reset_index(drop=True)
     # print(f"Total executions of the loop: {execution_count}")
 
@@ -271,14 +269,20 @@ def find_similar_tourism_spots(
                 # correlations.append(1)
 
         # 相関係数の平均を計算して辞書に格納
-        average_correlation_scores[similar_spot_df.loc[i, "Place_Name"]] = np.mean(
+        average_correlation_scores[similar_spot_df.loc[i, "wikipedia2VecVocab"]] = np.mean(
             correlations
         )
 
     # 平均相関係数が高い上位5つの観光スポットを選択
-    top_5_similar_spots = sorted(
+    top_5_similar_spots_vocab = sorted(
         average_correlation_scores, key=average_correlation_scores.get, reverse=True
     )[:5]
+
+        # top_5_similar_spots_vocabに対応するPlace_Nameを取得
+    top_5_similar_spots = similar_spot_df.loc[
+        similar_spot_df["wikipedia2VecVocab"].isin(top_5_similar_spots_vocab),
+        "Place_Name"
+    ].tolist()
 
     return top_5_similar_spots
 
