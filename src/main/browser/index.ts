@@ -30,7 +30,7 @@ export const open = async () => {
 // Node.js: Expose a function to receive scroll data
 await page.exposeFunction('onScrollChange', (scrollY) => {
   //デバッグ用
-  console.log('現在のスクロール位置:', scrollY);
+  //console.log('現在のスクロール位置:', scrollY);
   // 必要に応じて、ここでデータを外部保存や処理に利用
   pushScrollEvent({
     unixtime: Date.now(),

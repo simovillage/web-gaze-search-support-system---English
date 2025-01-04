@@ -1,510 +1,804 @@
-﻿Ward,Place_Name,Place_ID,anger,anticipation,disgust,fear,joy,negative,positive,sadness,surprise,trust
-Chiyoda,Yasukunijinja Shrine,ChIJ1UOuDWiMGGARkM6Iv-ZU57U,1,5,1,5,8,5,17,3,1,4
-Chiyoda,The National Museum of Modern Art Tokyo,ChIJL0kSfg2MGGARKv5KX53ZZ2Y,4,10,2,5,8,11,22,6,8,10
-Chiyoda,Science and Technology Museum,ChIJdfZ2xRKMGGARQSyxv6wfzw8,1,13,0,1,7,4,26,1,4,10
-Chiyoda,National Showa Memorial Museum,ChIJP5nfE2uMGGARCD9T7XHuNb4,8,10,0,13,8,23,29,9,6,11
-Chiyoda,Tsukudo Shrine,ChIJ4UhE-GqMGGARlLgTJ-LIbtU,3,7,2,10,3,11,17,5,2,11
-Chiyoda,Tokyodaijingu Shrine,ChIJq6q63UOMGGAR7zYBKd7iI3I,3,20,2,7,21,4,31,0,11,20
-Chiyoda,JCII Camera Museum,ChIJVVXl-2-MGGAR7svTOrr-IS0,0,3,1,2,5,6,15,1,2,7
-Chiyoda,千秋文庫,ChIJk80baWmMGGARO_Z_Ol-4MMg,0,12,4,0,9,11,29,3,4,18
-Chiyoda,Fukiage Omiya Palace,ChIJLVL4SHKMGGARR8l5zZQx02A,0,1,0,0,1,0,2,0,2,1
-Chiyoda,Daijingu Hall,ChIJh7Ol3UOMGGARQ3oMdDHhP3M,1,8,2,3,2,8,10,2,3,0
-Chiyoda,Shōkeikan,ChIJ_w85TGuMGGARezMKgo73Qx0,19,15,5,40,7,48,55,28,6,24
-Chiyoda,Tayasumon Gate,ChIJQwJLmGuMGGARZaD_O7oWHPI,3,8,1,3,7,6,22,2,5,23
-Chiyoda,Kudanzaka Park,ChIJGZArzGuMGGARPTxpzTl2nHE,2,9,1,1,10,7,21,5,3,7
-Chiyoda,Takatōrō Jōtōmyōdai,ChIJzbiOtmuMGGARAnAP53OIJZ0,0,8,0,1,4,3,27,3,3,11
-Chiyoda,Yayoi Ireido,ChIJq9r0nmuMGGARWwwQPkWWkws,0,11,1,8,3,7,22,7,8,10
-Chiyoda,Clock Tower,ChIJp8s7DqGNGGAR4bsVhMgJC1s,2,4,0,2,0,3,4,2,2,3
-Chiyoda,さざれ石,ChIJ6xv7V--NGGAReRAJJ7vza5Y,5,2,1,2,1,8,2,1,0,5
-Chiyoda,Statue of Ōmura Masujirō,ChIJ8Sc1l2mMGGARIA_VxjgBFQE,2,3,1,0,4,2,10,0,2,3
-Chiyoda,Nabewarizaka,ChIJ3XfHsG6MGGARjlkcczb5W4Q,2,3,4,1,5,6,8,0,3,4
-Chiyoda,Chidorigafuchi Moat,ChIJndmxIRmNGGAR9zOZKItqjDI,9,26,7,3,23,14,45,5,11,19
-Chiyoda,Shimizumon Gate,ChIJ70n0MROMGGARMjFhBBLsEGk,3,4,1,1,5,4,11,1,3,7
-Chiyoda,大東文化大学発祥地跡,ChIJNdVJeUKMGGARLNpCPSZYFqY,1,6,0,0,4,2,11,0,1,6
-Chiyoda,ソメイヨシノの標本木東京,ChIJsV-c1IqNGGARKep9AmuyJ04,25,39,25,2,46,6,72,0,27,43
-Chiyoda,Ujibashi Childrens Playground,ChIJmRomzRSMGGARG5uCrkey7Ac,1,5,1,1,6,4,10,0,6,4
-Chiyoda,Steam Locomotive C56 31,ChIJrZTVY6uNGGAR27DTFRwwEIA,2,4,1,8,2,7,12,0,1,4
-Chiyoda,Takarada Bridge,ChIJN4ojXBOMGGAR09rc4sbXPM4,0,3,0,0,2,1,9,1,0,7
-Chiyoda,Statue of Special Attack Squad Braves,ChIJJ8aSHWiMGGARmjhDGoLDel0,0,10,0,4,8,5,17,3,3,9
-Chiyoda,Nigo hanzaka,ChIJx7kQ7EGMGGARDaVgIxU5TkE,0,4,0,0,0,1,7,0,0,5
-Chiyoda,Monument of Daidokoro Machi,ChIJlR0PLECMGGAR7feMfB3DdEY,1,0,1,0,0,3,3,0,0,3
-Chiyoda,Hill of Fujimi,ChIJzxOEskKMGGAR0ht59j0AZA8,0,6,3,2,2,4,9,1,1,7
-Chiyoda,History Promenade,ChIJTd8VpEGMGGARInWwbg0RKbw,1,5,1,5,2,3,12,3,3,7
-Chiyoda,Shinkawa Bridge,ChIJ0-2bqmqMGGARdf1PbCvHIro,0,2,0,0,4,0,7,0,1,1
-Chiyoda,Site of Yosano Tekkan  Akikos Former Residence,ChIJw5vbJkOMGGAR_aKWf0Alu5M,1,8,1,7,6,7,11,4,3,9
-Chiyoda,Site of Yosano Tekkan  Akikos Former Residence (Memory of Chiyoda Ward Town),ChIJpf9uI2SMGGARo-lRwREcj3I,0,5,0,1,1,0,5,0,0,1
-Chiyoda,ShimizuBori Machikado Garden,ChIJjVswbBKMGGARBGXGbz_AbDQ,0,2,0,1,1,2,1,3,2,0
-Chiyoda,Kiji Bridge,ChIJ89xfRxKMGGARNpKd03x1yzU,3,2,1,2,2,3,10,2,2,2
-Chiyoda,Japan Red Cross Founding Place,ChIJOXDiMkOMGGARHxDj5RdvEE8,5,4,1,4,4,7,10,3,1,8
-Chiyoda,Gomizaka hill,ChIJ7YjDdm-MGGARQHd58om7axs,0,3,1,2,0,1,7,0,0,4
-Chiyoda,Aiai Bridge,ChIJn3jzZUCMGGARuppFZM174i8,1,8,1,2,16,4,32,2,2,9
-Chiyoda,Nishikanda Park,ChIJS2KjCxWMGGARlSmbfzCTDhQ,0,6,1,1,3,2,7,1,3,4
-Chiyoda,Jimbōchō Aizen Park,ChIJu36bFRSMGGARJ1K6y-kX1Zs,0,2,6,2,1,13,13,5,1,3
-Chiyoda,Site of Kushida Magoichis Former Residence,ChIJhw-N7mWMGGARMls0Ub9gTwU,1,10,1,2,6,4,12,2,1,9
-Chiyoda,Site of Taki Rentarōs Former Residence,ChIJ4Ry1gGWMGGARVj3doAlwlYI,4,9,3,8,12,14,26,12,4,18
-Chiyoda,日本医科大学付属第一病院記念碑,ChIJD_tPB0SMGGARkbBIjASku1g,2,4,0,5,0,1,6,4,0,6
-Chiyoda,皇典講究所發祥記念碑,ChIJx31pB0SMGGARSeW_hPKNz7g,3,1,0,0,1,3,7,0,1,5
-Chiyoda,Nishihanebashimon Gate,ChIJ1cJ9wgyMGGARNGBVSQ_0nDk,7,9,0,1,5,11,18,2,5,15
-Chiyoda,Togozaka,ChIJa7t1YGaMGGARM9Pws0tXXt0,0,4,0,0,2,1,4,2,0,6
-Chiyoda,Edo Castle Ruins,ChIJiZggVguMGGARaW4UFY3Mo8Q,3,12,3,3,16,6,27,4,7,15
-Chiyoda,Chidorigafuchi Park,ChIJ2Upy0nGMGGARNdDKDGtkffY,4,16,2,1,24,8,52,2,6,16
-Chiyoda,Edo Castle Outer Moat trace,ChIJg7nk8l2MGGAR4rASJbuRXjA,4,8,0,0,8,6,13,0,0,10
-Chiyoda,Shimodokanbori Moat,ChIJBdU8ugyMGGARJ9UXAFmePUI,0,2,0,1,1,0,3,0,0,2
-Chiyoda,江戸城築城の碑,ChIJn9MlcQ6MGGARYvt5eiV0b5k,12,13,3,9,11,16,34,6,7,13
-Chiyoda,Parliamentary Museum,ChIJCSOV_omLGGARC30qXmCHB7A,3,9,1,4,9,3,19,1,5,8
-Chiyoda,National Diet Building,ChIJibDhsomLGGARkIZSXvrUx0g,0,5,0,5,4,1,24,2,2,15
-Chiyoda,Hie Shrine,ChIJF0MR5MSmH2ARj3x0ov0aQ-8,0,8,0,1,9,0,21,4,5,14
-Chiyoda,Tokyo Garden Terrace Kioicho,ChIJ4Z9j7XuMGGAR9u6LL1dJtJ0,1,15,0,2,21,2,42,2,11,17
-Chiyoda,Site of AkasakaMitsuke Gate,ChIJoRtqW3mMGGAR_IfueEJk_5U,4,5,0,0,2,6,8,0,3,7
-Chiyoda,St Ignatius Catholic Church,ChIJNZ056omMGGARZhItdVTT87M,0,26,2,1,26,5,49,4,6,33
-Chiyoda,Kioi Art Gallery Edo IseKatagami Kimono Museum,ChIJ63TAg3uMGGARUhoxazPhn7Q,3,1,2,2,4,4,9,3,2,4
-Chiyoda,JCII Photo Salon,ChIJ8d_x-2-MGGARauUw6ERrqC4,2,3,0,1,3,3,16,0,1,8
-Chiyoda,大衆酒場 餃子いち 半蔵門麹町店,ChIJVVVJYnqMGGARV-HPtLpEQH0,0,3,0,0,4,0,5,0,1,5
-Chiyoda,Oishi Fossils Gallery of Mizuta Memorial Museum Josai Unversity Educational Corporation,ChIJq6oaRXqMGGARO38fkV_jVbE,0,5,0,2,4,4,17,1,3,9
-Chiyoda,Memorial Gallery of Toshima Yasumasa Annex,ChIJszHNB3CMGGARSGgpqCntYxI,0,0,0,0,1,0,2,0,0,1
-Chiyoda,Hanzomon Museum,ChIJAQDQVmWMGGAR4dNK6sEJZ80,0,5,1,1,5,4,13,1,3,9
-Chiyoda,Hanzōmon Kids Pond,ChIJvVErVHCMGGARuf-ToldwmNM,0,13,0,1,7,3,18,0,4,12
-Chiyoda,Nagaizaka Slope,ChIJr38YXWWMGGAR-m5mqTPXdMI,1,2,2,3,1,3,5,0,1,3
-Chiyoda,Foundation monument of First Tokyo municipal JHS,ChIJq0g-TXCMGGAR-o7ekmZpZaI,1,2,0,2,3,2,16,1,2,17
-Chiyoda,100th anniversary of the Japanese emigrating to Mexico  by Mexican artist Sebastián,ChIJQfs6S3CMGGARIM3RsqaggDc,0,5,0,0,5,0,17,2,4,5
-Chiyoda,Suwazaka hill,ChIJjenolXuMGGARgOBTvZTPBp4,2,1,1,1,1,2,2,2,1,5
-Chiyoda,Minamihōgenzaka,ChIJme_6xmWMGGARApVBn9JN0ow,1,1,0,1,0,1,10,1,1,9
-Chiyoda,平和の群像菊池一雄寺内正毅銅像跡,ChIJs8ER-XaMGGAREKIvM9Ji5kQ,2,4,1,2,4,3,25,3,1,9
-Chiyoda,Miyakezaka Syo Park,ChIJ-5FsWHaMGGARqbbg6TMXPMU,2,8,1,1,12,7,25,3,2,8
-Chiyoda,Shimizudani Park,ChIJ0zbC6nyMGGAROfFoUq13fnw,1,10,1,3,13,7,24,2,3,10
-Chiyoda,偕香苑,ChIJVVXB6nyMGGARVEVCpWUoLQo,0,1,0,0,1,0,4,0,1,0
-Chiyoda,Monument of Nobles Women College,ChIJuVLHr3mMGGAR9ACBD0mo7E8,1,2,0,0,1,3,9,0,1,10
-Chiyoda,Foundation monument of Tokyo Jogakkan,ChIJvwsuq72NGGAR70DiLrn4Obw,5,4,2,6,5,5,17,4,2,12
-Chiyoda,Hotel New Otani Japanese Garden,ChIJd0TGAH2MGGARdoUx5v0t2yo,1,4,0,3,10,7,14,1,2,7
-Chiyoda,Nakayoshi Park Kōjimachi Kids Square,ChIJBzNAQ2KMGGARJ1v9BGmSYj0,0,3,0,0,3,2,4,0,1,2
-Chiyoda,Obizaka,ChIJ0aK9LGGMGGARnp_YkwKPZgI,2,1,5,9,0,6,11,2,1,6
-Chiyoda,Site of the KuichigaiMitsuke,ChIJsR2kVn2MGGARzfT8eo-ciHs,11,9,3,15,5,18,28,6,4,18
-Chiyoda,Japanese Geodetic Origin Point,ChIJN_ucJIqLGGARpSbER4BCoPQ,2,5,2,1,3,3,10,4,3,5
-Chiyoda,The Diet Front Park,ChIJRwdJJIqLGGAR6wrIM__UeZg,7,15,4,5,15,9,34,8,6,9
-Chiyoda,Sannoinari Shrine,ChIJVVXigYeLGGARjnqtQYmiyTM,0,4,0,3,3,3,9,1,2,4
-Chiyoda,Sannōzaka Slope,ChIJvdjwZYiLGGAR5ilFlkRrlF8,0,1,3,0,0,4,3,1,0,6
-Chiyoda,Sakura Well,ChIJryeESYqLGGAR60avG3cGwd0,2,1,2,2,2,3,13,1,1,6
-Chiyoda,Tokyo Kotsu Kaikan,ChIJASonFuWLGGARoLBihp8-Dck,0,4,0,0,4,1,5,0,1,1
-Chiyoda,Imperial Palace,ChIJTQbYAg2MGGARt22eNwtfGtE,2,11,1,2,11,6,35,1,3,22
-Chiyoda,The National Museum of the Imperial Collections Sannomaru Shozokan,ChIJPfFaQhOMGGARTfig6X5OJvM,4,8,3,1,10,7,16,5,5,7
-Chiyoda,Imperial Palace East National Gardens,ChIJPfFaQhOMGGAR-QPbNQoAG6M,4,12,2,4,19,3,34,0,5,13
-Chiyoda,Chowaden Reception Hall of lmperial Palace,ChIJ-w9nwAqMGGARuiyw3jm3Ios,1,6,1,1,7,1,19,1,4,10
-Chiyoda,Mitsubishi Ichigokan Museum,ChIJuyY-ZfqLGGAREYR9A10IXPQ,0,16,0,0,19,1,41,7,12,13
-Chiyoda,Tokyo Station Gallery,ChIJtxODuv6LGGAR4xf7X3WayX0,0,5,1,0,4,1,14,2,5,5
-Chiyoda,Kokyo Gaien National Garden,ChIJAQCEbPGLGGARFa0L-v-rNtg,2,9,2,2,13,5,21,3,6,7
-Chiyoda,Seikado Bunko Art Museum,ChIJz-ZkAQb0GGARLd-j4HlLkaM,1,18,0,2,20,4,38,2,11,15
-Chiyoda,Idemitsu Museum of Arts,ChIJoUobW_CLGGARL_ES0JDK5lg,1,6,1,2,4,2,6,1,4,4
-Chiyoda,Fountain of Hibiya Park,ChIJgYcKD_KLGGARyM933-RbFaY,1,7,0,0,8,0,13,1,3,8
-Chiyoda,Intermediatheque,ChIJF5AiNPqLGGAR2igPgxC2_Kw,0,3,0,0,3,4,14,5,3,5
-Chiyoda,KITTE Garden,ChIJtZRvRvqLGGARdS57rQP2NEk,0,11,0,1,10,0,20,1,4,6
-Chiyoda,Marunouchi Square,ChIJAylxefmLGGARmouNFJGoD3E,2,6,1,2,5,2,14,1,1,5
-Chiyoda,Mitsubishi UFJ Trust and Banking Museum,ChIJvQWmVviLGGARWUVZ75YS5Jw,1,9,1,1,8,4,24,2,5,28
-Chiyoda,Wadakura Fountain National Park,ChIJV4TDwfeLGGARZZY83rpWpSA,0,6,0,0,5,2,12,2,5,5
-Chiyoda,The Birthplace of Nippon Dental University,ChIJxT_D7weMGGARBDvBJEWFNao,2,1,0,0,4,3,6,2,1,3
-Chiyoda,Site of Matsunooroka Corridor,ChIJhZsO6QuMGGARKpytUX8ZqOs,13,7,6,6,6,17,25,10,10,9
-Chiyoda,Statue of Kusunoki Masashige,ChIJ-SEtT_GLGGARh19OTroY4bA,0,5,1,3,6,2,14,0,4,9
-Chiyoda,Babasakimon Gate Monument,ChIJ43Sw2_CLGGARh5FCOXxs2tQ,3,4,1,1,5,4,15,3,1,22
-Chiyoda,Mt Mikasa,ChIJcUcaufOLGGARsuW5JEIux_U,4,7,2,3,2,4,7,1,1,2
-Chiyoda,Pelican Fountains,ChIJ-6ZEL_CLGGARRMzYsKSF188,0,15,0,0,10,2,17,3,5,15
-Chiyoda,リュウゼツラン,ChIJ_YndeACLGGAR4Hh7CJ4qPDo,0,9,0,1,7,0,7,0,1,5
-Chiyoda,Health Field,ChIJgTZzrvOLGGARoigItuM4MWI,0,4,0,0,5,1,5,0,3,4
-Chiyoda,The Place of Death of Date Masamune,ChIJVzm4lvGLGGARQcfrzMS4DcA,0,0,0,0,1,0,2,0,0,2
-Chiyoda,Kikyōmon Gate,ChIJmdef7AmMGGARhKjmuJGUSNs,2,14,2,2,6,7,13,5,3,10
-Chiyoda,Flowerbed 1,ChIJ05OYU2qLGGARdiRMwrnekMs,0,18,0,1,17,4,22,4,3,14
-Chiyoda,Remains of Hibiya Turret of Edo Castle,ChIJSVlhwPGLGGARz28AxXTPVEo,10,10,5,5,6,19,35,7,4,20
-Chiyoda,丸の内 仲通り,ChIJAVgJ6zmLGGAR99WBL5-fomQ,0,3,0,0,5,0,7,0,6,6
-Chiyoda,第一生命ギャラリー,ChIJV7F2OPCLGGAR8vcoxV5KS2A,0,0,0,0,0,0,0,0,0,0
-Chiyoda,Ponta Square,ChIJQfTOsD2LGGARysb_0G6009I,0,2,0,1,2,0,3,0,1,1
-Chiyoda,Shinjiike Pond,ChIJ23HgvY-LGGARzGvMuq9sbFQ,2,4,2,2,5,4,8,2,1,5
-Chiyoda,Remains of Wadakuramon Gate Guardhouse,ChIJ0QFUhfeLGGARcBgc0OSQI2U,1,3,0,1,2,2,10,0,0,4
-Chiyoda,Ancient Scandinavian Runestone Replica,ChIJBSyx9vGLGGARFTYqDttIVMo,6,5,2,3,4,8,8,4,3,5
-Chiyoda,Mitsubishi Center Digital Gallery,ChIJ9yIfZfqLGGART3DQZ4CfzgU,0,1,0,0,1,0,1,1,1,0
-Chiyoda,Wadakuramon Gate,ChIJn_Bp6PeLGGARAfpWo7lBTcA,2,2,1,0,1,1,5,1,1,6
-Chiyoda,丸ノ内イルミネーション,ChIJcYAKdrqLGGARjweYR6KBMUQ,1,21,1,7,22,11,41,3,9,23
-Chiyoda,Obansho Guardhouse,ChIJ8zjh2AuMGGARH4JAMFrF8FQ,1,0,0,11,2,4,21,2,1,10
-Chiyoda,Grand Fountain,ChIJr62ciOSLGGARIs6ax4bn-a8,0,0,0,1,2,0,5,0,0,0
-Chiyoda,Hibiya Step Plaza,ChIJ8aEILO6LGGARPVDPsPKqefw,1,6,2,1,3,1,11,1,3,5
-Chiyoda,Park View Garden,ChIJneixJe6LGGARfXvzyW1mY_U,6,11,5,8,11,16,23,3,3,15
-Chiyoda,Tsubonemon Gate,ChIJ0cCkZguMGGAR3ErK3Ay-awQ,2,5,1,4,3,1,8,2,2,9
-Chiyoda,Haniwa,ChIJqR-XViGLGGARPgAQi4QmyI0,3,12,1,3,14,4,25,7,9,8
-Chiyoda,Fujidana,ChIJVy3nmeGLGGARp_nCDwYm0c0,5,10,0,5,9,2,19,1,2,7
-Chiyoda,Crane Fountain,ChIJhxcV4MGLGGARopLeXlAS9tY,2,4,0,3,2,8,17,3,0,7
-Chiyoda,Godzilla Statue,ChIJj9FCzO-LGGARv0qenUaDws4,4,6,2,3,5,8,17,3,4,6
-Chiyoda,Edo Castle keep restoration model,ChIJ93STsrqNGGAReyjjarHT2cg,1,4,0,3,4,2,25,1,1,2
-Chiyoda,Gin no Suzu,ChIJ9-LJdPyLGGARZeSwNOHJv3I,0,2,0,1,3,2,4,1,2,4
-Chiyoda,Former Tokyo Central Postmasters Office,ChIJH5qNNPqLGGAReFR56HZUyfs,0,1,0,0,2,2,12,0,2,3
-Chiyoda,Remains of Tokyo Prefectural Office,ChIJP0Kk4PqLGGARJ3adoHhSblc,3,1,0,4,1,7,7,1,0,4
-Chiyoda,休憩所,ChIJ2TLQa_qNGGARykotPhNhxzk,1,1,0,0,1,0,5,0,0,3
-Chiyoda,Ōtemon Gate,ChIJ7-cJ_wiMGGAR_wayVide6uo,3,9,0,5,7,9,36,2,3,27
-Chiyoda,Imperial Palace Main Gate Stone Bridge Decorative Lamp,ChIJgzwL_QuMGGAR6xGd6K4fYGk,5,2,0,5,7,7,29,0,4,8
-Chiyoda,Bambinart Gallery,ChIJ8QD2sh-MGGAR1LiPsPUSBXg,1,2,2,1,2,3,7,2,2,3
-Chiyoda,Yanagimori Shrine,ChIJS2dPOKiOGGAREfQsUq73wP0,3,7,2,3,7,8,21,1,1,17
-Chiyoda,Otamagaike Pond Site,ChIJ1abH0vyLGGARoSlvRMJ3JuM,0,5,1,5,5,8,18,5,5,9
-Chiyoda,Horin Park,ChIJ58mpjx6MGGARseWnPsaMkNI,0,12,2,3,13,8,28,1,4,13
-Chiyoda,Myojin Otokozaka Stair,ChIJFSnzsB6MGGARnojVfoqkXW4,1,3,0,0,1,3,6,1,0,5
-Chiyoda,Kanda Myoujin Shrine,ChIJ7RsWzB6MGGARi3xBv7bkl_M,0,9,1,0,18,2,33,1,10,17
-Chiyoda,Ogawa Hiroba,ChIJd2lidxCMGGARqEE0ey3opTo,2,16,0,4,7,4,22,1,1,6
-Chiyoda,3331 Arts Chiyoda,ChIJWUPQrR-MGGARa622uywYz2E,3,20,2,2,19,4,43,11,14,19
-Chiyoda,Manseibashi Station Remains,ChIJF-kS1ByMGGARfX9TAILqL3w,1,7,0,0,6,2,17,1,4,5
-Chiyoda,Izumi Bridge,ChIJod60-KiOGGARzcq38CBviUQ,6,3,5,4,4,10,11,4,3,4
-Chiyoda,Site of Sakuma Bridge,ChIJDRpmZ6iOGGAR6hdWLVhNFmw,0,4,0,2,1,2,11,2,0,2
-Chiyoda,Akihabara Park,ChIJpQd7ZqiOGGARsRs2aimeHl4,2,4,2,1,3,1,9,3,1,3
-Chiyoda,秋葉原歩行者天国,ChIJD7xVrNuNGGARTGvk1WfwdnI,2,3,1,2,2,8,5,2,1,3
-Chiyoda,日本文化体験 庵an東京  AN TOKYO Japanese Culture Experience,ChIJ4e0xtBOPGGARctrNeHiaubE,1,13,1,4,15,6,36,3,12,12
-Chiyoda,Akihabara Electric Town,ChIJZzSYoB2MGGARfBcicn7sx28,0,13,0,4,3,5,25,1,0,8
-Chiyoda,Awaji Park,ChIJb_7IaRuMGGARavmrYh6B_5w,0,1,0,0,2,0,4,1,1,2
-Chiyoda,YKK,ChIJz3TS9aaOGGARwdZXzammqSQ,3,11,2,4,11,6,31,2,6,8
-Chiyoda,Remains of Kanda Hatchobori,ChIJ_3lj4aqOGGAR-qABtwqYCpE,1,11,2,9,2,10,17,4,4,11
-Chiyoda,Hill of Ghost,ChIJ8xqjvhuMGGAR8vSlKVW80l0,6,11,5,9,9,6,18,7,6,14
-Chiyoda,Park Gallery,ChIJ76X9mh6MGGAR_fhLJ312wT0,0,4,0,0,5,0,11,3,6,3
-Chiyoda,Kobaizaka Slope,ChIJL3baNBqMGGARpWtITdtR87g,0,3,0,3,0,1,6,0,0,2
-Chiyoda,Shusse Fudoson,ChIJVVW4TAGMGGARV7MjXGiZD1E,3,3,3,6,2,7,12,2,5,5
-Chiyoda,Mikura Bridge,ChIJlXGmj66OGGARxNIcdlKKjCE,1,2,1,3,1,3,6,2,0,4
-Chiyoda,Chiyoda Kuritsu Izumi Park,ChIJdScsSK-OGGARzKMrlFcqwN4,1,9,2,1,6,4,10,1,5,7
-Chiyoda,Ryukan Childrens Park,ChIJUxjq76yOGGARBhZMImQywT8,0,1,0,1,1,5,5,0,2,1
-Chiyoda,Hijiri Bridge,ChIJi3JUZACNGGARXyYn0j7sCkE,1,17,0,3,8,8,13,2,6,5
-Chiyoda,Uchikanda Ojima Park,ChIJrdkPmgaMGGARxBYfVzVugQA,4,5,2,1,6,9,19,1,2,6
-Chiyoda,Miyamoto Park,ChIJ14jFJxmMGGARblOZ2P33sIA,0,2,0,0,3,1,4,1,1,2
-Chiyoda,Meiji University Museum,ChIJ62acTxeMGGARUmcrd2EKsVw,5,10,4,7,7,13,24,5,5,9
-Chiyoda,Chiyoda Kuritsu Rensei Park,ChIJb71bVh-MGGARGsNeiT5iYb0,0,5,1,2,8,5,14,3,4,5
-Chiyoda,Gakushuin noble school original location,ChIJTy7HmgWMGGAR3ph7B88dXF0,1,2,0,1,2,1,8,2,1,6
-Chiyoda,Catholic Kanda Church,ChIJERbV3hWMGGARUPwaYY_9TE8,0,7,1,0,9,2,13,1,1,11
-Chiyoda,Misaki Inari Shrine,ChIJB7nCrj-MGGARrERpWjP8hhU,0,3,0,0,3,1,4,1,1,2
-Chiyoda,I Am a Cat Memorial,ChIJbwEz1RCMGGARe2Er6xR2kSA,0,2,0,0,3,1,9,1,1,7
-Chiyoda,Univ of Tokyos Founding Place,ChIJPSkYwxGMGGARubzYRoItzTM,3,7,0,1,3,4,15,0,2,9
-Chiyoda,Kinka Park,ChIJcdybLheMGGARHDlzS-Sfd_M,0,10,0,0,7,2,12,0,3,8
-Chiyoda,Birthplace of Tokyo Foreign Language School,ChIJSYA74BGMGGARkRotyQ791LY,1,2,0,0,6,1,8,0,1,7
-Chiyoda,猿楽町町会詰所,ChIJSZbFYdKNGGARZ-jte6LxH5s,0,5,0,6,4,1,19,0,2,12
-Chiyoda,東京音楽大学発祥の地,ChIJDbND9xaMGGARjeHlRxwfqqQ,3,1,0,0,3,3,12,3,1,6
-Chiyoda,Aku You Memorial Museum,ChIJLxsaTxeMGGARPiuFcX6fnkw,2,4,1,4,6,5,21,2,6,8
-Chiyoda,Site of Kikaiyu Public Bath,ChIJAQBsCRaMGGARVdVDFs7twkE,1,7,1,0,1,2,9,0,1,2
-Chiyoda,気象庁旧生物季節観測の木々,ChIJr6pkHMaNGGARMvwb5D2D2XQ,3,6,3,0,9,1,14,0,4,5
-Chiyoda,Hirakawamon Gate,ChIJTajifQ6MGGAR7Hm1Kn2631A,4,7,1,4,4,9,18,3,3,20
-Chiyoda,大手濠緑地,ChIJX8XwHw-MGGARDTEeZ7G1byo,1,2,0,2,2,1,11,0,2,6
-Chiyoda,Statue of Wake no Kiyomaro,ChIJi5nZHw-MGGARjf6RhUw_QjM,0,1,0,0,2,1,7,0,0,2
-Chiyoda,Kiyomaro Park,ChIJl3SFqg-MGGAR79DUKqYHfuk,0,4,0,0,3,3,9,1,2,4
-Chiyoda,Kanda Bridge,ChIJE4T6bQaMGGARcTdzr5G5rJ8,2,1,0,2,1,3,11,1,0,2
-Chuo,Sukiyabashi Park Young Clock Tower,ChIJV8P5fO-LGGAR6Qn-vWMmKO0,1,6,1,0,2,2,10,0,2,4
-Chuo,Ozu History Museum,ChIJUduh6VSJGGARqpH5415dX-U,1,7,0,1,8,2,23,2,5,5
-Chuo,Tokiwa Park,ChIJHSZQjwCMGGARRvkZQ4vk8kg,1,3,0,2,1,7,7,2,6,1
-Chuo,Fukutoku Shrine,ChIJw9uzC1WJGGARnZWYZveSJFc,2,18,1,4,17,5,35,1,10,23
-Chuo,Mitsui Fukutoku Garden,ChIJCSL5CFWJGGAR1n5EJ99hzXs,0,4,0,3,5,0,7,1,2,4
-Chuo,Daiichi Sankyo Medicine Museum,ChIJRR8sH1WJGGARgBXf6qT_viE,1,6,0,2,3,1,13,0,3,6
-Chuo,銅鐘 石町時の鐘都指定文化財,ChIJG4v3UKuOGGARWfQ97VLIqfE,5,9,1,7,4,6,14,3,2,6
-Chuo,Jisshi Park,ChIJAQBTVquOGGARLx6I1rPxg4s,3,9,2,1,8,4,14,1,6,7
-Chuo,Kodenmacho Prison Museum,ChIJ2zLvTauOGGAR6Ofe6rSxsRo,6,8,1,7,6,7,28,7,3,10
-Chuo,Remains of the Kodenmacho Prison,ChIJi08pVKuOGGARJSwjsbWHEyo,1,1,1,0,1,4,6,2,1,2
-Chuo,江戸伝馬町処刑場跡の碑,ChIJi9-KVauOGGARtSMNz-dDObk,11,2,1,12,2,17,17,12,3,10
-Chuo,龍閑橋親柱橋桁,ChIJ80l85gCMGGARE4zbDJk-z0A,2,5,1,1,2,4,19,1,0,12
-Chuo,Ryukansakura Bridge,ChIJFcFclQCMGGARPH0DpAtwueY,0,4,1,1,3,1,8,3,1,5
-Chuo,日本橋室町スチーム時計,ChIJHysNjO2LGGARrcRZ3rRLkeo,0,12,0,0,2,1,13,1,0,4
-Chuo,Saemon Bridge,ChIJ1xPb8K2OGGARleis8lZGsEk,0,2,0,0,2,0,2,0,0,2
-Chuo,Musée Hamaguchi Yozo Yamasa Collection,ChIJwbcTWUSJGGAR8JUnuMdbkss,1,11,1,2,10,9,28,6,5,6
-Chuo,Koami Shrine,ChIJmY9L9lCJGGAR3ydy0pQ5y8A,6,18,2,4,23,7,34,2,13,22
-Chuo,Genyadana Monument,ChIJX-v6wVGJGGARHoZj0mmV-vQ,0,4,0,2,2,2,17,2,4,8
-Chuo,Koamicho Childrens Park,ChIJM8w-7lCJGGAReRyMLnFUO1s,2,5,1,0,5,3,14,1,5,9
-Chuo,Suitengu Shrine,ChIJ6TXOcUWJGGAR2GRhafOUp0I,1,13,0,6,17,4,38,1,9,12
-Chuo,Ōkannonji Temple,ChIJb8SfLVCJGGARiU1Jtv-uHps,2,4,1,4,2,3,12,2,3,5
-Chuo,Hakozakigawa Daini Park,ChIJ93sW60SJGGARzc8c12fS4L0,2,5,2,2,2,4,5,5,4,2
-Chuo,Yagenbori Fudōin,ChIJAUC44EyJGGAREQhz3L_zRf8,2,3,0,2,2,4,11,0,2,3
-Chuo,Seishōkōji,ChIJa7igyEiJGGARtkrOqIK2NWo,3,3,2,1,5,6,10,0,4,9
-Chuo,Suginomori Shrine,ChIJc4hCu1OJGGAR_ru6C64yuTA,0,6,0,1,8,2,17,3,5,8
-Chuo,Suehiro Shrine,ChIJc1ZLN06JGGARgKpfVVWubp4,0,2,0,1,1,1,7,0,1,1
-Chuo,Hisamatsu Childrens Park,ChIJmR7bC06JGGARLma1SuhF87E,1,9,1,5,5,7,13,2,4,13
-Chuo,賀茂真淵県居の跡,ChIJdQukfU6JGGARrGylYbDAKtA,2,8,1,1,3,6,15,1,1,4
-Chuo,HiashiNihonbashi Childrens Playgorund,ChIJ_w8kQE2JGGARAN_MIC69NBQ,0,2,1,0,3,8,5,2,5,3
-Chuo,Horidome Childrens Park,ChIJC2rRZlGJGGARADpjo6WQrpI,1,4,2,0,9,9,12,2,6,10
-Chuo,Ningyōchō Karakuri Yagura,ChIJDdJsKFCJGGAR_LtuNlL-Wz4,0,9,0,1,3,2,8,0,1,5
-Chuo,Benkei from Kanjincho,ChIJD__5BU-JGGAR5IKXKzpGNRo,3,3,2,3,1,7,15,1,1,5
-Chuo,Amazakeyokocho,ChIJWUQg3E-JGGARurzf23V2D9s,2,4,1,1,3,2,7,0,2,3
-Chuo,Site of Saigō Takamoris Former Residence,ChIJWT6EOFCJGGARQIyroNNG_eE,1,1,0,1,1,1,9,1,1,6
-Chuo,Ningyocho Mechanical Clock Tower  Rakugo Performer,ChIJzYytP-mJGGARNLqgfLhxoxo,3,12,0,1,5,3,15,2,2,6
-Chuo,Hamachō Park,ChIJVVWxhEiJGGARsDYT-3WKc0E,1,7,1,2,5,4,12,2,2,4
-Chuo,ChildRaising Kappa,ChIJ3UJAckWJGGARsofcGiUkavQ,0,5,0,2,8,1,12,1,2,8
-Chuo,オカメザクラ通りあじさい通り,ChIJbe2lR_SJGGARBgZKhykDwDE,0,6,0,0,12,0,26,0,2,6
-Chuo,Founding Place of Japans Postal Service,ChIJvZMp5ZiJGGARpOjrs28ifTU,1,4,0,0,0,1,4,0,1,4
-Chuo,Yanagi Bridge,ChIJ7TkQRbOOGGARNrJRvDQpCKQ,2,6,1,2,2,3,18,3,1,7
-Chuo,Nihonbashi Fish Market Monument,ChIJZXozZVaJGGAR8hnc9IIESZ8,4,10,1,3,3,4,15,2,4,5
-Chuo,First National Bank Birthplace,ChIJL40trVCJGGARNlkutiABADE,7,2,2,4,8,8,17,3,6,19
-Chuo,Stone pillar of Kaiun Bridge,ChIJK2E1RleJGGARxZosdSQCgIY,13,8,2,5,3,21,29,9,2,16
-Chuo,Mitsui Honkan,ChIJq3fYnFWJGGARPz4hlEVggCU,0,1,0,0,2,0,4,0,1,2
-Chuo,National Film Archive of Japan,ChIJDTEgTOKLGGARRjeD6dnAoVY,3,8,2,3,10,8,26,6,6,9
-Chuo,Pola Museum Annex,ChIJM7rZi-OLGGARkL-rCS_OHyw,2,5,2,1,6,1,11,2,7,3
-Chuo,Sakuragawa Park,ChIJxdRDb16JGGARPwIuXnWRGRk,1,6,1,1,5,1,6,1,5,4
-Chuo,Ginza Canon Gallery,ChIJQw9ey-aLGGAR-PGXL1t98x0,0,3,0,1,5,1,15,1,1,7
-Chuo,Kashima Arts Co Ltd,ChIJpTdsYuKLGGARNsnAH3hUf2U,1,9,1,3,5,5,17,1,2,9
-Chuo,Mitsukoshi Lion Sculpture,ChIJU2J8iOaLGGAReNtcR5-9osw,0,3,0,4,2,1,7,1,2,0
-Chuo,Police Museum,ChIJV8wGu-OLGGAR1HVqNbP6r2c,1,5,0,6,5,4,27,3,3,16
-Chuo,Tokyo Takarakuji Dreamkan,ChIJsW8HWuKLGGAR5fpJi6JDLWk,1,35,2,4,11,5,22,3,5,14
-Chuo,Owl Cafe Ginza,ChIJQYZKGOaLGGAR1z0TR8uLzSs,3,12,2,7,14,15,37,6,7,15
-Chuo,Teppozu Inari Shrine,ChIJm3Zzb2eJGGARHKbKJcBHB4w,1,3,0,3,3,1,7,1,2,6
-Chuo,Tsukuda Park,ChIJAcDs82WJGGARRXmL_0ojH2g,1,15,1,4,21,9,40,5,8,15
-Chuo,Old Cathedral of St Joseph,ChIJmQBfRGGJGGARmvUyNV6e1J8,0,11,0,1,11,4,18,2,1,19
-Chuo,Shinkanabashi Childrens Park,ChIJqxmv2OGLGGAR9uwJm8IA2gs,1,7,1,3,4,8,9,2,2,3
-Chuo,Kaedegawa Shintomibashi Park,ChIJq3CvMuCLGGARJdSwg-XkM-U,1,3,0,2,3,3,4,1,0,3
-Chuo,Kyōbashi Park,ChIJn76wuOGLGGAR78WCEuv9vTQ,0,2,0,0,0,1,3,0,0,0
-Chuo,Miyoshi Bridge Monument,ChIJKTxnOOCLGGARgnqqTvzz1nc,3,4,1,1,1,10,13,1,3,1
-Chuo,Tsukijigawa Kameibashi Park,ChIJXXI0b-CLGGARwewp4OuBYdU,2,6,2,1,9,6,18,0,3,6
-Chuo,Irifune Bridge,ChIJ9fxraGCJGGARHg6DOb_XktI,0,0,0,0,1,0,5,0,0,0
-Chuo,Mizutanibashi Park,ChIJq5bv0eOLGGARrlEm2rzrx1U,2,7,2,0,10,6,21,1,7,15
-Chuo,Kamei Bridge,ChIJLcCqZeCLGGARUKTAGlta6ZQ,0,2,0,1,0,0,1,0,2,0
-Chuo,Kaedegawa Takarabashi Park,ChIJg3ARwFiJGGARegjGfE7ao54,3,3,5,3,1,8,5,4,0,2
-Chuo,Kyobashi Stele,ChIJ4R26vOOLGGARhqBH00DH2O0,4,1,1,2,0,6,7,3,0,7
-Chuo,Takara Jizoson,ChIJgwc9lFiJGGAREx6Dnh5Xli0,0,7,1,7,6,9,12,7,5,4
-Chuo,Tsukijigawa Iwaibashi Park,ChIJ56U1heCLGGARv-0KIy572mA,0,1,1,0,1,3,3,1,1,1
-Chuo,Edo Kabuki Birthplace,ChIJI2z0muOLGGAR_vvyJQi_qvE,3,6,1,4,5,3,14,3,2,4
-Chuo,京橋大根河岸青物市場跡の碑,ChIJJQAnmeOLGGARLXVQCOYq6ks,0,11,0,3,6,2,16,2,1,6
-Chuo,Central Museum Ginza,ChIJu2ZczOaLGGARqyh2nbbn8gk,0,5,0,0,5,0,10,0,2,4
-Chuo,Origin of Ginza Monument,ChIJrR16BeSLGGAR31Ezs8CKOKQ,2,5,0,1,1,4,9,0,1,4
-Chuo,Katakura Hall Façade Medallion,ChIJ08PpauOLGGARnhyyGJAI5XI,2,3,0,3,2,3,25,1,1,8
-Chuo,Ryunosuke Akutagawa Birthplace Monument,ChIJtQTYm2GJGGARB5eEdrkF7vU,5,4,2,3,2,8,7,6,5,3
-Chuo,Teppōsu Childrens Park,ChIJp8p4bGeJGGAR_JYU-_z0Trk,1,3,1,1,2,1,7,0,1,2
-Chuo,Momijigawa Kyūanbashi Park,ChIJd5Lrk1iJGGARXM-ZHwpQbOQ,0,2,4,1,2,7,4,2,2,3
-Chuo,Japans Top 100 Streets Ginza 3chome,ChIJq59OWdWLGGAR_xmE8GbhogI,1,1,0,1,1,0,2,0,1,1
-Chuo,Kyuan Bridge,ChIJQc5k-FiJGGARytQF8BqddKs,1,1,1,1,1,1,3,1,0,0
-Chuo,Chirori the Therapy Dog,ChIJ91aIHt6LGGARQJ7duvE22FA,4,5,4,4,2,5,15,3,1,2
-Chuo,Tsukijigawa Park,ChIJe7vq7GGJGGARwqsdCgIvefw,2,7,2,0,9,5,10,0,5,7
-Chuo,Kabuki Inari Shrine,ChIJVcCfs-CLGGARfSIMmkZGYoU,1,11,0,3,11,5,18,3,6,9
-Chuo,American Legation Memorial Stones,ChIJ1zeHemGJGGARM6GVHscmGfA,1,5,1,0,12,4,18,3,4,9
-Chuo,Teusler Memorial Hall,ChIJpXBPe2GJGGARaazVUCDpass,0,7,0,1,7,2,23,0,4,8
-Chuo,Ginza Central Street,ChIJRQ2BJ-SLGGARBo5lWSuc-jM,0,6,0,0,6,0,7,1,6,3
-Chuo,Kamejima Bridge,ChIJ79eM8NOJGGARZ_oqMW7mGqo,2,3,0,3,4,3,17,1,3,3
-Chuo,Birthplace Monument of Rikkyo Gakuin,ChIJMRxEeWGJGGAR0GRB7j5hYf0,9,7,0,2,5,12,14,3,2,13
-Chuo,Memorial Place Monument of Aoyama Gakuin,ChIJ474npWaJGGARoKfIoxcXdic,0,1,0,0,0,0,2,0,0,3
-Chuo,Yasubei Horibe Taketsune Monument,ChIJHbjiE1yJGGAR89zSPg7C02k,5,4,0,7,4,8,16,3,5,8
-Chuo,Akatsuki Park Adventure Square,ChIJw6TBhmGJGGARvGRPMPJ_tSA,0,3,0,3,3,5,7,1,0,2
-Chuo,ART AQUARIUM MUSEUM,ChIJ6UVSHl2JGGARDurMrMPwvdk,1,16,2,4,20,7,43,8,15,17
-Chuo,Namiki Dōri Street,ChIJie-XJjSLGGARkF7l_8BMlUM,0,2,0,0,2,0,4,0,1,2
-Chuo,Memorial to the Pearl King Mikimoto,ChIJPWUPgeaLGGAR6M2YnWjhXkE,3,6,1,1,1,2,19,1,2,6
-Chuo,Minamitaka Bridge,ChIJ1cpzo16JGGARiSDgHzOhMfo,0,1,0,0,1,5,5,0,0,2
-Chuo,Hamarikyū Gardens,ChIJwfegutyLGGARGjiY-L2eSps,6,10,2,2,19,8,31,5,5,12
-Chuo,Namiyoke Shrine,ChIJa4JUjdiLGGARfzINTSU_X0s,3,16,0,15,13,12,31,4,13,11
-Chuo,Toyomi Fish Museum,ChIJFaigWtSLGGARdptHpiZqSPg,1,8,1,5,9,4,23,1,2,9
-Chuo,Hatoba Park,ChIJx3P6-2KJGGARKkrq4_tlnd4,3,7,1,1,9,6,18,1,4,9
-Chuo,Toyomi Sports Park,ChIJ00LkcdWLGGAR-da62MvKl2M,0,4,0,0,3,0,5,0,2,4
-Chuo,Kachidoki Gochome Green Park,ChIJ4UMx-daLGGARujFMUN9N2wc,0,4,1,0,3,3,8,0,1,2
-Chuo,Kaikobashi gate,ChIJhYIO79iLGGARn9k6sqJL0ZE,1,5,0,2,1,1,7,1,2,1
-Chuo,勝鬨の渡し跡,ChIJUbMYjmKJGGARUByMne8RIMM,3,2,0,2,1,3,8,1,2,2
-Chuo,Site of Former Warship Training Institute 軍艦操練所跡,ChIJx7w3n9iLGGARnns7Z1HDCCU,0,1,0,0,0,1,0,1,0,1
-Chuo,Nishinaka Bridge,ChIJe5JIfnuJGGARrWyjwLWMeXo,2,6,1,1,12,4,25,1,1,5
-Chuo,Ichibabashi Park,ChIJ_7_Sjd6LGGARbsL1p098360,1,5,2,2,4,4,7,0,3,5
-Chuo,300 YearOld Pine,ChIJETsVn9yLGGARO6YBehyxOIQ,7,9,5,0,11,5,15,7,8,8
-Chuo,Matsunoochaya,ChIJq6oG0dqLGGARbqmloLdHBfg,0,2,0,1,2,3,10,0,1,4
-Chuo,Hobaitei,ChIJh23vSduLGGARP_2KeeyV4Gw,6,9,4,3,17,16,28,9,10,17
-Chuo,Asashio Canal Waterfront Park,ChIJs1692niJGGARbdFnoUtNLWo,0,2,1,0,2,1,5,0,5,2
-Chuo,Tsukiji River Sendaibashi Bridge Park,ChIJzyRXst2LGGARSThDMARiY04,3,4,1,5,2,5,4,1,3,4
-Chuo,Chuo Kuritsu Akatsuki Park,ChIJV2cV0WOJGGARuydNncDj020,0,3,0,0,2,1,6,1,2,3
-Chuo,Triton Bridge,ChIJ-ZQzEXmJGGARFFcuoepqGzc,2,1,2,3,1,3,6,2,1,0
-Chuo,Reimei Bridge Park,ChIJByFr9HiJGGARVlD-8jmlxPo,4,8,0,5,8,7,11,3,2,4
-Chuo,Uneme Bridge,ChIJfVrJnlKLGGARnOCUVziw2mQ,1,4,1,4,3,1,5,1,1,1
-Chuo,Ruins of Hamarikyumae Railway Crossing,ChIJPdj7I92LGGARR9f4X1-fID0,16,12,0,14,3,21,10,15,3,3
-Chuo,Tsukiji River Uneme Bridge Park,ChIJKZcP5d2LGGARdgYADLEjCgU,3,6,3,5,7,6,10,0,5,5
-Chuo,Harumi Rinkai Park,ChIJ4W4dM52JGGARld0hfrQ9WIM,2,2,2,1,2,3,4,2,2,1
-Chuo,Harumi No 3 Park,ChIJwabWDHiJGGARL4RE9TI-MIo,3,7,2,4,10,3,19,3,9,12
-Chuo,Waterside Terrace,ChIJYwlk-ZyJGGAReqfam73wXVk,1,7,0,2,10,8,21,4,8,7
-Chuo,Chuo Kuritsu Harumi Daiichi Park,ChIJDeDHe4GJGGARkMYrxC5Qspw,1,10,1,4,10,4,22,0,4,7
-Chuo,Asashio Bridge,ChIJzVDJBXqJGGARyD-pAQ2wnDw,3,5,2,4,7,5,13,2,6,6
-Chuo,Ishikawajima Museum,ChIJd6HdOG-JGGARg0Z9lieRosQ,1,6,1,2,2,7,22,3,3,8
-Chuo,Bank of Japans Founding Place,ChIJFZHDTEKJGGAR5KkBn53DwhQ,2,4,1,1,5,4,16,3,1,5
-Chuo,Tsukishima Monja Street,ChIJZ8PuP3CJGGARAXwWdc4PGQw,1,9,1,1,11,2,22,0,4,14
-Chuo,Sumiyoshi Jinja,ChIJtbY4fG-JGGARBcvW4yUB2rM,1,1,1,1,3,2,10,1,1,3
-Chuo,Chuo City Harbor Park,ChIJZ1N7WmaJGGARedOihu9IFDs,1,5,2,1,5,5,9,2,4,7
-Chuo,Katsuozuka Bonito Mound,ChIJU0bQh2WJGGARwNDqKpZcris,0,3,0,1,2,2,5,0,2,3
-Chuo,Tsukuda Machikado Museum,ChIJq-qVkGWJGGARrK_GNSIDk_Q,3,10,3,4,6,5,12,4,5,7
-Chuo,Tsukudakobashi Bridge,ChIJXW6Shm-JGGARG2GT8dohPhs,1,3,0,2,0,1,2,0,0,3
-Chuo,Echizenbori Childrens Park,ChIJWbeBKV2JGGARUrCWDmTv8KM,0,2,1,0,2,1,6,2,2,3
-Chuo,Toyomi Bridge,ChIJTydvRkKJGGARjKbSv6IMqx8,1,5,0,1,3,1,7,1,4,2
-Chuo,Tsukuda 3Chōme Park,ChIJ1VOka3GJGGARtUYTsozhGrM,0,4,0,2,4,4,11,0,4,5
-Chuo,Memorials to the victims of the 1923 Great Kantō earthquake and World War II Tokyo Air Raids,ChIJoZnnd1yJGGAREjNp7RFbtF4,4,6,1,11,3,7,6,4,5,3
-Chuo,Asashio Ohashi Bridge,ChIJU2iaSnGJGGARFh1rzpdIO8M,1,5,0,1,2,2,5,1,2,8
-Chuo,Reigan Bridge,ChIJS7wHlfqJGGARDkxaAgaReYM,1,8,0,0,3,2,8,0,2,4
-Chuo,The History Museum of JKoreans,ChIJ6QCZVaGLGGAR9QS6CROQGvA,1,2,2,2,3,4,13,4,1,5
-Chuo,お肉の情報館,ChIJrR24gUSKGGARqfx1r-LJyag,15,17,20,23,14,26,44,18,9,20
-Minato,Benkei Bridge,ChIJR0xmHHyMGGARAeMJayOwBhk,0,2,0,1,8,3,14,2,1,6
-Minato,Ad Museum Tokyo,ChIJ2VtGysKLGGAR2oS8_Y_o-pk,0,4,0,1,4,1,23,0,0,8
-Minato,Caretta Shiodome Sky View,ChIJrx_Ez8KLGGARPUaHxocRqHk,0,3,0,0,5,1,16,0,1,10
-Minato,TAKESHIBA BBQ BEER GARDEN,ChIJY_7vC_WLGGARLuzytQ_z7Es,3,6,0,1,11,1,16,1,4,7
-Minato,Moyai Statues,ChIJj9zko6mLGGARPQClKoJ3rRE,1,1,0,1,2,2,8,0,2,2
-Minato,Aoyama Cemetery,ChIJIe1uymKLGGARGpOwOiZEDog,6,24,3,11,38,12,53,12,13,23
-Minato,The National Art Center Tokyo,ChIJP-vO9nuLGGARGJ2q8uryJUA,1,9,0,2,6,6,21,2,5,10
-Minato,Izumo Taisha Tokyo,ChIJQUsA2nmLGGARYAdeN1dwsWc,1,7,1,2,7,5,11,2,4,6
-Minato,Akasaka Sacas,ChIJUyA7lICLGGARuHfsHqZ2U0Y,1,6,1,1,3,3,12,2,2,2
-Minato,Nogijinja Shrine,ChIJwR2lZ36LGGAR43Z0b6e3Gw4,0,7,0,1,6,5,13,0,3,9
-Minato,TOTO GALLERY  MA,ChIJOxerKXyLGGARKNvbpemyeys,1,9,1,2,7,3,27,4,6,8
-Minato,Okura Museum of Art,ChIJC5-nF5CLGGAR9M3JUrPsBj8,7,17,4,4,15,15,32,13,8,13
-Minato,Tomio Koyama Gallery,ChIJSzvUeD-JGGARLYi3ApW9NAo,1,7,0,1,7,1,19,3,6,7
-Minato,Tokyo City View,ChIJK0TdDneLGGARVxJ3MHC0emY,14,42,10,16,33,23,83,9,16,30
-Minato,Prince Chichibu Memorial Rugby Stadium,ChIJizNDvpuMGGAR9QdEmLoDOnQ,1,11,0,2,9,0,14,0,4,9
-Minato,Toyokawa Inari Tokyo Annex,ChIJK-keEn6MGGARyZaLZnQVdgU,0,8,1,4,16,4,31,1,5,12
-Minato,Chōkokuji,ChIJP8YkXGSLGGARF02Vs75NFEc,0,10,0,1,6,2,7,0,6,6
-Minato,21_21 DESIGN SIGHT,ChIJV4H0Nn-LGGAR2g7_9Kourf4,0,7,1,0,7,4,28,2,5,2
-Minato,Wine Shop Sommelier,ChIJaUEw5XeLGGARirrLUJr6v2c,1,6,0,1,5,1,8,0,3,5
-Minato,Taro Okamoto Memorial Museum,ChIJJbavS2GLGGARFLUeTte2lt0,4,10,5,3,9,11,21,6,9,4
-Minato,TEPIA Advanced Technology Gallery,ChIJL6t-1JuMGGARxviRyLV_l7M,2,7,0,1,7,2,15,0,3,10
-Minato,Reinanzaka Church,ChIJhUq-rJqLGGARvfm2U3mDSi8,0,16,1,0,21,4,27,3,2,19
-Minato,Daughters of St Paul,ChIJXcjhO36LGGARDWlbd4nsG7o,2,6,1,4,14,4,20,3,3,13
-Minato,Kikuchi Kanjitsu Memorial Tomo Museum,ChIJ3RlOVJCLGGARB3R2XWU5FtE,1,12,2,1,19,7,35,10,9,8
-Minato,Beni Museum,ChIJ1ZCFSWSLGGARpUEUiKoCxLo,2,5,1,2,5,12,25,2,4,12
-Minato,Entsuji,ChIJ80H9BoCLGGAR6H1LryVGdWU,0,1,1,2,4,3,7,1,1,4
-Minato,Honda Welcome Plaza Aoyama,ChIJ6ZZ5DoOMGGAR05jTAq9xqVQ,1,5,3,0,4,7,12,1,0,9
-Minato,STRIPED HOUSE GALLERY,ChIJd6PjkJ2LGGAR1mUOYtcqmDI,0,5,0,0,1,0,5,0,1,2
-Minato,Suntory Museum of Art,ChIJbSqxxHiLGGARKEK0IzZMksI,3,2,0,2,5,6,17,4,4,5
-Minato,Tokyo Midtown Design Hub,ChIJVVVVwXiLGGARdfqsI40Y-u8,0,1,0,0,0,0,11,0,0,2
-Minato,Mohri Garden,ChIJKwbstHeLGGARxzy-ttu57CM,1,12,1,1,16,5,31,2,6,13
-Minato,Roppongi Hills,ChIJM9xJEHeLGGARAshMWUgC_ls,0,11,0,1,10,4,18,3,5,9
-Minato,Myōzenji Temple,ChIJz3y1NneLGGARwPRxEIn8viE,0,6,0,3,4,2,16,2,1,3
-Minato,Kōjintei  Bujian,ChIJmVBbD2SLGGARMMF2OfGPoto,0,2,1,1,5,4,8,0,2,3
-Minato,イマームムハンマドイブンサウードイスラーム大学東京分校 アラブ イスラーム学院,ChIJ6VY-FnSLGGARN-I0bRXoA4Y,0,1,0,2,1,5,4,1,1,3
-Minato,Takahashi Korekiyo Memorial Park,ChIJN-aSBYGMGGARV4hamU-HF9I,0,1,1,0,2,2,8,3,1,5
-Minato,MinamiAoyama Sanchome green space,ChIJm6me2Z2MGGARJ561Thd-7WE,0,1,0,0,1,0,3,1,1,2
-Minato,Shotaro Akiyama Photo Art Museum,ChIJ_7sGxGOLGGAR7PhH5QQ5nNw,1,1,2,1,2,4,6,3,0,3
-Minato,Treasure Hall of Nogi Jinja,ChIJTR-RYH6LGGARnwqqNfwiddE,2,4,2,3,6,4,11,3,4,3
-Minato,Midtown Garden,ChIJx0V7jrqLGGAR_VT5Fj3yNZ8,2,11,2,0,15,2,23,2,10,14
-Minato,Nogi Park,ChIJk1Vhhn6LGGARl0MVL-KexZQ,0,2,0,1,3,3,19,5,1,2
-Minato,Hinokicho Park,ChIJqcU4DIKLGGARBxWj4fGnB_k,1,4,1,0,6,3,11,3,3,4
-Minato,Shutokuji,ChIJeUTg9H-LGGARhRkke_sJdt0,0,2,0,3,3,4,10,3,0,7
-Minato,Hodoji,ChIJOV0HO4CLGGARIRBcJmeA19s,1,5,1,10,7,11,18,10,4,7
-Minato,Dokyoji,ChIJ4QTp_n-LGGARYybasrO8CQI,2,5,2,2,1,3,3,3,2,2
-Minato,Hitotsugi Park,ChIJKTY1SoCLGGAR1ODjP4rZwPE,1,4,1,1,3,5,3,2,3,3
-Minato,Sanpun Zaka,ChIJR2WgSICLGGARDaal6un4-dg,3,6,1,2,4,6,18,3,2,9
-Minato,Former Site of the House of Kaishu Katsu,ChIJ62EneYGLGGARy3pBngNNGqA,0,2,0,2,2,2,5,3,2,3
-Minato,Aoba Park,ChIJoxynW4KMGGARTvUBjheB7Ts,0,5,0,0,8,2,11,2,4,5
-Minato,Naoya Shiga former residence mark,ChIJZznb8YKLGGAR9btzF0JkQxQ,1,4,1,1,2,2,2,0,3,1
-Minato,Motohikawa Zaka,ChIJay28x4OLGGARqfWZzc_uxus,0,3,1,2,3,2,11,0,0,3
-Minato,Ichogaoka Third Infantry Regiment of the Imperial Guard,ChIJLyLKDICLGGAR-sngoOoTN7I,2,2,1,2,2,1,4,1,1,4
-Minato,Roppongi West Park,ChIJpWTtOXiLGGARheMngAQjX5g,0,4,0,0,5,2,6,0,2,3
-Minato,Ruins of Takanawa Ōkido Gate,ChIJCVfWNq2LGGARvuAHzNroBTc,6,4,1,2,4,8,15,1,2,9
-Minato,Site of the seppuku ritualistic execution of Oishi Yoshitaka and the other 16 Akougishi Akou Roshi samurai,ChIJt8JMCKmLGGAROamwk0o7_-o,3,5,3,8,4,18,19,5,6,17
-Minato,Sengakuji,ChIJh64KT6uLGGARKx4cxgOaL54,9,6,2,11,9,17,33,10,3,14
-Minato,Koyasan Tokyo Betsuin,ChIJ4Y-GGVWKGGARAHFc8A6VDf0,1,3,2,2,4,3,18,2,2,7
-Minato,MitaHachimanjinja Shrine,ChIJX_Qh8q2LGGARghTq3Di6f8g,3,18,1,7,18,5,31,3,13,16
-Minato,Hatakeyama Memorial Museum of Fine Art,ChIJZQpgdf6KGGARXCH1FGs07t0,2,5,1,2,11,6,18,5,5,6
-Minato,Gyoranji,ChIJHZxnrK6LGGAR0d63CW4NM5M,5,20,2,4,11,5,29,2,8,27
-Minato,Hoanji Temple,ChIJCWZucKuLGGARTJ16cpGhJ3k,0,8,1,0,10,6,20,2,3,15
-Minato,Takamatsu Kusunoki Park,ChIJKXMIRamLGGARDlEnzmXhxqM,0,6,0,1,6,2,9,0,4,4
-Minato,Mita Enzetsukan,ChIJ6fYVHbCLGGARO6V6Z6Cj-Pg,1,8,1,3,5,2,52,1,3,19
-Minato,Museum of Logistics,ChIJ_wDxK1aKGGARvv10tNDypZs,0,5,0,0,4,1,8,0,2,8
-Minato,Takanawa Mori No Park,ChIJeX5U41aKGGARpQJCQQWMQrE,1,5,2,0,6,4,7,2,2,4
-Minato,Azabu Kokubisui Hot Spring Takenoyu,ChIJP8qx4KCLGGARrA6QxMdha0E,4,8,1,2,7,9,29,3,2,11
-Minato,Shirokane Hikawajinja Shrine,ChIJWXpokgeLGGARRc7Blgtb41Y,1,5,1,2,5,3,13,1,2,5
-Minato,Maxell Aqua Park Shinagawa,ChIJC1aZZFeKGGARGLX8IHTOn-c,7,25,5,3,35,14,60,9,20,42
-Minato,Tōzenji Temple,ChIJlaWyUFSKGGARjGBTT9eQH-M,2,2,3,1,9,8,21,2,3,13
-Minato,Yanaginoido Well,ChIJtxFmRqCLGGARP4T9Fd6pCUk,17,15,10,8,14,21,35,8,11,22
-Minato,Shibaura Chuo Park,ChIJgYTYlk6KGGAR24EkOo5CfeU,0,8,0,2,10,5,13,1,3,13
-Minato,Zuishōji,ChIJ11c1XwGLGGARw7yjtmaO3HA,0,8,0,1,8,4,17,2,4,10
-Minato,Takanawa Shrine,ChIJl-1sm1OKGGARKF7IMwZLpYk,1,0,0,0,1,6,6,1,2,0
-Minato,Daizōji Temple,ChIJO-TOZ66LGGARv-Oet9rkVi4,0,6,0,1,3,4,11,2,3,7
-Minato,Ninganji Temple,ChIJRb_N2q6LGGARDxgxOv7lMBM,0,2,0,4,2,4,12,5,0,7
-Minato,新芝運河沿緑地,ChIJp0Mi0UyKGGAR7f9b_0U3Xic,1,3,0,2,3,1,5,0,2,2
-Minato,Trinity Shibaura Green Space,ChIJOXTkaEuKGGARCPXwDjBxdY8,1,2,0,0,6,1,10,0,1,5
-Minato,歯科医学教育発祥之地,ChIJ2Q1AZ6yLGGAR4Fy7Df5J-Js,2,8,0,2,6,2,20,2,5,23
-Minato,Mitadai Park,ChIJAcBBLqyLGGARuADg9RGme-E,4,6,2,5,7,8,13,5,5,11
-Minato,泉岳寺 中門,ChIJ1T-1rKyLGGARxv05GXYzjik,0,1,1,1,2,2,11,0,0,16
-Minato,Sengakuji Childrens Playground,ChIJoV9gUFOKGGARtdGqsuW_2GU,0,4,0,1,5,1,8,0,3,4
-Minato,Bloody Plum Bloody Stone,ChIJrxh0TauLGGAR4mSTduX_58M,12,5,5,2,7,8,13,2,7,9
-Minato,Takamatsu Childrens Playground,ChIJ5wpfSaqLGGAR6q8ks2I980Y,3,5,0,1,3,2,7,0,2,5
-Minato,Head Washing Well,ChIJsYMRTauLGGARM4SwXVL4N4w,5,5,4,16,5,20,22,13,4,7
-Minato,Grave of Oishi Kuranosuke,ChIJVz-cNauLGGARqP4z7F-0dyM,3,5,1,6,10,6,16,5,2,9
-Minato,Genwa Christian Heritage,ChIJ34OL7a2LGGARoErdIT0622I,7,8,1,6,2,11,16,5,4,7
-Minato,Genshōji Temple,ChIJXxK3dqqLGGAR3Vw9RQ5Lyy4,1,5,1,6,4,7,13,6,2,6
-Minato,Shirokane Shidacho Childrens Park,ChIJVZ_lhqiLGGARYb6sZIBbc8o,0,8,2,0,7,7,14,0,4,4
-Minato,Hebizaka,ChIJEdikpa-LGGAR1J7AchwjYN0,0,0,7,6,0,7,5,0,0,1
-Minato,Hakutaka Childrens Playground,ChIJUeCOcaiLGGARyxxiFLKq7vI,0,7,1,0,7,5,11,0,4,4
-Minato,柴田錬三郎旧居,ChIJjxIkclSKGGAR8Io6R8GmRkI,0,1,0,0,0,0,6,0,0,3
-Minato,Meiji Gakuin Imbrie,ChIJY7X7bgCLGGARUVRCUO3oU5o,1,5,0,3,3,3,17,1,2,9
-Minato,Sankouzaka,ChIJGyeOGqGLGGARGL5jUTXneT0,3,7,5,2,4,8,9,6,3,6
-Minato,Shinfurukawa Bridge,ChIJjSVGvKeLGGARlNfb8wPMG08,0,2,0,6,2,1,13,1,0,9
-Minato,Takahama Bridge,ChIJB0YTHUyKGGAR5DX-E25kdNo,1,5,1,4,3,3,9,1,1,6
-Minato,Takanawa Park,ChIJG5biIlSKGGAR8WaSxLR3gBM,2,4,1,0,4,3,7,1,4,6
-Minato,日吉坂,ChIJU4S1KAeLGGARrHUp84nOk9Q,0,3,0,0,0,1,1,1,1,1
-Minato,Zekkozaka Slope,ChIJWT5qa6eLGGAR47h8mt7M-7c,0,4,1,1,0,4,17,0,0,10
-Minato,旧竹田宮邸洋館,ChIJBeLUl1aKGGARHfcT-DlHVC4,0,6,0,2,7,2,22,0,4,15
-Minato,Shirokane Park,ChIJA30KCQmLGGARkIlnntrSxOA,2,2,1,1,3,4,4,1,3,2
-Minato,Phantom of the gate old Keio University main gate,ChIJ313Ab7CLGGARy7f3Z7AAUgQ,1,1,0,1,1,1,9,1,1,6
-Minato,Minamiazabu Shinbori Childrens Playground,ChIJF_EuXAqLGGARwnMrIR9Sgws,4,3,0,2,3,8,8,1,1,4
-Minato,Site of Mizuno Kenmotsus Residence,ChIJ4dFsMLGLGGAR555X2dEqv7c,17,14,7,17,12,24,45,9,13,24
-Minato,Nagisabashi,ChIJWa4gq2-LGGAR-nOw2_MDMC4,0,3,0,1,1,0,7,1,2,4
-Minato,瑞聖寺 大雄宝殿,ChIJcVS8_LKLGGARn6hNZbotZ4w,0,2,1,1,5,2,19,2,3,16
-Minato,Fuji Television Network Inc,ChIJQQ6UsPeJGGAR3LFE4U43_NQ,1,14,0,1,11,8,50,1,7,14
-Minato,Tokyo Joypolis,ChIJuTdPXvaJGGARJhT_Ai6urFQ,2,20,1,4,9,9,27,3,9,10
-Minato,Rainbow Bridge,ChIJbWVFlTCKGGARr5l6ox-7_CA,0,12,0,0,18,3,38,0,11,15
-Minato,Daiba Park,ChIJ9aeqHiCKGGARFh-fljrxUT0,10,12,0,7,15,12,30,4,5,15
-Minato,Amphibious Bus by Tokyo Ducktour Splash Point,ChIJCwgzFByKGGARzfk2Ebjwel4,2,21,1,9,7,10,29,6,11,17
-Minato,Odaiba Marine Park,ChIJ18IK6x2KGGARKTc2yLS-030,0,21,0,3,20,2,25,2,9,16
-Minato,Fuji Television Headquarters HACHITAMA Spherical Observation Room,ChIJb2CosfeJGGAR_TIVIcsMyK4,0,7,0,2,7,5,19,2,3,11
-Minato,Odaiba Rainbow Park,ChIJx5hUh_OJGGART6Fognv9_Mk,0,12,0,0,9,0,15,1,5,6
-Minato,Teleport Bridge,ChIJic5uxPCJGGARHFHBqjf1nXo,0,0,0,1,2,1,4,1,0,3
-Minato,Kōnan Ryokusui Park,ChIJ-8hsv0CKGGARdmQp1_mXgw0,0,13,1,0,13,0,20,2,10,12
-Minato,Historic Site Memorial Monument,ChIJJ3z2aH-LGGAREznI8I2GOsw,1,6,0,0,6,4,15,2,1,4
-Minato,Site of Explosives Storage,ChIJhy8XBlaLGGAR_O8PEA4d-Xk,7,12,0,8,1,11,25,1,2,4
-Minato,Anchor and Chain Art,ChIJwbGgFWeLGGARHvAD-dPu3ao,0,2,0,0,3,1,6,1,3,1
-Minato,Rainbow Bridge Promenade,ChIJWTDPE46JGGAR6A1n9w_xfxM,6,12,2,10,9,13,23,5,6,8
-Minato,Statue of Liberty,ChIJp_dRJOOLGGARo5GGDjBnfrw,1,14,2,1,13,5,26,2,8,12
-Minato,Love Sign Odaiba,ChIJFeU3GJGLGGAR2yzNv6jUsfM,0,2,0,0,2,0,5,0,0,1
-Minato,Aqua City Odaiba Shrine,ChIJxWsRPPaJGGARLOOHJSxNf_k,3,9,0,0,5,3,9,1,2,8
-Minato,Rainbow Promenade,ChIJafp9aA-JGGARIZ4yrRBA9_Y,0,2,0,0,3,0,5,1,2,1
-Minato,Memorial Monument of Nirayama Town Shizuoka Prefecture,ChIJtVDiBGqJGGARaQdosKf-caM,1,0,0,0,0,1,3,0,1,0
-Minato,Shinagawa Kita Port Park,ChIJDd782D6KGGARU87YemLM-IE,2,4,3,2,6,5,12,0,0,4
-Minato,FCG Bldg,ChIJw3qKQduJGGARWr0DnXUAjV8,2,4,0,1,3,5,8,0,2,0
-Minato,お台場冒険王,ChIJPYMDbgCNGGARuZB59vzOiN0,5,20,2,5,13,8,24,3,5,9
-Minato,Konano Bridge,ChIJ4xSTRtqLGGARxvUO49Gvf-s,2,3,1,3,5,2,9,3,1,6
-Minato,Kawasaki Robostage,ChIJy7jAHPeJGGARj9nEku7az9s,0,8,0,1,7,1,14,0,4,6
-Minato,Bay Breeze Garden,ChIJ32AffUeKGGARD6Ni9J2YWl0,0,2,0,0,3,1,5,0,1,1
-Minato,第一芝浦丸,ChIJVVWY3EeKGGARWGfOTmJ-v2E,2,7,1,5,1,7,16,6,2,7
-Minato,Futo Park,ChIJcXl4TjSKGGAR-HrkGf4fKZM,2,6,1,1,5,4,9,0,1,4
-Minato,Konan Third Street playground,ChIJoW3U1UeKGGARMisujDoeeIc,3,9,2,2,12,3,14,2,6,6
-Minato,Shiosai Bridge,ChIJlWFm7TWKGGARpsUXLha-Yzk,0,1,0,0,0,1,0,0,0,0
-Minato,Platanus Park,ChIJB34WEEqKGGARpaq95ARZA70,0,6,0,0,5,5,10,0,3,6
-Minato,Shiba Maruyama Tumulus,ChIJ55pIRbmLGGAReFx7rf2nL8c,7,16,2,9,9,15,30,10,7,15
-Minato,Tokyo Tower,ChIJCewJkL2LGGAR3Qmk0vCTGkg,1,18,0,0,13,7,36,3,9,13
-Minato,Zōjōji,ChIJC2xnkb6LGGARJL0d222opIg,2,9,1,4,10,10,25,5,7,16
-Minato,NHK Museum of Broadcasting,ChIJCcGIPpSLGGARzZ4ZW6hu6NE,1,11,0,2,10,1,17,1,4,11
-Minato,Karasumori Shrine,ChIJmyHLzuuLGGAR_dp7Ams-EI4,2,5,2,6,9,7,21,4,3,8
-Minato,Panasonic Shiodome Museum of Art,ChIJ6Sypp8KLGGAR4lmmX-zFFmo,4,5,6,8,4,15,11,4,1,8
-Minato,The Old Shimbashi Station Railway History Exhibition Hall,ChIJ3YkTH-iLGGARFeFdXRMTGCA,5,6,0,0,1,9,11,0,0,3
-Minato,Asaoka Meshitaki Well,ChIJk4lQPr-LGGARtZdLy9hIY_4,2,2,2,4,2,7,10,3,0,6
-Minato,松蓮社,ChIJ___Tk5WLGGARD_ae8siBlt4,0,1,0,0,0,1,4,2,0,1
-Minato,Italia Street,ChIJ5YHK2MOLGGARfS_kBq3T3Kc,3,8,3,5,7,6,13,2,2,8
-Minato,Success Steps,ChIJ2cn3ZZSLGGARtAH08ZmRyIo,3,17,2,2,13,6,31,0,3,13
-Minato,Japan longitude and latitude origin,ChIJPxLuDpiLGGARrpOPDjdOGtw,0,7,0,5,2,4,15,1,2,10
-Minato,Shigeru Yokota Gallery,ChIJlaDjR86LGGARQItrXhG4188,0,2,0,0,2,0,2,1,3,1
-Minato,Sakurada Park,ChIJU2yfPOqLGGAR5kyogpBYaUY,1,5,1,0,4,7,10,0,4,5
-Minato,SL Square Shimbashi Station West Entrance Square,ChIJ--QO2OuLGGARArLS5ggknfU,0,5,0,2,3,3,6,1,3,5
-Minato,Japan Sake and Shōchū Information Center,ChIJ_____-yLGGAR8bvuJnTEoFs,0,5,0,0,4,3,12,0,2,6
-Minato,Shinkōin,ChIJG_Jxdr2LGGARo4c9XYwS20U,3,5,2,4,10,8,41,4,6,20
-Minato,Nishikubo Hachiman Shrine,ChIJgwRJZJeLGGARGS9TGva9Ec4,0,6,0,0,5,2,13,3,2,7
-Minato,Gate J,ChIJCSxVROqLGGARvoCrJ01g4jc,0,11,0,3,8,1,28,0,4,17
-Minato,Takeshiba Ship Terminal,ChIJKSgs1NGLGGAR-VKyI3yWIxE,0,3,0,0,3,4,5,1,4,3
-Minato,Shiba Toshogu,ChIJYeawQLmLGGAR2BdgTIsnMW0,2,6,2,2,6,3,15,0,3,8
-Minato,Seishōji Temple,ChIJfy9hNJSLGGAR41_DfA3WUB0,0,7,0,3,6,1,10,1,2,7
-Minato,Hinode Pier,ChIJFU3ezs2LGGARbErm6rqTfHw,0,10,0,0,6,3,15,1,5,3
-Minato,Toranomon Kotohiragu,ChIJdc_l942LGGAR_f4Ot6q7ISo,1,12,1,3,12,2,21,0,9,10
-Minato,Shiba Park Memorial,ChIJoQccixWLGGARGhqN-dSIxVY,1,2,0,0,0,2,5,0,0,0
-Minato,Statue of Admiral Perry,ChIJnRUazbiLGGARe6zV9fDyv74,1,5,0,0,3,3,13,1,2,5
-Minato,Former Daitokuin Reibyo Somon Gate,ChIJs8x7KbmLGGARa5QzTOovN48,0,1,0,2,3,3,9,1,1,3
-Minato,Administration Office,ChIJJ2hO_L6LGGAR6bUkSjqgU3w,0,1,0,0,0,0,7,1,0,3
-Minato,Zōjōji Treasures Gallery,ChIJMzFnjb6LGGARxIoAHgyGjLo,2,14,1,3,9,4,25,1,4,9
-Minato,貯金塚,ChIJMzBHTMeLGGARzHLxEE_xWK0,7,10,2,6,10,16,43,5,7,30
-Minato,A stone of the stonewall of Odaiba,ChIJ47IVsb-LGGARyPSyPIsJ74c,11,3,0,3,1,13,3,0,0,1
-Minato,Sailor Moon Manhole Cover Blue,ChIJr8i8NACLGGARC3ToFK8zbSk,0,0,0,0,0,0,5,0,0,0
-Minato,Monument for Ino Tadatakas national surveying,ChIJzbo6ULmLGGARquBQ7IuT4-Y,1,7,1,2,7,5,16,3,3,9
-Minato,Shiba Park,ChIJaYt93b6LGGARRTt3Y7YkqVg,3,14,2,3,15,4,28,3,10,16
-Minato,Shiba Park 4th Block,ChIJo_JFxL-LGGARdeXGPqUzSjY,1,6,2,0,8,2,13,1,2,3
-Minato,赤十字情報プラザ,ChIJhxwHjMCLGGARSLhVkJ9aQoc,13,10,5,13,5,20,18,14,4,8
-Minato,Haikuinscribed Monument of Ono Hanboku,ChIJ55o7WrmLGGAROL9f4UTqGqw,1,3,0,0,3,4,12,0,3,7
-Minato,Snake Mound,ChIJQRMvwr2LGGARC3GHLt8p1wY,3,19,10,11,18,18,36,4,15,15
-Minato,Momiji valley,ChIJwaj1yL2LGGARnm1x4JwnHe8,4,5,3,1,8,3,22,3,10,13
-Minato,Momiji Waterfall,ChIJKbFrx72LGGAR1uyToVEdITo,1,5,1,1,3,7,12,5,4,4
-Minato,東京タワーを見上げる階段東京タワー地下駐車場出入口,ChIJ4_ZvIgCLGGARLUI8wFAnNA0,0,10,0,1,2,7,6,1,1,2
-Minato,東京鐵塔售票口,ChIJS3ioM3SLGGARUG1WA0cOKS4,0,1,0,0,2,1,2,0,2,3
-Minato,Konchiin,ChIJU3Y19b2LGGARyjBjYYHekpI,1,1,2,2,1,4,6,4,1,2
-Minato,Shinagawa Central Garden,ChIJDUOuOVuKGGARvW6a5im7bOs,1,4,1,0,2,1,7,0,2,3
-Minato,Museum of Marine Science Tokyo University of Marine Science and Technology,ChIJ9aawRUGKGGARtp40czt54S4,1,7,1,0,4,2,18,1,3,4
-Minato,Konan waraku Park,ChIJKwzTjUaKGGARco_pKpf1hI4,1,4,2,1,6,4,7,1,5,6
-Minato,Konan Star Park,ChIJ64NerVqKGGAR2hooN4EjDLM,0,2,0,0,1,0,8,0,0,1
-Minato,Field B,ChIJASvm9kOKGGARomVcsXrIntQ,0,3,0,0,6,0,13,0,2,3
-Minato,Tide Park,ChIJl_pr2FqKGGARoT3W-Azkt-s,0,6,0,0,5,2,9,0,3,3
-Minato,Shinagawa Station Founding Monument,ChIJNYsCG4SLGGARH-pjSP2No-c,6,16,3,6,7,9,29,10,1,8
-Minato,Forest Park,ChIJ5XzRoFyKGGARxbNl5LaIAbM,0,9,1,1,10,4,19,2,1,9
-Minato,Kōnan Park,ChIJtWIqLkKKGGARZdQJI-JfzFU,1,3,1,2,3,2,7,3,2,3
-Minato,いちょう坂,ChIJIwU2Nm6LGGAR8MVjPIlhFSU,3,8,3,3,8,6,15,4,7,8
+"Place_Name","Place_ID","user_ratings_total","anger","anticipation","disgust","fear","joy","negative","positive","sadness","surprise","trust","wikipedia2VecVocab","wikipedia2VecVocabKouho"
+"Yasukuni Shrine","ChIJ1UOuDWiMGGARkM6Iv-ZU57U","20631","3","8","4","7","11","6","21","3","5","8","ENTITY/Yasukuni Shrine",""
+"The National Museum Of Modern Art, Tokyo","ChIJL0kSfg2MGGARKv5KX53ZZ2Y","6346","4","10","2","5","8","11","22","6","8","10","ENTITY/The National Museum Of Modern Art, Tokyo",""
+"Science And Technology Museum","ChIJdfZ2xRKMGGARQSyxv6wfzw8","3520","2","15","0","2","9","3","30","1","4","14","ENTITY/Science And Technology Museum",""
+"National Showa Memorial Museum","ChIJP5nfE2uMGGARCD9T7XHuNb4","1170","8","10","0","14","8","25","30","9","6","11","ENTITY/National Showa Memorial Museum",""
+"Tsukudo Shrine","ChIJ4UhE-GqMGGARlLgTJ-LIbtU","450","0","2","0","1","1","2","5","0","1","3","ENTITY/Tsukudo Shrine",""
+"Tokyo Daijingu Shrine","ChIJq6q63UOMGGAR7zYBKd7iI3I","10493","3","20","2","6","21","4","29","0","10","20","ENTITY/Tokyo Daijingu Shrine",""
+"JCII Camera Museum","ChIJVVXl-2-MGGAR7svTOrr-IS0","257","0","3","1","2","5","6","15","1","2","7","ENTITY/JCII Camera Museum",""
+"Mizuma Art Gallery","ChIJ2YbtW1yMGGARFNVU6oa8RC8","105","1","2","1","1","3","4","13","4","5","5","ENTITY/Mizuma Art Gallery",""
+"Fukiage Omiya Palace","ChIJLVL4SHKMGGARR8l5zZQx02A","53","0","1","0","0","1","0","2","0","2","1","ENTITY/Fukiage Omiya Palace",""
+"Daijingu Hall","ChIJh7Ol3UOMGGARQ3oMdDHhP3M","61","1","8","2","3","2","8","10","2","3","0","ENTITY/Daijingu Hall",""
+"Shōkei Kan","ChIJ_w85TGuMGGARezMKgo73Qx0","204","20","12","6","35","6","47","47","25","8","19","ENTITY/Shōkei Kan",""
+"Tayasu Mon Gate","ChIJQwJLmGuMGGARZaD_O7oWHPI","246","3","8","1","3","7","6","22","2","5","23","ENTITY/Tayasu Mon Gate",""
+"Kudanzaka Park","ChIJGZArzGuMGGARPTxpzTl2nHE","137","2","10","1","1","10","8","22","5","3","7","ENTITY/Kudanzaka Park",""
+"Takatōrō Jōtōmyōdai","ChIJzbiOtmuMGGARAnAP53OIJZ0","119","0","8","0","1","4","3","27","3","3","11","ENTITY/Takatōrō Jōtōmyōdai",""
+"Yayoi Ireido","ChIJq9r0nmuMGGARWwwQPkWWkws","26","0","11","1","8","3","7","22","7","8","10","ENTITY/Yayoi Ireido",""
+"Clock Tower","ChIJp8s7DqGNGGAR4bsVhMgJC1s","52","1","3","0","1","0","2","3","1","1","2","ENTITY/Clock Tower",""
+"Statue Of Ōmura Masujirō","ChIJ8Sc1l2mMGGARIA_VxjgBFQE","252","2","3","1","0","4","2","10","0","2","3","ENTITY/Statue Of Ōmura Masujirō",""
+"Chidorigafuchi Moat","ChIJndmxIRmNGGAR9zOZKItqjDI","777","9","25","7","3","24","14","47","4","10","21","ENTITY/Chidorigafuchi Moat",""
+"Shimizumon Gate","ChIJ70n0MROMGGARMjFhBBLsEGk","237","3","4","1","1","5","4","11","1","3","7","ENTITY/Shimizumon Gate",""
+"Statue Of Special Attack Squad Braves","ChIJJ8aSHWiMGGARmjhDGoLDel0","31","0","9","0","4","7","5","14","2","4","8","ENTITY/Statue Of Special Attack Squad Braves",""
+"Site Of Yosano Tekkan & Akiko'S Former Residence","ChIJw5vbJkOMGGAR_aKWf0Alu5M","20","1","8","1","7","6","7","11","4","3","9","ENTITY/Site Of Yosano Tekkan & Akiko'S Former Residence",""
+"Kiji Bridge","ChIJ89xfRxKMGGARNpKd03x1yzU","21","3","2","1","2","2","3","11","2","2","3","ENTITY/Kiji Bridge",""
+"Aiai Bridge","ChIJn3jzZUCMGGARuppFZM174i8","23","1","8","1","2","16","4","32","2","2","9","ENTITY/Aiai Bridge",""
+"Nishikanda Park","ChIJS2KjCxWMGGARlSmbfzCTDhQ","222","0","6","1","1","3","2","7","1","3","4","ENTITY/Nishikanda Park",""
+"Jimbōchō Aizen Park","ChIJu36bFRSMGGARJ1K6y-kX1Zs","142","0","2","7","2","2","15","14","5","1","4","ENTITY/Jimbōchō Aizen Park",""
+"Site Of Taki Rentarō'S Former Residence","ChIJ4Ry1gGWMGGARVj3doAlwlYI","21","4","9","3","8","12","14","26","12","4","18","ENTITY/Site Of Taki Rentarō'S Former Residence",""
+"Nishihanebashi Mon Gate","ChIJ1cJ9wgyMGGARNGBVSQ_0nDk","26","7","9","0","1","5","11","18","2","5","15","ENTITY/Nishihanebashi Mon Gate",""
+"Edo Castle Ruins","ChIJiZggVguMGGARaW4UFY3Mo8Q","1213","3","12","3","3","16","6","27","4","7","15","ENTITY/Edo Castle Ruins",""
+"Chidorigafuchi Park","ChIJ2Upy0nGMGGARNdDKDGtkffY","2551","4","16","2","1","24","8","52","2","6","16","ENTITY/Chidorigafuchi Park",""
+"Mathematical Experience Plaza","ChIJhWS9Z1uMGGAR_BZDzCuwuLM","103","1","1","1","1","1","2","10","1","2","7","ENTITY/Mathematical Experience Plaza",""
+"Shimo Dokanbori Moat","ChIJBdU8ugyMGGARJ9UXAFmePUI","36","0","1","0","1","1","0","1","0","0","0","ENTITY/Shimo Dokanbori Moat",""
+"Parliamentary Museum","ChIJCSOV_omLGGARC30qXmCHB7A","657","3","9","1","4","9","3","19","1","5","8","ENTITY/Parliamentary Museum",""
+"National Diet Building","ChIJibDhsomLGGARkIZSXvrUx0g","1085","0","5","0","5","4","1","24","2","2","15","ENTITY/National Diet Building",""
+"Hie Shrine","ChIJF0MR5MSmH2ARj3x0ov0aQ-8","11098","1","7","0","3","9","4","27","5","5","15","ENTITY/Hie Shrine",""
+"Tokyo Garden Terrace Kioicho","ChIJ4Z9j7XuMGGAR9u6LL1dJtJ0","6342","1","10","0","2","16","1","33","2","10","11","ENTITY/Tokyo Garden Terrace Kioicho",""
+"Site Of Akasaka Mitsuke Gate","ChIJoRtqW3mMGGAR_IfueEJk_5U","113","8","9","0","1","2","9","15","0","3","10","ENTITY/Site Of Akasaka Mitsuke Gate",""
+"St. Ignatius Catholic Church","ChIJNZ056omMGGARZhItdVTT87M","1083","0","23","2","1","23","5","44","4","7","31","ENTITY/St. Ignatius Catholic Church",""
+"JCII Photo Salon","ChIJ8d_x-2-MGGARauUw6ERrqC4","121","2","3","0","1","3","3","16","0","1","8","ENTITY/JCII Photo Salon",""
+"Oishi Fossils Gallery Of Mizuta Memorial Museum, Josai Unversity Educational Corporation","ChIJq6oaRXqMGGARO38fkV_jVbE","66","0","4","0","0","4","3","15","1","2","4","ENTITY/Oishi Fossils Gallery Of Mizuta Memorial Museum, Josai Unversity Educational Corporation",""
+"Hanzomon Museum","ChIJAQDQVmWMGGAR4dNK6sEJZ80","306","0","5","1","1","5","4","13","1","3","9","ENTITY/Hanzomon Museum",""
+"Hanzōmon Kids Pond","ChIJvVErVHCMGGARuf-ToldwmNM","86","1","8","0","0","8","1","14","0","3","10","ENTITY/Hanzōmon Kids Pond",""
+"Miyakezaka Syo Park","ChIJ-5FsWHaMGGARqbbg6TMXPMU","32","2","3","1","2","4","5","10","3","4","3","ENTITY/Miyakezaka Syo Park",""
+"Shimizudani Park","ChIJ0zbC6nyMGGAROfFoUq13fnw","658","1","10","1","3","13","7","24","2","3","10","ENTITY/Shimizudani Park",""
+"Benkei Bridge","ChIJR0xmHHyMGGARAeMJayOwBhk","87","0","1","0","0","4","2","6","1","0","4","ENTITY/Benkei Bridge",""
+"Hotel New Otani Japanese Garden","ChIJd0TGAH2MGGARdoUx5v0t2yo","845","2","5","1","2","15","8","21","1","2","9","ENTITY/Hotel New Otani Japanese Garden",""
+"Nakayoshi Park (Kōjimachi Kids Square)","ChIJBzNAQ2KMGGARJ1v9BGmSYj0","154","0","3","0","0","3","2","4","0","1","2","ENTITY/Nakayoshi Park (Kōjimachi Kids Square)",""
+"Site Of The Kuichigai Mitsuke","ChIJsR2kVn2MGGARzfT8eo-ciHs","47","10","8","3","14","4","17","26","6","4","16","ENTITY/Site Of The Kuichigai Mitsuke",""
+"Japanese Geodetic Origin Point","ChIJN_ucJIqLGGARpSbER4BCoPQ","202","2","5","2","1","3","3","10","4","3","5","ENTITY/Japanese Geodetic Origin Point",""
+"The Diet Front Park","ChIJRwdJJIqLGGAR6wrIM__UeZg","74","8","12","4","4","15","10","24","6","9","11","ENTITY/The Diet Front Park",""
+"Sannoinari Shrine","ChIJVVXigYeLGGARjnqtQYmiyTM","96","0","4","0","3","5","3","12","1","2","5","ENTITY/Sannoinari Shrine",""
+"Sakura Well","ChIJryeESYqLGGAR60avG3cGwd0","30","2","0","1","2","1","2","7","1","1","4","ENTITY/Sakura Well",""
+"Tokyo Kotsu Kaikan","ChIJASonFuWLGGARoLBihp8-Dck","12594","0","5","0","0","5","1","6","0","2","3","ENTITY/Tokyo Kotsu Kaikan",""
+"Imperial Palace","ChIJTQbYAg2MGGARt22eNwtfGtE","26298","3","16","5","4","14","5","43","6","8","19","ENTITY/Tokyo Imperial Palace",""
+"The National Museum Of The Imperial Collections, Sannomaru Shozokan","ChIJPfFaQhOMGGARTfig6X5OJvM","474","2","7","1","0","9","2","15","2","3","7","ENTITY/The National Museum Of The Imperial Collections, Sannomaru Shozokan",""
+"Imperial Palace East National Gardens","ChIJPfFaQhOMGGAR-QPbNQoAG6M","7991","8","15","6","10","17","14","29","4","5","16","ENTITY/Imperial Palace East National Gardens",""
+"Chowaden (Reception Hall Of Lmperial Palace)","ChIJ-w9nwAqMGGARuiyw3jm3Ios","240","1","6","1","1","7","1","19","1","4","10","ENTITY/Chowaden (Reception Hall Of Lmperial Palace)",""
+"Mitsubishi Ichigokan Museum","ChIJuyY-ZfqLGGAREYR9A10IXPQ","2989","0","17","0","1","20","1","40","7","12","14","ENTITY/Mitsubishi Ichigokan Museum, Tokyo",""
+"Tokyo Station Gallery","ChIJtxODuv6LGGAR4xf7X3WayX0","2229","0","5","1","0","5","1","16","1","4","8","ENTITY/Tokyo Station Gallery",""
+"Kokyo Gaien National Garden","ChIJAQCEbPGLGGARFa0L-v-rNtg","8224","6","13","4","4","19","7","32","7","10","14","ENTITY/Kokyo Gaien National Garden",""
+"Seikado Bunko Art Museum","ChIJz-ZkAQb0GGARLd-j4HlLkaM","909","2","17","1","3","20","5","38","2","11","15","ENTITY/Seikado Bunko Art Museum",""
+"Idemitsu Museum Of Arts","ChIJoUobW_CLGGARL_ES0JDK5lg","1378","1","6","1","2","4","2","6","1","4","4","ENTITY/Idemitsu Museum of Arts",""
+"Fountain Of Hibiya Park","ChIJgYcKD_KLGGARyM933-RbFaY","706","1","7","0","0","8","0","13","1","3","8","ENTITY/Fountain Of Hibiya Park",""
+"Intermediatheque","ChIJF5AiNPqLGGAR2igPgxC2_Kw","1081","0","3","0","0","3","4","14","5","3","5","ENTITY/Intermediatheque",""
+"KITTE Garden","ChIJtZRvRvqLGGARdS57rQP2NEk","772","0","11","0","1","10","0","20","1","4","6","ENTITY/KITTE Garden",""
+"Marunouchi Square","ChIJAylxefmLGGARmouNFJGoD3E","3531","3","6","4","3","7","4","18","1","1","9","ENTITY/Marunouchi Square",""
+"Mitsubishi UFJ Trust And Banking Museum","ChIJvQWmVviLGGARWUVZ75YS5Jw","44","1","9","1","2","9","5","25","2","5","29","ENTITY/Mitsubishi UFJ Trust And Banking Museum",""
+"Wadakura Fountain National Park","ChIJV4TDwfeLGGARZZY83rpWpSA","2057","0","9","0","0","10","6","25","4","6","9","ENTITY/Wadakura Fountain National Park",""
+"Site Of Matsu No O Roka Corridor","ChIJhZsO6QuMGGARKpytUX8ZqOs","86","15","9","7","7","8","17","22","11","13","9","ENTITY/Site Of Matsu No O Roka Corridor",""
+"Sukiyabashi Park Young Clock Tower","ChIJV8P5fO-LGGAR6Qn-vWMmKO0","84","0","5","0","0","1","0","8","0","1","3","ENTITY/Sukiyabashi Park Young Clock Tower",""
+"Statue Of Kusunoki Masashige","ChIJ-SEtT_GLGGARh19OTroY4bA","1243","1","7","1","5","7","3","19","1","4","11","ENTITY/Statue Of Kusunoki Masashige",""
+"Babasakimon Gate Monument","ChIJ43Sw2_CLGGARh5FCOXxs2tQ","52","2","4","1","1","5","3","16","4","1","21","ENTITY/Babasakimon Gate Monument",""
+"Mt. Mikasa","ChIJcUcaufOLGGARsuW5JEIux_U","46","1","0","1","0","0","3","2","0","0","1","ENTITY/Mt. Mikasa",""
+"Pelican Fountains","ChIJ-6ZEL_CLGGARRMzYsKSF188","33","0","15","0","0","10","2","17","3","5","15","ENTITY/Pelican Fountains",""
+"Health Field","ChIJgTZzrvOLGGARoigItuM4MWI","77","0","4","0","0","5","1","5","0","3","4","ENTITY/Health Field",""
+"The Place Of Death Of Date Masamune","ChIJVzm4lvGLGGARQcfrzMS4DcA","104","1","5","1","0","3","3","7","1","0","5","ENTITY/The Place Of Death Of Date Masamune",""
+"Kikyō Mon Gate","ChIJmdef7AmMGGARhKjmuJGUSNs","712","3","13","2","3","8","8","19","7","3","13","ENTITY/Kikyō Mon Gate",""
+"Flowerbed 1","ChIJ05OYU2qLGGARdiRMwrnekMs","40","0","17","0","0","12","3","18","3","2","13","ENTITY/Flowerbed 1",""
+"Remains Of Hibiya Turret Of Edo Castle","ChIJSVlhwPGLGGARz28AxXTPVEo","54","15","13","4","4","6","24","38","4","2","21","ENTITY/Remains Of Hibiya Turret Of Edo Castle",""
+"Shinji Ike Pond","ChIJ23HgvY-LGGARzGvMuq9sbFQ","51","2","3","2","2","4","4","9","2","2","4","ENTITY/Shinji Ike Pond",""
+"Remains Of Wadakuramon Gate Guardhouse","ChIJ0QFUhfeLGGARcBgc0OSQI2U","121","2","4","0","2","3","4","14","0","1","7","ENTITY/Remains Of Wadakuramon Gate Guardhouse",""
+"Ancient Scandinavian Runestone (Replica)","ChIJBSyx9vGLGGARFTYqDttIVMo","25","6","7","2","3","3","8","7","4","3","4","ENTITY/Ancient Scandinavian Runestone (Replica)",""
+"Wadakura Mon Gate","ChIJn_Bp6PeLGGARAfpWo7lBTcA","146","2","2","1","0","1","1","5","1","1","6","ENTITY/Wadakura Mon Gate",""
+"Obansho Guardhouse","ChIJ8zjh2AuMGGARH4JAMFrF8FQ","82","2","0","0","11","4","4","23","1","1","12","ENTITY/Obansho Guardhouse",""
+"Grand Fountain","ChIJr62ciOSLGGARIs6ax4bn-a8","68","0","0","0","1","2","0","5","0","0","0","ENTITY/Grand Fountain",""
+"Hibiya Step Plaza","ChIJ8aEILO6LGGARPVDPsPKqefw","171","1","4","2","1","2","1","7","1","2","3","ENTITY/Hibiya Step Plaza",""
+"Park View Garden","ChIJneixJe6LGGARfXvzyW1mY_U","168","6","11","5","8","11","16","23","3","3","15","ENTITY/Park View Garden",""
+"Tsubonemon Gate","ChIJ0cCkZguMGGAR3ErK3Ay-awQ","51","1","4","0","2","1","0","4","1","1","4","ENTITY/Tsubonemon Gate",""
+"Crane Fountain","ChIJhxcV4MGLGGARopLeXlAS9tY","28","2","4","0","4","2","8","17","3","0","7","ENTITY/Crane Fountain",""
+"Godzilla Statue","ChIJj9FCzO-LGGARv0qenUaDws4","2052","1","4","0","1","2","5","16","0","3","6","ENTITY/Godzilla Statue",""
+"Edo Castle Keep Restoration Model","ChIJ93STsrqNGGAReyjjarHT2cg","42","2","6","0","3","4","3","27","1","1","4","ENTITY/Edo Castle Keep Restoration Model",""
+"Gin No Suzu","ChIJ9-LJdPyLGGARZeSwNOHJv3I","2318","0","2","0","1","3","2","4","1","2","4","ENTITY/Gin No Suzu",""
+"Former Tokyo Central Postmaster'S Office","ChIJH5qNNPqLGGAReFR56HZUyfs","83","0","1","1","0","5","2","21","1","4","7","ENTITY/Former Tokyo Central Postmaster'S Office",""
+"Ōte Mon Gate","ChIJ7-cJ_wiMGGAR_wayVide6uo","421","3","9","0","5","7","9","36","2","3","27","ENTITY/Ōte Mon Gate",""
+"Imperial Palace Main Gate Stone Bridge Decorative Lamp","ChIJgzwL_QuMGGAR6xGd6K4fYGk","39","5","2","0","5","7","7","28","0","4","8","ENTITY/Imperial Palace Main Gate Stone Bridge Decorative Lamp",""
+"Yanagimori Shrine","ChIJS2dPOKiOGGAREfQsUq73wP0","719","3","7","2","3","7","8","21","1","1","17","ENTITY/Yanagimori Shrine",""
+"Otamagaike Pond Site","ChIJ1abH0vyLGGARoSlvRMJ3JuM","67","0","5","1","5","5","8","18","5","5","9","ENTITY/Otamagaike Pond Site",""
+"Horin Park","ChIJ58mpjx6MGGARseWnPsaMkNI","768","0","12","2","3","13","8","28","1","4","13","ENTITY/Horin Park",""
+"Myojin Otoko Zaka Stair","ChIJFSnzsB6MGGARnojVfoqkXW4","180","1","3","0","0","1","3","6","1","0","5","ENTITY/Myojin Otoko Zaka Stair",""
+"Kanda Myoujin Shrine","ChIJ7RsWzB6MGGARi3xBv7bkl_M","21920","0","7","0","0","13","1","27","1","5","12","ENTITY/Kanda Myoujin Shrine",""
+"Ozu History Museum","ChIJUduh6VSJGGARqpH5415dX-U","47","1","7","0","1","8","2","23","2","5","5","ENTITY/Ozu History Museum",""
+"Tokiwa Park","ChIJHSZQjwCMGGARRvkZQ4vk8kg","69","1","3","0","2","1","7","7","2","6","1","ENTITY/Tokiwa Park",""
+"Ogawa Hiroba","ChIJd2lidxCMGGARqEE0ey3opTo","349","3","12","1","1","6","4","21","2","3","6","ENTITY/Ogawa Hiroba",""
+"3331 Arts Chiyoda","ChIJWUPQrR-MGGARa622uywYz2E","1831","3","20","2","2","19","4","43","11","14","19","ENTITY/3331 Arts Chiyoda",""
+"Fukutoku Shrine","ChIJw9uzC1WJGGARnZWYZveSJFc","2699","2","15","1","7","15","4","30","1","10","20","ENTITY/Fukutoku Shrine",""
+"Mitsui Fukutoku Garden","ChIJCSL5CFWJGGAR1n5EJ99hzXs","320","0","4","0","2","5","0","7","1","2","4","ENTITY/Mitsui Fukutoku Garden",""
+"Daiichi Sankyo Medicine Museum","ChIJRR8sH1WJGGARgBXf6qT_viE","292","1","6","0","2","3","1","13","0","3","6","ENTITY/Daiichi Sankyo Medicine Museum",""
+"Manseibashi Station Remains","ChIJF-kS1ByMGGARfX9TAILqL3w","335","1","7","0","0","6","2","17","1","4","5","ENTITY/Manseibashi Station Remains",""
+"Izumi Bridge","ChIJod60-KiOGGARzcq38CBviUQ","55","6","3","5","4","4","10","11","4","3","4","ENTITY/Izumi Bridge",""
+"Akihabara Park","ChIJpQd7ZqiOGGARsRs2aimeHl4","408","2","4","2","1","3","1","9","3","1","3","ENTITY/Akihabara Park",""
+"Akihabara Electric Town","ChIJZzSYoB2MGGARfBcicn7sx28","4124","0","13","0","4","4","6","25","2","4","7","ENTITY/Akihabara Electric Town",""
+"Awaji Park","ChIJb_7IaRuMGGARavmrYh6B_5w","210","0","1","0","0","2","0","4","1","1","2","ENTITY/Awaji Park",""
+"YKK","ChIJz3TS9aaOGGARwdZXzammqSQ","54","3","11","2","4","11","6","31","2","6","8","ENTITY/YKK",""
+"Hill Of Ghost","ChIJ8xqjvhuMGGAR8vSlKVW80l0","27","0","0","0","0","0","0","0","0","0","0","ENTITY/Hill Of Ghost",""
+"Park Gallery","ChIJ76X9mh6MGGAR_fhLJ312wT0","32","0","9","0","1","7","4","25","4","7","10","ENTITY/Park Gallery",""
+"Shusse Fudo Son","ChIJVVW4TAGMGGARV7MjXGiZD1E","64","3","3","3","6","3","8","11","2","5","5","ENTITY/Shusse Fudo Son",""
+"Jisshi Park","ChIJAQBTVquOGGARLx6I1rPxg4s","367","3","9","2","1","8","4","14","1","6","7","ENTITY/Jisshi Park",""
+"Chiyoda Kuritsu Izumi Park","ChIJdScsSK-OGGARzKMrlFcqwN4","532","1","9","2","1","6","4","10","1","5","7","ENTITY/Chiyoda Kuritsu Izumi Park",""
+"Kodenmacho Prison Museum","ChIJ2zLvTauOGGAR6Ofe6rSxsRo","38","6","8","1","9","6","10","29","8","3","9","ENTITY/Kodenmacho Prison Museum",""
+"Remains Of The Kodenmacho Prison","ChIJi08pVKuOGGARJSwjsbWHEyo","59","1","1","1","0","1","4","6","2","1","2","ENTITY/Remains Of The Kodenmacho Prison",""
+"Ryukan Children'S Park","ChIJUxjq76yOGGARBhZMImQywT8","121","0","1","0","1","1","5","5","0","2","1","ENTITY/Ryukan Children'S Park",""
+"Hijiri Bridge","ChIJi3JUZACNGGARXyYn0j7sCkE","150","1","13","0","3","8","6","16","2","6","5","ENTITY/Hijiri Bridge",""
+"Uchikanda Ojima Park","ChIJrdkPmgaMGGARxBYfVzVugQA","39","1","4","1","0","3","6","11","0","1","3","ENTITY/Uchikanda Ojima Park",""
+"Miyamoto Park","ChIJ14jFJxmMGGARblOZ2P33sIA","153","0","2","0","0","3","1","4","1","1","2","ENTITY/Miyamoto Park",""
+"Meiji University Museum","ChIJ62acTxeMGGARUmcrd2EKsVw","512","5","10","4","7","7","13","24","5","5","9","ENTITY/Meiji University Museum",""
+"Chiyoda Kuritsu Rensei Park","ChIJb71bVh-MGGARGsNeiT5iYb0","164","0","4","1","2","7","5","10","2","3","4","ENTITY/Chiyoda Kuritsu Rensei Park",""
+"Ryukan Sakura Bridge","ChIJFcFclQCMGGARPH0DpAtwueY","67","0","4","1","0","6","1","14","2","1","9","ENTITY/Ryukan Sakura Bridge",""
+"Saemon Bridge","ChIJ1xPb8K2OGGARleis8lZGsEk","35","0","2","0","0","2","0","2","0","0","2","ENTITY/Saemon Bridge",""
+"Catholic Kanda Church","ChIJERbV3hWMGGARUPwaYY_9TE8","244","0","7","1","0","9","1","13","1","1","11","ENTITY/Catholic Kanda Church",""
+"Misaki Inari Shrine","ChIJB7nCrj-MGGARrERpWjP8hhU","296","0","3","0","0","2","1","3","1","1","2","ENTITY/Misaki Inari Shrine",""
+"Univ. Of Tokyo'S Founding Place","ChIJPSkYwxGMGGARubzYRoItzTM","23","3","7","0","1","3","4","15","0","2","9","ENTITY/Univ. Of Tokyo'S Founding Place",""
+"Kinka Park","ChIJcdybLheMGGARHDlzS-Sfd_M","286","0","7","0","0","5","0","8","0","1","5","ENTITY/Kinka Park",""
+"Aku You Memorial Museum","ChIJLxsaTxeMGGARPiuFcX6fnkw","37","2","4","1","4","6","5","21","2","6","8","ENTITY/Aku You Memorial Museum",""
+"Hirakawa Mon Gate","ChIJTajifQ6MGGAR7Hm1Kn2631A","130","4","5","2","3","1","10","15","2","1","20","ENTITY/Hirakawa Mon Gate",""
+"Statue Of Wake No Kiyomaro","ChIJi5nZHw-MGGARjf6RhUw_QjM","144","0","1","0","0","2","1","8","0","0","2","ENTITY/Statue Of Wake No Kiyomaro",""
+"Kiyomaro Park","ChIJl3SFqg-MGGAR79DUKqYHfuk","21","0","4","0","0","3","3","9","1","2","4","ENTITY/Kiyomaro Park",""
+"Kanda Bridge","ChIJE4T6bQaMGGARcTdzr5G5rJ8","152","4","12","0","3","4","9","24","3","3","11","ENTITY/Kanda Bridge",""
+"Musée Hamaguchi Yozo: Yamasa Collection","ChIJwbcTWUSJGGAR8JUnuMdbkss","139","1","10","1","1","9","8","24","6","5","7","ENTITY/Musée Hamaguchi Yozo: Yamasa Collection",""
+"Koami Shrine","ChIJmY9L9lCJGGAR3ydy0pQ5y8A","7581","6","25","2","6","30","9","45","3","18","26","ENTITY/Koami Shrine",""
+"Koamicho Children'S Park","ChIJM8w-7lCJGGAReRyMLnFUO1s","108","2","5","1","0","5","3","14","1","5","9","ENTITY/Koamicho Children'S Park",""
+"Suitengu Shrine","ChIJ6TXOcUWJGGAR2GRhafOUp0I","6485","1","9","0","6","13","1","32","0","7","10","ENTITY/Suitengu Shrine",""
+"Ōkannon Ji Temple","ChIJb8SfLVCJGGARiU1Jtv-uHps","189","2","4","1","4","2","3","12","2","3","5","ENTITY/Ōkannon Ji Temple",""
+"Hakozakigawa Daini Park","ChIJ93sW60SJGGARzc8c12fS4L0","75","2","5","1","1","2","4","5","3","3","3","ENTITY/Hakozakigawa Daini Park",""
+"Yagenbori Fudō In","ChIJAUC44EyJGGAREQhz3L_zRf8","357","2","3","0","2","2","4","11","0","2","3","ENTITY/Yagenbori Fudō In",""
+"Seishōkō Ji","ChIJa7igyEiJGGARtkrOqIK2NWo","50","3","3","2","1","5","6","10","0","4","9","ENTITY/Seishōkō Ji",""
+"Suginomori Shrine","ChIJc4hCu1OJGGAR_ru6C64yuTA","722","0","6","0","1","8","2","17","3","5","8","ENTITY/Suginomori Shrine",""
+"Suehiro Shrine","ChIJc1ZLN06JGGARgKpfVVWubp4","506","0","2","0","1","1","1","7","0","1","1","ENTITY/Suehiro Shrine",""
+"Hisamatsu Children'S Park","ChIJmR7bC06JGGARLma1SuhF87E","110","1","9","1","5","5","7","13","2","4","13","ENTITY/Hisamatsu Children'S Park",""
+"Horidome Children'S Park","ChIJC2rRZlGJGGARADpjo6WQrpI","412","2","5","4","1","14","11","19","3","6","13","ENTITY/Horidome Children'S Park",""
+"Ningyōchō Karakuri Yagura","ChIJDdJsKFCJGGAR_LtuNlL-Wz4","43","0","9","0","1","3","2","8","0","1","5","ENTITY/Ningyōchō Karakuri Yagura",""
+"Benkei From “Kanjincho”","ChIJD__5BU-JGGAR5IKXKzpGNRo","87","3","3","2","3","1","7","15","1","1","5","ENTITY/Benkei From “Kanjincho”",""
+"Amazakeyokocho","ChIJWUQg3E-JGGARurzf23V2D9s","551","2","4","1","1","3","2","7","0","2","3","ENTITY/Amazakeyokocho",""
+"Site Of Saigō Takamori’S Former Residence","ChIJWT6EOFCJGGARQIyroNNG_eE","26","1","1","0","5","1","7","11","4","1","12","ENTITY/Site Of Saigō Takamori’S Former Residence",""
+"Ningyocho Mechanical Clock Tower Rakugo Performer","ChIJzYytP-mJGGARNLqgfLhxoxo","29","2","10","0","1","4","3","14","2","1","4","ENTITY/Ningyocho Mechanical Clock Tower Rakugo Performer",""
+"Hamachō Park","ChIJVVWxhEiJGGARsDYT-3WKc0E","2817","1","7","1","2","5","4","12","2","2","4","ENTITY/Hamachō Park",""
+"Founding Place Of Japan’S Postal Service","ChIJvZMp5ZiJGGARpOjrs28ifTU","35","1","7","1","1","3","3","12","1","1","10","ENTITY/Founding Place Of Japan’S Postal Service",""
+"Yanagi Bridge","ChIJ7TkQRbOOGGARNrJRvDQpCKQ","268","2","6","1","2","2","3","18","3","1","7","ENTITY/Yanagi Bridge",""
+"Nihonbashi Fish Market Monument","ChIJZXozZVaJGGAR8hnc9IIESZ8","106","9","10","0","1","5","10","26","0","2","10","ENTITY/Nihonbashi Fish Market Monument",""
+"First National Bank Birthplace","ChIJL40trVCJGGARNlkutiABADE","32","7","5","2","4","9","9","26","4","5","30","ENTITY/First National Bank Birthplace",""
+"Mitsui Honkan","ChIJq3fYnFWJGGARPz4hlEVggCU","517","0","1","0","0","2","0","4","0","1","2","ENTITY/Mitsui Honkan",""
+"National Film Archive Of Japan","ChIJDTEgTOKLGGARRjeD6dnAoVY","685","3","7","2","2","6","7","21","6","7","4","ENTITY/National Film Archive of Japan",""
+"Pola Museum Annex","ChIJM7rZi-OLGGARkL-rCS_OHyw","461","2","5","2","1","6","1","11","2","7","3","ENTITY/Pola Museum Annex",""
+"Sakuragawa Park","ChIJxdRDb16JGGARPwIuXnWRGRk","307","1","6","1","1","5","1","6","1","5","4","ENTITY/Sakuragawa Park",""
+"Ginza Canon Gallery","ChIJQw9ey-aLGGAR-PGXL1t98x0","365","0","3","0","1","5","1","15","1","1","7","ENTITY/Ginza Canon Gallery",""
+"Kashima Arts Co., Ltd.","ChIJpTdsYuKLGGARNsnAH3hUf2U","51","1","9","1","3","5","5","17","1","2","9","ENTITY/Kashima Arts Co., Ltd.",""
+"Mitsukoshi Lion Sculpture","ChIJU2J8iOaLGGAReNtcR5-9osw","86","0","3","0","4","2","1","7","1","2","0","ENTITY/Mitsukoshi Lion Sculpture",""
+"Police Museum","ChIJV8wGu-OLGGAR1HVqNbP6r2c","2366","1","5","0","6","5","4","27","3","3","16","ENTITY/Police Museum",""
+"Tokyo Takarakuji Dream Kan","ChIJsW8HWuKLGGAR5fpJi6JDLWk","168","1","31","3","6","12","6","19","4","7","13","ENTITY/Tokyo Takarakuji Dream Kan",""
+"Owl Cafe Ginza","ChIJQYZKGOaLGGAR1z0TR8uLzSs","256","1","12","1","4","15","12","39","4","6","18","ENTITY/Owl Cafe Ginza",""
+"Teppozu Inari Shrine","ChIJm3Zzb2eJGGARHKbKJcBHB4w","436","1","3","0","3","3","1","7","1","2","6","ENTITY/Teppozu Inari Shrine",""
+"Tsukuda Park","ChIJAcDs82WJGGARRXmL_0ojH2g","369","1","15","1","4","21","10","40","5","9","16","ENTITY/Tsukuda Park",""
+"Old Cathedral Of St. Joseph","ChIJmQBfRGGJGGARmvUyNV6e1J8","148","0","17","0","1","13","4","21","2","3","21","ENTITY/Old Cathedral Of St. Joseph",""
+"Kaedegawa Shintomibashi Park","ChIJq3CvMuCLGGARJdSwg-XkM-U","115","1","3","0","2","3","3","4","1","1","3","ENTITY/Kaedegawa Shintomibashi Park",""
+"Kyōbashi Park","ChIJn76wuOGLGGAR78WCEuv9vTQ","327","0","2","0","0","0","1","3","0","0","0","ENTITY/Kyōbashi Park",""
+"Tsukijigawa Kameibashi Park","ChIJXXI0b-CLGGARwewp4OuBYdU","188","3","5","3","1","8","7","19","1","3","5","ENTITY/Tsukijigawa Kameibashi Park",""
+"Mizutanibashi Park","ChIJq5bv0eOLGGARrlEm2rzrx1U","119","2","7","2","0","10","6","21","1","7","15","ENTITY/Mizutanibashi Park",""
+"Kaedegawa Takarabashi Park","ChIJg3ARwFiJGGARegjGfE7ao54","68","2","3","4","2","2","6","7","3","1","4","ENTITY/Kaedegawa Takarabashi Park",""
+"Kyobashi Stele","ChIJ4R26vOOLGGARhqBH00DH2O0","21","4","1","1","2","0","6","7","3","0","7","ENTITY/Kyobashi Stele",""
+"Tsukijigawa Iwaibashi Park","ChIJ56U1heCLGGARv-0KIy572mA","203","0","1","1","0","1","3","3","1","1","1","ENTITY/Tsukijigawa Iwaibashi Park",""
+"Edo Kabuki Birthplace","ChIJI2z0muOLGGAR_vvyJQi_qvE","40","3","6","1","4","5","3","14","3","2","4","ENTITY/Edo Kabuki Birthplace",""
+"Central Museum Ginza","ChIJu2ZczOaLGGARqyh2nbbn8gk","144","0","5","0","0","5","0","10","0","2","4","ENTITY/Central Museum Ginza",""
+"Origin Of Ginza Monument","ChIJrR16BeSLGGAR31Ezs8CKOKQ","30","2","4","0","1","0","4","4","0","1","1","ENTITY/Origin Of Ginza Monument",""
+"Ryunosuke Akutagawa Birthplace Monument","ChIJtQTYm2GJGGARB5eEdrkF7vU","21","5","4","2","3","2","8","7","6","5","3","ENTITY/Ryunosuke Akutagawa Birthplace Monument",""
+"Teppōsu Children'S Park","ChIJp8p4bGeJGGAR_JYU-_z0Trk","263","4","2","1","4","3","3","10","0","1","3","ENTITY/Teppōsu Children'S Park",""
+"Momijigawa Kyūan Bashi Park","ChIJd5Lrk1iJGGARXM-ZHwpQbOQ","130","0","2","4","1","2","7","4","2","2","3","ENTITY/Momijigawa Kyūan Bashi Park",""
+"Chirori The Therapy Dog","ChIJ91aIHt6LGGARQJ7duvE22FA","54","0","6","0","4","6","4","13","3","2","3","ENTITY/Chirori The Therapy Dog",""
+"Tsukijigawa Park","ChIJe7vq7GGJGGARwqsdCgIvefw","473","2","7","2","0","9","5","10","0","5","7","ENTITY/Tsukijigawa Park",""
+"Kabuki Inari Shrine","ChIJVcCfs-CLGGARfSIMmkZGYoU","132","1","14","0","6","16","4","32","1","6","13","ENTITY/Kabuki Inari Shrine",""
+"Teusler Memorial Hall","ChIJpXBPe2GJGGARaazVUCDpass","26","0","7","0","1","7","2","24","0","3","8","ENTITY/Teusler Memorial Hall",""
+"Ginza Central Street","ChIJRQ2BJ-SLGGARBo5lWSuc-jM","43","0","6","0","0","6","0","7","1","6","3","ENTITY/Ginza Central Street",""
+"Kamejima Bridge","ChIJ79eM8NOJGGARZ_oqMW7mGqo","26","2","3","0","4","4","3","17","1","3","2","ENTITY/Kamejima Bridge",""
+"Yasubei Horibe Taketsune Monument","ChIJHbjiE1yJGGAR89zSPg7C02k","38","5","4","0","7","4","8","16","3","5","8","ENTITY/Yasubei Horibe Taketsune Monument",""
+"Akatsuki Park Adventure Square","ChIJw6TBhmGJGGARvGRPMPJ_tSA","102","0","3","0","3","3","5","7","1","0","2","ENTITY/Akatsuki Park Adventure Square",""
+"ART AQUARIUM MUSEUM","ChIJ6UVSHl2JGGARDurMrMPwvdk","3619","1","19","1","5","30","11","50","8","15","19","ENTITY/ART AQUARIUM MUSEUM",""
+"Namiki Dōri Street","ChIJie-XJjSLGGARkF7l_8BMlUM","44","1","8","0","1","6","1","13","0","4","4","ENTITY/Namiki Dōri Street",""
+"Minamitaka Bridge","ChIJ1cpzo16JGGARiSDgHzOhMfo","85","0","1","0","0","1","5","5","0","0","2","ENTITY/Minamitaka Bridge",""
+"Hamarikyū Gardens","ChIJwfegutyLGGARGjiY-L2eSps","10377","2","10","1","1","20","4","30","3","5","13","ENTITY/Hamarikyū Gardens",""
+"Namiyoke Shrine","ChIJa4JUjdiLGGARfzINTSU_X0s","2214","3","16","0","13","12","12","26","4","11","10","ENTITY/Namiyoke Shrine",""
+"Ad Museum Tokyo","ChIJ2VtGysKLGGAR2oS8_Y_o-pk","709","0","4","0","1","4","1","23","0","0","8","ENTITY/Ad Museum Tokyo",""
+"Caretta Shiodome Sky View","ChIJrx_Ez8KLGGARPUaHxocRqHk","263","0","4","0","0","6","1","13","0","2","11","ENTITY/Caretta Shiodome Sky View",""
+"Hatoba Park","ChIJx3P6-2KJGGARKkrq4_tlnd4","261","3","7","1","1","9","6","18","1","4","9","ENTITY/Hatoba Park",""
+"Toyomi Sports Park","ChIJ00LkcdWLGGAR-da62MvKl2M","216","0","4","0","0","3","0","5","0","2","4","ENTITY/Toyomi Sports Park",""
+"Kachidoki Gochome Green Park","ChIJ4UMx-daLGGARujFMUN9N2wc","59","0","3","1","0","3","3","7","0","1","2","ENTITY/Kachidoki Gochome Green Park",""
+"Nishinaka Bridge","ChIJe5JIfnuJGGARrWyjwLWMeXo","37","2","6","1","1","12","4","25","1","1","5","ENTITY/Nishinaka Bridge",""
+"Ichibabashi Park","ChIJ_7_Sjd6LGGARbsL1p098360","68","1","6","1","2","6","1","9","0","4","6","ENTITY/Ichibabashi Park",""
+"300 Year Old Pine","ChIJETsVn9yLGGARO6YBehyxOIQ","215","8","9","6","0","10","5","13","6","8","8","ENTITY/300 Year Old Pine",""
+"Matsu No Ochaya","ChIJq6oG0dqLGGARbqmloLdHBfg","37","0","2","0","1","2","3","10","0","1","4","ENTITY/Matsu No Ochaya",""
+"Hobai Tei","ChIJh23vSduLGGARP_2KeeyV4Gw","40","1","4","0","0","5","1","11","2","2","5","ENTITY/Hobai Tei",""
+"Tsukiji River Sendai Bashi Bridge Park","ChIJzyRXst2LGGARSThDMARiY04","66","3","6","1","5","5","6","10","1","4","6","ENTITY/Tsukiji River Sendai Bashi Bridge Park",""
+"Chuo Kuritsu Akatsuki Park","ChIJV2cV0WOJGGARuydNncDj020","294","0","3","0","0","2","1","6","1","2","3","ENTITY/Chuo Kuritsu Akatsuki Park",""
+"Triton Bridge","ChIJ-ZQzEXmJGGARFFcuoepqGzc","25","2","1","2","3","1","3","6","2","1","0","ENTITY/Triton Bridge",""
+"Reimei Bridge Park","ChIJByFr9HiJGGARVlD-8jmlxPo","255","1","2","0","2","4","4","7","2","0","2","ENTITY/Reimei Bridge Park",""
+"Ruins Of Hamarikyu Mae Railway Crossing","ChIJPdj7I92LGGARR9f4X1-fID0","69","9","11","0","7","4","12","13","9","3","4","ENTITY/Ruins Of Hamarikyu Mae Railway Crossing",""
+"Tsukiji River Uneme Bridge Park","ChIJKZcP5d2LGGARdgYADLEjCgU","116","4","4","4","6","6","7","8","1","5","5","ENTITY/Tsukiji River Uneme Bridge Park",""
+"Harumi Rinkai Park","ChIJ4W4dM52JGGARld0hfrQ9WIM","252","2","2","2","1","2","3","4","2","2","1","ENTITY/Harumi Rinkai Park",""
+"Harumi No. 3 Park","ChIJwabWDHiJGGARL4RE9TI-MIo","46","2","6","1","5","9","3","19","3","6","12","ENTITY/Harumi No. 3 Park",""
+"Waterside Terrace","ChIJYwlk-ZyJGGAReqfam73wXVk","85","1","7","0","2","10","8","21","4","8","7","ENTITY/Waterside Terrace",""
+"Asashio Bridge","ChIJzVDJBXqJGGARyD-pAQ2wnDw","55","3","5","2","4","7","5","13","2","6","6","ENTITY/Asashio Bridge",""
+"Ishikawajima Museum","ChIJd6HdOG-JGGARg0Z9lieRosQ","65","1","6","1","2","2","7","22","3","3","8","ENTITY/Ishikawajima Museum",""
+"Bank Of Japan’S Founding Place","ChIJFZHDTEKJGGAR5KkBn53DwhQ","25","2","4","1","1","5","3","17","3","1","6","ENTITY/Bank Of Japan’S Founding Place",""
+"Tsukishima Monja Street","ChIJZ8PuP3CJGGARAXwWdc4PGQw","2295","1","9","1","1","11","3","25","0","4","15","ENTITY/Tsukishima Monja Street",""
+"Sumiyoshi Shrine","ChIJtbY4fG-JGGARBcvW4yUB2rM","814","1","1","1","1","3","2","10","1","1","3","ENTITY/Sumiyoshi Shrine",""
+"Chuo City Harbor Park","ChIJZ1N7WmaJGGARedOihu9IFDs","72","0","5","1","0","5","4","9","1","4","6","ENTITY/Chuo City Harbor Park",""
+"Tsukuda Machikado Museum","ChIJq-qVkGWJGGARrK_GNSIDk_Q","37","3","9","3","4","5","5","11","4","4","5","ENTITY/Tsukuda Machikado Museum",""
+"Tsukudakobashi Bridge","ChIJXW6Shm-JGGARG2GT8dohPhs","363","1","3","0","2","0","1","2","0","0","3","ENTITY/Tsukudakobashi Bridge",""
+"Echizenbori Children'S Park","ChIJWbeBKV2JGGARUrCWDmTv8KM","266","0","2","1","0","2","1","6","2","2","3","ENTITY/Echizenbori Children'S Park",""
+"Toyomi Bridge","ChIJTydvRkKJGGARjKbSv6IMqx8","135","1","5","0","1","3","1","7","1","4","2","ENTITY/Toyomi Bridge",""
+"Tsukuda 3 Chōme Park","ChIJ1VOka3GJGGARtUYTsozhGrM","34","0","4","0","2","4","4","11","0","4","5","ENTITY/Tsukuda 3 Chōme Park",""
+"Asashio Ohashi Bridge","ChIJU2iaSnGJGGARFh1rzpdIO8M","31","1","5","0","1","2","2","5","1","2","8","ENTITY/Asashio Ohashi Bridge",""
+"Reigan Bridge","ChIJS7wHlfqJGGARDkxaAgaReYM","22","1","8","0","0","3","2","8","0","2","4","ENTITY/Reigan Bridge",""
+"Aoyama Cemetery","ChIJIe1uymKLGGARGpOwOiZEDog","281","6","24","3","11","38","12","53","12","13","23","ENTITY/Aoyama Cemetery",""
+"The National Art Center, Tokyo","ChIJP-vO9nuLGGARGJ2q8uryJUA","19175","1","16","0","0","12","10","28","3","6","13","ENTITY/The National Art Center, Tokyo",""
+"Izumo Taisha Tokyo","ChIJQUsA2nmLGGARYAdeN1dwsWc","1374","1","6","1","2","6","4","12","2","4","5","ENTITY/Izumo Taisha Tokyo",""
+"Meiji Jingu Gaien","ChIJ9RJ2PJGMGGARwG4ChjnDW3I","13807","2","10","2","0","11","3","19","3","4","12","ENTITY/Meiji Shrine Outer Garden",""
+"Akasaka Sacas","ChIJUyA7lICLGGARuHfsHqZ2U0Y","2975","1","6","1","1","3","3","12","2","2","2","ENTITY/Akasaka Sacas",""
+"Nogi Shrine","ChIJwR2lZ36LGGAR43Z0b6e3Gw4","4075","0","10","0","2","7","4","18","0","4","8","ENTITY/Nogi Shrine (Tokyo)",""
+"TOTO GALLERY · MA","ChIJOxerKXyLGGARKNvbpemyeys","267","1","10","1","2","9","3","28","4","6","6","ENTITY/TOTO GALLERY · MA",""
+"Okura Museum Of Art","ChIJC5-nF5CLGGAR9M3JUrPsBj8","385","7","17","4","4","15","15","32","13","8","13","ENTITY/Okura Museum Of Art",""
+"Tomio Koyama Gallery","ChIJSzvUeD-JGGARLYi3ApW9NAo","82","1","7","0","1","7","1","19","3","6","7","ENTITY/Tomio Koyama Gallery",""
+"Tokyo City View","ChIJK0TdDneLGGARVxJ3MHC0emY","2743","8","40","7","10","30","15","75","6","16","26","ENTITY/Tokyo City View",""
+"Prince Chichibu Memorial Rugby Stadium","ChIJizNDvpuMGGAR9QdEmLoDOnQ","3776","1","11","0","2","9","0","14","0","4","9","ENTITY/Prince Chichibu Memorial Rugby Stadium",""
+"Toyokawa Inari Tokyo Annex","ChIJK-keEn6MGGARyZaLZnQVdgU","4281","0","5","2","4","12","5","24","1","3","9","ENTITY/Toyokawa Inari Tokyo Annex",""
+"Chōkoku Ji","ChIJP8YkXGSLGGARF02Vs75NFEc","386","0","10","0","1","6","2","7","0","6","6","ENTITY/Chōkoku Ji",""
+"21_21 DESIGN SIGHT","ChIJV4H0Nn-LGGAR2g7_9Kourf4","2531","1","5","1","0","5","5","27","1","5","3","ENTITY/21_21 DESIGN SIGHT",""
+"Wine Shop Sommelier","ChIJaUEw5XeLGGARirrLUJr6v2c","490","1","6","0","1","5","1","8","0","3","5","ENTITY/Wine Shop Sommelier",""
+"Taro Okamoto Memorial Museum","ChIJJbavS2GLGGARFLUeTte2lt0","1487","5","12","5","5","8","14","22","6","11","6","ENTITY/Taro Okamoto Memorial Museum",""
+"Watarium Art Museum","ChIJXf9Z6JiMGGARRZ0zg4fFgLU","735","1","12","0","0","8","5","18","5","9","2","ENTITY/Watarium Art Museum",""
+"TEPIA Advanced Technology Gallery","ChIJL6t-1JuMGGARxviRyLV_l7M","458","2","7","0","1","7","2","15","0","3","10","ENTITY/TEPIA Advanced Technology Gallery",""
+"Reinanzaka Church","ChIJhUq-rJqLGGARvfm2U3mDSi8","88","0","16","1","0","21","4","27","3","2","19","ENTITY/Reinanzaka Church",""
+"HARAJUKU PROTESTANT CHURCH","ChIJmxQp3piMGGARC7Dcs_AGNLw","32","0","5","1","0","8","0","12","2","1","7","ENTITY/HARAJUKU PROTESTANT CHURCH",""
+"Kikuchi Kanjitsu Memorial Tomo Museum","ChIJ3RlOVJCLGGARB3R2XWU5FtE","353","1","12","2","1","19","7","35","10","9","8","ENTITY/Kikuchi Kanjitsu Memorial Tomo Museum",""
+"Beni Museum","ChIJ1ZCFSWSLGGARpUEUiKoCxLo","150","2","5","1","2","5","12","25","2","4","12","ENTITY/Beni Museum",""
+"Entsuji","ChIJ80H9BoCLGGAR6H1LryVGdWU","38","0","1","1","2","4","3","7","1","1","4","entsuji",""
+"Honda Welcome Plaza Aoyama","ChIJ6ZZ5DoOMGGAR05jTAq9xqVQ","2880","1","4","2","0","4","7","12","1","0","8","ENTITY/Honda Welcome Plaza Aoyama",""
+"STRIPED HOUSE GALLERY","ChIJd6PjkJ2LGGAR1mUOYtcqmDI","82","0","5","0","1","1","0","6","0","2","1","ENTITY/STRIPED HOUSE GALLERY",""
+"Suntory Museum Of Art","ChIJbSqxxHiLGGARKEK0IzZMksI","2329","2","2","0","1","4","8","18","5","3","3","ENTITY/Suntory Museum of Art",""
+"Tokyo Midtown Design Hub","ChIJVVVVwXiLGGARdfqsI40Y-u8","241","0","1","0","0","0","0","11","0","0","2","ENTITY/Tokyo Midtown Design Hub",""
+"Mohri Garden","ChIJKwbstHeLGGARxzy-ttu57CM","1368","2","9","2","1","13","3","23","1","6","9","ENTITY/Mohri Garden",""
+"Roppongi Hills","ChIJM9xJEHeLGGARAshMWUgC_ls","36103","2","15","1","2","19","5","30","4","10","8","ENTITY/Roppongi Hills",""
+"Myōzenji Temple","ChIJz3y1NneLGGARwPRxEIn8viE","85","0","6","0","3","4","2","16","2","1","3","ENTITY/Myōzenji Temple",""
+"Takahashi Korekiyo Memorial Park","ChIJN-aSBYGMGGARV4hamU-HF9I","467","1","3","2","0","4","5","12","3","1","6","ENTITY/Takahashi Korekiyo Memorial Park",""
+"Treasure Hall Of Nogi","ChIJTR-RYH6LGGARnwqqNfwiddE","24","5","7","2","9","7","9","17","8","5","7","ENTITY/Treasure Hall Of Nogi",""
+"Midtown Garden","ChIJx0V7jrqLGGAR_VT5Fj3yNZ8","470","2","9","2","0","14","2","22","3","10","13","ENTITY/Midtown Garden",""
+"Nogi Park","ChIJk1Vhhn6LGGARl0MVL-KexZQ","138","0","2","0","1","3","3","19","5","1","2","ENTITY/Nogi Park",""
+"Hinokicho Park","ChIJqcU4DIKLGGARBxWj4fGnB_k","1955","0","11","0","0","12","0","17","1","4","11","ENTITY/Hinokicho Park",""
+"Hodoji","ChIJOV0HO4CLGGARIRBcJmeA19s","45","1","5","1","10","7","11","18","10","4","7","ENTITY/Hodoji",""
+"Hitotsugi Park","ChIJKTY1SoCLGGAR1ODjP4rZwPE","114","1","4","1","1","3","5","3","2","3","3","ENTITY/Hitotsugi Park",""
+"Sanpun Zaka","ChIJR2WgSICLGGARDaal6un4-dg","41","3","7","1","3","4","7","18","4","2","9","ENTITY/Sanpun Zaka",""
+"Former Site Of The House Of Kaishu Katsu","ChIJ62EneYGLGGARy3pBngNNGqA","96","0","2","0","2","2","2","5","3","2","3","ENTITY/Former Site Of The House Of Kaishu Katsu",""
+"Aoba Park","ChIJoxynW4KMGGARTvUBjheB7Ts","229","0","5","0","0","8","2","11","2","4","5","ENTITY/Aoba Park",""
+"Motohikawa Zaka","ChIJay28x4OLGGARqfWZzc_uxus","24","0","3","1","2","3","2","11","0","0","3","ENTITY/Motohikawa Zaka",""
+"Roppongi West Park","ChIJpWTtOXiLGGARheMngAQjX5g","260","0","4","0","0","5","2","6","0","2","3","ENTITY/Roppongi West Park",""
+"Ruins Of Takanawa Ōkido Gate","ChIJCVfWNq2LGGARvuAHzNroBTc","110","5","3","2","3","5","7","15","2","2","9","ENTITY/Ruins Of Takanawa Ōkido Gate",""
+"Site Of The Seppuku (Ritualistic Execution) Of Oishi Yoshitaka And The Other 16 Akougishi (Akou Roshi) Samurai","ChIJt8JMCKmLGGAROamwk0o7_-o","77","3","5","3","8","5","18","19","5","6","18","ENTITY/Site Of The Seppuku (Ritualistic Execution) Of Oishi Yoshitaka And The Other 16 Akougishi (Akou Roshi) Samurai",""
+"Sengaku Ji","ChIJh64KT6uLGGARKx4cxgOaL54","3306","2","10","1","6","9","9","22","5","2","16","ENTITY/Sengaku Ji",""
+"Koyasan Tokyo Betsuin","ChIJ4Y-GGVWKGGARAHFc8A6VDf0","758","1","3","2","2","4","3","18","2","2","7","ENTITY/Koyasan Tokyo Betsuin",""
+"Mita Hachiman Shrine","ChIJX_Qh8q2LGGARghTq3Di6f8g","370","1","17","1","8","15","2","26","2","11","15","ENTITY/Mita Hachiman Shrine",""
+"Hatakeyama Memorial Museum Of Fine Art","ChIJZQpgdf6KGGARXCH1FGs07t0","170","2","5","1","2","11","6","16","5","6","7","ENTITY/Hatakeyama Memorial Museum of Fine Art",""
+"Gyoranji","ChIJHZxnrK6LGGAR0d63CW4NM5M","94","5","20","2","4","11","5","29","2","8","27","ENTITY/Gyoranji",""
+"Hoanji Temple","ChIJCWZucKuLGGARTJ16cpGhJ3k","23","0","8","1","0","10","6","20","2","3","15","ENTITY/Hoanji Temple",""
+"Takamatsu Kusunoki Park","ChIJKXMIRamLGGARDlEnzmXhxqM","74","0","6","0","1","6","2","9","0","4","4","ENTITY/Takamatsu Kusunoki Park",""
+"Museum Of Logistics","ChIJ_wDxK1aKGGARvv10tNDypZs","314","0","4","0","0","3","0","9","0","2","5","ENTITY/Museum Of Logistics",""
+"Takanawa Mori No Park","ChIJeX5U41aKGGARpQJCQQWMQrE","106","1","5","2","0","6","4","7","2","2","4","ENTITY/Takanawa Mori No Park",""
+"Azabu Kokubisui Hot Spring Takenoyu","ChIJP8qx4KCLGGARrA6QxMdha0E","756","5","9","1","2","7","10","30","4","3","14","ENTITY/Azabu Kokubisui Hot Spring Takenoyu",""
+"Shirokane Hikawa Shrine","ChIJWXpokgeLGGARRc7Blgtb41Y","315","1","5","1","2","5","3","13","1","2","5","ENTITY/Shirokane Hikawa Shrine",""
+"Maxell Aqua Park Shinagawa","ChIJC1aZZFeKGGARGLX8IHTOn-c","15691","5","20","4","7","33","9","70","5","28","47","ENTITY/Maxell Aqua Park Shinagawa",""
+"Tōzenji Temple","ChIJlaWyUFSKGGARjGBTT9eQH-M","116","2","2","3","1","9","8","21","2","3","13","ENTITY/Tōzenji Temple",""
+"Yanagi No Ido Well","ChIJtxFmRqCLGGARP4T9Fd6pCUk","26","17","15","10","8","14","21","35","8","11","22","ENTITY/Yanagi No Ido Well",""
+"Shibaura Chuo Park","ChIJgYTYlk6KGGAR24EkOo5CfeU","594","1","10","0","3","10","8","18","2","4","13","ENTITY/Shibaura Chuo Park",""
+"Zuishō Ji","ChIJ11c1XwGLGGARw7yjtmaO3HA","191","0","10","0","1","9","4","18","2","5","10","ENTITY/Zuishō Ji",""
+"Takanawa Shrine","ChIJl-1sm1OKGGARKF7IMwZLpYk","493","1","0","0","0","1","6","6","1","2","0","ENTITY/Takanawa Shrine",""
+"Daizōji Temple","ChIJO-TOZ66LGGARv-Oet9rkVi4","64","0","6","0","1","3","4","11","2","3","7","ENTITY/Daizōji Temple",""
+"The History Museum Of J Koreans","ChIJ6QCZVaGLGGAR9QS6CROQGvA","116","1","2","2","2","3","4","13","4","1","5","ENTITY/The History Museum Of J Koreans",""
+"Trinity Shibaura Green Space","ChIJOXTkaEuKGGARCPXwDjBxdY8","45","1","2","0","0","6","1","10","0","1","5","ENTITY/Trinity Shibaura Green Space",""
+"Mitadai Park","ChIJAcBBLqyLGGARuADg9RGme-E","171","1","2","1","1","5","1","6","0","2","3","ENTITY/Mitadai Park",""
+"Sengakuji Children'S Playground","ChIJoV9gUFOKGGARtdGqsuW_2GU","50","0","4","0","1","5","1","8","0","3","4","ENTITY/Sengakuji Children'S Playground",""
+"Takamatsu Children'S Playground","ChIJ5wpfSaqLGGAR6q8ks2I980Y","29","3","5","0","1","3","2","7","0","2","5","ENTITY/Takamatsu Children'S Playground",""
+"Head Washing Well","ChIJsYMRTauLGGARM4SwXVL4N4w","23","5","5","4","16","4","20","22","13","4","6","ENTITY/Head Washing Well",""
+"Grave Of Oishi Kuranosuke","ChIJVz-cNauLGGARqP4z7F-0dyM","39","3","5","1","6","10","6","16","5","2","9","ENTITY/Grave Of Oishi Kuranosuke",""
+"Genwa Christian Heritage","ChIJ34OL7a2LGGARoErdIT0622I","30","7","8","1","6","2","11","16","5","4","7","ENTITY/Genwa Christian Heritage",""
+"Genshōji Temple","ChIJXxK3dqqLGGAR3Vw9RQ5Lyy4","24","1","5","1","6","4","7","13","6","2","6","ENTITY/Genshōji Temple",""
+"Shirokane Shida Cho Children'S Park","ChIJVZ_lhqiLGGARYb6sZIBbc8o","39","0","7","2","0","7","7","14","0","3","3","ENTITY/Shirokane Shida Cho Children'S Park",""
+"Hakutaka Children'S Playground","ChIJUeCOcaiLGGARyxxiFLKq7vI","38","0","7","1","0","7","5","11","0","4","4","ENTITY/Hakutaka Children'S Playground",""
+"Sankouzaka","ChIJGyeOGqGLGGARGL5jUTXneT0","34","3","7","5","2","4","8","9","6","3","6","ENTITY/Sankouzaka",""
+"Shinfurukawa Bridge","ChIJjSVGvKeLGGARlNfb8wPMG08","26","0","2","0","6","2","1","13","1","0","9","ENTITY/Shinfurukawa Bridge",""
+"Takanawa Park","ChIJG5biIlSKGGAR8WaSxLR3gBM","231","2","4","1","0","4","3","7","1","4","6","ENTITY/Takanawa Park",""
+"Shirokane Park","ChIJA30KCQmLGGARkIlnntrSxOA","146","2","2","1","1","3","4","4","1","3","2","ENTITY/Shirokane Park",""
+"Minamiazabu Shinbori Children'S Playground","ChIJF_EuXAqLGGARwnMrIR9Sgws","33","4","3","0","2","3","8","8","1","1","4","ENTITY/Minamiazabu Shinbori Children'S Playground",""
+"Site Of Mizuno Kenmotsu'S Residence","ChIJ4dFsMLGLGGAR555X2dEqv7c","27","17","14","7","17","12","24","45","9","13","24","ENTITY/Site Of Mizuno Kenmotsu'S Residence",""
+"Nagisabashi","ChIJWa4gq2-LGGAR-nOw2_MDMC4","20","0","3","0","1","1","0","7","1","2","4","ENTITY/Nagisabashi",""
+"Fuji Television Network, Inc.","ChIJQQ6UsPeJGGAR3LFE4U43_NQ","9908","1","17","0","1","12","8","54","2","9","19","ENTITY/Fuji Television Network, Inc.",""
+"Tokyo Joypolis","ChIJuTdPXvaJGGARJhT_Ai6urFQ","6087","4","40","3","12","21","13","54","5","17","15","ENTITY/Tokyo Joypolis",""
+"Rainbow Bridge","ChIJbWVFlTCKGGARr5l6ox-7_CA","3248","0","11","0","0","14","2","30","0","10","11","ENTITY/Rainbow Bridge (Tokyo)",""
+"Daiba Park","ChIJ9aeqHiCKGGARFh-fljrxUT0","957","10","12","0","7","15","12","30","4","5","15","ENTITY/Daiba Park",""
+"Amphibious Bus By Tokyo Ducktour® Splash Point","ChIJCwgzFByKGGARzfk2Ebjwel4","27","2","17","1","7","6","10","28","6","12","16","ENTITY/Amphibious Bus By Tokyo Ducktour® Splash Point",""
+"Odaiba Marine Park","ChIJ18IK6x2KGGARKTc2yLS-030","13222","0","7","0","0","11","0","11","0","3","7","ENTITY/Odaiba Marine Park",""
+"Fuji Television Headquarters “HACHITAMA” Spherical Observation Room","ChIJb2CosfeJGGAR_TIVIcsMyK4","312","0","4","0","1","5","2","17","1","3","7","ENTITY/Fuji Television Headquarters “HACHITAMA” Spherical Observation Room",""
+"Odaiba Rainbow Park","ChIJx5hUh_OJGGART6Fognv9_Mk","324","0","12","0","0","9","0","15","1","5","6","ENTITY/Odaiba Rainbow Park",""
+"Teleport Bridge","ChIJic5uxPCJGGARHFHBqjf1nXo","34","0","0","0","1","2","1","4","1","0","3","ENTITY/Teleport Bridge",""
+"Kōnan Ryokusui Park","ChIJ-8hsv0CKGGARdmQp1_mXgw0","575","0","12","1","0","11","0","19","1","8","12","ENTITY/Kōnan Ryokusui Park",""
+"Site Of Explosives Storage","ChIJhy8XBlaLGGAR_O8PEA4d-Xk","28","7","12","0","8","1","11","25","1","2","4","ENTITY/Site Of Explosives Storage",""
+"Rainbow Bridge Promenade","ChIJWTDPE46JGGAR6A1n9w_xfxM","373","5","17","1","7","11","9","29","4","9","11","ENTITY/Rainbow Bridge Promenade",""
+"Statue Of Liberty","ChIJp_dRJOOLGGARo5GGDjBnfrw","2300","1","10","0","2","11","5","22","0","8","10","ENTITY/Statue Of Liberty",""
+"Love Sign Odaiba","ChIJFeU3GJGLGGAR2yzNv6jUsfM","51","0","2","0","0","1","0","4","0","2","1","ENTITY/Love Sign Odaiba",""
+"Aqua City Odaiba Shrine","ChIJxWsRPPaJGGARLOOHJSxNf_k","80","3","10","0","0","6","4","12","1","3","10","ENTITY/Aqua City Odaiba Shrine",""
+"Rainbow Promenade","ChIJafp9aA-JGGARIZ4yrRBA9_Y","43","0","0","0","0","0","0","0","0","0","0","ENTITY/Rainbow Promenade",""
+"Shinagawa Kita Port Park","ChIJDd782D6KGGARU87YemLM-IE","86","2","4","3","2","6","5","12","0","0","4","ENTITY/Shinagawa Kita Port Park",""
+"FCG Bldg.","ChIJw3qKQduJGGARWr0DnXUAjV8","125","2","3","0","1","2","5","7","0","1","0","ENTITY/FCG Bldg.",""
+"Konano Bridge","ChIJ4xSTRtqLGGARxvUO49Gvf-s","32","2","3","1","3","5","2","9","3","1","6","ENTITY/Konano Bridge",""
+"Kawasaki Robostage","ChIJy7jAHPeJGGARj9nEku7az9s","228","0","6","0","1","5","1","12","0","4","5","ENTITY/Kawasaki Robostage",""
+"Bay Breeze Garden","ChIJ32AffUeKGGARD6Ni9J2YWl0","58","0","2","0","0","3","1","5","0","1","1","ENTITY/Bay Breeze Garden",""
+"Futo Park","ChIJcXl4TjSKGGAR-HrkGf4fKZM","239","2","6","1","1","5","4","9","0","1","4","ENTITY/Futo Park",""
+"Konan Third Street Playground","ChIJoW3U1UeKGGARMisujDoeeIc","90","3","9","2","2","12","3","14","2","6","6","ENTITY/Konan Third Street Playground",""
+"Shiosai Bridge","ChIJlWFm7TWKGGARpsUXLha-Yzk","26","0","1","0","0","0","1","0","0","0","0","ENTITY/Shiosai Bridge",""
+"Platanus Park","ChIJB34WEEqKGGARpaq95ARZA70","102","0","6","0","0","5","5","10","0","3","6","ENTITY/Platanus Park",""
+"Shiba Maruyama Tumulus","ChIJ55pIRbmLGGAReFx7rf2nL8c","107","8","13","3","8","6","22","30","11","5","15","ENTITY/Shiba Maruyama Tumulus",""
+"Tokyo Tower","ChIJCewJkL2LGGAR3Qmk0vCTGkg","77752","5","28","1","5","15","17","49","7","14","19","ENTITY/Tokyo Tower",""
+"Zōjō Ji","ChIJC2xnkb6LGGARJL0d222opIg","10290","1","5","1","3","4","11","15","6","7","8","ENTITY/Zōjō Ji",""
+"NHK Museum Of Broadcasting","ChIJCcGIPpSLGGARzZ4ZW6hu6NE","1179","1","8","0","3","7","1","23","1","3","9","ENTITY/NHK Museum Of Broadcasting",""
+"Karasumori Shrine","ChIJmyHLzuuLGGAR_dp7Ams-EI4","4031","2","5","2","6","9","7","21","4","3","8","ENTITY/Karasumori Shrine",""
+"Panasonic Shiodome Museum Of Art","ChIJ6Sypp8KLGGAR4lmmX-zFFmo","1575","1","4","0","1","4","5","9","1","2","6","ENTITY/Panasonic Shiodome Museum Of Art",""
+"The Old Shimbashi Station Railway History Exhibition Hall","ChIJ3YkTH-iLGGARFeFdXRMTGCA","749","5","6","0","0","1","9","11","0","0","3","ENTITY/The Old Shimbashi Station Railway History Exhibition Hall",""
+"Italia Street","ChIJ5YHK2MOLGGARfS_kBq3T3Kc","1733","5","8","5","7","9","9","15","3","3","9","ENTITY/Italia Street",""
+"Success Steps","ChIJ2cn3ZZSLGGARtAH08ZmRyIo","3453","3","18","2","2","13","7","35","0","3","14","ENTITY/Success Steps",""
+"Japan Longitude And Latitude Origin","ChIJPxLuDpiLGGARrpOPDjdOGtw","46","0","7","0","5","2","4","15","1","2","10","ENTITY/Japan Longitude And Latitude Origin",""
+"Sakurada Park","ChIJU2yfPOqLGGAR5kyogpBYaUY","1044","1","5","1","0","4","7","10","0","4","5","ENTITY/Sakurada Park",""
+"SL Square (Shimbashi Station West Entrance Square)","ChIJ--QO2OuLGGARArLS5ggknfU","2302","0","5","0","2","3","1","6","1","3","4","ENTITY/SL Square (Shimbashi Station West Entrance Square)",""
+"Japan Sake And Shōchū Information Center","ChIJ_____-yLGGAR8bvuJnTEoFs","365","0","6","0","0","6","0","13","0","2","5","ENTITY/Japan Sake And Shōchū Information Center",""
+"Shinkōin","ChIJG_Jxdr2LGGARo4c9XYwS20U","59","2","4","2","3","8","5","22","4","4","7","ENTITY/Shinkōin",""
+"Nishikubo Hachiman Shrine","ChIJgwRJZJeLGGARGS9TGva9Ec4","292","0","6","0","0","5","2","13","3","2","7","ENTITY/Nishikubo Hachiman Shrine",""
+"Gate J.","ChIJCSxVROqLGGARvoCrJ01g4jc","194","0","9","0","2","6","0","20","0","3","12","ENTITY/Gate J.",""
+"Takeshiba Ship Terminal","ChIJKSgs1NGLGGAR-VKyI3yWIxE","2036","0","3","0","0","3","4","5","1","5","3","ENTITY/Takeshiba Ship Terminal",""
+"Shiba Toshogu","ChIJYeawQLmLGGAR2BdgTIsnMW0","795","2","6","2","2","6","3","15","0","3","8","ENTITY/Shiba Toshogu",""
+"Seishōji Temple","ChIJfy9hNJSLGGAR41_DfA3WUB0","226","0","6","0","2","5","0","11","1","3","7","ENTITY/Seishōji Temple",""
+"Hinode Pier","ChIJFU3ezs2LGGARbErm6rqTfHw","209","1","8","0","1","7","3","14","1","5","4","ENTITY/Hinode Pier",""
+"Toranomon Kotohiragu","ChIJdc_l942LGGAR_f4Ot6q7ISo","1885","1","14","1","4","14","1","24","0","9","13","ENTITY/Toranomon Kotohiragu",""
+"Statue Of Admiral Perry","ChIJnRUazbiLGGARe6zV9fDyv74","56","1","5","0","0","3","3","13","1","2","5","ENTITY/Statue Of Admiral Perry",""
+"Former Daitokuin Reibyo Somon Gate","ChIJs8x7KbmLGGARa5QzTOovN48","168","0","1","0","2","3","3","9","1","2","2","ENTITY/Former Daitokuin Reibyo Somon Gate",""
+"Zōjō Ji Treasures Gallery","ChIJMzFnjb6LGGARxIoAHgyGjLo","57","2","15","1","3","10","4","25","1","4","10","ENTITY/Zōjō Ji Treasures Gallery",""
+"Monument For Ino Tadataka'S National Surveying","ChIJzbo6ULmLGGARquBQ7IuT4-Y","49","1","7","1","2","7","5","16","3","3","9","ENTITY/Monument For Ino Tadataka'S National Surveying",""
+"Shiba Park","ChIJaYt93b6LGGARRTt3Y7YkqVg","15018","1","11","0","3","12","3","24","2","7","13","ENTITY/Shiba Park",""
+"Shiba Park 4th Block","ChIJo_JFxL-LGGARdeXGPqUzSjY","543","0","4","1","0","8","2","13","1","0","2","ENTITY/Shiba Park 4th Block",""
+"Snake Mound","ChIJQRMvwr2LGGARC3GHLt8p1wY","70","3","21","9","11","20","17","39","4","19","17","ENTITY/Snake Mound",""
+"Momiji Valley","ChIJwaj1yL2LGGARnm1x4JwnHe8","198","4","5","3","1","9","3","23","3","11","14","ENTITY/Momiji Valley",""
+"Momiji Waterfall","ChIJKbFrx72LGGAR1uyToVEdITo","113","1","5","1","2","4","6","13","3","5","5","ENTITY/Momiji Waterfall",""
+"Konchi In","ChIJU3Y19b2LGGARyjBjYYHekpI","122","1","1","2","2","1","4","6","4","1","2","ENTITY/Konchi In",""
+"Shinagawa Central Garden","ChIJDUOuOVuKGGARvW6a5im7bOs","172","2","5","2","0","5","0","12","0","3","8","ENTITY/Shinagawa Central Garden",""
+"Museum Of Marine Science, Tokyo University Of Marine Science And Technology","ChIJ9aawRUGKGGARtp40czt54S4","118","1","8","1","0","3","2","21","1","3","6","ENTITY/Museum Of Marine Science, Tokyo University Of Marine Science And Technology",""
+"Konan Waraku Park","ChIJKwzTjUaKGGARco_pKpf1hI4","45","1","4","1","1","5","4","7","2","4","4","ENTITY/Konan Waraku Park",""
+"Konan Star Park","ChIJ64NerVqKGGAR2hooN4EjDLM","255","0","0","0","0","0","0","3","0","0","0","ENTITY/Konan Star Park",""
+"Field B","ChIJASvm9kOKGGARomVcsXrIntQ","30","0","3","0","0","6","0","13","0","2","3","ENTITY/Field B",""
+"Tide Park","ChIJl_pr2FqKGGARoT3W-Azkt-s","54","0","6","0","0","5","2","9","0","3","3","ENTITY/Tide Park",""
+"Kōnan Park","ChIJtWIqLkKKGGARZdQJI-JfzFU","106","1","1","1","1","2","1","8","3","0","2","ENTITY/Kōnan Park",""
+"Hatagaya No. 3 Park","ChIJp9XBeCLzGGARw_sDTpvotnM","94","2","4","2","1","9","4","12","0","2","7","ENTITY/Hatagaya No. 3 Park",""
+"Hatagaya 2nd Park","ChIJ85ZmEyLzGGARNTG0pfJJnig","81","0","2","1","0","5","1","7","0","3","4","ENTITY/Hatagaya 2nd Park",""
+"Sasazuka Park","ChIJafK4RBnzGGART19W5ds5mds","56","2","9","2","3","4","12","11","2","3","6","ENTITY/Sasazuka Park",""
+"Nishihara 1 Chōme Park","ChIJh1v6lTrzGGARquV8D16UNWo","47","1","4","1","0","3","0","11","0","1","3","ENTITY/Nishihara 1 Chōme Park",""
+"Hatagaya Shinmichi Park","ChIJeS2JXCHzGGARxFzYLDjudno","109","1","5","1","0","4","3","8","1","3","4","ENTITY/Hatagaya Shinmichi Park",""
+"Tokyo Camii & Diyanet Turkish Culture Center","ChIJFUO-WUfzGGARhzhX4px1Jsc","3389","0","8","2","4","15","4","33","0","5","19","ENTITY/Tokyo Camii & Diyanet Turkish Culture Center",""
+"Honchozuido Park","ChIJUTP-ASXzGGARXMUEKLPoy9U","37","2","3","2","2","1","2","3","2","1","1","ENTITY/Honchozuido Park",""
+"Yoyogi Ōyama Park","ChIJiV7dsz7zGGARRz3gMDSZviY","356","1","13","1","3","12","3","17","3","12","13","ENTITY/Yoyogi Ōyama Park",""
+"Sasazuka East Park","ChIJpXOVXRjzGGARwpY1Xg-zm-A","33","0","3","2","1","15","2","21","1","4","9","ENTITY/Sasazuka East Park",""
+"Hatagaya Hidamari Park","ChIJVxKVFCPzGGARnkJ_pgjc7RQ","97","1","5","2","1","12","2","16","1","6","10","ENTITY/Hatagaya Hidamari Park",""
+"Nanagō DōRi Park","ChIJVVXAdSPzGGAR66QeV9y_2EY","65","0","2","4","0","1","5","7","0","1","3","ENTITY/Nanagō DōRi Park",""
+"Oyama Children'S Playground","ChIJc0sBsUDzGGARo3d-cvdb514","53","2","12","1","4","15","7","25","1","5","12","ENTITY/Oyama Children'S Playground",""
+"Koga Masao Museum Of Music","ChIJ4di9zkfzGGARHni4oECFNwQ","258","0","7","0","0","11","2","27","10","3","5","ENTITY/Koga Masao Museum Of Music",""
+"Tokyo Opera City Art Gallery","ChIJCaoz7S3zGGARrAnbz14VDcw","760","1","3","0","1","5","1","11","2","2","5","ENTITY/Tokyo Opera City Art Gallery",""
+"Tokyo Metropolitan Government Building","ChIJoTcat9SMGGAR6GGG8zdcZvE","5407","0","26","0","5","16","9","52","3","9","25","ENTITY/Tokyo Metropolitan Government Building",""
+"Shinjuku Juniso Kumano Shrine","ChIJKxXgZirzGGARz3KqnDzxHAE","1522","1","3","0","2","9","5","17","3","4","6","ENTITY/Shinjuku Juniso Kumano Shrine",""
+"Tokyo Metropolitan Government Building North Observatory","ChIJnctryNSMGGARLv4MknPFseU","6275","0","7","1","0","4","4","18","1","1","7","ENTITY/Tokyo Metropolitan Government Building North Observatory",""
+"Honmachi Minami Children'S Playground","ChIJ77Xm-C7zGGARI3-ejQmNk_Y","52","3","7","0","1","5","2","6","1","2","3","ENTITY/Honmachi Minami Children'S Playground",""
+"Tsunohazu Park","ChIJjVOEIizzGGARPTCFVd9O64Y","39","1","1","0","1","2","2","3","0","0","0","ENTITY/Tsunohazu Park",""
+"Motomura Zuidō Park","ChIJfWSDeyXzGGARzSOIOyM75TE","27","1","5","1","0","3","3","6","0","3","4","ENTITY/Motomura Zuidō Park",""
+"Honmachi Sakura Park","ChIJg6jJ_SXzGGARqe0cDmoI2rY","106","0","2","0","0","9","1","21","1","1","2","ENTITY/Honmachi Sakura Park",""
+"Hommachi Park","ChIJ--oXfyjzGGARVUaPKyw4Lxc","56","2","3","1","2","5","3","7","0","3","4","ENTITY/Hommachi Park",""
+"Honcho Minami Jido Park","ChIJ6UD7iibzGGARNIApmNextZg","34","0","4","2","3","3","3","8","2","5","9","ENTITY/Honcho Minami Jido Park",""
+"Shinjuku Chuo Park","ChIJL7oFpizzGGARH-npuiADZeQ","8380","3","12","2","3","13","4","23","3","7","10","ENTITY/Shinjuku Chuo Park",""
+"Shibuya Kuritsu Honchohikawa Park","ChIJgyme4CbzGGARvNv__axF54M","54","1","4","2","0","6","12","9","2","2","7","ENTITY/Shibuya Kuritsu Honchohikawa Park",""
+"Yoyogi Pony Park","ChIJAQCTx8uMGGARpNjDI6maHdc","457","1","9","0","0","8","7","11","2","4","9","ENTITY/Yoyogi Pony Park",""
+"Yoyogi Nishihara Park","ChIJJzkxRTbzGGARVgTIsZE-tnA","76","7","9","3","7","3","3","9","3","2","6","ENTITY/Yoyogi Nishihara Park",""
+"Daikin Solution Plaza ""Fuha: Tokyo""","ChIJi5_tndOMGGARknHIW__3Srg","106","1","1","1","1","3","3","11","1","2","5","ENTITY/Daikin Solution Plaza ""Fuha: Tokyo""",""
+"Nikenya Park","ChIJFeZOyNfyGGAREdzorfoxcL8","57","1","9","1","0","9","5","17","3","4","6","ENTITY/Nikenya Park",""
+"NTT InterCommunication Center [ICC]","ChIJowtcwi3zGGARbigi4O2YxA0","414","1","3","1","1","9","5","13","3","1","5","ENTITY/NTT InterCommunication Center [ICC]",""
+"Hatsudai 2chome Children'S Playground..","ChIJw62mcjTzGGARHz8l4iPzEY4","20","1","4","1","0","2","5","7","0","1","1","ENTITY/Hatsudai 2chome Children'S Playground..",""
+"Sangūbashi Park","ChIJ19QFZsuMGGARZeAOGSKiNDc","154","0","9","0","1","10","4","17","0","3","5","ENTITY/Sangūbashi Park",""
+"Former Yodobashi Purification Plant Rokkakudo","ChIJvcK3OCvzGGARlabECQTN4f0","66","0","2","0","0","1","0","6","0","0","2","ENTITY/Former Yodobashi Purification Plant Rokkakudo",""
+"Meiji Shrine West Entrance","ChIJCWj3pfWNGGARCXFQs7emQDE","53","0","3","1","0","1","2","3","0","2","1","ENTITY/Meiji Shrine West Entrance",""
+"Shinjuku Central Park Sports Corner","ChIJ_0qGcCrzGGARwfQpK4IhJKQ","21","1","6","1","0","7","0","9","0","3","7","ENTITY/Shinjuku Central Park Sports Corner",""
+"COVO Oyster Bar","ChIJ1YdpdsaMGGARMfnoMwudPGQ","148","1","9","0","0","9","5","24","1","2","7","ENTITY/COVO Oyster Bar",""
+"Meiji Jingu","ChIJ5SZMmreMGGARcz8QSTiJyo8","39874","2","16","3","2","21","10","41","2","10","18","ENTITY/Meiji Shrine",""
+"Shinjuku Gyoen National Garden","ChIJPyOTG8KMGGARh_IXobWxHmo","39015","7","12","3","3","21","11","33","7","6","10","ENTITY/Shinjuku Gyoen National Garden",""
+"Hatonomori Hachiman Shrine","ChIJmUOGYr6MGGARQsQR0O1SPbo","2296","1","14","0","2","7","7","22","1","5","11","ENTITY/Hatonomori Hachiman Shrine",""
+"Shogi Hall","ChIJsRZneb6MGGARJhdlem3RTQc","604","2","12","1","2","6","3","15","0","2","7","ENTITY/Shogi Hall",""
+"Meiji Shrine Sanshuden","ChIJw7n09rmMGGARNfx8WUEX9go","206","1","3","0","0","5","2","11","1","4","5","ENTITY/Meiji Shrine Sanshuden",""
+"Umayamichi Park","ChIJO37928WMGGARxmP6u0TAxzM","42","1","3","0","1","2","4","4","0","2","5","ENTITY/Umayamichi Park",""
+"Yoyogi Midori Park","ChIJoZPcUc-MGGARTOXVFKTIF3I","123","2","5","5","0","5","8","8","0","3","4","ENTITY/Yoyogi Midori Park",""
+"Togo Shrine","ChIJW40URLuMGGARgo4q_fJdYsA","2351","1","17","1","4","19","4","33","1","9","14","ENTITY/Togo Shrine",""
+"Meiji Jingu Gaien Ice Skating Rink","ChIJW5RGOJSMGGAR4-oMDpxi-oA","714","2","9","1","1","2","7","12","1","4","9","ENTITY/Meiji Jingu Gaien Ice Skating Rink",""
+"Nanzuka","ChIJjy2U41iLGGAREMoF6FatXt4","130","0","7","0","2","6","1","14","3","5","8","nanzuka",""
+"Harajuku Owl'S Forest","ChIJibXHTLuMGGARMB4sF7eQAaY","211","11","16","9","6","12","18","27","7","10","15","ENTITY/Harajuku Owl'S Forest",""
+"Design Festa Gallery","ChIJe0hvGqOMGGARYW2c7IAAQVk","908","1","9","1","2","10","3","17","4","8","3","ENTITY/Design Festa Gallery",""
+"SoLaDo Takeshita Dori","ChIJ6xA0pKSMGGAREB8mFuuaPYo","1418","2","8","3","2","5","8","16","4","0","5","ENTITY/SoLaDo Takeshita Dori",""
+"Jingu Mae Park","ChIJB4PpM5iMGGARYZ7Fys8UpJ8","28","0","4","0","0","3","3","5","1","2","3","ENTITY/Jingu Mae Park",""
+"Meiji Jingu Gyoen","ChIJ5SZMmreMGGARqBUU4sVwUIM","623","6","13","5","1","16","8","26","2","4","13","ENTITY/Meiji Jingu Gyoen",""
+"Meiji Jingu Kaguraden","ChIJ04pwyreMGGARKvoa9AYdtp8","663","6","5","3","4","8","6","15","4","8","9","ENTITY/Meiji Jingu Kaguraden",""
+"Meiji Jingu Kitasando Torii","ChIJD1Uy87GNGGARqyEnS-3dZrg","226","6","36","7","4","32","11","60","4","16","35","ENTITY/Meiji Jingu Kitasando Torii",""
+"North Pond","ChIJX8aTXWWNGGARAkJnOY_Ib8Q","24","5","6","3","2","9","3","10","2","6","8","ENTITY/North Pond",""
+"Imperial Station Site","ChIJUX4zzbuMGGAReNj61j0ez8c","49","5","6","1","1","5","8","17","4","2","9","ENTITY/Imperial Station Site",""
+"Arai Hakuseki'S Deathplace","ChIJk70qKcGMGGARc15j_wSmHqM","31","4","7","4","5","1","5","8","4","3","2","ENTITY/Arai Hakuseki'S Deathplace",""
+"Zuienji Temple","ChIJ2V1C7L2MGGARUSbbu2EJXDE","45","1","9","1","1","13","3","29","3","3","8","ENTITY/Zuienji Temple",""
+"Seirinji","ChIJZR5nHZaMGGARR1XvKRovkZk","50","2","7","1","2","10","7","23","3","2","11","ENTITY/Seirinji",""
+"Shinjuku Gyoen Cherry Tree Area","ChIJAz6oc8CMGGARxoIUXZ8nOE4","95","6","21","6","2","33","2","47","3","13","23","ENTITY/Shinjuku Gyoen Cherry Tree Area",""
+"Meiji Jingu Higashijinmon","ChIJs2crRr6NGGAREQazZTnHrug","32","1","3","1","0","4","1","11","1","5","4","ENTITY/Meiji Jingu Higashijinmon",""
+"Meiji Jingu Nino Torii","ChIJsyv0pLqMGGARO-cDLT1bCeU","204","1","1","1","0","2","1","10","0","2","5","ENTITY/Meiji Jingu Nino Torii",""
+"Kid'S Area","ChIJf4O1UMCMGGARZ6nQzxTLK1E","136","2","7","1","0","9","2","14","1","6","6","ENTITY/Kid'S Area",""
+"Treasure Hall Lawn","ChIJV4WwpsmMGGARWuGtovJT4VU","151","0","4","0","0","6","0","7","1","3","4","ENTITY/Treasure Hall Lawn",""
+"Kyu Goryo Tei (Taiwan Pavilion)","ChIJW8ppCcGMGGAR4IusOTaMch0","315","1","4","1","1","8","1","19","3","6","5","ENTITY/Kyu Goryo Tei (Taiwan Pavilion)",""
+"Kiyomasa'S Well","ChIJHT9f_baMGGARDI98NbVp800","584","6","9","4","2","9","5","17","0","4","8","ENTITY/Kiyomasa'S Well",""
+"Lower Pond","ChIJkTjjRZWMGGAR9g3ij8oeq5U","59","2","5","3","1","6","1","8","1","1","5","ENTITY/Lower Pond",""
+"Kakuuntei (Tea House)","ChIJFYjCSLeMGGARpDRCMMVE6U0","113","3","8","0","1","9","10","20","2","2","7","ENTITY/Kakuuntei (Tea House)",""
+"The Sato Museum Of Art","ChIJx4Vf9pSMGGART0xIYtJt3d8","112","0","5","0","0","5","0","11","2","2","4","ENTITY/The Sato Museum Of Art",""
+"Japan National Stadium Square","ChIJg-c6oXKNGGARmFggEVjr-i4","235","0","3","0","0","2","1","2","1","2","2","ENTITY/Japan National Stadium Square",""
+"Takeshita Street Entrance Arch (Harajuku Station)","ChIJMysrNgCNGGARquFl5zADX0s","63","1","6","1","2","6","6","15","3","5","7","ENTITY/Takeshita Street Entrance Arch (Harajuku Station)",""
+"Takeshita Street","ChIJL51pWnmNGGAR-e2hoAztmTQ","499","1","10","3","0","8","11","32","1","5","8","ENTITY/Takeshita Street",""
+"Cenotaph For The Submariners","ChIJ74k3SbuMGGARBt2VenITPSA","23","5","2","0","6","0","9","12","4","0","3","ENTITY/Cenotaph For The Submariners",""
+"Brahms Path","ChIJWWLaNLuMGGARH3aXTBPHqB8","42","0","1","0","1","1","5","4","1","1","1","ENTITY/Brahms Path",""
+"Formal Garden","ChIJmfpAz-qMGGARRPQ6NnBNokc","44","9","34","7","5","72","7","114","7","15","31","ENTITY/French formal garden",""
+"Olympic Symbol","ChIJC9RlODuNGGARuHTPkbyR4wE","181","0","4","0","0","1","1","1","0","0","1","ENTITY/Olympic symbols",""
+"Yoyogi Hachimangu Shrine","ChIJM84BYErzGGARve-_iieaBvY","2469","0","0","1","1","0","2","5","2","0","2","ENTITY/Yoyogi Hachimangu Shrine",""
+"Oda Field","ChIJJ9Khi62MGGARsdAyKbBWV4s","356","1","13","0","2","5","0","8","0","2","5","ENTITY/Oda Field",""
+"Tomigaya Sanbonsugi Park","ChIJjbI5OUzzGGAR2gY87Rn9maY","45","3","5","1","5","5","6","11","2","4","5","ENTITY/Tomigaya Sanbonsugi Park",""
+"Shibuya Kuritsu Uehara Park","ChIJ4UBeU0bzGGAR3rOkfdsjG-Q","80","0","2","0","0","3","1","3","0","2","2","ENTITY/Shibuya Kuritsu Uehara Park",""
+"Tomigaya Park","ChIJ3YgKCFLzGGARONs_0SzSBNI","75","1","1","0","0","2","0","3","0","0","2","ENTITY/Tomigaya Park",""
+"Shibuyakuritsuharunogawa Community Park","ChIJD_wnLEvzGGAR1mn2GUpRv34","53","2","7","0","9","7","5","19","0","4","8","ENTITY/Shibuyakuritsuharunogawa Community Park",""
+"Shibuya Haru No Ogawa Play Park","ChIJzU3SM0vzGGARPIY4DwMpwJY","173","5","16","9","7","15","15","27","0","7","16","ENTITY/Shibuya Haru No Ogawa Play Park",""
+"Memorial Statue Of ""Haru No Ogawa"" Song","ChIJASbUz0rzGGARyIPx6a9fWYk","26","4","6","1","5","5","4","18","1","3","9","ENTITY/Memorial Statue Of ""Haru No Ogawa"" Song",""
+"Yoyogi Park Service Center","ChIJMwpiebSMGGARdCKrqyg2zho","106","0","2","0","0","1","0","3","0","0","1","ENTITY/Yoyogi Park Service Center",""
+"First Flight Monument","ChIJeySCGrOMGGARIDsbasNCJZQ","34","0","1","1","2","2","2","3","2","1","1","ENTITY/First Flight Monument",""
+"Hachikō Memorial Statue","ChIJx1e971eLGGARum8w_tnpFwI","19985","10","44","4","13","22","28","85","14","10","31","ENTITY/Hachikō Memorial Statue",""
+"Gallery Ledeco","ChIJr8UMwluLGGARKpTnLiYG6yU","544","0","1","0","0","3","0","4","0","1","1","ENTITY/Gallery Ledeco",""
+"Bunkamura","ChIJLy2X3KuMGGARyxodVmR8Y5U","5366","1","8","0","1","7","2","15","3","3","3","ENTITY/Bunkamura",""
+"The Shoto Museum Of Art","ChIJR6AfJquMGGARLtT29Rg6HLY","1064","4","13","0","4","19","9","47","3","7","27","ENTITY/The Shoto Museum Of Art",""
+"Chōsenji Temple","ChIJTbemwaWMGGAR0N6g9kPo5I4","83","1","2","0","0","3","1","7","1","1","2","ENTITY/Chōsenji Temple",""
+"Shibuya Fureai Botanical Center","ChIJnRJnNUOLGGARI8rzGiPxTb0","648","5","11","2","2","13","7","24","1","9","11","ENTITY/Shibuya Fureai Botanical Center",""
+"Shibuya Nonbei Yokocho","ChIJpwDSAViLGGARVaJ_WUwQrt8","951","3","18","2","5","13","11","30","7","3","20","ENTITY/Shibuya Nonbei Yokocho",""
+"Moyai Statue","ChIJ16NJjFeLGGARCokGVw8B2C0","707","1","1","0","2","2","1","7","0","1","1","ENTITY/Moyai Statue",""
+"Nabeshima Shōtō Park","ChIJq0aKTKuMGGARqxiPD_P3HFY","834","1","8","2","2","7","4","15","2","2","7","ENTITY/Nabeshima Shōtō Park",""
+"Konno Hachimangu Shrine","ChIJ1bZmU1mLGGAR73z2D3wQFVo","1861","1","9","0","2","9","2","17","1","2","14","ENTITY/Konno Hachimangu Shrine",""
+"Toguri Museum","ChIJlzzwnKyMGGAReHy-2C4FVxs","272","1","13","0","0","10","3","25","3","4","15","ENTITY/Toguri Museum",""
+"Gallery TOM","ChIJXXNupVTzGGARxpXUX6yUKio","22","2","18","2","2","12","8","34","5","10","14","ENTITY/Gallery TOM",""
+"Ancient Egyptian Museum","ChIJm0gRj6iMGGAROvT98Nc8_GE","46","2","29","1","6","24","14","50","3","12","26","ENTITY/Ancient Egyptian Museum",""
+"Shibuya Hikawa","ChIJATtRNXDqGGARiwtm8iwmq-4","990","1","8","1","3","9","3","13","0","7","7","ENTITY/Shibuya Hikawa",""
+"Shibuya Scramble Crossing","ChIJK9EM68qLGGARacmu4KJj5SA","9988","0","7","0","0","2","0","7","0","4","3","ENTITY/Shibuya Scramble Crossing",""
+"Shibuya Sky","ChIJ4Rr2JWiLGGARcyRSHuZ-9G8","16249","0","24","0","8","19","5","34","1","19","18","ENTITY/Shibuya Sky",""
+"Shibuya Center Gai","ChIJU6FXN6iMGGAR0fe6KiMxQm8","1625","6","8","1","6","8","7","18","4","8","6","ENTITY/Shibuya Center Gai",""
+"D47 Museum","ChIJd7kNUViLGGARlW46j_NJizY","248","0","5","0","1","4","2","20","0","4","9","ENTITY/D47 Museum",""
+"Dogenzaka Happy Board","ChIJB_EFeIGNGGARPO2Vqgp8ZhA","34","3","2","3","6","1","4","5","2","1","4","ENTITY/Dogenzaka Happy Board",""
+"Tokyo Anime Center In DNP PLAZA SHIBUYA","ChIJxSdBZKiMGGARhSFzbiq0fJc","211","2","7","0","3","6","2","14","0","3","2","ENTITY/Tokyo Anime Center In DNP PLAZA SHIBUYA",""
+"SAKURA STREET","ChIJOcrIZgCLGGARiU35YdrLXdQ","23","3","9","4","0","10","2","18","2","4","7","ENTITY/SAKURA STREET",""
+"Spain Zaka Slope","ChIJq-09_qiMGGAROyl4SkF4H0Y","185","0","7","0","2","3","3","9","0","1","2","ENTITY/Spain Zaka Slope",""
+"Mitake Park","ChIJkRGEm6eMGGARDMqDAfwbM1Q","210","0","0","2","1","0","4","0","2","1","0","ENTITY/Mitake Park",""
+"Musollah Prayer Noa Dogenzaka Level 11 Room 07","ChIJrWsrAKqMGGARtYicckABX4o","206","1","9","2","4","9","5","21","0","6","14","ENTITY/Musollah Prayer Noa Dogenzaka Level 11 Room 07",""
+"Jingumae 5chome Children Playground","ChIJX4z7MKeMGGARIphKiofcfmQ","48","0","4","1","0","5","3","11","3","1","4","ENTITY/Jingumae 5chome Children Playground",""
+"Namiki Bridge","ChIJF1feHEGLGGARpYa63-GMXVY","65","3","0","5","4","1","6","2","3","0","1","ENTITY/Namiki Bridge",""
+"Shibuya Kuritsu Hachiyama Park","ChIJ2eLt4VCLGGARJwt0DyjQA1A","61","1","4","2","1","4","2","8","0","3","3","ENTITY/Shibuya Kuritsu Hachiyama Park",""
+"Yoyogi Park Zelkova Trees","ChIJr6ok-a6MGGARdMx8AvZ_zuA","790","5","15","1","5","20","10","28","6","4","16","ENTITY/Yoyogi Park Zelkova Trees",""
+"Hikawanomori Park","ChIJAUAzMl2LGGARJnpDLAI7pPA","83","2","6","2","2","8","2","17","3","5","12","ENTITY/Hikawanomori Park",""
+"Kokugakuin University Museum","ChIJWVhdZF2LGGAREoAcS5G19vM","784","2","3","0","1","4","2","9","0","3","2","ENTITY/Kokugakuin University Museum",""
+"Yamatane Museum Of Art","ChIJseohrGmLGGARWx9gVUaRc7Y","2267","0","12","1","0","15","3","32","2","8","11","ENTITY/Yamatane Museum Of Art",""
+"YEBISU BREWERY TOKYO","ChIJY24wMRSLGGARdbDv6D2KdHE","3819","1","8","2","2","28","7","53","1","8","24","ENTITY/YEBISU BREWERY TOKYO",""
+"Shibuya Folk And Literary Shirane Memorial Museum","ChIJx-5n62eLGGARCE-Bne1qZF0","176","2","11","3","3","11","14","27","3","7","12","ENTITY/Shibuya Folk And Literary Shirane Memorial Museum",""
+"Ebisu Higashi Park","ChIJSylf0UGLGGARpQ-MXDiKLuE","556","2","3","2","1","3","2","9","0","1","5","ENTITY/Ebisu Higashi Park",""
+"Kōrin In Temple","ChIJKT4_IG2LGGARMn9DEVzupDk","68","0","3","1","0","3","1","8","1","2","2","ENTITY/Kōrin In Temple",""
+"Sukima","ChIJ__-LAhOLGGARbEEF2HnpZLU","146","0","6","1","0","6","6","20","2","4","3","ENTITY/Sukima",""
+"Ebisu Station East Exit Park","ChIJp1QzPECLGGARa61TFJlj1SQ","70","1","3","3","3","2","5","3","1","1","2","ENTITY/Ebisu Station East Exit Park",""
+"Hikawa Mikan Park","ChIJFUQ4mkKLGGAR6t0JiQ6TW78","22","2","4","1","1","4","6","7","1","3","6","ENTITY/Hikawa Mikan Park",""
+"Toyosawa Children'S Playground","ChIJdT34_RKLGGARRniBgtD0CM0","25","2","4","3","1","1","3","7","1","2","5","ENTITY/Toyosawa Children'S Playground",""
+"Hiroo East Park","ChIJmVoi7m2LGGARt71Gcb4kjG8","71","3","3","3","2","5","6","9","3","2","6","ENTITY/Hiroo East Park",""
+"Date Playground","ChIJh0bU7ROLGGARbGbzhyfrVE8","20","3","6","1","0","5","8","11","2","3","10","ENTITY/Date Playground",""
+"Kageoka Park","ChIJ6VcLrxWLGGARU4VM3e8VRF4","57","0","2","0","0","3","0","3","0","1","2","ENTITY/Kageoka Park",""
+"America Bashi Park","ChIJZyQQmRWLGGART3fVqKvBmvw","116","2","5","2","1","4","2","13","0","2","5","ENTITY/America Bashi Park",""
+"Ebisuminami 2 Park","ChIJU75bcz-LGGARia4QMeynS_Y","156","1","1","2","3","5","2","9","0","0","3","ENTITY/Ebisuminami 2 Park",""
+"Senmeiji","ChIJZTjEbD-LGGAROGR1zBcA5sc","24","2","2","1","2","0","2","0","1","0","0","ENTITY/Senmeiji",""
+"Ebisu Shrine","ChIJX5PFF0GLGGARxGm8yW4jlZ8","511","1","6","1","3","5","2","9","1","7","7","ENTITY/Ebisu Shrine",""
+"Wakaba Children'S Playground","ChIJZfK5WmiLGGARz4pfMXPHUJ8","31","0","2","0","0","3","1","5","0","1","2","ENTITY/Wakaba Children'S Playground",""
+"Hiroo Walking Street","ChIJWVpUpnKLGGAR_12nyU1Bb-4","26","0","6","0","0","5","1","13","1","2","3","ENTITY/Hiroo Walking Street",""
+"Hiroo Park","ChIJAYWRfA2LGGAROa3FU9djodc","296","2","2","2","1","3","2","7","1","0","2","ENTITY/Hiroo Park",""
+"Ebisu Park","ChIJ_7TR7f-LGGARDgn4GscDis4","327","0","3","5","1","6","5","6","2","3","6","ENTITY/Ebisu Park",""
+"Hiroo North Park","ChIJq2rDsW-LGGARG08pDVOv4Vw","70","1","3","2","0","7","6","7","0","1","8","ENTITY/Hiroo North Park",""
+"America Bridge (Ebisu South Bridge)","ChIJ1TD3jxWLGGARBCtWshRS308","31","8","15","1","4","7","13","27","11","1","19","ENTITY/America Bridge (Ebisu South Bridge)",""
+"Ebisu South 1 Park","ChIJWY9jixWLGGARYyDxRspjJVQ","211","0","0","1","0","0","2","0","0","0","0","ENTITY/Ebisu South 1 Park",""
+"Sky Lounge","ChIJS3i6g_NbGGARv2unZWPg2NQ","113","0","6","1","1","8","4","22","1","3","7","ENTITY/Sky Lounge",""
+"Sanko Children'S Playground","ChIJcXVphw6LGGARBmQ9tNMPX3Y","52","0","9","0","2","6","2","12","3","6","5","ENTITY/Sanko Children'S Playground",""
+"Hayashi Fumiko Commemorative Museum","ChIJD9pLurHyGGARgOFmDYZdzyc","313","1","2","0","0","9","2","24","0","3","10","ENTITY/Hayashi Fumiko Commemorative Museum",""
+"Hobby Center Kato","ChIJ-2jiPabyGGARvrXrHql13NQ","1818","0","7","0","0","5","2","13","1","2","5","ENTITY/Hobby Center Kato",""
+"Shinjukukuritsunishiochiaihigashi Park","ChIJR_FBA6byGGARHLZT9b9Dkco","30","1","4","2","1","3","4","7","2","0","3","ENTITY/Shinjukukuritsunishiochiaihigashi Park",""
+"Nakai East Park","ChIJX0AnOLLyGGARN3ikb_hMj2M","52","3","3","3","1","4","10","8","1","0","2","ENTITY/Nakai East Park",""
+"Miharashizaka","ChIJk3l1PbPyGGARTGvtWNHl6H4","22","0","11","0","0","4","4","11","2","4","10","ENTITY/Miharashizaka",""
+"Shinjuku Kuritsu Nishiochiai Park","ChIJUbuomabyGGARPzcNztJukjc","166","1","0","0","0","3","3","3","0","0","3","ENTITY/Shinjuku Kuritsu Nishiochiai Park",""
+"Ochiai Park","ChIJ_ddbmLryGGAR7vvB5MRZH9M","604","3","16","2","4","13","3","23","0","4","10","ENTITY/Ochiai Park",""
+"Naka Ochiai Park","ChIJoVZdyEyNGGARrpNIxDz1eZk","56","3","11","4","1","18","6","30","1","3","12","ENTITY/Naka Ochiai Park",""
+"Kuzugaya Park","ChIJlZRlZafyGGAREcKCwoTiOEg","48","3","13","3","4","10","8","22","3","3","7","ENTITY/Kuzugaya Park",""
+"Saeki Yuzo Atelier Museum","ChIJ3dpMf02NGGARPd63AVWM_4I","123","1","6","3","1","7","1","34","2","5","14","ENTITY/Saeki Yuzo Atelier Museum",""
+"Shinjukukuritsukaba Park","ChIJ0z_j_EyNGGARquVfaE6XjtM","49","1","3","2","1","4","5","8","1","1","5","ENTITY/Shinjukukuritsukaba Park",""
+"Nishizaka Park","ChIJvw9hWEyNGGAReeW2GM0aFVQ","50","0","7","1","1","6","3","13","0","2","12","ENTITY/Nishizaka Park",""
+"Nishiochiai North Park","ChIJK9OhWVjtGGARpEXk08w8Ln0","86","2","1","2","2","3","1","7","1","1","1","ENTITY/Nishiochiai North Park",""
+"Kami Ochiai West Park","ChIJd5uVILfyGGARdid-vVnqCwY","89","4","8","4","2","7","5","13","3","6","7","ENTITY/Kami Ochiai West Park",""
+"Ochiai Central Park Baseball Field & Tennis Courts","ChIJNe8Jj0qNGGARsZ_-xSKlAEY","377","2","14","2","7","10","5","16","1","2","9","ENTITY/Ochiai Central Park Baseball Field & Tennis Courts",""
+"Shimoochiai Hikawa Shrine","ChIJTfaVEp_BGGARBkSLNg4mSbg","266","0","16","0","4","14","4","36","0","5","16","ENTITY/Shimoochiai Hikawa Shrine",""
+"Seseragi Park","ChIJXwRgr0uNGGARqv47cE4ponk","236","0","4","2","1","5","3","10","0","1","4","ENTITY/Seseragi Park",""
+"Nakamura Tsune Atelier Museum","ChIJTXalikWNGGAR2x7eZXoq8HE","151","0","4","0","2","9","2","22","2","6","5","ENTITY/Nakamura Tsune Atelier Museum",""
+"Yakuoin","ChIJW0LCNUmNGGAR56yQKr1BQLk","210","1","12","2","1","13","6","34","7","1","13","ENTITY/Yakuoin",""
+"Hyakuninchō Fureai Park","ChIJu4Hq0zONGGARCZDBd-_UpRQ","216","0","0","0","0","1","0","3","0","0","0","ENTITY/Hyakuninchō Fureai Park",""
+"Genkokuji","ChIJZ9rYojyNGGARvbHK8brO3ls","75","4","14","2","4","15","9","32","5","8","21","ENTITY/Genkokuji",""
+"Shinjuku Suwa Shrine","ChIJd_ZwuDyNGGARtqx0z7VVGEQ","588","5","4","1","3","3","3","6","2","4","3","ENTITY/Shinjuku Suwa Shrine",""
+"Shinjuku City Miyatabashi Park","ChIJzdKRHkiNGGARNS_Q_6qm6BE","40","1","5","0","1","4","1","9","1","1","4","ENTITY/Shinjuku City Miyatabashi Park",""
+"Tobe Park","ChIJ66iDszeNGGARaMhefAfpTSo","52","0","6","1","2","8","4","15","1","4","5","ENTITY/Tobe Park",""
+"Shinjuku Kuritsu Takadanobaba Park","ChIJS57cVjeNGGARhRBwom7qOFE","78","1","3","1","1","3","5","9","4","4","3","ENTITY/Shinjuku Kuritsu Takadanobaba Park",""
+"Shinjuku City Totsuka Park","ChIJh6hR_jWNGGARuRjSMR1ZOR4","79","2","10","1","3","8","4","15","3","5","10","ENTITY/Shinjuku City Totsuka Park",""
+"Shimo Ochiai Yachō No Mori Park","ChIJk73iMEmNGGARU7wsg1qNRPo","90","2","4","2","0","6","3","10","2","4","4","ENTITY/Shimo Ochiai Yachō No Mori Park",""
+"Otomeyama Park","ChIJbxNyLEaNGGARygBnMY0hgAE","811","1","14","0","1","14","2","15","1","13","12","ENTITY/Otomeyama Park",""
+"Shinjuku City Suwa Park","ChIJN8C0ZDyNGGARe7JZEe3H68w","99","1","6","3","0","5","3","11","1","8","4","ENTITY/Shinjuku City Suwa Park",""
+"Nishitoyama Park","ChIJP4j8DzGNGGARGusipeG_i8U","161","1","1","2","1","1","3","1","1","1","1","ENTITY/Nishitoyama Park",""
+"Shinjuku Kuritsu Shimoochiai Park","ChIJZZzSYk6NGGAR64h64C-67AE","68","0","4","2","1","3","4","8","2","2","2","ENTITY/Shinjuku Kuritsu Shimoochiai Park",""
+"Shinjukukuritsushimoochiaihigashi Park","ChIJVbdNikWNGGARNEocD0P1Dco","32","1","9","1","1","10","6","16","1","5","7","ENTITY/Shinjukukuritsushimoochiaihigashi Park",""
+"Hachiman Park","ChIJ8cont0qNGGARLTSh3H8_WuM","69","2","9","2","6","10","9","16","3","3","13","ENTITY/Hachiman Park",""
+"Matsukawa Park","ChIJA1em2j2NGGARC72Z4dzSOW8","48","3","2","2","1","4","4","5","0","2","4","ENTITY/Matsukawa Park",""
+"Mannenyu","ChIJRwn2XCaNGGARII-6woQjTiA","1162","1","9","0","2","13","10","25","0","2","14","ENTITY/Mannenyu",""
+"Hanazono Shrine","ChIJK9584NuMGGARVKfZjpYoQDs","7742","1","9","3","5","11","6","14","3","6","11","ENTITY/Hanazono Shrine",""
+"Yoroi Shrine","ChIJNYE8JzONGGARlniylZX_6u0","296","0","3","0","6","3","0","19","2","2","9","ENTITY/Yoroi Shrine",""
+"Josenin","ChIJh1so4tWMGGARisQ_cDpfAB8","56","2","5","1","3","8","5","17","1","3","5","ENTITY/Josenin",""
+"Kashiwagi Park","ChIJwZxCItaMGGARwym184L-7sc","518","3","5","6","5","3","13","10","3","2","6","ENTITY/Kashiwagi Park",""
+"Kaichū Inari Shrine","ChIJN53cOi-NGGARiMyC3HhBQ78","1176","7","12","1","5","9","9","18","2","6","8","ENTITY/Kaichū Inari Shrine",""
+"Omoide Yokocho","ChIJP9eKBdeMGGAR0zzBXJNVj5A","11675","2","10","2","1","13","5","24","1","1","12","ENTITY/Omoide Yokocho",""
+"SOMPO Museum Of Art","ChIJZ0mHeNaMGGARawZDmC_3dBo","2581","0","5","0","0","7","1","23","2","3","7","ENTITY/SOMPO Museum Of Art",""
+"Kitakashiwagi Park","ChIJNcR-mzSNGGARkUSg2ojSnRI","206","5","25","6","8","25","11","43","3","7","19","ENTITY/Kitakashiwagi Park",""
+"Naruko Tenjin Shrine","ChIJO4g9OSuNGGAR7DvooJGv9Jk","918","4","24","1","3","19","8","35","0","9","14","ENTITY/Naruko Tenjin Shrine",""
+"Jōenji Temple","ChIJO1_KDtaMGGAR_rMFx_8-hMk","366","0","2","0","0","2","1","6","0","1","5","ENTITY/Jōenji Temple",""
+"Shin Okubo Korea Town","ChIJIy8BewCNGGARYEkbHyX18Ok","64","4","6","1","5","8","6","10","2","4","9","ENTITY/Shin Okubo Korea Town",""
+"Ninja Trick House In Tokyo","ChIJPQSrYNiMGGARwlBNXP_on_E","350","4","16","0","4","19","10","33","2","8","14","ENTITY/Ninja Trick House In Tokyo",""
+"Godzilla Head","ChIJzRzI3HSNGGARRwZW6AtJfi0","1601","4","17","3","8","10","17","32","6","8","10","ENTITY/Godzilla Head",""
+"Kabukicho Ichiban Gai Arch","ChIJVwPVkdiNGGARpNpvwSQTXQw","294","0","8","0","1","8","0","19","0","5","8","ENTITY/Kabukicho Ichiban Gai Arch",""
+"Ohjo Building","ChIJO5zZY5qNGGAR6t0TMKJoAIc","36","1","1","0","0","5","1","5","1","2","2","ENTITY/Ohjo Building",""
+"Shinjuku Ganka Art Gallery (Shinjuki Ganka Garō)","ChIJucqZTdmMGGAR-aZn5ZmWjeU","264","0","8","1","3","7","6","17","1","6","7","ENTITY/Shinjuku Ganka Art Gallery (Shinjuki Ganka Garō)",""
+"Enshoji","ChIJb_Qn2szyGGARARADYxZ2Vu0","91","1","5","1","0","24","2","36","4","6","9","ENTITY/Enshoji",""
+"Black Pillar Of Kyu Ome Kaido","ChIJReEtENeMGGARCD-tZ-YVD00","25","0","2","0","0","1","0","1","0","1","2","ENTITY/Black Pillar Of Kyu Ome Kaido",""
+"Kita Shinjuku Park","ChIJK821Fs3yGGARCq4Jf5umbig","191","1","2","0","1","2","2","3","0","1","5","ENTITY/Kita Shinjuku Park",""
+"Giant 3D Cat","ChIJ2WpQBmWNGGAROZeXFvCZA90","400","2","12","0","6","4","7","12","1","2","4","ENTITY/Giant 3D Cat",""
+"Robert Indiana Sculpture: ""LOVE""","ChIJ-Wz0l9WMGGARffzhnOGip_w","1486","0","1","0","0","1","1","8","0","1","1","ENTITY/Robert Indiana Sculpture: ""LOVE""",""
+"Suehiro Children'S Playground","ChIJZ1lNg83yGGARkuRLGqczfgs","23","2","6","4","0","5","8","10","0","4","4","ENTITY/Suehiro Children'S Playground",""
+"Shinjuku Golden Gai","ChIJr7mGZdmMGGARjxoMFeHApXE","10109","5","9","1","4","9","9","22","2","2","12","ENTITY/Shinjuku Golden Gai",""
+"Shinkaibashi Children'S Park","ChIJUT5W9MzyGGARasLhtHcUr4o","24","0","1","2","0","2","8","8","0","0","3","ENTITY/Shinkaibashi Children'S Park",""
+"Miraion Lion Square","ChIJuV44lwaNGGARFjwjOZg6mjU","32","1","3","1","4","1","3","10","0","2","5","ENTITY/Miraion Lion Square",""
+"Subaru Building Shinjuku Eye","ChIJXS9xxdaMGGAR9XZd9wIeJrk","464","1","8","0","6","7","8","25","5","5","11","ENTITY/Subaru Building Shinjuku Eye",""
+"Shinjuku Wall 456","ChIJZVt18kqNGGAReyXIKnlPyiI","67","1","6","0","0","6","1","10","1","3","4","ENTITY/Shinjuku Wall 456",""
+"Sokkuri Yakata Kisara","ChIJVYhpTNqMGGAR5ZZcGEcuViI","1121","2","15","2","1","16","4","24","0","7","18","ENTITY/Sokkuri Yakata Kisara",""
+"Seria ¥100 Store","ChIJZSwbW9uMGGARIkr_94DqxP8","1790","0","9","0","0","5","5","15","2","4","6","ENTITY/Seria ¥100 Store",""
+"Asahi Culture Center","ChIJn2fJGdWMGGARneZpR_piJjQ","153","3","17","0","3","8","7","22","0","1","17","ENTITY/Asahi Culture Center",""
+"Love Benten Sculpture And Izumo Taisha Shrine","ChIJnVy5IdWMGGARbUjoLhYkOYk","44","2","8","1","3","7","4","15","1","3","5","ENTITY/Love Benten Sculpture And Izumo Taisha Shrine",""
+"Tokyo Night & Light","ChIJX53MMgCNGGART78Pfc57ZuQ","167","2","14","1","9","8","6","28","3","7","19","ENTITY/Tokyo Night & Light",""
+"Suica Penguin Square","ChIJZ_s1D9CMGGARFKPIrA2gfg8","362","1","2","0","3","2","3","3","1","2","2","ENTITY/Suica Penguin Square",""
+"Statue Of Suica Penguin","ChIJg7INBtCMGGARcUPnGkz4zoQ","148","1","1","1","2","1","3","7","1","2","1","ENTITY/Statue Of Suica Penguin",""
+"Raiden Inari Shrine","ChIJAQBrOtuMGGARPZyRlEEd3fk","99","1","4","0","2","1","4","8","1","1","4","ENTITY/Raiden Inari Shrine",""
+"Women'S Active Museum On War And Peace","ChIJn7EnWhmNGGAR41qlMlKouN0","125","0","1","0","1","1","1","4","0","1","4","ENTITY/Women'S Active Museum On War And Peace",""
+"Gekkeiji","ChIJjab3ovqMGGARngM7ojzWOwc","20","3","6","3","5","3","10","11","6","3","9","ENTITY/Gekkeiji",""
+"Kansen En Park","ChIJQfY8WBeNGGARPmUvXP3I_EY","694","4","8","2","3","14","7","22","1","5","6","ENTITY/Kansen En Park",""
+"Ana Hachimangu Shrine","ChIJBZBWBRyNGGARW2A510tXEpE","4941","1","21","2","7","21","2","33","2","12","24","ENTITY/Ana Hachimangu Shrine",""
+"Tsubouchi Memorial Theatre Museum","ChIJ-UnLoBuNGGARiaRkr6zXCmU","245","1","2","2","0","5","2","17","0","3","10","ENTITY/Waseda University Tsubouchi Memorial Theatre Museum",""
+"Hozenji","ChIJ25pLS-eMGGARLDGzRxlnL1U","65","0","0","2","2","3","5","16","3","1","8","ENTITY/Hozenji",""
+"Hōsen Ji","ChIJJS2FiByNGGAR5ENhBkTKl54","56","3","7","2","2","5","6","12","5","3","8","ENTITY/Hōsen Ji",""
+"Aizu Museum","ChIJOf5VdxuNGGARCr8NdF4zK40","123","1","11","0","5","14","6","45","3","5","7","ENTITY/Aizu Museum",""
+"Toyama East Park","ChIJ7Vzaix2NGGARYWeCDwRSjJY","24","1","8","0","6","4","8","8","4","6","5","ENTITY/Toyama East Park",""
+"Hoshoji","ChIJzQQJxOKMGGARqoF0KoQ73wE","41","1","6","0","3","8","6","22","3","3","11","ENTITY/Hoshoji",""
+"Hakone Yama","ChIJ5zKZqB-NGGAR2X7x6XUaqb8","555","7","23","5","18","13","27","39","14","8","16","ENTITY/Hakone Yama",""
+"Sosanji","ChIJZ4KGu_2MGGAR5-I8XuGu5Eg","46","2","2","2","9","4","7","18","7","1","14","ENTITY/Sosanji",""
+"Natsume Soseki Memorial Museum","ChIJ_-kCNfyMGGAR1O0nCLKeY44","690","1","10","1","2","9","7","27","4","6","15","ENTITY/Natsume Soseki Memorial Museum",""
+"Soseki Park","ChIJJ00rYVmMGGARyA51i-BFRto","346","3","5","1","1","5","3","11","0","4","7","ENTITY/Soseki Park",""
+"Mizuinari Shrine","ChIJoc143xmNGGARq6IFxgeaHaE","218","2","4","0","2","3","3","7","1","4","2","ENTITY/Mizuinari Shrine",""
+"Ōkuma Garden","ChIJn3aDqgSNGGARxCpOTYh_5h0","476","5","8","3","0","13","7","24","0","4","6","ENTITY/Ōkuma Garden",""
+"Nukebenten Kita Park","ChIJvVB2-OCMGGAR2_u7AcmPoeM","71","0","1","0","0","2","1","3","0","2","1","ENTITY/Nukebenten Kita Park",""
+"Toyama Park (Okubo Area)","ChIJCT5xMDuNGGARnjCtiCWRCcI","2191","1","9","0","3","5","4","15","2","0","5","ENTITY/Toyama Park (Okubo Area)",""
+"Shinjuku City Ushigome Benten Park","ChIJo6QwXvmMGGARO2sx-Lz3IyQ","70","0","4","2","1","3","3","9","0","2","2","ENTITY/Shinjuku City Ushigome Benten Park",""
+"Itsukushima Nukebenten","ChIJMUEKxeCMGGARGfK38eFzH6w","390","0","3","0","1","4","3","6","0","1","2","ENTITY/Itsukushima Nukebenten",""
+"Hashigo Zaka Slope","ChIJfe-UheCMGGARgf_22GvzUA0","21","1","0","0","1","0","4","5","4","2","3","ENTITY/Hashigo Zaka Slope",""
+"Shinjuku Kuritsu Enokimachi Park","ChIJoy8HA_-MGGARn7f-wORDHNE","37","2","3","4","2","3","6","9","2","3","4","ENTITY/Shinjuku Kuritsu Enokimachi Park",""
+"Shinjuku Kuritsu Minamienoki Park","ChIJJ8YJpvmMGGAR23aS6XKR5Os","39","3","7","3","1","10","4","15","0","6","10","ENTITY/Shinjuku Kuritsu Minamienoki Park",""
+"Akagi Shrine","ChIJgeazv1aMGGARQh5cREuvLjI","3113","1","12","0","9","14","6","33","2","7","18","ENTITY/Akagi Shrine",""
+"Zenkoku Ji Temple","ChIJx6PKXlqMGGAR5gDIJambKD4","1365","0","6","1","0","6","2","11","1","4","5","ENTITY/Zenkoku Ji Temple",""
+"Ichigaya Kameoka Hachimangu","ChIJX_kLuV-MGGARbqwHZcrZc1c","839","0","3","0","4","8","2","17","1","4","5","ENTITY/Ichigaya Kameoka Hachimangu",""
+"Enpukuji","ChIJbW9pbleMGGAROGYf3jmI7Uk","54","0","1","0","4","3","4","8","3","3","3","ENTITY/Enpukuji",""
+"Akagi Children'S Playground","ChIJcW0_dVaMGGARNmH8W48jqjo","129","0","7","1","0","10","3","22","1","3","13","ENTITY/Akagi Children'S Playground",""
+"Jinai Park","ChIJ7RLhelqMGGAR0XnDj5cID3c","33","4","1","2","3","0","9","5","5","3","2","ENTITY/Jinai Park",""
+"Miyagi Michio Memorial Hall","ChIJ_XaZg1mMGGAR49MsJ8uiuDk","51","0","9","0","1","12","0","26","4","2","8","ENTITY/Miyagi Michio Memorial Hall",""
+"Tsukudo Hachiman Shrine","ChIJt3bsaFCMGGARmRx8EJr9uCs","315","0","7","0","0","8","0","14","1","3","6","ENTITY/Tsukudo Hachiman Shrine",""
+"Nakamachi Park","ChIJjQ-Xf1mMGGAR5byBAnbCGgI","43","1","3","2","1","2","7","6","3","1","2","ENTITY/Nakamachi Park",""
+"Statue Of Kobo Chan","ChIJFVPkNVeMGGARu5df3orPWr4","99","1","3","1","5","3","3","9","0","2","3","ENTITY/Statue Of Kobo Chan",""
+"Alpaca Petting Zoo","ChIJ23CWE32NGGARyxJJZt43kLY","96","1","6","1","2","14","9","24","1","4","10","ENTITY/Alpaca Petting Zoo",""
+"Yarai Park","ChIJvYVcuPiMGGARm6v911alOuU","96","2","4","1","1","2","3","2","1","2","2","ENTITY/Yarai Park",""
+"Kōshōji","ChIJCeVKN1qMGGARImLytHxcmh4","46","6","14","10","22","5","34","32","26","10","23","ENTITY/Kōshōji",""
+"Shirogane Park","ChIJJyNywVCMGGARp22PvIIZ_4w","488","0","6","1","0","5","2","8","0","4","5","ENTITY/Shirogane Park",""
+"Hyogo Yokocho Alley","ChIJXRSCiFqMGGARWo3VQL4Ge0k","78","4","14","0","1","9","11","20","4","6","10","ENTITY/Hyogo Yokocho Alley",""
+"Atamiyu","ChIJj3TaG1uMGGARAeGlKwrENQc","364","8","4","1","3","4","4","21","3","1","4","ENTITY/Atamiyu",""
+"Shinjuku City Wakamiya Park","ChIJq9G4a1uMGGAR5to8Ss2I_gg","67","2","5","1","3","3","3","10","2","2","5","ENTITY/Shinjuku City Wakamiya Park",""
+"Kakurenbo Yokocho (Hide And Seek Alley)","ChIJFfFAcNSNGGARJrymMof-YoY","40","1","10","0","3","8","3","19","1","2","10","ENTITY/Kakurenbo Yokocho (Hide And Seek Alley)",""
+"Shinjuku City Kaga Park","ChIJF3OYJPeMGGARRJt5zZZihQM","89","1","6","2","2","7","7","11","1","3","6","ENTITY/Shinjuku City Kaga Park",""
+"Shin Ogawa Park","ChIJrwdaHlCMGGARrGACJgxSm-U","82","0","3","1","2","2","7","3","4","3","2","ENTITY/Shin Ogawa Park",""
+"Meiji Memorial Museum","ChIJzcr8rpaMGGARrj2DaL4S0Hk","972","6","9","1","4","9","7","25","4","4","12","ENTITY/Meiji Memorial Museum",""
+"Min On Music Museum","ChIJ5W-rtJOMGGARB-JFc6fs9c8","429","2","5","0","1","7","4","16","4","5","9","ENTITY/Min On Music Museum",""
+"Fire Museum","ChIJG99Bp-2MGGARK9sWy49hBq8","2043","3","9","0","13","4","8","19","1","3","9","ENTITY/Fire Museum",""
+"Korean Cultural Center","ChIJdRrdfOyMGGARYNQyuwkUcuY","353","0","4","0","0","6","1","16","1","3","6","ENTITY/Korean Cultural Center",""
+"Suga Shrine","ChIJ8VLVBuTsGGARfIDGqQDmC0Q","2503","0","4","0","1","8","4","21","1","0","9","ENTITY/Suga Shrine",""
+"Yotsuya Okido Mark","ChIJlQ-68uuMGGAR4-j7RGfLdxs","68","4","6","2","3","2","7","20","2","0","5","ENTITY/Yotsuya Okido Mark",""
+"Shinjuku Kuritsu Suga Park","ChIJeQ4UC42MGGARQOxJHryPS78","49","0","2","0","0","4","0","15","1","2","5","ENTITY/Shinjuku Kuritsu Suga Park",""
+"Place M","ChIJq6qL9OmMGGARnbwINiHDD_o","80","0","3","0","0","2","1","6","0","3","7","ENTITY/Place M",""
+"Tokyo Toy Museum","ChIJHeBCIOyMGGAR7BktETlUP_w","1911","2","13","1","2","14","7","33","6","9","13","ENTITY/Tokyo Toy Museum",""
+"Yotsuya Mitsuke Park","ChIJZT9KFYmMGGAR0RHuH3Wk-Lw","451","0","3","0","0","1","3","9","0","1","2","ENTITY/Yotsuya Mitsuke Park",""
+"Shinjuku City Hanazono West Park","ChIJMdC9oMKMGGARrA2ltGNeASQ","139","1","7","6","3","4","9","8","4","7","6","ENTITY/Shinjuku City Hanazono West Park",""
+"Tofukuin Temple","ChIJeUh_F42MGGAR1L0C8yhJrdI","59","3","6","3","4","6","11","22","7","7","17","ENTITY/Tofukuin Temple",""
+"Yōunji Temple","ChIJo4gQo5KMGGARczYuAmOur0g","475","1","9","1","1","10","2","15","2","4","11","ENTITY/Yōunji Temple",""
+"Kaigyōji","ChIJc6h-sY2MGGARtvIZGRA6uQI","34","3","1","3","13","3","15","23","11","3","14","ENTITY/Kaigyōji",""
+"Shinjuku Historical Museum","ChIJ-yMPcvOMGGARgN0roRXEJiI","933","2","11","0","0","8","10","23","0","4","10","ENTITY/Shinjuku Historical Museum",""
+"Daikyō Park","ChIJsehfquyMGGARdza-PQhc5gE","60","3","7","3","2","8","5","18","3","7","8","ENTITY/Daikyō Park",""
+"Shinsamon Children'S Playground","ChIJpYcJk5KMGGARixaI-Xd2Nw4","45","1","0","6","0","3","8","5","0","0","2","ENTITY/Shinsamon Children'S Playground",""
+"Sasadera","ChIJzwl9jeyMGGAR68YC3XeH2Yk","43","5","5","1","7","7","9","19","5","7","4","ENTITY/Sasadera",""
+"Wakaba Park","ChIJ5SYKiY2MGGAR2-Qo6ViaJvE","46","4","11","3","1","8","8","20","4","6","13","ENTITY/Wakaba Park",""
+"Samon Park","ChIJVRXiF-2MGGARPWCZsiuN8SY","35","4","2","3","2","3","5","6","0","1","3","ENTITY/Samon Park",""
+"Shōkōji","ChIJVWH-dY2MGGAR3HJOHTEooHQ","33","5","3","1","8","2","10","15","8","1","6","ENTITY/Shōkōji",""
+"Suga Shrine Otokodan","ChIJFZmQijCNGGARTGdM5ATq-aw","582","0","4","0","0","3","2","6","1","2","2","ENTITY/Suga Shrine Otokodan",""
+"Tōchōji","ChIJCxu-I-mMGGARonzoMFZwwvc","173","2","3","1","1","5","4","10","2","2","5","ENTITY/Tōchōji",""
+"Greenhouse, Shinjuku Gyoen National Garden","ChIJpzTiFuqMGGAR4uvTgBAtMN8","412","2","7","2","0","7","3","17","1","2","7","ENTITY/Greenhouse, Shinjuku Gyoen National Garden",""
+"Aizenin","ChIJrY54_YyMGGARsS1E2VOdJvQ","48","2","9","2","4","9","10","26","5","1","18","ENTITY/Aizenin",""
+"Shinjuku Kuritsu Aizumi Park","ChIJl8i6nO6MGGARmWvAHMTwD44","100","0","9","1","2","7","3","13","2","6","7","ENTITY/Shinjuku Kuritsu Aizumi Park",""
+"2020 Olympic Cauldron","ChIJw5mHjH-NGGAR-rSeORv2eSQ","46","1","6","1","2","2","4","2","2","2","2","ENTITY/2020 Olympic Cauldron",""
+"Fishing Culture Museum","ChIJueBPY-6MGGAR0eNdwstn0pk","37","1","4","2","1","7","5","17","7","4","6","ENTITY/Fishing Culture Museum",""
+"Hanazono Park","ChIJbxM9vemMGGAR3dDKPZNlzU4","218","1","2","0","2","3","3","6","3","0","5","ENTITY/Hanazono Park",""
+"Shinjuku City Araki Park","ChIJfTM5e_KMGGART1BwLNTze3w","58","1","5","2","1","4","3","7","1","1","4","ENTITY/Shinjuku City Araki Park",""
+"Tokyo 1964 Olympic Cauldron","ChIJeb61HrqNGGARAkHtgTNdDR4","33","3","5","2","5","2","4","7","3","2","0","ENTITY/Tokyo 1964 Olympic Cauldron",""
+"National Foundation Memorial Archives","ChIJV1vyLZeMGGARCgUPmlo4jqA","27","6","20","4","0","12","4","32","1","5","19","ENTITY/National Foundation Memorial Archives",""
+"Shinjuku City San'Ei Park","ChIJ3ZFeJPOMGGARHV4pzckEFEM","226","1","2","0","1","2","1","6","0","1","2","ENTITY/Shinjuku City San'Ei Park",""
+"Genkyōji","ChIJtT92KOmMGGARnIIrladqYus","24","1","1","0","6","0","5","6","5","0","4","ENTITY/Genkyōji",""
+"Muchi Pond","ChIJFxVObPKMGGARsZzoY7S5AX8","38","3","7","4","5","14","14","26","3","6","13","ENTITY/Muchi Pond",""
+"Owl Cafe MofuMofu","ChIJs4P67dqMGGARiUY0WnPhywM","213","5","8","0","1","9","8","27","1","6","13","ENTITY/Owl Cafe MofuMofu",""
+"Tokyo Metropolitan Art Museum","ChIJb_o7HiiMGGARUKu8uO7fGIQ","14223","0","15","1","0","14","5","35","4","13","10","ENTITY/Tokyo Metropolitan Art Museum",""
+"The National Museum Of Western Art","ChIJf8xB-pyOGGARizzhlNTcI7s","9447","1","9","1","2","8","6","18","2","5","7","ENTITY/The National Museum Of Western Art",""
+"Tokyo National Museum","ChIJEX3XFIOOGGAR3XdJvRjWLyM","25685","0","17","0","4","18","5","43","8","14","18","ENTITY/Tokyo National Museum",""
+"National Museum Of Nature And Science","ChIJ8Vuh65yOGGARyj4L5IBFiIk","25195","0","11","0","2","8","6","19","2","2","12","ENTITY/National Museum of Nature and Science",""
+"Ueno Zoological Gardens","ChIJf2129yiMGGAR9I6Yoe-1uHY","34317","7","13","4","9","13","6","26","3","6","10","ENTITY/Ueno Zoo",""
+"Kanei Ji","ChIJs0s4j4GOGGARZwSDJ4mP5Tc","1920","1","10","1","0","12","4","21","4","8","11","ENTITY/Kanei Ji",""
+"Gallery Neko Machi","ChIJ7zIG29KNGGAR8mac1BLq5Kc","159","0","4","0","1","10","0","22","2","5","6","ENTITY/Gallery Neko Machi",""
+"Ueno Toshogu Shrine","ChIJP7lRfyiMGGARqb1QQhfm9EQ","3793","3","5","2","0","7","8","13","3","2","8","ENTITY/Ueno Toshogu Shrine",""
+"Shiki An","ChIJu1O6_ICOGGARn_ZIExwTDeE","153","3","3","3","4","8","6","14","5","1","7","ENTITY/Shiki An",""
+"Former Yoshida Ya Liquor Store","ChIJP8uMSCqMGGARy3Q6ZdwRK5g","145","2","2","0","1","1","3","3","2","0","2","ENTITY/Former Yoshida Ya Liquor Store",""
+"Haginoyu","ChIJIWPdM4GOGGAROBg4zlnJUXA","4314","3","12","1","2","9","4","31","2","3","9","ENTITY/Haginoyu",""
+"Teramachi Art Museum","ChIJy13aydSNGGARHnpnbn0NReI","32","0","2","0","0","2","1","3","0","0","2","ENTITY/Teramachi Art Museum",""
+"Yodenji Temple","ChIJAQAMm9SNGGARDwvScj-ea6k","30","2","8","0","3","5","8","17","5","0","4","ENTITY/Yodenji Temple",""
+"Tokyo National Museum Garden","ChIJASZEDYOOGGARrcQ8hwDK6dY","398","1","3","0","0","5","1","7","1","2","6","ENTITY/Tokyo National Museum Garden",""
+"Tokyo National Museum Hyokeikan","ChIJa99w4YKOGGAR6kI8HfHgq1Y","979","0","6","0","2","8","1","19","5","6","6","ENTITY/Tokyo National Museum Hyokeikan",""
+"Okakura Tenshin Memorial Park","ChIJtfJTldONGGARkAvmSAA2ax4","121","1","5","2","2","6","2","14","0","3","5","ENTITY/Okakura Tenshin Memorial Park",""
+"Negishi Sampei Dō","ChIJkSxf5YCOGGARZ6c4Gy813gE","47","1","8","1","3","2","4","10","2","1","4","ENTITY/Negishi Sampei Dō",""
+"Asakura Museum Of Sculpture","ChIJeRYrbNSNGGAR0P33uymr9Ug","977","0","20","1","2","35","7","73","6","9","25","ENTITY/Asakura Museum Of Sculpture",""
+"Daimyo Clock Museum","ChIJSUsS7CyMGGARc6JcAnpvjjU","136","2","28","2","4","11","11","41","7","7","17","ENTITY/Daimyo Clock Museum",""
+"Kanei Ji Gojunoto (Five Story Pagoda)","ChIJ44cX4SeMGGARVGhUY_nOF4U","244","1","6","2","1","9","5","17","3","7","8","ENTITY/Kanei Ji Gojunoto (Five Story Pagoda)",""
+"Shingen Ji (Kishi Mojin Of Iriya)","ChIJ__-brpqOGGARpX31ZpieS-I","599","0","16","3","1","12","4","19","2","6","8","ENTITY/Shingen Ji (Kishi Mojin Of Iriya)",""
+"Zenshoan Temple","ChIJtbB5atONGGARS2lb1uRdhXw","284","0","4","0","4","5","3","17","2","3","4","ENTITY/Zenshoan Temple",""
+"Taitō City Calligraphy Museum","ChIJV9V04YCOGGAR1vJXsD-8tmc","272","1","2","1","2","2","5","11","1","0","7","ENTITY/Taitō City Calligraphy Museum",""
+"Tennōji Temple","ChIJ8fH0kNSNGGARRqPAgLpngyc","611","0","6","0","3","7","6","14","6","6","6","ENTITY/Tennōji Temple",""
+"Ueno Toshogu Peony Garden","ChIJAQC06SeMGGAR1OplI5VNONo","367","3","8","1","1","11","6","18","3","3","9","ENTITY/Ueno Toshogu Peony Garden",""
+"Kannōnji Temple","ChIJ18PKhtSNGGARqBnt1MDvTiI","166","1","8","1","2","4","4","23","5","4","13","ENTITY/Kannōnji Temple",""
+"Meioin","ChIJl7MDXNONGGARpiNX94UXcsE","45","0","3","0","1","2","4","10","1","0","5","ENTITY/Meioin",""
+"Jomyoin","ChIJRaAb3IGOGGAR-mrsT4mlvLc","231","0","8","0","2","7","5","16","3","3","3","ENTITY/Jomyoin",""
+"Tennōji Temple","ChIJVVUKJdWNGGARqrxX5wMcmrA","38","0","0","0","1","0","2","5","2","0","0","ENTITY/Tennōji Temple",""
+"Choshiyozandaio Temple","ChIJu46PTSqMGGAR-Bn_zKmdO0M","48","4","6","5","11","9","13","24","10","5","12","ENTITY/Choshiyozandaio Temple",""
+"Ryogonji","ChIJXyuq8tSNGGAR8dILo0n-hY0","30","1","11","1","4","6","4","11","2","3","9","ENTITY/Ryogonji",""
+"Tennoji Park","ChIJl6EKrtWNGGARjKIK9cEvKjc","29","0","4","0","1","2","3","4","1","2","2","ENTITY/Tennoji Park",""
+"Ono Terusaki Shrine","ChIJb8HIjY-OGGARSuIM_AjFxyY","1703","1","9","1","4","16","2","30","1","8","12","ENTITY/Ono Terusaki Shrine",""
+"Yanaka Shimizuchō Park","ChIJ-ZqYxiuMGGARrOVi78aVb3U","83","2","4","1","0","2","4","8","0","1","3","ENTITY/Yanaka Shimizuchō Park",""
+"Tokyo National Museum The Gallery Of Horyuji Treasures","ChIJEX3XFIOOGGARg_LSzKHontE","793","2","8","0","1","5","5","12","2","6","3","ENTITY/Tokyo National Museum The Gallery Of Horyuji Treasures",""
+"Taito Kuritsu Uguisudani Park","ChIJOU_b9YSOGGARyQ5htyCiCl4","196","1","4","0","0","7","2","8","1","3","7","ENTITY/Taito Kuritsu Uguisudani Park",""
+"Kokozan Daienji Temple","ChIJ46uNANONGGAReLVaK5nURuI","48","0","6","0","4","6","2","21","2","4","7","ENTITY/Kokozan Daienji Temple",""
+"Negishi No Sato Fire Prevention Ground","ChIJhaTZwoWOGGAR8yISke56uCM","106","5","8","5","7","4","6","12","5","7","6","ENTITY/Negishi No Sato Fire Prevention Ground",""
+"Gyokurinji","ChIJZ8McbiyMGGARdrglQN4Unag","132","1","4","0","2","2","3","9","2","1","3","ENTITY/Gyokurinji",""
+"Ueno Park","ChIJadyf49CNGGARSk1qaqg8Hc0","39","3","4","1","0","5","5","12","1","3","3","ENTITY/Ueno Park",""
+"Hatsune Children'S Playground","ChIJiZSktdONGGARuKSuZtQOJng","21","3","7","3","5","9","9","16","5","4","8","ENTITY/Hatsune Children'S Playground",""
+"Rinkōji","ChIJPZwEXCyMGGARi1hVtQtPgk4","36","0","3","0","2","2","2","7","1","0","4","ENTITY/Rinkōji",""
+"Yanaka Ginza","ChIJPYwFnNGNGGARYEeXwiYQPe8","9794","4","13","3","3","12","8","25","1","4","12","ENTITY/Yanaka Ginza",""
+"Steam Locomotive D51 231, National Museum Of Nature And Science","ChIJaw8N5pyOGGARStuEa0S_PVE","47","0","1","1","2","2","4","5","2","1","2","ENTITY/Steam Locomotive D51 231, National Museum Of Nature And Science",""
+"Hōshō Ji (Vaiśravaṇa)","ChIJ7x6Q4I-OGGARNugq4WRkQVc","64","0","2","0","4","2","3","15","4","1","3","ENTITY/Hōshō Ji (Vaiśravaṇa)",""
+"Sensō Ji","ChIJ8T1GpMGOGGARDYGSgpooDWw","77420","2","23","2","4","20","9","45","3","13","19","ENTITY/Sensō Ji",""
+"Asakusa Hanayashiki","ChIJPXcZIsCOGGARsYimyXoHsms","6122","1","18","1","2","13","5","22","1","5","15","ENTITY/Asakusa Hanayashiki",""
+"Ichiyo Memorial Museum","ChIJ75oaN42OGGAR2l6KUhqZ7q4","377","2","5","0","0","5","3","21","3","2","3","ENTITY/Ichiyo Memorial Museum",""
+"Yoshiwara Shrine","ChIJd3MqzZKOGGARjvccr6lPos8","1061","0","2","0","1","2","1","7","0","2","3","ENTITY/Yoshiwara Shrine",""
+"Asakusa Mosque","ChIJJWVr5uiOGGARPSpcQzDRSzY","406","0","6","0","4","8","3","12","4","8","9","ENTITY/Asakusa Mosque",""
+"Sanyabori Park","ChIJLxG1LN2OGGAReBajvFvv95s","196","0","6","0","0","6","1","10","1","4","5","ENTITY/Sanyabori Park",""
+"Imado Shrine","ChIJowLlTd2OGGARR-BEdamTD5w","3611","0","10","0","1","10","3","26","3","5","6","ENTITY/Imado Shrine",""
+"Matsuchiyamashoten Park","ChIJE62UxMKOGGARu94hiDn4FCM","743","0","4","0","0","6","1","10","2","2","4","ENTITY/Matsuchiyamashoten Park",""
+"Shōtarō Ikegami Birthplace","ChIJgc1_3sKOGGARg0aY0DYbHgU","32","12","4","1","17","5","11","18","4","1","8","ENTITY/Shōtarō Ikegami Birthplace",""
+"Hikan Inari Shrine","ChIJ__-rmsGOGGARy_t9D0Zvd7k","152","1","6","2","2","7","4","14","1","3","11","ENTITY/Hikan Inari Shrine",""
+"Asakusa Shrine","ChIJx62FmcGOGGARDxQTl8Zx6U4","4220","0","14","3","5","22","2","49","2","6","22","ENTITY/Asakusa Shrine",""
+"Senso Ji Nitemmon Gate","ChIJAQAMd8GOGGAR945X-Jjf2ug","287","0","4","0","0","4","0","9","0","3","8","ENTITY/Senso Ji Nitemmon Gate",""
+"Chōkokuji Temple","ChIJhenvlZKOGGARmONM_iAuJQg","203","0","4","1","1","3","1","8","0","0","4","ENTITY/Chōkokuji Temple",""
+"Matsuchiyama Shoden","ChIJS50K18KOGGARx4D8Zs9NA0Q","1565","2","13","1","3","21","4","32","3","5","13","ENTITY/Matsuchiyama Shoden",""
+"Benten Dō","ChIJVVU6QsGOGGARv4gvT9bniTM","109","0","1","0","2","4","4","9","1","1","6","ENTITY/Benten Dō",""
+"Tamahime Inari Shrine","ChIJ0b4_wO-OGGARKzSB99Oi6cQ","432","6","15","4","8","11","14","23","6","8","5","ENTITY/Tamahime Inari Shrine",""
+"Taito Kuritsu Chigusa Park","ChIJ4RA0b-yOGGARAqDsTvJXrrI","31","0","2","1","2","2","4","4","0","0","4","ENTITY/Taito Kuritsu Chigusa Park",""
+"Taito Kuritsu Nihonzutsumi Park","ChIJ_Qjrge6OGGAR9e5TmRC2YAM","59","1","4","2","0","8","4","14","0","3","6","ENTITY/Taito Kuritsu Nihonzutsumi Park",""
+"Looking Back Willow Tree","ChIJXeZxx-2OGGARLzD9wTfbjWw","88","11","23","10","1","20","7","44","6","12","24","ENTITY/Looking Back Willow Tree",""
+"Yoshiwara Daimon Gatesite","ChIJNXDIoO2OGGAR2ZzkX9D7Z6s","147","1","5","2","7","1","9","15","3","3","15","ENTITY/Yoshiwara Daimon Gatesite",""
+"Taito Kuritsu Kyomachi Park","ChIJudHO5-yOGGART4pJUqueB10","34","0","9","0","0","8","3","13","0","4","6","ENTITY/Taito Kuritsu Kyomachi Park",""
+"Ashita No Joe Statue","ChIJIYvuju2OGGARc88PwN3tuck","300","7","9","4","10","9","13","23","9","5","6","ENTITY/Ashita No Joe Statue",""
+"Yoshiwara Park","ChIJaeC1ZO2OGGARGvFDbP1S5Ig","238","0","4","1","0","4","3","7","1","2","4","ENTITY/Yoshiwara Park",""
+"Yoshiwara Benten","ChIJs9x-LJOOGGARnICadn_YsD4","142","0","1","0","0","3","2","7","0","2","1","ENTITY/Yoshiwara Benten",""
+"Akebonoyu","ChIJ__-v_eqOGGARP-g-UY8HvTc","614","2","6","0","3","7","8","18","3","4","8","ENTITY/Akebonoyu",""
+"Senzoku Park","ChIJL9BFN-uOGGAR1WvHC2b-V08","226","0","2","0","0","4","0","8","0","2","3","ENTITY/Senzoku Park",""
+"Ichiyō Memorial Park","ChIJPTrBOY2OGGARZ3FV2aVP0OE","65","2","2","2","0","1","5","5","0","0","1","ENTITY/Ichiyō Memorial Park",""
+"Taitokuritsu Ishihama Park","ChIJod_77-WOGGARfDKUw36P99M","106","0","0","1","2","1","3","5","1","0","3","ENTITY/Taitokuritsu Ishihama Park",""
+"Keiyoji","ChIJdz96ysKOGGARKb3L072KGLY","28","3","8","3","4","12","5","20","5","7","8","ENTITY/Keiyoji",""
+"Tamahime Park","ChIJ5QDC6e-OGGARjD6eEBPoef0","113","5","12","8","9","3","19","19","11","4","4","ENTITY/Tamahime Park",""
+"Taito Kuritsu Imado Park","ChIJuywQdOeOGGARO8tywE4uAws","44","2","5","3","0","3","4","6","0","2","5","ENTITY/Taito Kuritsu Imado Park",""
+"Taito Kuritsu Kiyokawa Park","ChIJy4t8iu-OGGARP_u54dJonGg","26","0","3","1","0","4","4","9","0","1","2","ENTITY/Taito Kuritsu Kiyokawa Park",""
+"Rokkakudo","ChIJk8U1tcGOGGARxSRnjWHkgn0","52","0","3","0","2","3","1","14","0","2","7","ENTITY/Rokkakudo",""
+"Stone Bridge","ChIJyb-7scGOGGAR5SoLDkUi6G0","60","1","6","0","3","5","6","10","1","1","4","ENTITY/Stone Bridge",""
+"Manryuji Temple","ChIJq6oaHJWOGGARsfxL-2KP8fE","47","1","0","0","1","2","4","6","2","1","4","ENTITY/Manryuji Temple",""
+"Awashima Do","ChIJJ9sySMCOGGARGHOrLXVqYVM","48","1","20","0","15","17","11","42","10","12","22","ENTITY/Awashima Do",""
+"Shōtōji","ChIJy7RgxI2OGGARo6lmdVtPMgk","31","2","7","2","2","4","3","15","4","3","4","ENTITY/Shōtōji",""
+"Meijiya","ChIJO4OG4y6PGGARByNx6CQthOg","218","4","9","2","1","10","3","14","2","8","8","ENTITY/Meijiya",""
+"Purification Fountain","ChIJTSL9CcGOGGARlLeKWJfm55Y","137","3","6","2","2","6","6","15","1","1","9","ENTITY/Purification Fountain",""
+"Great Tokyo Air Raid Memorial Monument","ChIJT4swQsOOGGARreAJ-lYBsx4","114","7","4","2","8","0","9","2","5","5","1","ENTITY/Great Tokyo Air Raid Memorial Monument",""
+"Tousei Koen Park","ChIJpapNroyOGGARv2sRrYLIZig","170","0","3","1","0","2","1","4","0","2","2","ENTITY/Tousei Koen Park",""
+"Incense Burner","ChIJ-4V5p8GOGGARNIKo0_EknZY","73","5","2","0","1","3","5","5","0","1","2","ENTITY/Incense Burner",""
+"Iko In","ChIJY1Hqrr6OGGARXeZrebcsxqQ","21","1","7","0","3","5","2","18","0","2","10","ENTITY/Iko In",""
+"Higashi Hongan Ji","ChIJVQ12Xr6OGGARPHTDfGa-Jy4","845","1","6","3","1","9","1","22","2","3","9","ENTITY/Higashi Hongan Ji",""
+"TODAYS GALLERY STUDIO.","ChIJbSg3G7COGGARc_1E9gP_mUM","422","3","5","0","1","4","8","17","0","3","6","ENTITY/TODAYS GALLERY STUDIO.",""
+"Nishimachi Park","ChIJ4fDXc6KOGGARJW_-GdpFW-g","257","0","3","1","0","2","2","4","1","2","2","ENTITY/Nishimachi Park",""
+"Okachimachi Park","ChIJ61Rzd6GOGGARbRLrxf3VoJQ","523","1","5","1","1","5","3","9","3","2","6","ENTITY/Okachimachi Park",""
+"Kotobuki Yu","ChIJ-0tAIpiOGGARkARnNsXzZW8","2869","5","11","3","6","9","16","41","3","3","23","ENTITY/Kotobuki Yu",""
+"Kuramae Water House","ChIJq6ohZraOGGARB27xpk-kktk","33","2","10","8","5","4","13","18","4","4","14","ENTITY/Kuramae Water House",""
+"Honkakuji","ChIJny4MGJaOGGARDT8m_HrU6B8","78","0","6","3","1","4","6","18","1","3","6","ENTITY/Honkakuji",""
+"Shitaya Shrine","ChIJz-3ScJiOGGARmxnMARIPu5M","1871","1","16","1","3","13","5","24","5","4","17","ENTITY/Shitaya Shrine",""
+"Okachimachi Panda Square","ChIJw1EAFqCOGGARYU5JCUW0KHo","915","0","5","0","0","3","1","5","0","2","0","ENTITY/Okachimachi Panda Square",""
+"Torigoe Shrine","ChIJj22YYbCOGGARKeCpknTJmTU","1458","1","7","1","1","4","2","17","0","4","4","ENTITY/Torigoe Shrine",""
+"Eishoji","ChIJOU-4BJiOGGARcLO_2zig5-0","42","6","2","0","4","2","6","14","2","2","4","ENTITY/Eishoji",""
+"Chōenji","ChIJ_bnhI72OGGARzU4ewtf-xns","32","0","7","4","5","11","9","32","3","4","16","ENTITY/Chōenji",""
+"Dairokuten Sakaki Shrine","ChIJv9y4o7aOGGAR6wUCd3Oraw4","321","0","5","1","1","6","3","7","2","3","8","ENTITY/Dairokuten Sakaki Shrine",""
+"Kuramae Shrine","ChIJnSJkkreOGGARyDX_3LuR2MI","786","3","5","3","0","11","3","17","2","6","7","ENTITY/Kuramae Shrine",""
+"St. Paul Catholic Asakusa Church","ChIJqxvkiq-OGGARZK1ZKEnxOs4","116","2","12","1","3","17","8","21","4","2","15","ENTITY/St. Paul Catholic Asakusa Church",""
+"Kojima Park","ChIJT0gPOLuOGGARdYZTDEV8Rmk","163","1","4","0","1","4","3","7","2","1","3","ENTITY/Kojima Park",""
+"Takecho Park","ChIJtap-gaOOGGARRS7B2vIjX8o","495","0","2","2","0","3","3","5","1","1","2","ENTITY/Takecho Park",""
+"Taito Kuritsu Kikuyabashi Park","ChIJNwlHbbyOGGARaBsJzk1X14s","79","3","10","0","3","6","5","13","4","3","6","ENTITY/Taito Kuritsu Kikuyabashi Park",""
+"Taito Kuritsu Seika Park","ChIJAQDZRLeOGGARx7o7aPHM48A","186","0","9","1","0","10","2","22","1","4","8","ENTITY/Taito Kuritsu Seika Park",""
+"Seikyōji","ChIJtwIl_ryOGGARmh8t3ysuGH0","50","5","13","2","12","10","13","46","15","7","26","ENTITY/Seikyōji",""
+"Shofukuin","ChIJUW_Mrr2OGGAReMh_2aiphnk","29","0","4","0","0","5","1","15","0","1","13","ENTITY/Shofukuin",""
+"Site Of Former Asakusa Astronomical Observatory","ChIJH5MNzraOGGARxfREQL9yMms","52","1","2","0","3","2","4","6","3","0","2","ENTITY/Site Of Former Asakusa Astronomical Observatory",""
+"Honpō Ji","ChIJkVKA0r6OGGAR_QF9SLf0t7M","45","12","7","5","19","12","23","38","16","7","15","ENTITY/Honpō Ji",""
+"Ryuhoku Park","ChIJ7_knzq-OGGARL9cOPAJVWuE","263","0","10","0","1","10","3","27","1","6","8","ENTITY/Ryuhoku Park",""
+"Kuramae Park","ChIJWQSdSLaOGGARk7qGNVyECxI","73","0","12","1","2","18","5","39","1","3","15","ENTITY/Kuramae Park",""
+"Mikuramae Park","ChIJZan1oraOGGAR8OItyGCXJEo","63","1","2","1","5","1","10","3","2","2","2","ENTITY/Mikuramae Park",""
+"Marishiten Tokudaiji Temple","ChIJR1htlJ-OGGARjfsjO9H637Y","1318","1","7","0","2","7","4","16","3","3","8","ENTITY/Marishiten Tokudaiji Temple",""
+"Matsuba Park","ChIJH0PD7r2OGGAR5F3NYQnIB1E","305","0","8","1","0","7","5","11","1","4","5","ENTITY/Matsuba Park",""
+"Higashi Ueno Koreantown","ChIJ91AOQ5-OGGAR9bcMiP7h1HU","79","5","23","5","5","24","8","46","7","12","20","ENTITY/Higashi Ueno Koreantown",""
+"Sōun In","ChIJZ_QS_piOGGARQKX7QqwxFgM","48","3","6","4","1","10","6","18","2","4","11","ENTITY/Sōun In",""
+"Tawara Park","ChIJTSiGpriOGGARsxUYehGgzMA","69","1","1","4","0","0","7","2","0","0","1","ENTITY/Tawara Park",""
+"Senshō Ji","ChIJId2zGr-OGGARCHc6jzamHF0","28","0","2","0","1","4","1","6","1","1","5","ENTITY/Senshō Ji",""
+"Miyamoto Unosuke Drum Museum","ChIJF0FrzcaOGGARPrSfUYaGYH4","120","0","10","0","2","10","3","16","0","1","7","ENTITY/Miyamoto Unosuke Drum Museum",""
+"FAN FUN STREET","ChIJ_aaSDr2PGGARPxIxuSYJaoQ","34","1","4","0","0","5","0","9","0","3","4","ENTITY/FAN FUN STREET",""
+"Genkūji","ChIJNywWDJeOGGARwoXsf30W6FI","63","1","4","1","1","4","1","12","1","1","5","ENTITY/Genkūji",""
+"Ueno Ameyoko Shopping Street","ChIJh7eDrwCPGGARCs9fpCkKS2U","7006","1","9","2","4","6","3","20","2","2","5","ENTITY/Ueno Ameyoko Shopping Street",""
+"Shitamachi Museum","ChIJC3FkniCMGGAR4N263rFJ6mQ","1358","0","9","0","0","6","4","21","4","6","10","ENTITY/Shitamachi Museum",""
+"Gojoten Shrine","ChIJZWwXnSeMGGAR6GqEjdQ3zZ8","1300","1","8","1","3","7","3","17","2","2","14","ENTITY/Gojoten Shrine",""
+"Statue Of Saigo Takamori","ChIJTzetDJ6OGGAR0KdwKu0sknI","1815","8","4","2","12","4","15","27","8","3","9","ENTITY/Statue Of Saigo Takamori",""
+"Former Iwasaki Kayacho Mansion And Gardens","ChIJ7x2-BSSMGGARahVDg6WIAag","3020","1","5","1","1","14","2","27","2","4","7","ENTITY/Former Iwasaki Kayacho Mansion And Gardens",""
+"Great Buddha, Ueno Park","ChIJj9xBfZ2OGGARNImldpTTCEo","1229","5","7","2","6","6","5","12","5","8","7","ENTITY/Great Buddha, Ueno Park",""
+"Hanazono Inari Shrine","ChIJxTzgfieMGGARGw0pm6dhKKw","721","0","6","0","0","6","2","14","0","6","7","ENTITY/Hanazono Inari Shrine",""
+"Shinobazu Pond","ChIJo8VKlCCMGGARarjlIsaLY1g","7935","2","15","1","3","20","9","38","4","7","14","ENTITY/Shinobazu Pond",""
+"Sogenji Temple","ChIJO3uQ-paOGGARFgpuYcwaYLQ","126","0","6","1","2","4","0","9","0","2","3","ENTITY/Sogenji Temple",""
+"Kiyomizu Kannon Dō Temple","ChIJ9Rg_5Z2OGGAR40HN7lsM5_U","1284","4","14","4","7","14","7","36","4","15","15","ENTITY/Kiyomizu Kannon Dō Temple",""
+"Shinobazunoike Benten Do","ChIJd9rFFieMGGAR0zV_avi5q-8","2853","1","7","2","2","6","7","21","1","2","9","ENTITY/Shinobazunoike Benten Do",""
+"Boat Dock, Ueno Park","ChIJd9rFFieMGGARleZ3ugud8V0","267","4","14","0","2","11","9","21","0","2","7","ENTITY/Boat Dock, Ueno Park",""
+"Suribachiyama, Ueno Park","ChIJc3rDmZ2OGGARajnPsB7OrmA","110","2","8","1","3","3","13","21","6","2","7","ENTITY/Suribachiyama, Ueno Park",""
+"Children’S Zoo STEP","ChIJgcbQoieMGGARtTWq26vIb9o","27","1","13","7","2","8","15","22","4","5","11","ENTITY/Children’S Zoo STEP",""
+"Kita Ueno Children'S Playground","ChIJwdAABJqOGGAReNgzTSmh7u0","78","0","5","1","0","7","3","15","0","1","4","ENTITY/Kita Ueno Children'S Playground",""
+"Daikokutendo","ChIJn8aLEyeMGGAR4PFykKlB1_M","310","0","2","0","0","2","1","6","0","1","3","ENTITY/Daikokutendo",""
+"Taito Kuritsu Yamabushi Park","ChIJqXNVpZCOGGARM049qViOtjI","120","0","2","1","0","3","3","6","0","0","4","ENTITY/Taito Kuritsu Yamabushi Park",""
+"Shin Sakamoto Children'S Playground","ChIJoxv47JCOGGAR1cywiHx15Tc","28","4","14","3","4","16","12","25","0","4","14","ENTITY/Shin Sakamoto Children'S Playground",""
+"Iriya South Park","ChIJzRXrK5GOGGARKnvUjdq5EpE","577","1","6","1","3","9","5","14","4","6","8","ENTITY/Iriya South Park",""

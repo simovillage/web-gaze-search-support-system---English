@@ -37,7 +37,7 @@ export const KeywordModalPresenter = ({
             ✕
           </button>
         </form>
-        <div className="flex items-center justify-between">
+        <div className="space-y-5 justify-between">
           <KeywordList
             title="Keywords related to text"
             keywordType="textRelatedKeywords"

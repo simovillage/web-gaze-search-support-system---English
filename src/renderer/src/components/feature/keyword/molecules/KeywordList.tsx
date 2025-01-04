@@ -27,12 +27,12 @@ export const KeywordListPresenter = ({
       <h2>{title}</h2>
       <div>
         {keywordStates.map(({ keyword, checked }, index) => (
-          <div key={keyword} className="form-control">
+          <div key={keyword} className="flex flex-col items-start">
             <label className="label cursor-pointer">
               <input
                 type="checkbox"
                 checked={checked}
-                className="checkbox"
+                className="checkbox mr-5" // 右に余白を設定
                 onChange={handleChange(index)}
               />
               <span className="label-text">{keyword}</span>
