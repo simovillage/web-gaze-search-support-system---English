@@ -24,10 +24,10 @@ nltk_resources = {
 for resource, path in nltk_resources.items():
     try:
         nltk.data.find(f"{path}")
-        # print(f"{resource} is already downloaded")
+
     except LookupError:
         nltk.download(resource)
-        # print(f"{resource} download complete")
+
 
 stop_words = set(stopwords.words("english"))
 
@@ -40,16 +40,35 @@ def extract_words(text: str):
     # 品詞タグ付け
     tagged_words = pos_tag(words)
 
+    # 無視する言葉
+    ignore_words = [
+    "Said", "Inner", "JPY", "Treajure", "Siences", "Giant", "Bengal", "Visitors", "Considered",
+    "Today", "Year", "Attractions", "Travel", "Japan", "Thunder", "Minami", "Treasure",
+    "April", "May", "June", "November", "October", "Spring", "Autumn", "February", "March",
+    "White", "Grand", "New", "National", "Public", "Natural", "Western", "Civil",
+    "Prefecture", "Main", "First", "Dance", "Festival", "Art", "Museum", "Castle",
+    "River", "Park", "Temple", "Gate", "Hall", "Foundation", "Ceremony", "Day",
+    "Period", "Admission", "House", "Photo", "Tea", "Garden", "Well", "Lake", "Zoo",
+    "Exit", "Tiger", "Panda", "Gorilla", "Emperor", "Empress", "Manuel", "Shoken",
+    "Sean", "David", "Kengo", "Marshall", "Shrine", "CC", "BY-NC",
+    "BY-NC-ND"
+    ]
+
     # 重要な品詞の抽出（名詞、動詞、形容詞）
     # word.lower → 単語を小文字化する
     important_words = [
-        word
-        for word, tag in tagged_words
+        word for word, tag in tagged_words
         if tag.startswith(("NN", "VB", "JJ")) and word.lower() not in stop_words
     ]
 
-    # 固有名詞の抽出
-    proper_nouns = [word for word, tag in tagged_words if tag.startswith("NNP")]
+    # 固有名詞の抽出（記号や一般名詞を除外）
+    proper_nouns = [
+        word for word, tag in tagged_words
+        if tag.startswith("NNP") and word.isalpha() and word[0].isupper() and word not in ignore_words
+    ]
+
+    # 重複を削除
+    proper_nouns = list(set(proper_nouns))
 
     return {
         "words": important_words,
@@ -98,7 +117,6 @@ model = KeyedVectors.load("src/main/models/w2v/wikipedia2vec_model.kv", mmap="r"
 def find_top_similar_words(words):
     # モデルの語彙にある単語のみを含むリストを作成
     filtered_words = [word for word in words if word in model.key_to_index]
-    # print(filtered_words)
 
     # 類似度スコアを格納するための辞書
     similarity_scores = {}
@@ -120,61 +138,19 @@ def find_top_similar_words(words):
 
     return top_5_words
 
-"""
-def find_similar_by_vector(words):
-    # トップ5単語のベクトルを加算
-    aggregate_vector = np.sum([model[word] for word in words], axis=0)
-
-    # 加算されたベクトルに最も類似した単語を5個選択（ただし、元の単語は除く）
-    similar_words = model.similar_by_vector(aggregate_vector, topn=10)
-
-    # 元のトップ5に含まれる単語は除外
-    result_words = [word for word, similarity in similar_words if word not in words][:5]
-
-    return result_words
-"""
 def find_similar_by_vector(words):
     words = [word.lower() for word in words]  # 小文字化
-    # print(f"Input words (lowercased): {words}")
 
-    # ENTITY/ を付与して語彙に合わせる
-    # formatted_words = [f"ENTITY/{word}" for word in words]
-    # filtered_words = [word for word in formatted_words if word in model.key_to_index]
     filtered_words = [word for word in words if word in model.key_to_index]
-    # デバッグ用 - filtered wordsを表示
-    # print(f"Filtered words: {filtered_words}")
-
-    #デバッグ用 - filtered_wordsが存在しなかった場合、default_wordを返す
-    if not filtered_words:
-        # print("No words found in the model vocabulary. Returning default value.")
-        return ["default_word"]  # デフォルト処理
 
     aggregate_vector = np.sum([model[word] for word in filtered_words], axis=0)
-    # デバッグ用 - aggregate vectorを表示
-    # print(f"Aggregate vector shape: {aggregate_vector.shape}")
-
-    # デバッグ用 - Aggregate vectorが0の場合、default_wordを返す
-    if np.all(aggregate_vector == 0):
-        # print("Aggregate vector is zero. Returning default value.")
-        return ["default_word"]
 
     similar_words = model.similar_by_vector(aggregate_vector, topn=10)
-    # デバッグ用 - similar wordsを表示
-    # print(f"Similar words: {similar_words}")
-    # デバッグ用 - similar wordsが0の場合、default_wordを返す
-    if not similar_words:
-        # print("No similar words found. Returning default value.")
-        return ["default_word"]
 
     result_words = [
         word for word, similarity in similar_words
         if word not in filtered_words
     ][:5]
-
-    # デバッグ用 - result wordsが0の場合、default_wordを返す
-    if not result_words:
-        # print("Result words is empty. Returning default value.")
-        return ["default_word"]
 
     return result_words
 
@@ -191,10 +167,7 @@ def find_similar_tourism_spots(
 
     tourism_spots_df = pd.read_csv(
         "src/main/csv/Tokyo_spots_en_ja.csv"
-        # 家用
-        # "D:\senpaisystem\src\main\csv\Tokyo_spots_en_ja.csv"
     )
-    # tokyo_tourism_spot_df = tourism_spots_df[tourism_spots_df["Ward"]]
 
     # 観光地名を小文字化
     tokyo_tourism_spot_names = tourism_spots_df["wikipedia2VecVocab"].astype(str)
@@ -214,19 +187,13 @@ def find_similar_tourism_spots(
     similar_spot_names = []
     for _ in range(15):
         if not filtered_tokyo_tourism_spot_names:
-            # print("Filtered tourism spot names is empty. Stopping iteration.")
             break  # 空ならループを終了
-
-        # execution_count += 1  # 実行回数をインクリメント
-        # print(f"Finding most similar to: {proper_noun}")
-        # print(f"Candidates: {filtered_tokyo_tourism_spot_names}")
 
         # 最も類似した観光地を取得
         similar_spot_name = model.most_similar_to_given(
             proper_noun,
             filtered_tokyo_tourism_spot_names,
         )
-        # print(f"Most similar spot found: {similar_spot_name}")
         similar_spot_names.append(similar_spot_name)
 
         filtered_tokyo_tourism_spot_names.remove(similar_spot_name)
@@ -235,7 +202,6 @@ def find_similar_tourism_spots(
     similar_spot_df = tourism_spots_df[
         tourism_spots_df["wikipedia2VecVocab"].isin(similar_spot_names)
     ].reset_index(drop=True)
-    # print(f"Total executions of the loop: {execution_count}")
 
     # 感情スコアのカラムを選択
     emotion_cols = [
@@ -299,11 +265,8 @@ texts = list(map(lambda text: " ".join(text["words"]), texts))
 tfidfs, terms = calc_tfidf_for_proper_nouns(texts)
 
 top_5_words = find_top_similar_words(terms)
-# print(top_5_words)
 similar_words = find_similar_by_vector(top_5_words)
-# print(similar_words)
 similar_spots = find_similar_tourism_spots(article_title, top_5_words, similar_words)
-# print(similar_spots)
 
 
 print(

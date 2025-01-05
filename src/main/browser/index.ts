@@ -270,7 +270,7 @@ await frame.evaluate(() => {
 
       const isFitIntention = await page.evaluate(() => {
         return window.confirm(
-          'ただいま閲覧したページはタスクや興味に適していましたか？'
+          'Was the page you just viewed appropriate for your task or interest?'
         );
       });
 
