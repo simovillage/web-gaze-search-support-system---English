@@ -42,17 +42,17 @@ def extract_words(text: str):
 
     # 無視する言葉
     ignore_words = [
-    "Said", "Inner", "JPY", "Treajure", "Siences", "Giant", "Bengal", "Visitors", "Considered",
-    "Today", "Year", "Attractions", "Travel", "Japan", "Thunder", "Minami", "Treasure",
+    "Said", "Inner", "JPY", "Treajure", "Visitors", "Considered",
+    "Today", "Year", "Attractions", "Travel", "Japan", "Tokyo",
+    "English", "Given", "People", "Station", 
     "April", "May", "June", "November", "October", "Spring", "Autumn", "February", "March",
-    "White", "Grand", "New", "National", "Public", "Natural", "Western", "Civil",
-    "Prefecture", "Main", "First", "Dance", "Festival", "Art", "Museum", "Castle",
-    "River", "Park", "Temple", "Gate", "Hall", "Foundation", "Ceremony", "Day",
-    "Period", "Admission", "House", "Photo", "Tea", "Garden", "Well", "Lake", "Zoo",
-    "Exit", "Tiger", "Panda", "Gorilla", "Emperor", "Empress", "Manuel", "Shoken",
-    "Sean", "David", "Kengo", "Marshall", "Shrine", "CC", "BY-NC",
-    "BY-NC-ND"
+    "New","Prefecture", "Main", "First",
+    "River", "Gate", "Hall", "Foundation", "Ceremony", "Day",
+    "Period", "Admission", "House", "Photo", "Tea", "Well", 
+    "Exit", "Manuel", "Sean", "David", "Marshall", "CC", "BY-NC", "BY-NC-ND"
     ]
+
+
 
     # 重要な品詞の抽出（名詞、動詞、形容詞）
     # word.lower → 単語を小文字化する
@@ -113,7 +113,14 @@ def calc_tfidf_for_proper_nouns(texts):
 # 学習済みのWord2Vecモデルの読み込み
 model = KeyedVectors.load("src/main/models/w2v/wikipedia2vec_model.kv", mmap="r")
 
+# 結果から日本語をはじくためのフィルター
+def contains_japanese(word):
+    for char in word:
+        if '\u3040' <= char <= '\u30FF' or '\u4E00' <= char <= '\u9FFF':
+            return True
+    return False
 
+# 本文から関連するワードを抽出
 def find_top_similar_words(words):
     # モデルの語彙にある単語のみを含むリストを作成
     filtered_words = [word for word in words if word in model.key_to_index]
@@ -133,11 +140,12 @@ def find_top_similar_words(words):
         similarity_scores[word] = similarity
 
     # 平均類似度が高い上位5単語を選択
-    top_5_words = sorted(similarity_scores, key=similarity_scores.get, reverse=True)[:5]
-    top_5_words = [word.lower() for word in top_5_words]
+    top_5_words = sorted(similarity_scores, key=similarity_scores.get, reverse=True)[:10]
+    top_5_words = [word.lower() for word in top_5_words if not contains_japanese(word)]
 
     return top_5_words
 
+#　上記ワードの加算したベクトルに似てるベクトルを持つワードを抽出
 def find_similar_by_vector(words):
     words = [word.lower() for word in words]  # 小文字化
 
@@ -148,8 +156,8 @@ def find_similar_by_vector(words):
     similar_words = model.similar_by_vector(aggregate_vector, topn=10)
 
     result_words = [
-        word for word, similarity in similar_words
-        if word not in filtered_words
+        word for word,similarity in similar_words
+        if word not in filtered_words and not contains_japanese(word)
     ][:5]
 
     return result_words
@@ -160,7 +168,8 @@ def find_similar_by_vector(words):
 def find_similar_tourism_spots(
     article_title: str, top_5_words: list[str], similar_words: list[str]
 ):
-    proper_nouns = [noun.lower() for noun in extract_words(article_title)["proper_nouns"]]
+    # proper_nouns = [noun.lower() for noun in extract_words(article_title)["proper_nouns"]]
+    proper_nouns = [noun[0] for noun in similar_words]
     if len(proper_nouns) == 0:
         proper_nouns = top_5_words
     proper_noun = proper_nouns[0]
@@ -169,7 +178,7 @@ def find_similar_tourism_spots(
         "src/main/csv/Tokyo_spots_en_ja.csv"
     )
 
-    # 観光地名を小文字化
+    # 観光地名を取得
     tokyo_tourism_spot_names = tourism_spots_df["wikipedia2VecVocab"].astype(str)
 
     filtered_tokyo_tourism_spot_names = [
