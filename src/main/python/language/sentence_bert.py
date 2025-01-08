@@ -39,24 +39,6 @@ class SentenceBertEnglish:
         # Tensorのリストをスタックして返す
         return torch.stack(all_embeddings)
 
-"""
-    @torch.no_grad()
-    def encode(self, sentences, batch_size=8):
-        all_embeddings = []
-        iterator = range(0, len(sentences), batch_size)
-        for batch_idx in iterator:
-            batch = sentences[batch_idx : batch_idx + batch_size]
-
-            # モデルに入力をエンコードして埋め込みを取得する
-            sentence_embeddings = self.model.encode(batch, show_progress_bar=False)
-
-            all_embeddings.extend(sentence_embeddings)
-
-        # return torch.stack(all_embeddings).numpy()
-        return torch.stack(all_embeddings)
-"""
-
-
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 model = SentenceBertEnglish(MODEL_NAME)
 

@@ -40,6 +40,7 @@ def extract_words(text: str):
     # 品詞タグ付け
     tagged_words = pos_tag(words)
 
+    """
     # 無視する言葉
     ignore_words = [
     "Said", "Inner", "JPY", "Treajure", "Visitors", "Considered",
@@ -51,6 +52,7 @@ def extract_words(text: str):
     "Period", "Admission", "House", "Photo", "Tea", "Well", 
     "Exit", "Manuel", "Sean", "David", "Marshall", "CC", "BY-NC", "BY-NC-ND"
     ]
+    """
 
 
 
@@ -64,7 +66,7 @@ def extract_words(text: str):
     # 固有名詞の抽出（記号や一般名詞を除外）
     proper_nouns = [
         word for word, tag in tagged_words
-        if tag.startswith("NNP") and word.isalpha() and word[0].isupper() and word not in ignore_words
+        if tag.startswith("NNP") and word.isalpha() and word[0].isupper() and word # not in ignore_words
     ]
 
     # 重複を削除
