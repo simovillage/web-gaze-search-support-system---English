@@ -9,10 +9,15 @@ import {
 } from '@src/main/constants';
 import puppeteer from 'puppeteer';
 
+/* 要素取得周りの処理 
+   保存されてないページであれば特定のdivタグから要素取得を行い保存する
+   Japan Travel内のみ有効
+*/
+
 // ページ内の要素の位置とサイズを取得する
 export const fetchPageElements = async (url: string) => {
   //デバッグ用
-  console.log('呼ばれました！！！要素の取得を開始します。');
+  //console.log('呼ばれました！！！要素の取得を開始します。');
 
   const browser = await puppeteer.launch({
     headless: 'new',
@@ -29,7 +34,8 @@ export const fetchPageElements = async (url: string) => {
   //隠された要素を表示してから要素を取得する
   // ターゲット要素が存在するか確認
   try {
-    console.log('要素を確認し、あれば表示します');
+    //デバッグ用
+    //console.log('要素を確認し、あれば表示します');
     const elementExists = await page.$('.spot-description__full-text');
     if (elementExists) {
       // スタイルを変更して要素を表示
@@ -55,7 +61,7 @@ export const fetchPageElements = async (url: string) => {
   */
 
   //デバッグ用
-  console.log('以下よりコンテンツの分析を開始します');
+  //console.log('以下よりコンテンツの分析を開始します');
   const elements: BrowserElement[] = await page.evaluate(
     (
       BLOCK_BOTTOM_OFFSET: number,

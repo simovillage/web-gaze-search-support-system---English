@@ -3,6 +3,10 @@ import { generateCaption } from '@src/main/libs/openai';
 import { store } from '@src/main/libs/store';
 import { suggestKeywords } from '@src/main/python/language';
 
+/* キーワード周りの処理
+　　最後のページでユーザが一番長く見ていた要素の特定や関数を使ってキーワードの提案を行う
+　　SuggestKeywords関数本体はpython/languageにある */
+
 export const suggest = async () => {
   const lastArticle = store
     .get('browser')

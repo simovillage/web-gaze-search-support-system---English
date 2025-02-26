@@ -1,3 +1,5 @@
+/* プログラムの動作に必要な情報を置いている場所 */
+
 // 必要なPythonのバージョン
 export const REQUIRED_PYTHON_VERSION = '3.10.0';
 

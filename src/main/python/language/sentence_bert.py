@@ -5,9 +5,9 @@ import torch
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
+###　要約文，最終ページで長く見ていた文章を比較しユーザの興味のある文章の抽出を行う ###
+
 # sentence-BERT英語モデルを使うためのクラス
-
-
 class SentenceBertEnglish:
     def __init__(self, model_name_or_path, device=None):
         # sentence Transformerを使用してモデルをロードする

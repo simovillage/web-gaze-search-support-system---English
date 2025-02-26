@@ -4,6 +4,8 @@ import sys
 from shapely.geometry import Point, Polygon
 from shapely.ops import unary_union
 
+### 注視判定面積の計算を行うプログラム ###
+
 
 def calculate_fill_ratio(points, rectangle_bounds, radius):
     """

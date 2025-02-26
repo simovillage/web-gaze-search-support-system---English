@@ -1,33 +1,53 @@
-# web-gaze-search-support-system
+# web-gaze-search-support-system - English
 
-視線情報を活用した Web 検索支援システム
+視線情報を活用した Web 検索支援システムの英語対応バージョン
 
-## Requirement
+## このシステムについて
+このシステムは[先行研究のシステム](https://github.com/airRnot1106/web-gaze-search-support-system.git)の一部を改変し、英語に対応させたものです<br>
+詳しくはTeamsにアップロードされている論文を読んでください<br>
+
+## やりながら少しずつ調べた方がいいこと
+- [ ] Python仮想環境について
+- [ ] Pythonバージョンについて
+- [ ] 環境変数について 
+- [ ] Git Hubについて
+- [ ] ディレクトリについて
+- [ ] アイトラッカーについて（使い方とか）
+- [ ] Wikipedia2VecやWord2Vecについて
+
+## このプログラムを動かすのに必要な条件(Requirement)
 
 - Windows 10 or 11 (64bit)
 - Node.js v18.18.2 or later
-- Python v3.10.10
-- openai の API キー
+- Python v3.10.10（必ずこのバージョンをインストールしてください）
+- openai の API キー（先生にアカウントの情報を教えてもらってください）
 
 ## Setup
 
 ### 1. Node.js のインストール
 
-[Node.js](https://nodejs.org/en)の公式サイトからインストーラをダウンロードし、インストールしてください。もしくは、その他の方法で Node.js をインストールしてください。
+[Node.js](https://nodejs.org/en)の公式サイトからインストーラをダウンロードし、インストールしてください。もしくは、その他の方法で Node.js をインストールしてください。 
 
 ### 2. Python のインストール
 
-[Python](https://www.python.org)の公式サイトからインストーラをダウンロードし、インストールしてください。もしくは、その他の方法で Python をインストールしてください。
+[Python](https://www.python.org)の公式サイトからインストーラをダウンロードし、インストールしてください。もしくは、その他の方法で Python をインストールしてください。<br>
+必ず3.10.10のバージョンをインストールしてください
 
-### 3. リポジトリのクローン
+### 3. pnpm のインストール
 
-このディレクトリを丸々あなたの PC にコピーしてください。もしくは、<https://github.com/airRnot1106/web-gaze-search-support-system.git>をクローンしてください。
+[pnpm](https://pnpm.io/ja/installation)を参照し、pnpm をインストールしてください。<br>
+npmを使用するの場所を参考にしてください
 
-### 4. pnpm のインストール
+### 4. Tobii Pro Eye Tracker Managerのインストール
+[ダウンロードページ](https://www.tobii.com/ja/products/software/applications-and-developer-kits/tobii-pro-eye-tracker-manager)に移動し、Windows用をダウンロードしてください<br>
+もし動作しなかった場合、公開されていればv2.7.1をインストールしてください（動いたので）
 
-<https://pnpm.io/ja/installation>を参照し、pnpm をインストールしてください。
 
-### 5. ライブラリのインストール
+### 5. リポジトリのクローン
+
+このディレクトリを丸々あなたの PC にコピーしてください。もしくは、Git hubからシステムのプログラム<>をクローンしてください。
+
+### 6. ライブラリのインストール
 
 PowerShell やコマンドプロンプトを開き、このディレクトリに移動し、以下のコマンドを実行してください。
 
@@ -35,31 +55,55 @@ PowerShell やコマンドプロンプトを開き、このディレクトリに
 pnpm install
 ```
 
-### 6. Mecab のインストール
+### 7. Python仮想環境の作成
+venvで仮想環境を作成してください<br>
+Powershellかコマンドプロンプトを開きこのディレクトリに移動し以下のコマンドを実行してください<br>
+```shell
+python -m venv .venv
+```
 
-<https://qd-suriken.com/2020/04/22/widows%E3%81%A7mecabneologd/>などを参照し、Mecab と mecab-ipadic-neologd をインストールし、Path を設定してください。
 
-### 7. .env ファイルの作成
+### 8. 依存関係ライブラリのインストール
+以下のコマンドを入力し、仮想環境をアクティベートしてください<br>
+```shell
+.\.venv\Scripts\activate
+```
+
+アクティベートしたのち、以下のコマンドを入力し、インストールが完了するのを待ってください
+```shell
+pip install -r requirements.txt
+```
+
+
+### 9. .env ファイルの作成
 
 ルートディレクトリの下に
 「.env」
 というファイルを作成し、
 以下をそのままコピペしてください
 
----ここから---（ここは無視）
-
-MAIN_VITE_OPENAI_API_KEY=(your-api-key-here)
-
----ここまで---（ここも無視）
+```shell
+MAIN_VITE_OPENAI_API_KEY = (your-api-key-here)
+```
 
 (your-openai-api-key-here) の場所に持っている API キーを入力してください。
 
-### 8.word2vec 学習済みモデルの導入
+### 10.wikipedia2vec 学習済みモデルの導入
 
-なんとかして旧システムを開発した先輩が作成した word2vec 学習済モデルを探し、モデルを入れる場所に入れてください。
-場所：.（ルートディレクトリ）/src/main/models/
+[Wikipedia2Vec事前学習モデルダウンロードページ](https://wikipedia2vec.github.io/wikipedia2vec/pretrained/)から以下の英語事前学習モデルをダウンロードしてください<br>
 
-### 7. システムの実行
+> enwiki_20180420 (window=5, iteration=10, negative=15)　→ 300d(bin)
+
+
+これを何とかしてKeyed Vectorファイル(拡張子：.kv)にしたのち、作成の際に出てきたnpyファイルと一緒に以下の場所に格納してください
+```shell
+src/main/models/w2v/
+```
+
+### 11. アイトラッカーのキャリブレーション
+Tobii Pro Sparkを接続し、キャリブレーションを行ってください
+
+### 12. システムの実行
 
 PowerShell やコマンドプロンプトを開き、このディレクトリに移動し、以下のコマンドを実行してください。
 
@@ -93,4 +137,9 @@ pnpm dev
 
 ### おまけ
 
-柳川先輩と森先輩の論文を読んでおくとかなり理解がスムーズになります。
+- 先行研究の論文を読んでおくとかなり理解がスムーズになります。
+- Tobii Pro Labと一緒に使うとエラー出るかも
+- かなり改善点の多いプログラムです
+- 導入の際にエラーが出るかもなので都度エラー文を調べて頑張ってください
+
+

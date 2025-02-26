@@ -5,6 +5,9 @@ import { store } from '@src/main/libs/store';
 import { calcFillRatio } from '@src/main/python';
 import { Result } from '@src/types/result';
 
+/*　注視判定および注視文章要約に関するプログラム
+　　注視面積割合とかを設定できる　　　　　　　　 */
+
 // 注視した要素を抽出する
 const extractFocusedElements = async (
   elements: BrowserElement[],
@@ -54,9 +57,11 @@ const extractFocusedElements = async (
     elementsWithFillRatio,
   });
 
+  //注視判定面積割合を設定するプログラム
   const focusedElements = elementsWithFillRatio.filter(
-    //　日本語用閾値　> fillRatioが0.05以上であれば注視しているとし、文章を抜き出して要約する
+    //　↓ 日本語用閾値　> fillRatioが0.05以上であれば注視しているとし、文章を抜き出して要約する
     // (element) => element.fillRatio > 0.05 //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
+    // 英語用閾値（多分不適切）
     (element) => element.fillRatio > 0.15 //FOCUS_DECISION_FILL_RATIO_THRESHOLD,
   );
 

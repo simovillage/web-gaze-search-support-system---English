@@ -1,3 +1,6 @@
+/* 記事判定をURLの正規表現をもとに判断
+　　判断用のURLを置いている
+　　Smart magazine tokyo, Japan TravelのURLを格納 */
 // 記事のURLの正規表現
 export const articleRegexps = [
   //日本語用観光地記事ページ

@@ -1,5 +1,7 @@
 import { GazePointNonNullable } from '@src/main/gaze/type';
 
+/* Webページ要素などの保存するデータの型を決めているプログラム */
+
 // Webページの要素の座標
 export type BrowserElementRect = {
   x: number;

@@ -7,6 +7,8 @@ import {
 } from '@src/main/gaze/type';
 import { tobiiEmitter } from '@src/main/libs/tobii';
 
+/* 視線やブラウザ操作に関するイベントをpushするプログラム */
+
 // gazeEventsの更新を検知するためのEventEmitter
 const gazeEventEmitter = new EventEmitter();
 

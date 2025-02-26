@@ -15,6 +15,8 @@ from nltk.tokenize import word_tokenize
 from scipy.stats import pearsonr
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+### 本文関連情報，共起関連情報，推薦スポットを算出するプログラム ###
+
 nltk_resources = {
     "punkt_tab": "tokenizers/punkt_tab",
     "averaged_perceptron_tagger_eng": "taggers/averaged_perceptron_tagger_eng",
@@ -41,7 +43,7 @@ def extract_words(text: str):
     tagged_words = pos_tag(words)
 
     """
-    # 無視する言葉
+    # 無視する言葉 - 精度が下がったので使いませんでした
     ignore_words = [
     "Said", "Inner", "JPY", "Treajure", "Visitors", "Considered",
     "Today", "Year", "Attractions", "Travel", "Japan", "Tokyo",

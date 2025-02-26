@@ -18,10 +18,17 @@ import { GazeUpdateStationaryPointData } from '@src/main/gaze/type';
 import { SingletonPuppeteer } from '@src/main/libs/puppeteer';
 import { store } from '@src/main/libs/store';
 
+/*
+  ブラウザ導入回りのプログラム
+  マウススクロール値の記録やユーザが表示したWebページURLの保存などを
+  行っている
+ */
+
 export const open = async () => {
   // puppeteerの起動
   const browser = await SingletonPuppeteer.getBrowser();
   const page = await browser.newPage();
+  //最初に表示するページURLの指定
   await page.goto(
     'https://en.japantravel.com/search?prefecture=tokyo&region=kanto&category=culture&q=Sensoji&sort=relevance'
   );
@@ -57,6 +64,7 @@ await page.exposeFunction('onMouseMove', () => {
 
     // ブラウザ側スクリプト
 await frame.evaluate(() => {
+  //*** マウススクロールを感知し非表示のdivに記録するプログラム ***/
   const logDiv = document.createElement('div');
   logDiv.id = 'scroll-tracker';
   logDiv.style.display = 'none'; // 表示せず、データ格納用として利用
@@ -88,45 +96,13 @@ await frame.evaluate(() => {
   const target = document.getElementById('scroll-tracker');
   if (target) observer.observe(target, { childList: true });
 });
-
-    /**
-    const inPageScrollY = await frame.evaluate(() => {
-      const logDiv = document.createElement('div');
-      logDiv.style.position = 'fixed';
-      logDiv.style.bottom = '0';
-      logDiv.style.left = '0';
-      logDiv.style.width = '100%';
-      logDiv.style.backgroundColor = 'rgba(0,0,0,0.7)';
-      logDiv.style.color = 'white';
-      logDiv.style.fontSize = '12px';
-      logDiv.style.fontFamily = 'monospace';
-      logDiv.style.zIndex = '10000';
-      document.body.appendChild(logDiv);
-    
-      const appendLog = (message) => {
-        const p = document.createElement('p');
-        p.textContent = message;
-        logDiv.appendChild(p);
-      };
-    
-      const scrollY = window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-
-        // ログを1行のみに制限
-        logDiv.textContent = `スクロール位置: ${scrollPosition}`;
-        return scrollPosition
-      });
-    
-      appendLog('ログシステム初期化完了');
-      return scrollY
-    });
-    */
+  //*** マウススクロールを感知し非表示のdivに記録するプログラム 終***/
 
     const title = await frame.title();
     const url = frame.url();
 
   
-    //隠された要素の表示
+    //ボタンで表示する要素を自動で表示する　Japan Travel内一部記事のみ有効
     const needShowPage = showRegexps.some((regexp) => regexp.test(url));
     if (needShowPage) {
       try {
@@ -265,6 +241,7 @@ await frame.evaluate(() => {
       return;
     }
 
+    //記事ページから戻った場合にポップアップを表示
     try {
       await page.waitForNavigation({ waitUntil: 'networkidle2' });
 
@@ -314,6 +291,7 @@ await frame.evaluate(() => {
   });
 };
 
+//以下、送られてきた視線情報周りの処理
 // 停留点が更新されたときの処理
 gazeStatesEmitter.on(
   'updateStationaryPoint',

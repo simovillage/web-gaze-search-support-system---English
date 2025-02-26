@@ -5,7 +5,7 @@ import {
 import { STATIONARY_DECISION_PIXEL_RANGE_RADIUS } from '@src/main/constants';
 import { execPythonScript } from '@src/main/python/exec';
 
-// 四角形の面積と停留点の面積の割合を計算する
+// 四角形の面積と停留点の面積の割合を関数を使って計算する
 export const calcFillRatio = async (element: {
   rect: BrowserElementRect;
   stationaryPoints: BrowserStationaryPoint[];

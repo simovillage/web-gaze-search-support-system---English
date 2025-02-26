@@ -1,3 +1,5 @@
+/* 視線情報やブラウザイベントなど保存するデータの型を決めているプログラム */
+
 // 視線情報
 export type GazePointNullable = {
   unixtime: number;

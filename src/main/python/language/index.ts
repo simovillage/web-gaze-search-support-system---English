@@ -1,5 +1,6 @@
 import { execPythonScript } from '@src/main/python/exec';
 
+/* 関数を使ってユーザの興味に関連した文章を抽出したり，推薦キーワードを算出する */
 export const suggestKeywords = async (
   articleTitle: string,
   targetText: string,
